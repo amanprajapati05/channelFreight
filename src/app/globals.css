@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --white: #ffffff;
+    --gray1:#F5F5F5;
+    --gray2:#C8C8C8;
+    --blue1:#ADEDFF;
+    --blue2:#333F5E;
+    --blue3:#02123B;
+    
+  }
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  
+  /* color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif; */
+}
+
+.lineargradient {
+  height: 50vh;
+  /* position: absolute; */
+  /* bottom: 0; */
+  width: 100%;
+  background: linear-gradient(0deg, #011c4d, transparent);
+}
+
+.container{
+  display: inline-block;
+  animation-name: anime;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.container2{
+  display: inline-block;
+  animation-name: anime2;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes anime{
+  0% {
+    transform: translate3d(calc(-250%), 0, 0);
+}
+100% {
+    /* Move exactly one item width */
+    transform: translate3d(calc(10%), 0, 0);
+}
+}
+@keyframes anime2{
+  0% {
+    transform: translateX(calc(10%));
+}
+100% {
+    /* Move exactly one item width */
+    transform: translateX(calc(-100%));
+}
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.gradient1{
+  /* background: linear-gradient(180deg, #02123B 0%, rgba(2, 18, 59, 30%) 100%); */
+  background: linear-gradient(180deg, #02123B 0%, rgba(2, 18, 59, 0.3) 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  
+}
+.gradient2{
+  background: linear-gradient(0deg, #02123B 0%, rgba(2, 18, 59, 30%) 100%);
+  mask-image: linear-gradient(to top, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 85%, transparent 100%);
+}
