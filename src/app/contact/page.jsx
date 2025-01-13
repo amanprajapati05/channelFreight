@@ -89,7 +89,7 @@ const page = () => {
             </div>
             <div className="md:w-[55%] h-[80vw] md:h-auto ">
               <iframe
-                class="rounded-2xl w-full h-full"
+                className="rounded-2xl w-full h-full"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.022602733516!2d72.85537882480719!3d19.106664332104216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c83605b4603d%3A0xec999ea1e4bbb3f2!2sAdarsh%20Industrial%20Estate%2C%20Navpada%2C%20Vile%20Parle%20East%2C%20Vile%20Parle%2C%20Mumbai%2C%20Maharashtra%20400099!5e0!3m2!1sen!2sin!4v1734611709028!5m2!1sen!2sin"
                 width="600"
                 height="450"

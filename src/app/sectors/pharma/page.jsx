@@ -76,9 +76,9 @@ const page = () => {
                   <BottomSector/>
                 </div>
 
-                <div>
+                {/* <div>
                 <CircularProgress/>
-                </div>
+                </div> */}
   
     <Footer/>
     </>

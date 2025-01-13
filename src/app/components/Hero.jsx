@@ -17,6 +17,33 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
 
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    useEffect(() => {
+        if (!isClient) return;
+
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+        
+        const ctx = canvas.getContext('2d');
+        
+        const setCanvasSize = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        };
+        
+        setCanvasSize();
+        window.addEventListener('resize', setCanvasSize);
+
+        return () => {
+            window.removeEventListener('resize', setCanvasSize);
+        };
+    }, [isClient]);
+
     useEffect( () => {
 
         (
@@ -60,13 +87,15 @@ const Hero = () => {
         image.src = '/images/ship.png';
         shipImage.current = image;
     
+        let tl;
+
         image.onload = () => {
           // Calculate initial position to start from right edge
           const initialX = canvas.width + (image.width / 2);
           // Calculate y position to vertically center the ship
           const y = (canvas.height - image.height) / 2;
     
-          const tl = gsap.timeline({
+           tl = gsap.timeline({
             scrollTrigger: {
               trigger: containerRef2.current,
               start: 'top top',
