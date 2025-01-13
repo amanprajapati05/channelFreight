@@ -29,7 +29,7 @@ const ScrollShip = () => {
         trigger: container,
         start: "top top", // Start when container hits top
         end: "bottom bottom", // End when container bottom hits bottom
-        markers: true, // Set to true to see trigger area
+        markers: false, // Set to true to see trigger area
         scrub: 1, // Smooth scrolling
         pin: false,
         onUpdate: (self) => {

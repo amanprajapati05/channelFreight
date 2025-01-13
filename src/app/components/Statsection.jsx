@@ -54,7 +54,7 @@ const CircularStat = ({ title, description }) => {
       trigger: circleRef.current,
       start: "top center+=100",
       end: "bottom center",
-      markers: true,
+      // markers: true,
       onUpdate: (self) => {
         circle.progress(self.progress);
         dot.progress(self.progress);
@@ -132,7 +132,7 @@ const StatsSection = () => {
       start: "top top",
       end: "bottom top",
       pin: true,
-      markers: true,
+      // markers: true,
       // pinSpacing: true,
       anticipatePin: 1,
     });

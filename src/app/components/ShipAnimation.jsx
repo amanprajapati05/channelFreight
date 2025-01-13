@@ -84,7 +84,7 @@ const ShipAnimation = () => {
             end: "1500 top",
             scrub: 0.6,
             pin: true,
-            markers: true,
+            // markers: true,
             anticipatePin: 1,
             fastScrollEnd: true,
             preventOverlaps: true,
@@ -108,7 +108,7 @@ const ShipAnimation = () => {
           start: "50% top",
           scrub: true,
           pin: true,
-          markers: true
+          // markers: true
         }
       });
 

@@ -136,7 +136,7 @@ useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: imageContainer.parentElement,
-        markers: true,
+        // markers: true,
         start: "top bottom-=100",
         end: "top top+=100",
         toggleActions: "play none none reverse",
