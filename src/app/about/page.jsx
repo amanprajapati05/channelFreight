@@ -464,7 +464,7 @@ useEffect(() => {
         </div>
 
         <div>
-            <div className='w-full flex justify-center bg-[--blue3] pt-[4vw]'>
+            <div className='w-full flex justify-center bg-[--blue3] -mt-1 -mb-1 pt-[4vw]'>
                 <div>
                     <div className={`${Clash.className} text-[8vw] text-center w-full text-white  md:text-[5vw] lg:text-[4vw]`}>Our Offices</div>
                     <div className='w-full p-4 md:p-0  flex justify-center h-full pt-[3vw]'>

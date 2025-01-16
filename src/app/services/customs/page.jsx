@@ -79,9 +79,9 @@ const text = [
 
   return (
     <>
-    {/* <div className='absolute w-full'>
+    <div className='absolute w-full'>
     <Navbar/>
-    </div> */}
+    </div>
  
 
     <ServicesPage title={'Customs Brokerage'} img1={'/images/services/img7.png'} img2={'/images/services/img72.png'} desc={'Our customs brokerage solutions transcend basic compliance to deliver seamless trade facilitation.'}/>

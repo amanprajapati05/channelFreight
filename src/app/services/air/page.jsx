@@ -55,9 +55,9 @@ const text = [
 
   return (
     <>
-    {/* <div className='absolute w-full'>
+    <div className='absolute w-full'>
     <Navbar/>
-    </div> */}
+    </div>
  
 
     <ServicesPage title={'air Freight'} img1={'/images/services/img1.png'} img2={'/images/services/img12.png'} desc={'Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace. At Channel Freight Logistics India Private Limited, we understand that timely delivery is critical for your business.'}/>

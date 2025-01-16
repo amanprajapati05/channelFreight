@@ -98,9 +98,9 @@ const slides = [
 
   return (
     <>
-    {/* <div className='absolute w-full'>
+    <div className='absolute w-full'>
     <Navbar/>
-    </div> */}
+    </div>
  
 
     <ServicesPage title={'value added services'} img1={'/images/services/img5.png'} img2={'/images/services/img52.png'} desc={'At Channel Freight Logistics India, we recognize that modern businesses require more than just transportation; they need comprehensive, tailored solutions that enhance efficiency and customer satisfaction.'}/>

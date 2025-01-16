@@ -47,9 +47,9 @@ const text = [
 
   return (
     <>
-    {/* <div className='absolute w-full'>
+    <div className='absolute w-full'>
     <Navbar/>
-    </div> */}
+    </div>
  
 
     <ServicesPage title={'sea Freight'} img1={'/images/services/img2.png'} img2={'/images/services/img22.png'} desc={'With decades of experience in logistics, we excel in providing end-to-end support for businesses of all sizes, ensuring that your cargo reaches its destination efficiently and securely.'}/>

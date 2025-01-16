@@ -101,9 +101,9 @@ const slides = [
 
   return (
     <>
-    {/* <div className='absolute w-full'>
+    <div className='absolute w-full'>
     <Navbar/>
-    </div> */}
+    </div>
  
 
     <ServicesPage title={'cross trade'} img1={'/images/services/img4.png'} img2={'/images/services/img42.png'} desc={'We excel in Cross Trade Logistics, enabling businesses to navigate the complexities of international shipments involving multiple countries.'}/>

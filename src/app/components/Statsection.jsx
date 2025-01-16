@@ -693,7 +693,7 @@ const CircularStat = ({ title, description, isMobile, commonTrigger }) => {
           <div className="text-[6vw] sm:text-[4vw] md:text-[2vw] lg:text-[1.5vw] text-white whitespace-pre-line font-bold">
             {title}
           </div>
-          <div className="text-[3vw] sm:text-[2vw] md:text-[1vw] lg:text-[0.8vw] text-white mt-2">
+          <div className="text-[3vw] sm:text-[2vw] md:text-[1vw] lg:text-[0.8vw] text-white mt-2 px-[4vw] md:px-[2vw]">
             {description}
           </div>
         </div>

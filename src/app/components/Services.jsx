@@ -61,69 +61,7 @@ const Services = () => {
         }
     };
 
-  // const addToImageRefs = (el) => {
-  //   if (el && !imageRefs.current.includes(el)) {
-  //     imageRefs.current.push(el);
-  //   }
-  // };
 
-// useGSAP(() => {
-//     imageRefs.current.forEach((imageContainer, index) => {
-//       // Set initial height for all cards
-//       gsap.set(imageContainer.parentElement, {
-//         height: 'auto' // This ensures each card takes its natural height
-//       });
-  
-//       // Create timeline for each card
-//       const tl = gsap.timeline({
-//         scrollTrigger: {
-//           trigger: imageContainer.parentElement,
-//           markers: true,
-//           start: "top bottom-=100",
-//           end: "top top+=100",
-//           toggleActions: "play none none reverse",
-//           scrub: true,
-//         }
-//       });
-  
-//       // Add animation to timeline
-//       tl.fromTo(imageContainer,
-//         {
-//           width: '15%',
-//           height: '10vw'
-//         },
-//         {
-//           width: '40%',
-//           height: '25vw',
-//           ease: "none",
-//         }
-//       );
-  
-//       // Add a scroll trigger to handle the next card
-//       if (index < imageRefs.current.length - 1) {
-//         ScrollTrigger.create({
-//           trigger: imageContainer.parentElement,
-//           start: "bottom bottom",
-//           onEnter: () => {
-//             // Only after current card is fully visible, enable next card's animation
-//             const nextCard = imageRefs.current[index + 1];
-//             if (nextCard) {
-//               gsap.set(nextCard.parentElement, { visibility: "visible" });
-//             }
-//           }
-//         });
-  
-//         // Initially hide next card
-//         if (index > 0) {
-//           gsap.set(imageContainer.parentElement, { visibility: "hidden" });
-//         }
-//       }
-//     });
-  
-//     return () => {
-//       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-//     };
-//   }, []);
 
 useGSAP(() => {
   imageRefs.current.forEach((imageContainer, index) => {
@@ -203,96 +141,6 @@ useGSAP(() => {
                 <img src="/images/img43.png" alt="" className='w-full z-[-1] object-cover'/>
             </div>
             </div>
-
-            {/* <div className='w-full bg-white md:p-[2vw] lg:p-[4vw] p-4 '>
-                <div className='flex flex-col gap-4'>
-                <div className='relative' style={{ height: '26vw' }}>
-                <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                    <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                        <img src="/images/img138.png" className='w-full h-full' alt="" />
-                    </div>
-                    <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                        <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                        <div className='flex flex-col gap-[3vw]'>
-                            <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                            <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div className='relative' style={{ height: '26vw' }}>
-                <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                    <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                        <img src="/images/img138.png" className='w-full h-full' alt="" />
-                    </div>
-                    <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                        <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                        <div className='flex flex-col gap-[3vw]'>
-                            <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                            <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div className='relative' style={{ height: '26vw' }}>
-                <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                    <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                        <img src="/images/img138.png" className='w-full h-full' alt="" />
-                    </div>
-                    <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                        <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                        <div className='flex flex-col gap-[3vw]'>
-                            <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                            <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div className='relative' style={{ height: '26vw' }}>
-                <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                    <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                        <img src="/images/img138.png" className='w-full h-full' alt="" />
-                    </div>
-                    <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                        <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                        <div className='flex flex-col gap-[3vw]'>
-                            <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                            <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div className='relative' style={{ height: '26vw' }}>
-                <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                    <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                        <img src="/images/img138.png" className='w-full h-full' alt="" />
-                    </div>
-                    <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                        <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                        <div className='flex flex-col gap-[3vw]'>
-                            <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                            <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div className='relative' style={{ height: '26vw' }}>
-                <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                    <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                        <img src="/images/img138.png" className='w-full h-full' alt="" />
-                    </div>
-                    <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                        <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                        <div className='flex flex-col gap-[3vw]'>
-                            <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                            <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                </div>
-               
-            </div> */}
               <div className='w-full bg-white md:p-[2vw] lg:p-[4vw] p-4 '>
                             <div className='flex flex-col gap-4'>
                             <div className='relative' style={{ height: '26vw' }}>
@@ -305,7 +153,7 @@ useGSAP(() => {
                                     <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(0)}
                                         onMouseLeave={() => handleLeave(0)}>
                                         <div className='text-[--blue3] text-[5vw] hidden md:block  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                        <div    ref={addToButtonRefs}   className='cursor-pointer flex xl:text-[1vw] md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] w-fit bg-[--blue3] text-[#ffffff]  px-4 py-2 rounded-full items-center justify-center'  style={{ opacity: 0,display: 'none', transform: 'translateY(30px)' }}>View More</div>
+                                        {/* <div    ref={addToButtonRefs}   className='cursor-pointer flex xl:text-[1vw] md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] w-fit bg-[--blue3] text-[#ffffff]  px-4 py-2 rounded-full items-center justify-center'  style={{ opacity: 0,display: 'none', transform: 'translateY(30px)' }}>View More</div> */}
                                         <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                         <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                     </div>
@@ -399,8 +247,8 @@ useGSAP(() => {
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                     <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Charter Services</div>
-                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(5)}
-                                        onMouseLeave={() => handleLeave(5)}>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(6)}
+                                        onMouseLeave={() => handleLeave(6)}>
                                         <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
                                         <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                         <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
@@ -415,8 +263,8 @@ useGSAP(() => {
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                     <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Value Added Services</div>
-                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(6)}
-                                        onMouseLeave={() => handleLeave(6)}>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(7)}
+                                        onMouseLeave={() => handleLeave(7)}>
                                         <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
                                         <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                         <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>

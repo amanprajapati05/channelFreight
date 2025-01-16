@@ -148,7 +148,7 @@ const page = () => {
         </div>
         </div>
 
-     <div className='w-full bg-white md:p-[2vw] lg:p-[4vw] p-4 '>
+     {/* <div className='w-full bg-white md:p-[2vw] lg:p-[4vw] p-4 '>
                 <div className='flex flex-col gap-4'>
                 <div className='relative' style={{ height: '26vw' }}>
                 <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
@@ -181,79 +181,113 @@ const page = () => {
                 </div>
                 </div>
 
-                {/* <div className='relative' style={{ height: '26vw' }}>
-                <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                    <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                        <img src="/images/img138.png" className='w-full h-full' alt="" />
-                    </div>
-                    <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                        <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                        <div className='flex flex-col gap-[3vw]'>
-                            <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                            <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div className='relative' style={{ height: '26vw' }}>
-                <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                    <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                        <img src="/images/img138.png" className='w-full h-full' alt="" />
-                    </div>
-                    <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                        <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                        <div className='flex flex-col gap-[3vw]'>
-                            <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                            <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div className='relative' style={{ height: '26vw' }}>
-                <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                    <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                        <img src="/images/img138.png" className='w-full h-full' alt="" />
-                    </div>
-                    <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                        <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                        <div className='flex flex-col gap-[3vw]'>
-                            <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                            <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div className='relative' style={{ height: '26vw' }}>
-                <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                    <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                        <img src="/images/img138.png" className='w-full h-full' alt="" />
-                    </div>
-                    <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                        <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                        <div className='flex flex-col gap-[3vw]'>
-                            <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                            <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div className='relative' style={{ height: '26vw' }}>
-                <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                    <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                        <img src="/images/img138.png" className='w-full h-full' alt="" />
-                    </div>
-                    <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                        <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                        <div className='flex flex-col gap-[3vw]'>
-                            <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                            <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
-                        </div>
-                    </div>
-                </div>
-                </div> */}
                 </div>
                
-            </div>
+            </div> */}
+
+<div className='w-full bg-white md:p-[2vw] lg:p-[4vw] p-4 '>
+                            <div className='flex flex-col gap-4'>
+                            <div className='relative' style={{ height: '26vw' }}>
+                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                                <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
+                                    <img src="/images/sectors/pharma.webp" className='w-full h-full' alt="" />
+                                </div>
+                                <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Pharmaceuticals</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(0)}
+                                        onMouseLeave={() => handleLeave(0)}>
+                                        <div className='text-[--blue3] text-[5vw] hidden md:block  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Pharmaceutical logistics is one of the most critical and regulated sectors, requiring precise handling of sensitive goods such as medicines, vaccines, APIs, and biological samples.</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/pharma' /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/pharma'  /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div className='relative' style={{ height: '26vw' }}>
+                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                                <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
+                                    <img src="/images/sectors/haz.webp" className='w-full h-full' alt="" />
+                                </div>
+                                <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Hazardous
+                                    Chemicals</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(1)}
+                                        onMouseLeave={() => handleLeave(1)}>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Transporting hazardous cargo involves high-stakes logistics due to the inherent risks to people, property, and the environment.</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/hazardous' /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/hazardous' /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div className='relative' style={{ height: '26vw' }}>
+                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                                <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
+                                    <img src="/images/sectors/eng.webp" className='w-full h-full' alt="" />
+                                </div>
+                                <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Engineering</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(2)}
+                                        onMouseLeave={() => handleLeave(2)}>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>We specialize in managing the transport of heavy machinery, oversized equipment, and engineering components.</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/engineering'  /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  link='/sectors/engineering' /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div className='relative' style={{ height: '26vw' }}>
+                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                                <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
+                                    <img src="/images/sectors/cold.webp" className='w-full h-full' alt="" />
+                                </div>
+                                <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Cold Chain Products</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(3)}
+                                        onMouseLeave={() => handleLeave(3)}>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Cold chain logistics is vital for industries such as healthcare, food, agriculture, and chemicals</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/col' /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/col' /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div className='relative' style={{ height: '26vw' }}>
+                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                                <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
+                                    <img src="/images/sectors/pac.webp" className='w-full h-full' alt="" />
+                                </div>
+                                <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Packaging Solutions</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(4)}
+                                        onMouseLeave={() => handleLeave(4)}>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Our packaging solutions are designed to safeguard your shipments, regardless of size or sensitivity. </div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  link='/sectors/packaging' /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/packaging' /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div className='relative' style={{ height: '26vw' }}>
+                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                                <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
+                                    <img src="/images/sectors/exh.webp" className='w-full h-full' alt="" />
+                                </div>
+                                <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Exhibition & Relocation</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(5)}
+                                        onMouseLeave={() => handleLeave(5)}>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Exhibition cargo logistics involves the timely transport and setup of display materials for trade shows and events. Precision timing and damage-free delivery are critical to success. </div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/exhibition'  /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/exhibition' /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                           
+                            </div>
+                           
+                        </div>
 
 
         <div className={`bg-[--blue3] px-4 py-4 md:px-[4vw] md:py-[3vw] md:h-[15vw] gap-3 md:gap-0 flex flex-col md:flex-row justify-between items-center ${Clash.className}`}>

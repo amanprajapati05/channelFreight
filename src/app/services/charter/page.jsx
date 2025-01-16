@@ -75,9 +75,9 @@ const text = [
 
   return (
     <>
-    {/* <div className='absolute w-full'>
+    <div className='absolute w-full'>
     <Navbar/>
-    </div> */}
+    </div>
  
 
     <ServicesPage title={'charter services'} img1={'/images/services/img1.png'} img2={'/images/services/img12.png'} desc={'Channel Freight Logistics India Pvt. Ltd. delivers tailored charter services, ensuring your cargo moves seamlessly across the globe with unmatched precision and speed.'}/>

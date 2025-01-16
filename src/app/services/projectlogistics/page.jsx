@@ -94,9 +94,9 @@ const slides = [
 
   return (
     <>
-    {/* <div className='absolute w-full'>
+    <div className='absolute w-full'>
     <Navbar/>
-    </div> */}
+    </div>
  
 
     <ServicesPage title={'project logistics'} img1={'/images/services/img3.png'} img2={'/images/services/img32.png'} desc={'Our team is dedicated to providing end-to-end solutions for transporting Over-Dimensional Cargo (ODC), Super-ODC, and other heavy lift equipment critical for large-scale industrial, commercial, and infrastructural projects.'}/>

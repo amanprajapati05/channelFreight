@@ -1050,8 +1050,10 @@ const Hero2 = () => {
         </div>
         <div>
                    
-               
-                <StatsSection/>
+               <div className='-mt-1'>
+               <StatsSection/>
+               </div>
+                
                
                 <div className={`w-full md:h-[35vw] h-[70vw] bg-[--blue3]  relative ${Clash.className} -mt-1`}>
                     <div className=' whitespace-nowrap overflow-x-hidden overflow-y-hidden '>
@@ -1534,6 +1536,17 @@ const Hero2 = () => {
                 
                      
                     </div>
+                    <div className='w-full'>
+        <video
+        className=" inset-0 w-full h-full object-cover -mb-1 z-[0]"
+        src="/videos/freight.mp4"
+        muted
+        playsInline
+        autoPlay
+        loop
+        />
+      </div>
+        <Footer/>
     
     </>
   )
