@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import { Clash, ClashM } from '../../../public/fonts/fonts'
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight, CaretDown } from "@phosphor-icons/react/dist/ssr";
 import Footer from './Footer';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -343,7 +343,9 @@ const Hero = () => {
                 <div className={`${Clash.className} leading-8  md:leading-normal text-[5vw] sm:text-[3.4vw] pt-[3.4vw] md:pt-0   xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] xl:w-[30%] md:w-[38%]  lg:w-[33%] text-start flex items-end`}>We create customised solutions to meet the changing demands of a dynamic industry and always stay a step ahead of contemporaries.</div>
             </div>
         </div>
-        <div className='flex flex-col items-center justify-center text-center w-full absolute bottom-10 '>
+        <div className='flex flex-col items-center text-white justify-center text-center w-full absolute bottom-10 text-base '>
+        <CaretDown size={20}/>
+        <CaretDown/>
                 <div className={`${Clash.className} text-white font-thin`}>Scroll Down</div>
         </div>
         </div>
@@ -607,7 +609,7 @@ const Hero = () => {
             <img src="/images/content.png" alt="" className=' z-[-1] w-full h-full md:hidden absolute top-0' />
             <div className='flex flex-col justify-center items-center h-full text-center text-white gap-4'>
                 <div className={`${Clash.className} text-white text-5xl`}>About Us</div>
-                <div className={`${Clash.className} text-white text-lg w-[80%] md:w-[50%] font-thin`}>Channel Freight Services (I) Pvt Ltd is a completely customer driven organisation. Our team, comprising a young set of professionals ensures that the milestones achieved are pegged on every project they handle. They rise to every occasion with pure dedication and impeccable speed. </div>
+                <div className={`${Clash.className} text-white text-lg w-[80%] md:w-[50%] font-thin`}>Our team, comprising a young set of professionals ensures that the milestones achieved are pegged on every project they handle. They rise to every occasion with pure dedication and impeccable speed.</div>
                 <Button bgColor='#ffffff' tColor='--blue3' text='Read More' />
             </div>
         </div>
