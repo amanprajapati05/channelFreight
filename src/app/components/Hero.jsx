@@ -13,168 +13,769 @@ import CircularProgress from './CircularProgress';
 
 import StatsSection from './Statsection';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
+
+if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger, useGSAP);
+}
+  
 
 const Hero = () => {
 
+    // const [isClient, setIsClient] = useState(false);
+
+    // useEffect(() => {
+    //     setIsClient(true);
+    // }, []);
+
+    // useEffect(() => {
+    //     if (!isClient) return;
+
+    //     const canvas = canvasRef.current;
+    //     if (!canvas) return;
+        
+    //     const ctx = canvas.getContext('2d');
+        
+    //     const setCanvasSize = () => {
+    //         canvas.width = window.innerWidth;
+    //         canvas.height = window.innerHeight;
+    //     };
+        
+    //     setCanvasSize();
+    //     window.addEventListener('resize', setCanvasSize);
+
+    //     return () => {
+    //         window.removeEventListener('resize', setCanvasSize);
+    //     };
+    // }, [isClient]);
+
+    // useEffect( () => {
+
+    //     (
+    
+    //       async () => {
+    
+    //           const LocomotiveScroll = (await import('locomotive-scroll')).default
+    
+    //           const locomotiveScroll = new LocomotiveScroll();
+    
+    //       }
+    
+    //     )()
+    
+    //   }, [])
+
+    // const slider = useRef();
+    // const triggerRef = useRef();
+    // const triggerRef2 = useRef();
+    // const canvasRef = useRef(null);
+    // const [hoveredCard, setHoveredCard] = useState(null);
+
+    // const card1Ref = useRef();
+    // const card2Ref = useRef();
+    // const card3Ref = useRef();
+    // const card4Ref = useRef();
+
+
+    // useEffect(() => {
+    //     const canvas = canvasRef.current;
+    //     const ctx = canvas.getContext('2d');
+        
+    //     const setCanvasSize = () => {
+    //       canvas.width = window.innerWidth;
+    //       canvas.height = window.innerHeight;
+    //     };
+    //     setCanvasSize();
+    //     window.addEventListener('resize', setCanvasSize);
+    
+    //     const image = new Image();
+    //     image.src = '/images/ship.png';
+    //     shipImage.current = image;
+    
+    //     let tl;
+
+    //     image.onload = () => {
+    //       // Calculate initial position to start from right edge
+    //       const initialX = canvas.width + (image.width / 2);
+    //       // Calculate y position to vertically center the ship
+    //       const y = (canvas.height - image.height) / 2;
+    
+    //        tl = gsap.timeline({
+    //         scrollTrigger: {
+    //           trigger: containerRef2.current,
+    //           start: 'top top',
+    //           end: '2035vw center',
+    //         //   markers: true,
+    //           scrub: true,
+    //           pin: true,
+    //           onUpdate: (self) => {
+    //             ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+    //             const progress = self.progress;
+    //             // Calculate x position relative to canvas center
+    //             const totalDistance = canvas.width + image.width * 2;
+    //             const x = initialX - (progress * totalDistance);
+                
+    //             // Draw image centered vertically
+    //             ctx.drawImage(image, x, y);
+    
+    //             // Calculate the center of the ship instead of its end
+    //             const shipCenterX = x + (image.width / 2);
+    //             const canvasCenterX = canvas.width / 2;
+    //             const threshold = 50; // Reduced threshold for tighter transition
+    
+    //             // Check if ship's center is crossing canvas center
+    //             if (Math.abs(shipCenterX - canvasCenterX) < threshold) {
+    //               if (!hasPassedCenter.current) {
+    //                 // Ship's center is passing center point
+    //                 gsap.to(initialTextRef.current, { opacity: 0, duration: 0.3 });
+    //                 gsap.to(finalTextRef.current, { opacity: 1, duration: 0.3 });
+    //                 hasPassedCenter.current = true;
+    //               }
+    //             } else if (shipCenterX > canvasCenterX + threshold) {
+    //               if (hasPassedCenter.current) {
+    //                 // Ship's center has moved back past center
+    //                 gsap.to(initialTextRef.current, { opacity: 1, duration: 0.3 });
+    //                 gsap.to(finalTextRef.current, { opacity: 0, duration: 0.3 });
+    //                 hasPassedCenter.current = false;
+    //               }
+    //             }
+    //           },
+    //           onLeaveBack: () => {
+    //             // Reset text when scrolling back to top
+    //             gsap.set(initialTextRef.current, { opacity: 1 });
+    //             gsap.set(finalTextRef.current, { opacity: 0 });
+    //             hasPassedCenter.current = false;
+    //           }
+    //         }
+    //       });
+    
+    //       return () => {
+    //         tl.kill();
+    //         window.removeEventListener('resize', setCanvasSize);
+    //       };
+    //     };
+    //   }, []);
+
+
+  
+    // const handleMouseEnter = (expandingCardRef, shrinkingCardRef, isSmallCard) => {
+    //     if (isSmallCard) {
+    //         // Timeline for synchronized animations
+    //         const tl = gsap.timeline();
+            
+    //         // Expand the small card
+    //         tl.to(expandingCardRef.current, {
+    //             width: '66%',
+    //             duration: 0,
+    //             ease: "power3.out"
+    //         }, 0); // Start at 0
+            
+    //         // Shrink the large card
+    //         tl.to(shrinkingCardRef.current, {
+    //             width: '33%',
+    //             duration: 0,
+    //             ease: "power3.out"
+    //         }, 0); // Start at 0 (simultaneous)
+    //     }
+
+    //     // Play video
+    //     const video = expandingCardRef.current.querySelector('video');
+    //     if (video) {
+    //         video.currentTime = 0;
+    //         video.play();
+    //     }
+    // };
+
+    // const handleMouseLeave = (cardRef, otherCardRef, isSmallCard) => {
+    //     if (isSmallCard) {
+    //         // Timeline for reset animations
+    //         const tl = gsap.timeline();
+            
+    //         // Reset small card
+    //         tl.to(cardRef.current, {
+    //             width: '33%',
+    //             duration: 0,
+    //             ease: "power3.out"
+    //         }, 0);
+            
+    //         // Reset large card
+    //         tl.to(otherCardRef.current, {
+    //             width: '66%',
+    //             duration: 0,
+    //             ease: "power3   .out"
+    //         }, 0);
+    //     }
+
+    //     // Pause video
+    //     const video = cardRef.current.querySelector('video');
+    //     if (video) {
+    //         video.pause();
+    //     }
+    // };
+
+    // useGSAP(()=>{
+    //     gsap.fromTo(slider.current,{
+    //         translateX: 0,
+    //       },
+    //       {
+    //         translateX: "-205%",
+    //         ease: "none",
+    //         duration: 1,
+    //         scrollTrigger: {
+    //           trigger: triggerRef.current,
+    //           start: "top top",
+    //           end: "1500 top",
+    //           scrub: 0.6,
+    //           pin: true,
+           
+    //           anticipatePin: 1, // This helps prevent jarring pin start
+    //           fastScrollEnd: true, // Improves performance during fast scrolling
+    //           preventOverlaps: true,
+    //           invalidateOnRefresh: true,
+    //           onEnter: () => {
+    //             // Ensure smooth start of animation
+    //             gsap.to(slider.current, {
+    //               opacity: 1,
+    //               duration: 0.3
+    //             });
+    //           },
+    //         },
+    //       }
+          
+    //     )
+    //     return () => {
+    //         // pin.kill();
+    //       };
+    // })
+   
+    // const circle1Ref = useRef(null);
+    // const circle2Ref = useRef(null);
+    // const circle3Ref = useRef(null);
+    // const dot1Ref = useRef(null);
+    // const dot2Ref = useRef(null);
+    // const dot3Ref = useRef(null);
+    // const containerRef = useRef(null);
+
+    
+    // const shipImage = useRef(null);
+    // const containerRef2 = useRef(null);
+    // const initialTextRef = useRef(null);
+    // const finalTextRef = useRef(null);
+    // const hasPassedCenter = useRef(false);
+
+    // useEffect(() => {
+    //     // Set initial states starting from bottom
+    //     [circle1Ref, circle2Ref, circle3Ref].forEach(ref => {
+    //         gsap.set(ref.current, {
+    //             strokeDasharray: '377, 377',
+    //             strokeDashoffset: -377  // Negative value to start from bottom
+    //         });
+    //     });
+
+    //     [dot1Ref, dot2Ref, dot3Ref].forEach(ref => {
+    //         gsap.set(ref.current, {
+    //             rotation: -90,  // Start from bottom
+    //             transformOrigin: '50% 50%'
+    //         });
+    //     });
+
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: containerRef.current,
+    //             start: 'top center+=100',
+    //             end: 'center center',
+    //             scrub: 0.5
+    //         }
+    //     });
+
+    //     [circle1Ref, circle2Ref, circle3Ref].forEach(ref => {
+    //         tl.to(ref.current, {
+    //             strokeDashoffset: 0,
+    //             duration: 1,
+    //             ease: 'none'
+    //         }, 0);
+    //     });
+
+    //     [dot1Ref, dot2Ref, dot3Ref].forEach(ref => {
+    //         tl.to(ref.current, {
+    //             rotation: 270,  // End at bottom (complete circle)
+    //             duration: 1,
+    //             ease: 'none'
+    //         }, 0);
+    //     });
+
+    //     return () => {
+    //         ScrollTrigger.getAll().forEach(t => t.kill());
+    //     };
+    // }, []);
+
+
+    // const [isClient, setIsClient] = useState(false);
+    // const [hoveredCard, setHoveredCard] = useState(null);
+
+    // // Refs
+    // const slider = useRef();
+    // const triggerRef = useRef();
+    // const triggerRef2 = useRef();
+    // const canvasRef = useRef(null);
+    // const card1Ref = useRef();
+    // const card2Ref = useRef();
+    // const card3Ref = useRef();
+    // const card4Ref = useRef();
+    // const circle1Ref = useRef(null);
+    // const circle2Ref = useRef(null);
+    // const circle3Ref = useRef(null);
+    // const dot1Ref = useRef(null);
+    // const dot2Ref = useRef(null);
+    // const dot3Ref = useRef(null);
+    // const containerRef = useRef(null);
+    // const shipImage = useRef(null);
+    // const containerRef2 = useRef(null);
+    // const initialTextRef = useRef(null);
+    // const finalTextRef = useRef(null);
+    // const hasPassedCenter = useRef(false);
+
+    // // Set client-side rendering flag
+    // useEffect(() => {
+    //     setIsClient(true);
+    // }, []);
+
+    // // Initialize Locomotive Scroll
+    // useEffect(() => {
+    //     if (!isClient) return;
+        
+    //     let locomotiveInstance;
+
+    //     const initLocomotive = async () => {
+    //         try {
+    //             const LocomotiveScroll = (await import('locomotive-scroll')).default;
+    //             locomotiveInstance = new LocomotiveScroll();
+    //         } catch (error) {
+    //             console.error('Error initializing Locomotive Scroll:', error);
+    //         }
+    //     };
+
+    //     initLocomotive();
+
+    //     return () => {
+    //         if (locomotiveInstance) {
+    //             locomotiveInstance.destroy();
+    //         }
+    //     };
+    // }, [isClient]);
+
+    // // Canvas Animation Setup
+    // useEffect(() => {
+    //     if (!isClient || !canvasRef.current || !containerRef2.current) return;
+
+    //     const canvas = canvasRef.current;
+    //     const ctx = canvas.getContext('2d');
+    //     let scrollTriggerInstance;
+    //     let animator;
+
+    //     const setCanvasSize = () => {
+    //         if (!canvas) return;
+    //         canvas.width = window.innerWidth;
+    //         canvas.height = window.innerHeight;
+    //     };
+
+    //     setCanvasSize();
+    //     window.addEventListener('resize', setCanvasSize);
+
+    //     const image = new Image();
+    //     image.src = '/images/ship.png';
+    //     shipImage.current = image;
+
+    //     image.onload = () => {
+    //         const initialX = canvas.width + (image.width / 2);
+    //         const y = (canvas.height - image.height) / 2;
+
+    //         scrollTriggerInstance = ScrollTrigger.create({
+    //             trigger: containerRef2.current,
+    //             start: 'top top',
+    //             end: '2035vw center',
+    //             scrub: true,
+    //             pin: true,
+    //             onUpdate: (self) => {
+    //                 if (!canvas || !ctx) return;
+
+    //                 ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //                 const progress = self.progress;
+    //                 const totalDistance = canvas.width + image.width * 2;
+    //                 const x = initialX - (progress * totalDistance);
+    //                 ctx.drawImage(image, x, y);
+
+    //                 const shipCenterX = x + (image.width / 2);
+    //                 const canvasCenterX = canvas.width / 2;
+    //                 const threshold = 50;
+
+    //                 if (!initialTextRef.current || !finalTextRef.current) return;
+
+    //                 if (Math.abs(shipCenterX - canvasCenterX) < threshold) {
+    //                     if (!hasPassedCenter.current) {
+    //                         animator = gsap.timeline()
+    //                             .to(initialTextRef.current, { opacity: 0, duration: 0.3 })
+    //                             .to(finalTextRef.current, { opacity: 1, duration: 0.3 });
+    //                         hasPassedCenter.current = true;
+    //                     }
+    //                 } else if (shipCenterX > canvasCenterX + threshold) {
+    //                     if (hasPassedCenter.current) {
+    //                         animator = gsap.timeline()
+    //                             .to(initialTextRef.current, { opacity: 1, duration: 0.3 })
+    //                             .to(finalTextRef.current, { opacity: 0, duration: 0.3 });
+    //                         hasPassedCenter.current = false;
+    //                     }
+    //                 }
+    //             },
+    //             onLeaveBack: () => {
+    //                 if (initialTextRef.current && finalTextRef.current) {
+    //                     gsap.set([initialTextRef.current, finalTextRef.current], { clearProps: "all" });
+    //                     gsap.set(initialTextRef.current, { opacity: 1 });
+    //                     gsap.set(finalTextRef.current, { opacity: 0 });
+    //                     hasPassedCenter.current = false;
+    //                 }
+    //             }
+    //         });
+    //     };
+
+    //     return () => {
+    //         window.removeEventListener('resize', setCanvasSize);
+    //         if (scrollTriggerInstance) {
+    //             scrollTriggerInstance.kill();
+    //         }
+    //         if (animator) {
+    //             animator.kill();
+    //         }
+    //         if (initialTextRef.current) {
+    //             gsap.killTweensOf(initialTextRef.current);
+    //         }
+    //         if (finalTextRef.current) {
+    //             gsap.killTweensOf(finalTextRef.current);
+    //         }
+    //         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            
+    //         if (canvas && ctx) {
+    //             ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //         }
+    //     };
+    // }, [isClient]);
+
+    // // Card Hover Animations
+    // const handleMouseEnter = (expandingCardRef, shrinkingCardRef, isSmallCard) => {
+    //     if (!expandingCardRef.current || !shrinkingCardRef.current) return;
+
+    //     if (isSmallCard) {
+    //         const tl = gsap.timeline();
+    //         tl.to(expandingCardRef.current, {
+    //             width: '66%',
+    //             duration: 0.3,
+    //             ease: "power3.out"
+    //         }, 0)
+    //         .to(shrinkingCardRef.current, {
+    //             width: '33%',
+    //             duration: 0.3,
+    //             ease: "power3.out"
+    //         }, 0);
+    //     }
+
+    //     const video = expandingCardRef.current.querySelector('video');
+    //     if (video) {
+    //         video.currentTime = 0;
+    //         video.play();
+    //     }
+    // };
+
+    // const handleMouseLeave = (cardRef, otherCardRef, isSmallCard) => {
+    //     if (!cardRef.current || !otherCardRef.current) return;
+
+    //     if (isSmallCard) {
+    //         const tl = gsap.timeline();
+    //         tl.to(cardRef.current, {
+    //             width: '33%',
+    //             duration: 0.3,
+    //             ease: "power3.out"
+    //         }, 0)
+    //         .to(otherCardRef.current, {
+    //             width: '66%',
+    //             duration: 0.3,
+    //             ease: "power3.out"
+    //         }, 0);
+    //     }
+
+    //     const video = cardRef.current.querySelector('video');
+    //     if (video) {
+    //         video.pause();
+    //     }
+    // };
+
+    // // Slider Animation
+    // useGSAP(() => {
+    //     if (!isClient || !slider.current || !triggerRef.current) return;
+
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: triggerRef.current,
+    //             start: "top top",
+    //             end: "1500 top",
+    //             scrub: 0.6,
+    //             pin: true,
+    //             anticipatePin: 1,
+    //             fastScrollEnd: true,
+    //             preventOverlaps: true,
+    //             invalidateOnRefresh: true,
+    //             onEnter: () => {
+    //                 gsap.to(slider.current, {
+    //                     opacity: 1,
+    //                     duration: 0.3
+    //                 });
+    //             }
+    //         }
+    //     });
+
+    //     tl.fromTo(slider.current,
+    //         { translateX: 0 },
+    //         { translateX: "-205%", ease: "none", duration: 1 }
+    //     );
+
+    //     return () => {
+    //         if (tl.scrollTrigger) {
+    //             tl.scrollTrigger.kill();
+    //         }
+    //         tl.kill();
+    //     };
+    // }, [isClient]);
+
+    // // Circular Progress Animation
+    // useEffect(() => {
+    //     if (!isClient || !containerRef.current) return;
+
+    //     const circles = [circle1Ref, circle2Ref, circle3Ref];
+    //     const dots = [dot1Ref, dot2Ref, dot3Ref];
+
+    //     circles.forEach(ref => {
+    //         if (ref.current) {
+    //             gsap.set(ref.current, {
+    //                 strokeDasharray: '377, 377',
+    //                 strokeDashoffset: -377
+    //             });
+    //         }
+    //     });
+
+    //     dots.forEach(ref => {
+    //         if (ref.current) {
+    //             gsap.set(ref.current, {
+    //                 rotation: -90,
+    //                 transformOrigin: '50% 50%'
+    //             });
+    //         }
+    //     });
+
+    //     const circlesTl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: containerRef.current,
+    //             start: 'top center+=100',
+    //             end: 'center center',
+    //             scrub: 0.5
+    //         }
+    //     });
+
+    //     circles.forEach(ref => {
+    //         if (ref.current) {
+    //             circlesTl.to(ref.current, {
+    //                 strokeDashoffset: 0,
+    //                 duration: 1,
+    //                 ease: 'none'
+    //             }, 0);
+    //         }
+    //     });
+
+    //     dots.forEach(ref => {
+    //         if (ref.current) {
+    //             circlesTl.to(ref.current, {
+    //                 rotation: 270,
+    //                 duration: 1,
+    //                 ease: 'none'
+    //             }, 0);
+    //         }
+    //     });
+
+    //     return () => {
+    //         if (circlesTl.scrollTrigger) {
+    //             circlesTl.scrollTrigger.kill();
+    //         }
+    //         circlesTl.kill();
+    //     };
+    // }, [isClient]);
+
     const [isClient, setIsClient] = useState(false);
+    const [hoveredCard, setHoveredCard] = useState(null);
 
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
-    useEffect(() => {
-        if (!isClient) return;
-
-        const canvas = canvasRef.current;
-        if (!canvas) return;
-        
-        const ctx = canvas.getContext('2d');
-        
-        const setCanvasSize = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        };
-        
-        setCanvasSize();
-        window.addEventListener('resize', setCanvasSize);
-
-        return () => {
-            window.removeEventListener('resize', setCanvasSize);
-        };
-    }, [isClient]);
-
-    useEffect( () => {
-
-        (
-    
-          async () => {
-    
-              const LocomotiveScroll = (await import('locomotive-scroll')).default
-    
-              const locomotiveScroll = new LocomotiveScroll();
-    
-          }
-    
-        )()
-    
-      }, [])
-
+    // Refs
     const slider = useRef();
     const triggerRef = useRef();
     const triggerRef2 = useRef();
     const canvasRef = useRef(null);
-    const [hoveredCard, setHoveredCard] = useState(null);
-
     const card1Ref = useRef();
     const card2Ref = useRef();
     const card3Ref = useRef();
     const card4Ref = useRef();
+    const circle1Ref = useRef(null);
+    const circle2Ref = useRef(null);
+    const circle3Ref = useRef(null);
+    const dot1Ref = useRef(null);
+    const dot2Ref = useRef(null);
+    const dot3Ref = useRef(null);
+    const containerRef = useRef(null);
+    const shipImage = useRef(null);
+    const containerRef2 = useRef(null);
+    const initialTextRef = useRef(null);
+    const finalTextRef = useRef(null);
+    const hasPassedCenter = useRef(false);
 
-
+    // Set client-side rendering flag
     useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    // Initialize Locomotive Scroll
+    useEffect(() => {
+        if (!isClient) return;
+        
+        let locomotiveInstance;
+
+        const initLocomotive = async () => {
+            try {
+                const LocomotiveScroll = (await import('locomotive-scroll')).default;
+                locomotiveInstance = new LocomotiveScroll();
+            } catch (error) {
+                console.error('Error initializing Locomotive Scroll:', error);
+            }
+        };
+
+        initLocomotive();
+
+        return () => {
+            if (locomotiveInstance) {
+                locomotiveInstance.destroy();
+            }
+        };
+    }, [isClient]);
+
+    // Canvas Animation Setup
+    useEffect(() => {
+        if (!isClient || !canvasRef.current || !containerRef2.current) return;
+
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
-        
+        let scrollTriggerInstance;
+        let animator;
+
         const setCanvasSize = () => {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
+            if (!canvas) return;
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         };
+
         setCanvasSize();
         window.addEventListener('resize', setCanvasSize);
-    
+
         const image = new Image();
         image.src = '/images/ship.png';
         shipImage.current = image;
-    
-        let tl;
 
         image.onload = () => {
-          // Calculate initial position to start from right edge
-          const initialX = canvas.width + (image.width / 2);
-          // Calculate y position to vertically center the ship
-          const y = (canvas.height - image.height) / 2;
-    
-           tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: containerRef2.current,
-              start: 'top top',
-              end: '2035vw center',
-            //   markers: true,
-              scrub: true,
-              pin: true,
-              onUpdate: (self) => {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                const progress = self.progress;
-                // Calculate x position relative to canvas center
-                const totalDistance = canvas.width + image.width * 2;
-                const x = initialX - (progress * totalDistance);
-                
-                // Draw image centered vertically
-                ctx.drawImage(image, x, y);
-    
-                // Calculate the center of the ship instead of its end
-                const shipCenterX = x + (image.width / 2);
-                const canvasCenterX = canvas.width / 2;
-                const threshold = 50; // Reduced threshold for tighter transition
-    
-                // Check if ship's center is crossing canvas center
-                if (Math.abs(shipCenterX - canvasCenterX) < threshold) {
-                  if (!hasPassedCenter.current) {
-                    // Ship's center is passing center point
-                    gsap.to(initialTextRef.current, { opacity: 0, duration: 0.3 });
-                    gsap.to(finalTextRef.current, { opacity: 1, duration: 0.3 });
-                    hasPassedCenter.current = true;
-                  }
-                } else if (shipCenterX > canvasCenterX + threshold) {
-                  if (hasPassedCenter.current) {
-                    // Ship's center has moved back past center
-                    gsap.to(initialTextRef.current, { opacity: 1, duration: 0.3 });
-                    gsap.to(finalTextRef.current, { opacity: 0, duration: 0.3 });
-                    hasPassedCenter.current = false;
-                  }
+            const initialX = canvas.width + (image.width / 2);
+            const y = (canvas.height - image.height) / 2;
+
+            scrollTriggerInstance = ScrollTrigger.create({
+                trigger: containerRef2.current,
+                start: 'top top',
+                end: '2035vw center',
+                scrub: true,
+                pin: true,
+                onUpdate: (self) => {
+                    if (!canvas || !ctx) return;
+
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    const progress = self.progress;
+                    const totalDistance = canvas.width + image.width * 2;
+                    const x = initialX - (progress * totalDistance);
+                    ctx.drawImage(image, x, y);
+
+                    const shipCenterX = x + (image.width / 2);
+                    const canvasCenterX = canvas.width / 2;
+                    const threshold = 50;
+
+                    if (!initialTextRef.current || !finalTextRef.current) return;
+
+                    if (Math.abs(shipCenterX - canvasCenterX) < threshold) {
+                        if (!hasPassedCenter.current) {
+                            animator = gsap.timeline()
+                                .to(initialTextRef.current, { opacity: 0, duration: 0.3 })
+                                .to(finalTextRef.current, { opacity: 1, duration: 0.3 });
+                            hasPassedCenter.current = true;
+                        }
+                    } else if (shipCenterX > canvasCenterX + threshold) {
+                        if (hasPassedCenter.current) {
+                            animator = gsap.timeline()
+                                .to(initialTextRef.current, { opacity: 1, duration: 0.3 })
+                                .to(finalTextRef.current, { opacity: 0, duration: 0.3 });
+                            hasPassedCenter.current = false;
+                        }
+                    }
+                },
+                onLeaveBack: () => {
+                    if (initialTextRef.current && finalTextRef.current) {
+                        gsap.set([initialTextRef.current, finalTextRef.current], { clearProps: "all" });
+                        gsap.set(initialTextRef.current, { opacity: 1 });
+                        gsap.set(finalTextRef.current, { opacity: 0 });
+                        hasPassedCenter.current = false;
+                    }
                 }
-              },
-              onLeaveBack: () => {
-                // Reset text when scrolling back to top
-                gsap.set(initialTextRef.current, { opacity: 1 });
-                gsap.set(finalTextRef.current, { opacity: 0 });
-                hasPassedCenter.current = false;
-              }
-            }
-          });
-    
-          return () => {
-            tl.kill();
-            window.removeEventListener('resize', setCanvasSize);
-          };
+            });
         };
-      }, []);
 
-
-  
-    const handleMouseEnter = (expandingCardRef, shrinkingCardRef, isSmallCard) => {
-        if (isSmallCard) {
-            // Timeline for synchronized animations
-            const tl = gsap.timeline();
+        return () => {
+            window.removeEventListener('resize', setCanvasSize);
+            if (scrollTriggerInstance) {
+                scrollTriggerInstance.kill();
+            }
+            if (animator) {
+                animator.kill();
+            }
+            if (initialTextRef.current) {
+                gsap.killTweensOf(initialTextRef.current);
+            }
+            if (finalTextRef.current) {
+                gsap.killTweensOf(finalTextRef.current);
+            }
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
             
-            // Expand the small card
+            if (canvas && ctx) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        };
+    }, [isClient]);
+
+    // Card Hover Animations
+    const handleMouseEnter = (expandingCardRef, shrinkingCardRef, isSmallCard) => {
+        if (!expandingCardRef.current || !shrinkingCardRef.current) return;
+
+        if (isSmallCard) {
+            const tl = gsap.timeline();
             tl.to(expandingCardRef.current, {
                 width: '66%',
-                duration: 0,
+                duration: 0.3,
                 ease: "power3.out"
-            }, 0); // Start at 0
-            
-            // Shrink the large card
-            tl.to(shrinkingCardRef.current, {
+            }, 0)
+            .to(shrinkingCardRef.current, {
                 width: '33%',
-                duration: 0,
+                duration: 0.3,
                 ease: "power3.out"
-            }, 0); // Start at 0 (simultaneous)
+            }, 0);
         }
 
-        // Play video
         const video = expandingCardRef.current.querySelector('video');
         if (video) {
             video.currentTime = 0;
@@ -183,99 +784,91 @@ const Hero = () => {
     };
 
     const handleMouseLeave = (cardRef, otherCardRef, isSmallCard) => {
+        if (!cardRef.current || !otherCardRef.current) return;
+
         if (isSmallCard) {
-            // Timeline for reset animations
             const tl = gsap.timeline();
-            
-            // Reset small card
             tl.to(cardRef.current, {
                 width: '33%',
-                duration: 0,
+                duration: 0.3,
                 ease: "power3.out"
-            }, 0);
-            
-            // Reset large card
-            tl.to(otherCardRef.current, {
+            }, 0)
+            .to(otherCardRef.current, {
                 width: '66%',
-                duration: 0,
-                ease: "power3   .out"
+                duration: 0.3,
+                ease: "power3.out"
             }, 0);
         }
 
-        // Pause video
         const video = cardRef.current.querySelector('video');
         if (video) {
             video.pause();
         }
     };
 
-    useGSAP(()=>{
-        gsap.fromTo(slider.current,{
-            translateX: 0,
-          },
-          {
-            translateX: "-205%",
-            ease: "none",
-            duration: 1,
-            scrollTrigger: {
-              trigger: triggerRef.current,
-              start: "top top",
-              end: "1500 top",
-              scrub: 0.6,
-              pin: true,
-           
-              anticipatePin: 1, // This helps prevent jarring pin start
-              fastScrollEnd: true, // Improves performance during fast scrolling
-              preventOverlaps: true,
-              invalidateOnRefresh: true,
-              onEnter: () => {
-                // Ensure smooth start of animation
-                gsap.to(slider.current, {
-                  opacity: 1,
-                  duration: 0.3
-                });
-              },
-            },
-          }
-          
-        )
-        return () => {
-            // pin.kill();
-          };
-    })
-   
-    const circle1Ref = useRef(null);
-    const circle2Ref = useRef(null);
-    const circle3Ref = useRef(null);
-    const dot1Ref = useRef(null);
-    const dot2Ref = useRef(null);
-    const dot3Ref = useRef(null);
-    const containerRef = useRef(null);
-
-    
-    const shipImage = useRef(null);
-    const containerRef2 = useRef(null);
-    const initialTextRef = useRef(null);
-    const finalTextRef = useRef(null);
-    const hasPassedCenter = useRef(false);
-
-    useEffect(() => {
-        // Set initial states starting from bottom
-        [circle1Ref, circle2Ref, circle3Ref].forEach(ref => {
-            gsap.set(ref.current, {
-                strokeDasharray: '377, 377',
-                strokeDashoffset: -377  // Negative value to start from bottom
-            });
-        });
-
-        [dot1Ref, dot2Ref, dot3Ref].forEach(ref => {
-            gsap.set(ref.current, {
-                rotation: -90,  // Start from bottom
-                transformOrigin: '50% 50%'
-            });
-        });
+    // Slider Animation
+    useGSAP(() => {
+        if (!isClient || !slider.current || !triggerRef.current) return;
 
         const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: triggerRef.current,
+                start: "top top",
+                end: "1500 top",
+                scrub: 0.6,
+                pin: true,
+                anticipatePin: 1,
+                fastScrollEnd: true,
+                preventOverlaps: true,
+                invalidateOnRefresh: true,
+                onEnter: () => {
+                    gsap.to(slider.current, {
+                        opacity: 1,
+                        duration: 0.3
+                    });
+                }
+            }
+        });
+
+        tl.fromTo(slider.current,
+            { translateX: 0 },
+            { translateX: "-205%", ease: "none", duration: 1 }
+        );
+
+        return () => {
+            if (tl.scrollTrigger) {
+                tl.scrollTrigger.kill();
+            }
+            tl.kill();
+        };
+    }, [isClient]);
+
+    // Circular Progress Animation
+    useEffect(() => {
+        if (!isClient || !containerRef.current) return;
+
+        const circles = [circle1Ref, circle2Ref, circle3Ref];
+        const dots = [dot1Ref, dot2Ref, dot3Ref];
+
+        circles.forEach(ref => {
+            if (ref.current) {
+                gsap.set(ref.current, {
+                    strokeDasharray: '377, 377',
+                    strokeDashoffset: -377
+                });
+            }
+        });
+
+        dots.forEach(ref => {
+            if (ref.current) {
+                gsap.set(ref.current, {
+                    rotation: -90,
+                    transformOrigin: '50% 50%'
+                });
+            }
+        });
+
+        const circlesTl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: 'top center+=100',
@@ -284,28 +877,34 @@ const Hero = () => {
             }
         });
 
-        [circle1Ref, circle2Ref, circle3Ref].forEach(ref => {
-            tl.to(ref.current, {
-                strokeDashoffset: 0,
-                duration: 1,
-                ease: 'none'
-            }, 0);
+        circles.forEach(ref => {
+            if (ref.current) {
+                circlesTl.to(ref.current, {
+                    strokeDashoffset: 0,
+                    duration: 1,
+                    ease: 'none'
+                }, 0);
+            }
         });
 
-        [dot1Ref, dot2Ref, dot3Ref].forEach(ref => {
-            tl.to(ref.current, {
-                rotation: 270,  // End at bottom (complete circle)
-                duration: 1,
-                ease: 'none'
-            }, 0);
+        dots.forEach(ref => {
+            if (ref.current) {
+                circlesTl.to(ref.current, {
+                    rotation: 270,
+                    duration: 1,
+                    ease: 'none'
+                }, 0);
+            }
         });
 
         return () => {
-            ScrollTrigger.getAll().forEach(t => t.kill());
+            if (circlesTl.scrollTrigger) {
+                circlesTl.scrollTrigger.kill();
+            }
+            circlesTl.kill();
         };
-    }, []);
-
-
+    }, [isClient]);
+    
   return (
     <>
      
@@ -347,11 +946,6 @@ const Hero = () => {
                         <div className={`text-[--blue3] ${Clash.className} text-[5vw] md:hidden sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.
                        Our services are designed to ensure smooth operations and efficient delivery for all businesses.</div>
                 </div>
-                
-                {/* <div className={`bg-[--blue3] flex w-fit  text-sm px-3 py-2 gap-2 items-center  rounded-3xl text-white ${Clash.className} `}>
-                    <div>View More</div>
-                    <div>&gt;</div>
-                </div> */}
                 <Button bgColor='--blue3' tColor='#ffffff' text='View More' />
             </div>
         </div>
@@ -605,7 +1199,7 @@ const Hero = () => {
         <div>
            
        
-        {/* <StatsSection/> */}
+        <StatsSection/>
        
         <div className={`w-full md:h-[35vw] h-[70vw] bg-[--blue3]  relative ${Clash.className} -mt-1`}>
             <div className=' whitespace-nowrap overflow-x-hidden overflow-y-hidden '>

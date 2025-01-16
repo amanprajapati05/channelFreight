@@ -338,9 +338,9 @@ useEffect(() => {
     
 
   <div ref={sectionRef} className="h-screen bg-[--blue3] md:px-[2vw] lg:px-[4vw] px-4">
-        <div className="flex w-full h-full justify-between items-center">
-          <div className="w-[30%] flex gap-[2vw] items-center">
-            <div className="w-[1.8vw] h-[25vw] border-[#333f5e] flex justify-center border rounded-3xl relative">
+        <div className="flex w-full md:flex-row flex-col h-full justify-between items-center">
+          <div className="md:w-[30%] w-full flex gap-[2vw] items-center ">
+            <div className="w-[1.8vw] h-[25vw] border-[#333f5e] hidden md:flex justify-center border rounded-3xl relative ">
               <div 
                 ref={dotRef}
                 className="w-[0.8vw] h-[0.8vw] absolute top-[2px] rounded-full bg-[#adedff]"

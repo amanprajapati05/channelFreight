@@ -1,9 +1,21 @@
+"use client"
+import { useState } from 'react'
 import React from 'react'
 import Navbar from '../components/Navbar'
 import { Clash } from '../../../public/fonts/fonts'
 import Footer from '../components/Footer'
+import { UploadSimple } from '@phosphor-icons/react/dist/ssr'
+import Button from '../components/Button'
 
 const page = () => {
+  const [fileName, setFileName] = useState('');
+  
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setFileName(file.name);
+    }
+  };
   return (
     <>
     <div className='absolute w-full'>
@@ -66,7 +78,7 @@ const page = () => {
               <div className="flex flex-col gap-[5vw] md:gap-[2vw] lg:gap-[1.5vw]">
                 <div className="bg-transparent border text-[4vw] md:text-[2vw] lg:text-[1.2vw]  border-[#515b73] rounded-xl w-full h-[15vw] md:h-[6.5vw] lg:h-[4.2vw] flex flex-col justify-center">
                   <div
-                    className={`${Clash.className}  text-[#677189] uppercase px-2`}
+                    className={`${Clash.className}  text-[#677189] uppercase px-2 pt-2`}
                   >
                     your Name
                   </div>
@@ -77,7 +89,7 @@ const page = () => {
                 </div>
                 <div className="bg-transparent border text-[4vw] md:text-[2vw] lg:text-[1.2vw] border-[#515b73] rounded-xl w-full h-[15vw] md:h-[6.5vw] lg:h-[4vw] flex flex-col justify-center">
                   <div
-                    className={`${Clash.className}  text-[#677189] uppercase px-2`}
+                    className={`${Clash.className}  text-[#677189] uppercase px-2 pt-2`}
                   >
                     phone number
                   </div>
@@ -88,7 +100,7 @@ const page = () => {
                 </div>
                 <div className="bg-transparent border text-[4vw] md:text-[2vw] lg:text-[1.2vw] border-[#515b73] rounded-xl w-full h-[15vw] md:h-[6.5vw] lg:h-[4vw] flex flex-col justify-center">
                   <div
-                    className={`${Clash.className}  text-[#677189] uppercase px-2`}
+                    className={`${Clash.className}  text-[#677189] uppercase px-2 pt-2`}
                   >
                     email
                   </div>
@@ -97,23 +109,45 @@ const page = () => {
                     type="text"
                   />
                 </div>
-                <div className="bg-transparent border text-[4vw] md:text-[2vw] lg:text-[1.2vw] border-[#515b73] rounded-xl w-full h-[25vw] md:h-[9.5vw] lg:h-[7vw] flex flex-col justify-center">
+                <div className="bg-transparent border text-[4vw] md:text-[2vw] lg:text-[1.2vw] border-[#515b73] rounded-xl w-full h-[15vw] md:h-[9.5vw] lg:h-[7vw] flex flex-col justify-center">
                   <div
-                    className={`${Clash.className}  text-[#677189] uppercase px-2`}
+                    className={`${Clash.className}  text-[#677189] uppercase px-2 pt-2`}
                   >
                     job roles
                   </div>
-                  <input
+                  {/* <input
                     className={`bg-transparent text-white w-full h-full rounded-xl border-none focus:outline-none px-2 ${Clash.className}`}
                     type="file"
-                  />
+                  /> */}
                 </div>
+                <div className="max-w-xl w-full">
+      <label 
+        htmlFor="resume-upload" 
+        className={`${Clash.className} bg-transparent border text-[4vw] md:text-[2vw] lg:text-[1.2vw] border-[#515b73] rounded-xl w-full h-[15vw] md:h-[6.5vw] lg:h-[4vw] flex flex-col justify-center px-2`}
+      >
+        <input
+          id="resume-upload"
+          type="file"
+          accept=".pdf,.doc,.docx"
+          className="hidden"
+          onChange={handleFileChange}
+        />
+        
+        <div className="flex items-center justify-between text-gray-400">
+          <span className="text-lg">
+            {fileName || 'CLICK HERE TO UPLOAD RESUME'}
+          </span>
+          <UploadSimple size={32} />
+        </div>
+      </label>
+    </div>
               </div>
-              <div
+              {/* <div
                 className={`${Clash.className} cursor-pointer flex xl:text-[1vw] md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] w-fit bg-[--blue3] text-[#ffffff]  px-4 py-2 rounded-full items-center justify-center`}
               >
                 Submit
-              </div>
+              </div> */}
+              <Button text='Submit' tColor='#ffffff' bgColor='#02123B' />
             </div>
             <div className="md:w-[55%] h-[80vw] md:h-auto order-1 md:order-1">
               <img src="/images/img42.jpg" className="rounded-2xl w-full h-full" alt="" />

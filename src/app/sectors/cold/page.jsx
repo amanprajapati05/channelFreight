@@ -18,10 +18,20 @@ const page = () => {
   
 
   const text = [
-    "With certified personnel, ADR-compliant",
-    "vehicles, and a deep understanding of",
-    "IMDG and IATA regulations, we ensure the",
-    "highest levels of safety and compliance."
+    "We offer industry-leading cold chain ",
+    "logistics, integrating refrigerated transport, ",
+    "temperature-controlled warehouses, and ",
+    "advanced packaging solutions."
+  ];
+
+  
+  const text2 = [
+    "We offer industry-leading cold",
+    "chain logistics, integrating",
+    "refrigerated transport,",
+    "temperature-controlled",
+    "warehouses, and advanced",
+    "packaging solutions."
   ];
 
   return (
@@ -31,13 +41,14 @@ const page = () => {
     </div>
  
 
-    <ServicesPage title={'cold chain products'} img1={'/images/sectors/ig71.png'} img2={'/images/sectors/ig72.png'} desc={'Cold chain logistics is vital for industries such as healthcare, food, agriculture, and chemicals. It involves the seamless movement of perishable goods under strict temperature controls to preserve quality and safety.'}/>
+    <ServicesPage title={'cold chain products'} img1={'/images/sectors/ig61.png'} img2={'/images/sectors/ig62.png'} desc={'Cold chain logistics is vital for industries such as healthcare, food, agriculture, and chemicals. It involves the seamless movement of perishable goods under strict temperature controls to preserve quality and safety.'}/>
 
     <div className='w-full -mt-1'>
     <TruckAnimation/>
     </div>
     <div className='w-full h-screen bg-[--blue3]'></div>
-                <div className='  my-[10vw]'>
+
+                <div className='  my-[10vw] hidden md:block'>
                 <AnimatedTextSection
       textLines={text}
       font={Clash.className}
@@ -45,9 +56,22 @@ const page = () => {
     //   showMarkers={true} // Useful for debugging animations// Additional classes for the container
     />
                 </div>
+                <div className='  my-[10vw] block md:hidden'>
+                <AnimatedTextSection
+      textLines={text2}
+      font={Clash.className}
+      spacing="my-4"
+    //   showMarkers={true} // Useful for debugging animations// Additional classes for the container
+    />
+                </div>
                 
                 <div>
-                  <BottomSector/>
+                <BottomSector 
+  description="Clients trust us for our precision, innovation, and global expertise. With Channel Freight, your perishable goods are in the safest hands, delivered fresh and on time, every time."
+  image1="/images/sectors/cc1.webp"
+  image2="/images/sectors/cc3.webp"
+  image3="/images/sectors/cc2.webp"
+/>
                 </div>
   
     <Footer/>

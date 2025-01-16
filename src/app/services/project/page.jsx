@@ -30,6 +30,7 @@ const page = () => {
     <div className='md:p-[2vw] lg:p-[4vw] px-4 py-4'>
     <ServicesSlider/>
     </div>
+    
     <Footer/>
     </>
   )

@@ -10,15 +10,26 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import AnimatedCard from '../../components/AnimatedCard'
 import BottomSector from '../../components/BottomSector'
+import AnimatedTextSection from '../../components/SectorAnimated'
 
 
 const page = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
 
-  const cardRef = useRef(null);
-  const backgroundRef = useRef(null);
-  const contentRef = useRef(null);
-  const titleRef = useRef(null);
+  const text = [
+    "With certified personnel, ADR-compliant ",
+    "vehicles, and a deep understanding of  ",
+    "IMDG and IATA regulations, we ensure the ",
+    "highest levels of safety and compliance."
+  ];
+  const text2 = [
+    "With certified personnel,",
+    "ADR-compliant vehicles, and",
+    "a deep understanding of",
+    "IMDG and IATA regulations,",
+    "we ensure the highest levels",
+    " of safety and compliance.",
+
+  ];
 
   return (
     <>
@@ -37,29 +48,51 @@ const page = () => {
        <div   className='md:flex flex md:w-full md:px-[2vw] lg:px-[4vw] px-4 md:mx-0 justify-between gap-[1.7vw] md:gap-0'> 
                     <AnimatedCard
     index={1}
-    title="Safety & Security"
-    content="Rigorous quality controls for handling high-value and sensitive goods."
+    title="Safety Risks"
+    content="Comprehensive training and risk assessments ensure zero incidents."
     Clash={Clash}
   />
 
 <AnimatedCard
     index={2}
-    title="Flexibility"
-    content="Solutions for diverse industries, including automotive, healthcare, and e-commerce"
+    title="Complex Documentation"
+    content="Our team streamlines the approval process, minimizing delays."
     Clash={Clash}
   />
   <AnimatedCard
     index={3}
-    title="Sustainability"
-    content="Initiatives to reduce carbon footprints, aligning with environmentally conscious logistics."
+    title="Emergency Management"
+    content="Predefined response protocols handle any unforeseen incidents with efficiency and care."
     Clash={Clash}
   />
 
                   
                 </div>  
+
+                <div className='my-[10vw] hidden md:block'>
+                <AnimatedTextSection
+      textLines={text}
+      font={Clash.className}
+      spacing="my-4"
+    //   showMarkers={true} // Useful for debugging animations// Additional classes for the container
+    />
+                </div>
+                <div className='my-[10vw] block md:hidden '>
+                <AnimatedTextSection
+      textLines={text2}
+      font={Clash.className}
+      spacing="my-4"
+    //   showMarkers={true} // Useful for debugging animations// Additional classes for the container
+    />
+                </div>
                 
                 <div>
-                  <BottomSector/>
+                <BottomSector 
+  description="Clients trust us for our precision, innovation, and global expertise. With Channel Freight, you’re not just shipping goods—you’re safeguarding lives."
+  image1="/images/sectors/h1.webp"
+  image2="/images/sectors/h3.webp"
+  image3="/images/sectors/h2.webp"
+/>
                 </div>
   
     <Footer/>

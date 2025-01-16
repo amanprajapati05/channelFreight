@@ -8,7 +8,7 @@ const AirplaneCanvas = ({
   imagePath = '/images/services/airplane.webp',
   imageWidth = 300,
   canvasHeight = 400,
-  topPosition = "10vw",
+  topPosition = "15vw",
   animationDuration = 1.5
 }) => {
   const canvasRef = useRef(null);
@@ -53,7 +53,7 @@ const AirplaneCanvas = ({
           once: true,
           onEnter: () => {
             gsap.to({ y: y }, {
-              y: (canvas.height - imageHeight) / 2,
+              y: (canvas.height - imageHeight) /2,
               duration: animationDuration,
               ease: "power2.out",
               onUpdate: function() {
@@ -83,10 +83,11 @@ const AirplaneCanvas = ({
     <div ref={containerRef} className="w-full h-0 relative">
       <canvas 
         ref={canvasRef}
-        className={`absolute left-0 top-[${topPosition}]`}
+        className={`absolute left-0 `}
         style={{ 
           pointerEvents: 'none',
-          zIndex: 10 
+          zIndex: 10,
+          top: topPosition // Using style for top position instead of className
         }}
       />
     </div>

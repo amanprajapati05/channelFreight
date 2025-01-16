@@ -1,5 +1,3 @@
-     
-
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
 import ServicesPage from '../../components/ServicesPage'
@@ -17,6 +15,8 @@ import AnimatedContent from '../../components/AnimatedServiceContent'
 import ServicesSlider from '../../components/ServicesSlider'
 
 const page = () => {
+      const slider = useRef();
+      const triggerRef = useRef();
 
 const text = [
     "Whether it’s an industrial park setup, a ",
@@ -26,24 +26,87 @@ const text = [
     "within budget."
   ];
 
+  const text2 = [
+    "Whether it’s an industrial",
+    "park setup, a power plant",
+    "installation, or an offshore ",
+    "infrastructure build, we",
+    "bring over two decades of",
+    "expertise to deliver on time",
+    "and within budget."
+  ];
 
+  
 
+  useGSAP(()=>{
+    gsap.fromTo(slider.current,{
+        translateX: 0,
+      },
+      {
+        translateX: "-30%",
+        ease: "none",
+        duration: 1,
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "top top",
+          end: "1500 top",
+          scrub: 0.6,
+          pin: true,
+       
+          anticipatePin: 1, // This helps prevent jarring pin start
+          fastScrollEnd: true, // Improves performance during fast scrolling
+          preventOverlaps: true,
+          invalidateOnRefresh: true,
+          onEnter: () => {
+            // Ensure smooth start of animation
+            gsap.to(slider.current, {
+              opacity: 1,
+              duration: 0.3
+            });
+          },
+        },
+      }
+      
+    )
+    return () => {
+        // pin.kill();
+      };
+})
+
+const slides = [
+  {
+    title: "Strategic Partnerships",
+    description: "We collaborate with industry leaders to offer competitive pricing and innovative transport solutions.",
+    image: "/images/services/p1.webp"
+  },
+  {
+    title: "Commitment to Safety",
+    description: "We adhere to stringent safety standards, ensuring the secure handling and delivery of your valuable assets.",
+    image: "/images/services/p2.webp"
+  },
+  {
+    title: "Global Reach with Local Expertise",
+    description: "Operating across continents, we combine global connectivity with localized insights to deliver efficient services tailored to your project's needs.",
+    image: "/images/services/p3.webp"
+  },
+  
+];
 
   return (
     <>
-    <div className='absolute w-full'>
+    {/* <div className='absolute w-full'>
     <Navbar/>
-    </div>
+    </div> */}
  
 
-    <ServicesPage title={'project logistics'} img1={'/images/services/img1.png'} img2={'/images/services/img12.png'} desc={'Our team is dedicated to providing end-to-end solutions for transporting Over-Dimensional Cargo (ODC), Super-ODC, and other heavy lift equipment critical for large-scale industrial, commercial, and infrastructural projects.'}/>
+    <ServicesPage title={'project logistics'} img1={'/images/services/img3.png'} img2={'/images/services/img32.png'} desc={'Our team is dedicated to providing end-to-end solutions for transporting Over-Dimensional Cargo (ODC), Super-ODC, and other heavy lift equipment critical for large-scale industrial, commercial, and infrastructural projects.'}/>
     
-    <div className='md:p-[2vw] lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
+    <div ref={triggerRef} className='md:p-[2vw] hidden md:block lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
       <div className='flex flex-col justify-between h-full'>
-        <div className={`flex md:flex-row flex-col justify-between ${Clash.className} text-[--blue3] `}>
-          <div className='leading-[1.2] md:text-[4vw] text-[9vw] w-full md:w-[50%]'>Seamless Cargo Solutions</div>
+        <div className={`flex  md:flex-row flex-col justify-between gap-4 md:gap-0 ${Clash.className} text-[--blue3] `}>
+          <div className='leading-[1.2] md:text-[4vw] text-[9vw] w-full md:w-[40%]'> Seamless Cargo Solutions</div>
 
-          <div className='text-[4vw] md:text-[1.3vw] w-full md:w-[40%] flex flex-col justify-between '>
+          <div className='text-[4vw] md:text-[1.3vw] w-full md:w-[40%] flex flex-col gap-4 md:gap-0 justify-between '>
             <div>
             Discover the specialized services that ensure seamless execution of complex logistics projects worldwide.
             </div>
@@ -53,28 +116,92 @@ const text = [
             </div>
         </div>
         <div>
-        <div   className='md:flex hidden md:w-full  md:mx-0 justify-between gap-[1.7vw] md:gap-0'>            
+<div  className='w-full h-full overflow-hidden pt-[2vw]'>
+        <div ref={slider}   className='flex md:w-full flex-nowrap   md:mx-0 justify-between gap-[1.7vw] md:gap-[2vw]'>   
+             
                     <AnimatedCard
     index={1}
-    title="Unmatched Reliability"
-    content="Rigorous quality controls for handling high-value and sensitive goods."
+    title="Comprehensive Project Management"
+    content="From site surveys and feasibility studies to engineering analysis, we meticulously plan every aspect of your shipment."
     Clash={Clash}
   />
 
 <AnimatedCard
     index={2}
-    title="Eco-Conscious Shipping"
-    content="Solutions for diverse industries, including automotive, healthcare, and e-commerce"
+    title="Specialized Equipment & Techniques"
+    content="We leverage state-of-the-art equipment, including hydraulic axles, flat racks, and modular trailers, tailored for oversized and over-weighted goods."
     Clash={Clash}
   />
   <AnimatedCard
     index={3}
-    title="Technology-Driven Transparency"
-    content="Initiatives to reduce carbon footprints, aligning with environmentally conscious logistics."
+    title="Multimodal Transportation Options"
+    content="Whether by sea, road, rail, or barge, our logistics network provides flexible and reliable transportation solutions to meet diverse project requirements. "
+    Clash={Clash}
+  />
+    <AnimatedCard
+    index={4}
+    title="Sector-Specific Expertise"
+    content="We have supported industries including energy, construction, heavy manufacturing, and technology."
+    Clash={Clash}
+  />
+ 
+
+                  
+                </div>
+                </div>
+        </div>
+
+     
+      </div>
+    
+    </div>
+    <div  className='md:p-[2vw] md:hidden lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
+      <div className='flex flex-col justify-between h-full'>
+        <div className={`flex  md:flex-row flex-col justify-between gap-4 md:gap-0 ${Clash.className} text-[--blue3] `}>
+          <div className='leading-[1.2] md:text-[4vw] text-[9vw] w-full md:w-[40%]'> Seamless Cargo Solutions</div>
+
+          <div className='text-[4vw] md:text-[1.3vw] w-full md:w-[40%] flex flex-col gap-4 md:gap-0 justify-between '>
+            <div>
+            Discover the specialized services that ensure seamless execution of complex logistics projects worldwide.
+            </div>
+            <div>
+                <Button text='Get in Touch' link='/contact' bgColor='#02123b' tColor='#ffffff' />
+            </div>
+            </div>
+        </div>
+        <div>
+<div  className='w-full h-full overflow-hidden pt-[2vw]'>
+        <div   className='flex md:w-full flex-nowrap   md:mx-0 justify-between gap-[1.7vw] md:gap-[2vw]'>   
+             
+                    <AnimatedCard
+    index={1}
+    title="Comprehensive Project Management"
+    content="From site surveys and feasibility studies to engineering analysis, we meticulously plan every aspect of your shipment."
     Clash={Clash}
   />
 
+<AnimatedCard
+    index={2}
+    title="Specialized Equipment & Techniques"
+    content="We leverage state-of-the-art equipment, including hydraulic axles, flat racks, and modular trailers, tailored for oversized and over-weighted goods."
+    Clash={Clash}
+  />
+  <AnimatedCard
+    index={3}
+    title="Multimodal Transportation Options"
+    content="Whether by sea, road, rail, or barge, our logistics network provides flexible and reliable transportation solutions to meet diverse project requirements. "
+    Clash={Clash}
+  />
+    <AnimatedCard
+    index={4}
+    title="Sector-Specific Expertise"
+    content="We have supported industries including energy, construction, heavy manufacturing, and technology."
+    Clash={Clash}
+  />
+ 
+
                   
+                </div>
                 </div>
         </div>
 
@@ -83,34 +210,66 @@ const text = [
     
     </div>
 
-                       
+                       <div className='hidden md:block'>
                         <AnimatedTextSection
       textLines={text}
       font={Clash.className}
       spacing="my-4"
     //   showMarkers={true} // Useful for debugging animations// Additional classes for the container
     />
+    </div>
+    <div className='md:hidden block'>
+                        <AnimatedTextSection
+      textLines={text2}
+      font={Clash.className}
+      spacing="my-0"
+    //   showMarkers={true} // Useful for debugging animations// Additional classes for the container
+    />
+    </div>
 
-{/* 
-<div className='md:p-[2vw] lg:p-[4vw] px-4 py-4'>
-    <ServicesSlider/>
-    </div>                   */}
+     <div className='md:p-[2vw] lg:p-[4vw] px-4 py-4 md:block hidden'>
+     <ServicesSlider 
+  heading="Benefits of Choosing Us" 
+  slides={slides} 
+/>
+    </div>
+
+    <div className='md:p-[2vw] lg:p-[4vw] px-4 py-4 block  md:hidden'>
+        <div className='flex flex-col gap-4 w-full'>
+          <div className={`text-[--blue3] ${Clash.className} text-[8vw] py-[2vw] md:text-[5vw] lg:text-[4vw]`}>
+            Benefits of Choosing Us
+          </div>
+          <div className={`${Clash.className} text-[--blue3] flex gap-3 flex-col w-[80%]`}>
+            <div className=' w-full inset-0' >
+              <img src="/images/services/p1.webp" className='w-full' alt="" />
+            </div>
+            <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw]`}>
+            Strategic Partnerships
+            </div>
+            <div className={`text-[--blue3] ${Clash.className} text-[3vw] sm:text-[3.2] xl:text-[1vw] md:text-[1.7vw] lg:text-[1.2vw] w-full text-left`}>
+            We collaborate with industry leaders to offer competitive pricing and innovative transport solutions.
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+                        
    
-
     <div className='w-full h-full md:p-[2vw] lg:p-[4vw] px-4 py-4'>
         <div className={`${Clash.className} text-[--blue3] flex flex-col w-full items-center`}>
-            <div className='md:text-[4vw] text-[9vw] leading-[1.3]'>Efficient, Secure, & Scalable</div>
-            <div className='text-[4vw] md:text-[1.3vw] text-[#333f5e] '>Transport large volumes with precision and flexibility, tailored to meet your unique shipping needs.</div>
+            <div className='md:text-[4vw] text-[9vw] text-center'>Your Trusted Partner for ODC Cargo</div>
+            <div className='text-[4vw] md:text-[1.3vw] text-[#333f5e] text-center '>Simplifying global supply chains with precision, innovation, and expertise.</div>
         </div>
-        {/* <div className='flex w-full md:flex-row flex-col  md:h-[28vw] justify-between my-[4vw]'>
+        <div className='flex w-full md:h-[28vw] h-[250vw] md:gap-0 gap-4 md:flex-row flex-col justify-between my-[4vw]'>
           
-            <div className='w-[32.5%]  relative h-full overflow-hidden rounded-2xl flex flex-col justify-end'>
+            <div className='md:w-[32.5%] w-full  relative h-full overflow-hidden rounded-2xl flex flex-col justify-end'>
                 <img src='/images/card1.webp' className='absolute w-full  inset-0 z-[-1]'/>
-                <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] p-[1.5vw]`}>Tailored Solutions</div>
+                <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>Tailored Solutions</div>
             </div>
-            <div className='w-[32.5%]  h-full rounded-2xl  '> 
+            <div className='md:w-[32.5%] w-full h-full rounded-2xl  '> 
                 <div className='flex flex-col h-full justify-between'>
-                <div className={`${Clash.className} w-full h-[48%] rounded-2xl border relative border-[#c8c8c8] overflow-hidden flex justify-between text-[--blue2] p-[1.5vw] `}>
+                <div className={`${Clash.className} w-full h-[32%] rounded-2xl border relative border-[#c8c8c8] overflow-hidden flex justify-between text-[--blue2] md:p-[1.5vw] p-[3vw] `}>
     <video 
         className="w-full h-full object-cover scale-[3] absolute right-52 opacity-25 z-[-1]"
         src="/videos/air.mp4"
@@ -120,78 +279,29 @@ const text = [
         loop
     />
 
-    <div className={`${Clash.className} text-[--blue3] text-[1vw] `}>Global Operations</div>
+    <div className={`${Clash.className} text-[--blue3] lg:text-[1vw] md:text-[1.8vw] text-[3vw]  `}>Partnerships</div>
     <div className='h-full flex flex-col justify-end '>
-        <div className={`${Clash.className} text-[--blue3] text-[3vw]`}>000+</div>
-        <div className={`${Clash.className} text-[1vw] text-[--blue3] leading-[0]`}>completed annually</div>
+        <div className={`${Clash.className} text-[--blue3] lg:text-[3vw] md:text-[3.5vw] text-[6vw] text-right md:text-left`}>000+</div>
+        <div className={`${Clash.className} lg:text-[1vw] md:text-[1.8vw] text-[3vw] text-[--blue3] leading-[0] pb-[2vw] md:pb-0`}>Airlines Connected</div>
     </div>
 
 </div>
-                <div className=' h-[47%] bg-[--blue3] rounded-2xl px-[2vw] '>
-                    <div className={`flex  items-center justify-between  w-full h-full ${Clash.className} text-white`}>
-                        <div className='text-[7vw] '>20+</div>
-                        <div className='text-[4vw] md:text-[1.3vw] w-[50%] -mr-[1vw]'>years of expertise to deliver on time and within budget</div>
+                <div className=' h-[64%] bg-[--blue3] rounded-2xl md:px-[1vw] px-[3vw] '>
+                    <div className={`${Clash.className} text-[#c8c8c8] lg:text-[1vw] md:text-[1.8vw] text-[3vw] md:py-[1vw] py-[3vw]`}>Trusted Partner</div>
+                    <div className='flex justify-center items-center h-[90%] relative'>
+                        <div className={` md:text-[1.6vw] text-[4vw] text-white absolute  top-14 left-0   `}>
+                            <img src="/images/inv.png" alt="" />
+                        </div>
+                        <div className={`${ClashM.className} px-3   md:text-[1.6vw] md:text-center text-[4vw] text-white `}>From booking to delivery, every detail is managed with care.</div>
+                        <div className='absolute bottom-14 right-0 scale-x-[-1] scale-y-[-1]'><img  className='' src="/images/inv.png" alt="" /></div>
                     </div>
                 </div>
                 </div>
             </div>
-            <div className='w-[32.5%]  relative h-full overflow-hidden rounded-2xl flex flex-col justify-end'>
+            <div className='md:w-[32.5%] w-full  relative h-full overflow-hidden rounded-2xl flex flex-col justify-end'>
             <img src='/images/card2.webp' className='w-full  absolute inset-0 z-[-1]'/>
-                <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] p-[1.5vw]`}>Unique Logistics</div>
+                <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>Unique Logistics</div>
             </div>
-        </div> */}
-        <div className='flex w-full md:flex-row flex-col md:h-[28vw] justify-between my-[4vw] gap-4 md:gap-0'>
-          
-          <div className='w-full md:w-[32.5%] h-[70vw] md:h-full relative overflow-hidden rounded-2xl flex flex-col justify-end'>
-            <img src='/images/card1.webp' className='absolute w-full h-full object-cover inset-0 z-[-1]'/>
-            <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] p-[3vw] md:p-[1.5vw]`}>
-              Tailored Solutions
-            </div>
-          </div>
-    
-          <div className='w-full md:w-[32.5%] h-[70vw] md:h-full rounded-2xl'> 
-            <div className='flex flex-col h-full justify-between'>
-              <div className={`${Clash.className} w-full h-[48%] rounded-2xl border relative border-[#c8c8c8] overflow-hidden flex justify-between text-[--blue2] p-[3vw] md:p-[1.5vw]`}>
-                <video 
-                  className="w-full h-full object-cover scale-[3] absolute right-52 opacity-25 z-[-1]"
-                  src="/videos/air.mp4"
-                  muted
-                  playsInline
-                  autoPlay
-                  loop
-                />
-    
-                <div className={`${Clash.className} text-[--blue3] md:text-[1vw] text-[3vw]`}>
-                  Global Operations
-                </div>
-                <div className='h-full flex flex-col justify-end'>
-                  <div className={`${Clash.className} text-[--blue3] text-[8vw] md:text-[3vw]`}>
-                    000+
-                  </div>
-                  <div className={`${Clash.className} md:text-[1vw] pb-[1vw] md:pb-0 text-[3vw] text-[--blue3] leading-[0]`}>
-                    completed annually
-                  </div>
-                </div>
-              </div>
-    
-              <div className='h-[47%] bg-[--blue3] rounded-2xl md:px-[2vw] px-[4vw]'>
-                <div className={`flex items-center justify-between w-full h-full ${Clash.className} text-white`}>
-                  <div className='text-[10vw] md:text-[4vw]'>20+</div>
-                  <div className='text-[4vw] md:text-[1.3vw] w-[50%] -mr-[1vw]'>
-                    years of expertise to deliver on time and within budget
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <div className='w-full md:w-[32.5%] h-[70vw] md:h-full relative overflow-hidden rounded-2xl flex flex-col justify-end'>
-            <img src='/images/card2.webp' className='absolute w-full h-full object-cover inset-0 z-[-1]'/>
-            <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] p-[3vw] md:p-[1.5vw]`}>
-              Unique Logistics
-            </div>
-          </div>
-    
         </div>
     </div>
     <Footer/>

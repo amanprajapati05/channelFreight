@@ -298,14 +298,16 @@ useGSAP(() => {
                             <div className='relative' style={{ height: '26vw' }}>
                             <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                                    <img src="/images/img138.png" className='w-full h-full' alt="" />
+                                    <img src="/images/services/service/air.webp" className='w-full h-full' alt="" />
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                                    <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Air Freight</div>
                                     <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(0)}
                                         onMouseLeave={() => handleLeave(0)}>
-                                        <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                        <div className='text-[--blue3] text-[5vw] hidden md:block  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
                                         <div    ref={addToButtonRefs}   className='cursor-pointer flex xl:text-[1vw] md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] w-fit bg-[--blue3] text-[#ffffff]  px-4 py-2 rounded-full items-center justify-center'  style={{ opacity: 0,display: 'none', transform: 'translateY(30px)' }}>View More</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                     </div>
                                 </div>
                             </div>
@@ -313,29 +315,15 @@ useGSAP(() => {
                             <div className='relative' style={{ height: '26vw' }}>
                             <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                                    <img src="/images/img138.png" className='w-full h-full' alt="" />
+                                    <img src="/images/services/service/sea.webp" className='w-full h-full' alt="" />
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                                    <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Sea Freight</div>
                                     <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(1)}
                                         onMouseLeave={() => handleLeave(1)}>
-                                        <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                        <div    ref={addToButtonRefs}   className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white'  style={{ opacity: 0,display: 'none', transform: 'translateY(30px)' }}>View More</div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-            
-                            {/* <div className='relative' style={{ height: '26vw' }}>
-                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
-                                <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                                    <img src="/images/img138.png" className='w-full h-full' alt="" />
-                                </div>
-                                <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                                    <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                                    <div className='flex flex-col gap-[3vw]'>
-                                        <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                        <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                     </div>
                                 </div>
                             </div>
@@ -343,13 +331,15 @@ useGSAP(() => {
                             <div className='relative' style={{ height: '26vw' }}>
                             <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                                    <img src="/images/img138.png" className='w-full h-full' alt="" />
+                                    <img src="/images/services/service/supply.webp" className='w-full h-full' alt="" />
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                                    <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                                    <div className='flex flex-col gap-[3vw]'>
-                                        <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                        <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Supply Chain</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(2)}
+                                        onMouseLeave={() => handleLeave(2)}>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                     </div>
                                 </div>
                             </div>
@@ -357,13 +347,15 @@ useGSAP(() => {
                             <div className='relative' style={{ height: '26vw' }}>
                             <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                                    <img src="/images/img138.png" className='w-full h-full' alt="" />
+                                    <img src="/images/services/service/project.webp" className='w-full h-full' alt="" />
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                                    <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                                    <div className='flex flex-col gap-[3vw]'>
-                                        <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                        <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Project Logistics</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(3)}
+                                        onMouseLeave={() => handleLeave(3)}>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                     </div>
                                 </div>
                             </div>
@@ -371,13 +363,15 @@ useGSAP(() => {
                             <div className='relative' style={{ height: '26vw' }}>
                             <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                                    <img src="/images/img138.png" className='w-full h-full' alt="" />
+                                    <img src="/images/services/service/customs.webp" className='w-full h-full' alt="" />
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                                    <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                                    <div className='flex flex-col gap-[3vw]'>
-                                        <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                        <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Customs Brokerage</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(4)}
+                                        onMouseLeave={() => handleLeave(4)}>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                     </div>
                                 </div>
                             </div>
@@ -385,17 +379,52 @@ useGSAP(() => {
                             <div className='relative' style={{ height: '26vw' }}>
                             <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                                    <img src="/images/img138.png" className='w-full h-full' alt="" />
+                                    <img src="/images/services/service/cross.webp" className='w-full h-full' alt="" />
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
-                                    <div className={`${ClashM.className} text-[3vw] text-[--blue3] `}>Air Freight</div>
-                                    <div className='flex flex-col gap-[3vw]'>
-                                        <div className='text-[--blue3] text-[1.4vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                        <div className='bg-[--blue3] px-2 py-1 w-fit rounded-full text-white '>View More</div>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Cross Trade</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(5)}
+                                        onMouseLeave={() => handleLeave(5)}>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                     </div>
                                 </div>
                             </div>
-                            </div> */}
+                            </div>
+                            <div className='relative' style={{ height: '26vw' }}>
+                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                                <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
+                                    <img src="/images/services/service/charter.webp" className='w-full h-full' alt="" />
+                                </div>
+                                <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Charter Services</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(5)}
+                                        onMouseLeave={() => handleLeave(5)}>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div className='relative' style={{ height: '26vw' }}>
+                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                                <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
+                                    <img src="/images/services/service/value.webp" className='w-full h-full' alt="" />
+                                </div>
+                                <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
+                                    <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[--blue3] `}>Value Added Services</div>
+                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(6)}
+                                        onMouseLeave={() => handleLeave(6)}>
+                                        <div className='hidden md:block text-[--blue3] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                           
                             </div>
                            
                         </div>

@@ -14,27 +14,6 @@ const NavItem = ({ children, onMouseEnter, isActive, isPersistent,link }) => {
   const underlineRef = useRef(null)
   const isCurrentRoute = pathname === link
 
-  // useEffect(() => {
-  //   if (isPersistent) {
-  //     gsap.to(underlineRef.current, {
-  //       width: "100%",
-  //       left: "0%",
-  //       duration: 0.3,
-  //       ease: "power2.out"
-  //     });
-  //   } else {
-  //     gsap.to(underlineRef.current, {
-  //       width: "0%",
-  //       left: "100%",
-  //       duration: 0.3,
-  //       ease: "power2.out",
-  //       onComplete: () => {
-  //         gsap.set(underlineRef.current, { left: "0%" });
-  //       }
-  //     });
-  //   }
-  // }, [isPersistent]);
-
   useEffect(() => {
     if (isPersistent || isCurrentRoute) {
       gsap.to(underlineRef.current, {
