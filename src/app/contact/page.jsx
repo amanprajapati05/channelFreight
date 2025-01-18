@@ -24,7 +24,7 @@ const page = () => {
       <div className="absolute w-full top-0 z-50">
         <Navbar />
       </div>
-      <div className="bg-[--blue3] -mb-1 h-full md:px-[2vw] lg:px-[4vw] px-4 pt-[45vw] sm:pt-[30vw] md:pt-[12vw]">
+      <div className="bg-[#02123b] -mb-1 h-full md:px-[2vw] lg:px-[4vw] px-4 pt-[45vw] sm:pt-[30vw] md:pt-[12vw]">
         <div className="flex flex-col gap-[10vw] sm:gap-[6vw] md:gap-[4vw]">
           <div
             className={` ${Clash.className} text-white text-[10vw] lg:text-[6vw] md:text-[8vw] h-auto md:h-[50%] uppercase`}

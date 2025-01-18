@@ -162,7 +162,7 @@
 // // //       ref={sectionRef} 
 // // //       className="relative z-50"
 // // //     >
-// // //       <div className="w-full flex md:flex-row flex-col items-center justify-center gap-8 bg-[--blue3] py-16">
+// // //       <div className="w-full flex md:flex-row flex-col items-center justify-center gap-8 bg-[#02123b] py-16">
 // // //         {stats.map((stat, index) => (
 // // //           <CircularStat 
 // // //             key={index}
@@ -338,7 +338,7 @@
 // //       ref={sectionRef} 
 // //       className="relative z-50"
 // //     >
-// //       <div className="w-full flex md:flex-row flex-col items-center justify-center gap-8 bg-[--blue3] py-16">
+// //       <div className="w-full flex md:flex-row flex-col items-center justify-center gap-8 bg-[#02123b] py-16">
 // //         {stats.map((stat, index) => (
 // //           <CircularStat 
 // //             key={index}
@@ -544,7 +544,7 @@
 //       ref={sectionRef} 
 //       className="relative z-50 stats-section"
 //     >
-//       <div className="w-full flex md:flex-row flex-col items-center justify-center gap-8 bg-[--blue3] py-16">
+//       <div className="w-full flex md:flex-row flex-col items-center justify-center gap-8 bg-[#02123b] py-16">
 //         {stats.map((stat, index) => (
 //           <CircularStat 
 //             key={index}
@@ -744,7 +744,7 @@ const StatsSection = () => {
       ref={sectionRef} 
       className="relative z-50 stats-section"
     >
-      <div className="w-full flex md:flex-row flex-col items-center justify-center gap-8 bg-[--blue3] py-16">
+      <div className="w-full flex md:flex-row flex-col items-center justify-center gap-8 bg-[#02123b] py-16">
         {stats.map((stat, index) => (
           <CircularStat 
             key={index}

@@ -54,14 +54,14 @@
 //         rotate: 50,
 //         y: 2,
 //         duration: 0.6,
-//         backgroundColor: "var(--blue3)"
+//         backgroundColor: "var(#02123b)"
 //       }, "-=0.6");
       
 //       tl.to(hamburgerLinesRef.current[1], {
 //         rotate: -50,
 //         y: -2,
 //         duration: 0.6,
-//         backgroundColor: "var(--blue3)"
+//         backgroundColor: "var(#02123b)"
 //       }, "-=0.6");
 
 //     } else {
@@ -117,7 +117,7 @@
 //           </div>
 //           <button
 //             onClick={toggleNav}
-//             className={`md:hidden h-fit text-center flex gap-2 items-center border px-2 py-1 rounded ${isOpen ? 'text-[--blue3] border-[--blue3]' : 'text-white border-white'}`}
+//             className={`md:hidden h-fit text-center flex gap-2 items-center border px-2 py-1 rounded ${isOpen ? 'text-[#02123b] border-[#02123b]' : 'text-white border-white'}`}
 //           >
 //             <div className={`${ClashM.className} text-base tracking-wider`}>
 //               {isOpen ? 'Close' : 'Menu'}
@@ -142,7 +142,7 @@
 //         className="fixed pt-[20vw] left-0 w-full h-screen bg-white md:hidden overflow-y-auto z-[9999]"
 //       >
 //         {/* Scrollable Menu Items Container */}
-//         <div className={`${Clash.className} flex flex-col text-[--blue3] text-[7.5vw] px-2 pt-4 pb-20`}>
+//         <div className={`${Clash.className} flex flex-col text-[#02123b] text-[7.5vw] px-2 pt-4 pb-20`}>
 //           <Link href='/' className="flex items-center h-fit gap-1">
 //             HOME
 //             <ArrowUpRight size={28} />
@@ -253,14 +253,14 @@ const MobileNavbar = () => {
         rotate: 50,
         y: 2,
         duration: 0.6,
-        backgroundColor: "var(--blue3)"
+        backgroundColor: "var(#02123b)"
       }, "-=0.6");
       
       tl.to(hamburgerLinesRef.current[1], {
         rotate: -50,
         y: -2,
         duration: 0.6,
-        backgroundColor: "var(--blue3)"
+        backgroundColor: "var(#02123b)"
       }, "-=0.6");
 
     } else {
@@ -303,7 +303,7 @@ const MobileNavbar = () => {
           </div>
           <button
             onClick={toggleNav}
-            className={`md:hidden h-fit text-center flex gap-2 items-center border px-2 py-1 rounded ${isOpen ? 'text-[--blue3] border-[--blue3]' : 'text-white border-white'}`}
+            className={`md:hidden h-fit text-center flex gap-2 items-center border px-2 py-1 rounded ${isOpen ? 'text-[#02123b] border-[#02123b]' : 'text-white border-white'}`}
           >
             <div className={`${ClashM.className} text-base tracking-wider`}>
               {isOpen ? 'Close' : 'Menu'}
@@ -326,7 +326,7 @@ const MobileNavbar = () => {
         ref={navRef}
         className="fixed pt-[20vw] left-0 w-full h-screen bg-white md:hidden overflow-y-auto z-[9999]"
       >
-        <div className={`${Clash.className} flex flex-col text-[--blue3] text-[7.5vw] px-2 pt-4 pb-20`}>
+        <div className={`${Clash.className} flex flex-col text-[#02123b] text-[7.5vw] px-2 pt-4 pb-20`}>
           <Link href='/' className="flex items-center h-fit gap-1">
             HOME
             {isActivePath('/') && <ArrowUpRight size={28} weight="bold" />}

@@ -104,7 +104,7 @@
 //             ease: 'power2.in'
 //           })
 //           .to(titleRef.current, {
-//             color: 'var(--blue3)',
+//             color: 'var(#02123b)',
 //             y: 0,
 //             opacity: 1,
 //             duration: 0.3,
@@ -161,11 +161,11 @@
 //       ref={cardRef}
 //       onMouseEnter={() => setHoveredCard(index)}
 //       onMouseLeave={() => setHoveredCard(null)}
-//       className="rounded-xl flex-shrink-0 overflow-hidden w-[80vw] h-[80vw] lg:w-[28vw] md:w-[31vw] md:h-[31vw] lg:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[--blue3]"
+//       className="rounded-xl flex-shrink-0 overflow-hidden w-[80vw] h-[80vw] lg:w-[28vw] md:w-[31vw] md:h-[31vw] lg:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]"
 //     >
 //       <div
 //         ref={backgroundRef}
-//         className="absolute inset-0 bg-[--blue3] opacity-0 -bottom-14 scale-0 rounded-full"
+//         className="absolute inset-0 bg-[#02123b] opacity-0 -bottom-14 scale-0 rounded-full"
 //       />
 //       <div className="flex flex-col justify-between h-full">
 //         <div className="flex justify-end md:my-[1.2vw] mx-[6vw] my-[6vw] md:mx-[1.6vw]">
@@ -188,7 +188,7 @@
 //         </div>
 //         <div
 //           ref={titleRef}
-//           className={`${Clash.className} text-[--blue3] md:my-[1.2vw] mx-[6vw] my-[6vw] md:mx-[1.6vw] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}
+//           className={`${Clash.className} text-[#02123b] md:my-[1.2vw] mx-[6vw] my-[6vw] md:mx-[1.6vw] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}
 //         >
 //           {title}
 //         </div>
@@ -303,7 +303,7 @@ const AnimatedCard = ({ title, content, index, Clash }) => {
             ease: 'power2.in'
           })
           .to(titleRef.current, {
-            color: 'var(--blue3)',
+            color: 'var(#02123b)',
             y: 0,
             opacity: 1,
             duration: 0.3,
@@ -357,11 +357,11 @@ const AnimatedCard = ({ title, content, index, Clash }) => {
       ref={cardRef}
       onMouseEnter={() => setHoveredCard(index)}
       onMouseLeave={() => setHoveredCard(null)}
-      className="rounded-xl flex-shrink-0 overflow-hidden w-[80vw] h-[80vw] lg:w-[28vw] md:w-[31vw] md:h-[31vw] lg:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[--blue3]"
+      className="rounded-xl flex-shrink-0 overflow-hidden w-[80vw] h-[80vw] lg:w-[28vw] md:w-[31vw] md:h-[31vw] lg:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]"
     >
       <div
         ref={backgroundRef}
-        className="absolute inset-0 bg-[--blue3] opacity-0 -bottom-14 scale-0 rounded-full"
+        className="absolute inset-0 bg-[#02123b] opacity-0 -bottom-14 scale-0 rounded-full"
       />
       
       <div className="flex justify-end md:my-[1.2vw] mx-[6vw] my-[6vw] md:mx-[1.6vw] icon-container">
@@ -385,7 +385,7 @@ const AnimatedCard = ({ title, content, index, Clash }) => {
 
       <div
         ref={titleRef}
-        className={`${Clash.className} absolute text-[--blue3] mx-[6vw] my-[6vw] md:my-[2vw] md:mx-[1.6vw] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2] bottom-0`}
+        className={`${Clash.className} absolute text-[#02123b] mx-[6vw] my-[6vw] md:my-[2vw] md:mx-[1.6vw] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2] bottom-0`}
       >
         {title}
       </div>

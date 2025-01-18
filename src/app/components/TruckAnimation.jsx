@@ -105,17 +105,17 @@
 // // // // // // // // //   return (
 // // // // // // // // //     <div 
 // // // // // // // // //       ref={containerRef} 
-// // // // // // // // //       className="w-full  bg-[--blue3]"
+// // // // // // // // //       className="w-full  bg-[#02123b]"
 // // // // // // // // //     >
 // // // // // // // // //       <canvas
 // // // // // // // // //         ref={canvasRef}
 // // // // // // // // //         className="w-full h-full"
 // // // // // // // // //       />
-// // // // // // // // //     <div className='absolute left-14 rounded-xl w-[60vw] h-[60vw] lg:w-[23vw] md:w-[25vw] md:h-[25vw] lg:h-[23vw] sm:w-[40vw] sm:h-[40vw]  border border-[--blue3]'>
+// // // // // // // // //     <div className='absolute left-14 rounded-xl w-[60vw] h-[60vw] lg:w-[23vw] md:w-[25vw] md:h-[25vw] lg:h-[23vw] sm:w-[40vw] sm:h-[40vw]  border border-[#02123b]'>
 // // // // // // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // // // // // //         <div className='flex flex-col gap-[1vw]'>
 // // // // // // // // //         <div 
-// // // // // // // // //             className={`bg-[--blue3]  w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300`}
+// // // // // // // // //             className={`bg-[#02123b]  w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300`}
 // // // // // // // // //           >
 // // // // // // // // //             <ArrowUpRight
               
@@ -125,7 +125,7 @@
 // // // // // // // // //           </div>
 // // // // // // // // //           <div
           
-// // // // // // // // //           className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}
+// // // // // // // // //           className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}
 // // // // // // // // //         >
 // // // // // // // // //           Sustainability Concerns
 // // // // // // // // //         </div>
@@ -138,11 +138,11 @@
 // // // // // // // // //       </div>
 // // // // // // // // //         </div>
 // // // // // // // // //     </div>
-// // // // // // // // //     <div className='absolute left-14 rounded-xl w-[60vw] h-[60vw] lg:w-[23vw] md:w-[25vw] md:h-[25vw] lg:h-[23vw] sm:w-[40vw] sm:h-[40vw]  border border-[--blue3]'>
+// // // // // // // // //     <div className='absolute left-14 rounded-xl w-[60vw] h-[60vw] lg:w-[23vw] md:w-[25vw] md:h-[25vw] lg:h-[23vw] sm:w-[40vw] sm:h-[40vw]  border border-[#02123b]'>
 // // // // // // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // // // // // //         <div className='flex flex-col gap-[1vw]'>
 // // // // // // // // //         <div 
-// // // // // // // // //             className={`bg-[--blue3]  w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300`}
+// // // // // // // // //             className={`bg-[#02123b]  w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300`}
 // // // // // // // // //           >
 // // // // // // // // //             <ArrowUpRight
               
@@ -152,7 +152,7 @@
 // // // // // // // // //           </div>
 // // // // // // // // //           <div
           
-// // // // // // // // //           className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}
+// // // // // // // // //           className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}
 // // // // // // // // //         >
 // // // // // // // // //           Sustainability Concerns
 // // // // // // // // //         </div>
@@ -165,11 +165,11 @@
 // // // // // // // // //       </div>
 // // // // // // // // //         </div>
 // // // // // // // // //     </div>
-// // // // // // // // //     <div className='absolute left-14 rounded-xl w-[60vw] h-[60vw] lg:w-[23vw] md:w-[25vw] md:h-[25vw] lg:h-[23vw] sm:w-[40vw] sm:h-[40vw]  border border-[--blue3]'>
+// // // // // // // // //     <div className='absolute left-14 rounded-xl w-[60vw] h-[60vw] lg:w-[23vw] md:w-[25vw] md:h-[25vw] lg:h-[23vw] sm:w-[40vw] sm:h-[40vw]  border border-[#02123b]'>
 // // // // // // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // // // // // //         <div className='flex flex-col gap-[1vw]'>
 // // // // // // // // //         <div 
-// // // // // // // // //             className={`bg-[--blue3]  w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300`}
+// // // // // // // // //             className={`bg-[#02123b]  w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300`}
 // // // // // // // // //           >
 // // // // // // // // //             <ArrowUpRight
               
@@ -179,7 +179,7 @@
 // // // // // // // // //           </div>
 // // // // // // // // //           <div
           
-// // // // // // // // //           className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}
+// // // // // // // // //           className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}
 // // // // // // // // //         >
 // // // // // // // // //           Sustainability Concerns
 // // // // // // // // //         </div>
@@ -328,7 +328,7 @@
 // // // // // // // //       <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // // // // //         <div className='flex flex-col gap-[1vw]'>
 // // // // // // // //           <div className='bg-white w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
-// // // // // // // //             <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-[--blue3]' />
+// // // // // // // //             <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-[#02123b]' />
 // // // // // // // //           </div>
 // // // // // // // //           <div className={`${Clash.className} text-white text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // // // // // //             Sustainability Concerns
@@ -342,7 +342,7 @@
 // // // // // // // //   );
 
 // // // // // // // //   return (
-// // // // // // // //     <div ref={containerRef} className="w-full h-screen bg-[--blue3]">
+// // // // // // // //     <div ref={containerRef} className="w-full h-screen bg-[#02123b]">
 // // // // // // // //       <canvas ref={canvasRef} className="w-full h-full" />
 // // // // // // // //       <Card ref={card1Ref} className="left-14 top-1/4" />
 // // // // // // // //       <Card ref={card2Ref} className="right-14 top-1/4" />
@@ -504,7 +504,7 @@
 // // // // // // //   return (
 // // // // // // //     <div 
 // // // // // // //       ref={containerRef} 
-// // // // // // //       className="w-full h-screen bg-[--blue3]"
+// // // // // // //       className="w-full h-screen bg-[#02123b]"
 // // // // // // //     >
 // // // // // // //       <canvas
 // // // // // // //         ref={canvasRef}
@@ -645,21 +645,21 @@
 // // // // // // //   }, []);
 
 // // // // // // //   return (
-// // // // // // //     <div ref={containerRef} className="w-full h-screen bg-[--blue3] relative">
+// // // // // // //     <div ref={containerRef} className="w-full h-screen bg-[#02123b] relative">
 // // // // // // //       <canvas ref={canvasRef} className="w-full h-full absolute top-0 left-0" />
       
 // // // // // // //       {/* Cards using your exact design */}
 // // // // // //     //   <div ref={card1Ref} className="absolute bg-white left-[10vw] top-[25vw] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 // // // // // //     //     <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // // //     //       <div className='flex flex-col gap-[1vw]'>
-// // // // // //     //         <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+// // // // // //     //         <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 // // // // // //     //           <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 // // // // // //     //         </div>
-// // // // // //     //         <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+// // // // // //     //         <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // // // //     //           Sustainability Concerns
 // // // // // //     //         </div>
 // // // // // //     //       </div>
-// // // // // //     //       <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+// // // // // //     //       <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 // // // // // //     //         Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 // // // // // //     //       </div>
 // // // // // //     //     </div>
@@ -668,14 +668,14 @@
 // // // // // //     //   <div ref={card2Ref} className="absolute bg-white right-[10vw] top-[30vw] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[28vw] md:h-[28vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 // // // // // //     //     <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // // //     //       <div className='flex flex-col gap-[1vw]'>
-// // // // // //     //         <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+// // // // // //     //         <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 // // // // // //     //           <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 // // // // // //     //         </div>
-// // // // // //     //         <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+// // // // // //     //         <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // // // //     //           Sustainability Concerns
 // // // // // //     //         </div>
 // // // // // //     //       </div>
-// // // // // //     //       <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+// // // // // //     //       <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 // // // // // //     //         Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 // // // // // //     //       </div>
 // // // // // //     //     </div>
@@ -684,14 +684,14 @@
 // // // // // //     //   <div ref={card3Ref} className="absolute bg-white right-[10vw] top-[20vw] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 // // // // // //     //     <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // // //     //       <div className='flex flex-col gap-[1vw]'>
-// // // // // //     //         <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+// // // // // //     //         <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 // // // // // //     //           <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 // // // // // //     //         </div>
-// // // // // //     //         <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+// // // // // //     //         <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // // // //     //           Sustainability Concerns
 // // // // // //     //         </div>
 // // // // // //     //       </div>
-// // // // // //     //       <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+// // // // // //     //       <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 // // // // // //     //         Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 // // // // // //     //       </div>
 // // // // // //     //     </div>
@@ -825,21 +825,21 @@
 // // // // // //   }, []);
 
 // // // // // //   return (
-// // // // // //     <div ref={containerRef} className="w-full h-screen bg-[--blue3] relative">
+// // // // // //     <div ref={containerRef} className="w-full h-screen bg-[#02123b] relative">
 // // // // // //       <canvas ref={canvasRef} className="w-full h-full absolute top-0 left-0" />
       
 // // // // // //       {/* Cards using your exact design */}
 // // // // // //       <div ref={card1Ref} className="absolute bg-white left-[10vw] top-[40%] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 // // // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // // //           <div className='flex flex-col gap-[1vw]'>
-// // // // // //             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+// // // // // //             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 // // // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 // // // // // //             </div>
-// // // // // //             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+// // // // // //             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // // // //               Sustainability Concerns
 // // // // // //             </div>
 // // // // // //           </div>
-// // // // // //           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+// // // // // //           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 // // // // // //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 // // // // // //           </div>
 // // // // // //         </div>
@@ -848,14 +848,14 @@
 // // // // // //       <div ref={card2Ref} className="absolute bg-white right-[10vw] top-[30vw] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[28vw] md:h-[28vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 // // // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // // //           <div className='flex flex-col gap-[1vw]'>
-// // // // // //             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+// // // // // //             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 // // // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 // // // // // //             </div>
-// // // // // //             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+// // // // // //             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // // // //               Sustainability Concerns
 // // // // // //             </div>
 // // // // // //           </div>
-// // // // // //           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+// // // // // //           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 // // // // // //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 // // // // // //           </div>
 // // // // // //         </div>
@@ -864,14 +864,14 @@
 // // // // // //       <div ref={card3Ref} className="absolute bg-white right-[10vw] top-[20vw] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 // // // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // // //           <div className='flex flex-col gap-[1vw]'>
-// // // // // //             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+// // // // // //             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 // // // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 // // // // // //             </div>
-// // // // // //             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+// // // // // //             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // // // //               Sustainability Concerns
 // // // // // //             </div>
 // // // // // //           </div>
-// // // // // //           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+// // // // // //           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 // // // // // //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 // // // // // //           </div>
 // // // // // //         </div>
@@ -1005,7 +1005,7 @@
 // // // // //   }, []);
 
 // // // // //   return (
-// // // // //     <div ref={containerRef} className="w-full h-screen bg-[--blue3] relative">
+// // // // //     <div ref={containerRef} className="w-full h-screen bg-[#02123b] relative">
 // // // // //       <canvas ref={canvasRef} className="w-full h-full absolute top-0 left-0" />
       
 // // // // //       {/* Cards using your exact design */}
@@ -1013,7 +1013,7 @@
 // // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // //           <div className='flex flex-col gap-[1vw]'>
 // // // // //             <div className='bg-white w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
-// // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-[--blue3]' />
+// // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-[#02123b]' />
 // // // // //             </div>
 // // // // //             <div className={`${Clash.className} text-white text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // // //               Sustainability Concerns
@@ -1029,7 +1029,7 @@
 // // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // //           <div className='flex flex-col gap-[1vw]'>
 // // // // //             <div className='bg-white w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
-// // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-[--blue3]' />
+// // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-[#02123b]' />
 // // // // //             </div>
 // // // // //             <div className={`${Clash.className} text-white text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // // //               Sustainability Concerns
@@ -1045,7 +1045,7 @@
 // // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // // //           <div className='flex flex-col gap-[1vw]'>
 // // // // //             <div className='bg-white w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
-// // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-[--blue3]' />
+// // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-[#02123b]' />
 // // // // //             </div>
 // // // // //             <div className={`${Clash.className} text-white text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // // //               Sustainability Concerns
@@ -1185,21 +1185,21 @@
 // // // //   }, []);
 
 // // // //   return (
-// // // //     <div ref={containerRef} className="w-full h-screen bg-[--blue3] relative">
+// // // //     <div ref={containerRef} className="w-full h-screen bg-[#02123b] relative">
 // // // //       <canvas ref={canvasRef} className="w-full h-full absolute top-0 left-0" />
       
 // // // //       {/* Cards using your exact design */}
 // // // //       <div ref={card1Ref} className="absolute bg-white left-[10vw] top-[40%] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // //           <div className='flex flex-col gap-[1vw]'>
-// // // //             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+// // // //             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 // // // //             </div>
-// // // //             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+// // // //             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // //               Sustainability Concerns
 // // // //             </div>
 // // // //           </div>
-// // // //           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+// // // //           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 // // // //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 // // // //           </div>
 // // // //         </div>
@@ -1208,14 +1208,14 @@
 // // // //       <div ref={card2Ref} className="absolute bg-white right-[10vw] top-[40%] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[28vw] md:h-[28vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // //           <div className='flex flex-col gap-[1vw]'>
-// // // //             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+// // // //             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 // // // //             </div>
-// // // //             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+// // // //             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // //               Sustainability Concerns
 // // // //             </div>
 // // // //           </div>
-// // // //           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+// // // //           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 // // // //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 // // // //           </div>
 // // // //         </div>
@@ -1224,14 +1224,14 @@
 // // // //       <div ref={card3Ref} className="absolute bg-white right-[10vw] top-[30%]  rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 // // // //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 // // // //           <div className='flex flex-col gap-[1vw]'>
-// // // //             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+// // // //             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 // // // //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 // // // //             </div>
-// // // //             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+// // // //             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 // // // //               Sustainability Concerns
 // // // //             </div>
 // // // //           </div>
-// // // //           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+// // // //           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 // // // //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 // // // //           </div>
 // // // //         </div>
@@ -1382,21 +1382,21 @@ const TruckAnimation = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="w-full h-screen bg-[--blue3] relative">
+    <div ref={containerRef} className="w-full h-screen bg-[#02123b] relative">
       <canvas ref={canvasRef} className="w-full h-full absolute top-0 left-0" />
       
       {/* Cards using your exact design */}
       <div ref={card1Ref} className="absolute bg-white left-[10vw] top-[40%] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
           <div className='flex flex-col gap-[1vw]'>
-            <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+            <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
             </div>
-            <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+            <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
               Sustainability Concerns
             </div>
           </div>
-          <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+          <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
           </div>
         </div>
@@ -1405,14 +1405,14 @@ const TruckAnimation = () => {
       <div ref={card2Ref} className="absolute bg-white right-[10vw] top-[30vw] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[28vw] md:h-[28vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
           <div className='flex flex-col gap-[1vw]'>
-            <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+            <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
             </div>
-            <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+            <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
               Sustainability Concerns
             </div>
           </div>
-          <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+          <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
           </div>
         </div>
@@ -1421,14 +1421,14 @@ const TruckAnimation = () => {
       <div ref={card3Ref} className="absolute bg-white right-[10vw] top-[20vw] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
           <div className='flex flex-col gap-[1vw]'>
-            <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+            <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
             </div>
-            <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+            <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
               Sustainability Concerns
             </div>
           </div>
-          <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+          <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
           </div>
         </div>
@@ -1631,21 +1631,21 @@ export default TruckAnimation;
 //   }, []);
 
 //   return (
-//     <div ref={containerRef} className="w-full h-screen bg-[--blue3] relative">
+//     <div ref={containerRef} className="w-full h-screen bg-[#02123b] relative">
 //       <canvas ref={canvasRef} className="w-full h-full absolute top-0 left-0" />
       
 //       {/* Cards using your exact design */}
 //       <div ref={card1Ref} className="absolute bg-white left-[10vw] top-[40%] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 //           <div className='flex flex-col gap-[1vw]'>
-//             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+//             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 //             </div>
-//             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+//             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 //               Sustainability Concerns
 //             </div>
 //           </div>
-//           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+//           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 //           </div>
 //         </div>
@@ -1654,14 +1654,14 @@ export default TruckAnimation;
 //       <div ref={card2Ref} className="absolute bg-white right-[10vw] top-[30vw] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[28vw] md:h-[28vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 //           <div className='flex flex-col gap-[1vw]'>
-//             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+//             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 //             </div>
-//             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+//             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 //               Sustainability Concerns
 //             </div>
 //           </div>
-//           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+//           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 //           </div>
 //         </div>
@@ -1670,14 +1670,14 @@ export default TruckAnimation;
 //       <div ref={card3Ref} className="absolute bg-white right-[10vw] top-[20vw] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 //           <div className='flex flex-col gap-[1vw]'>
-//             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+//             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 //             </div>
-//             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+//             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 //               Sustainability Concerns
 //             </div>
 //           </div>
-//           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+//           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 //           </div>
 //         </div>
@@ -1880,21 +1880,21 @@ export default TruckAnimation;
 //   }, []);
 
 //   return (
-//     <div ref={containerRef} className="w-full h-screen bg-[--blue3] relative">
+//     <div ref={containerRef} className="w-full h-screen bg-[#02123b] relative">
 //       <canvas ref={canvasRef} className="w-full h-full absolute top-0 left-0" />
       
 //       {/* Cards using your exact design */}
 //       <div ref={card1Ref} className="absolute bg-white left-[10vw] top-[40%] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 //           <div className='flex flex-col gap-[1vw]'>
-//             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+//             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 //             </div>
-//             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+//             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 //               Sustainability Concerns
 //             </div>
 //           </div>
-//           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+//           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 //           </div>
 //         </div>
@@ -1903,14 +1903,14 @@ export default TruckAnimation;
 //       <div ref={card2Ref} className="absolute bg-white right-[10vw] top-[30vw] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[28vw] md:h-[28vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 //           <div className='flex flex-col gap-[1vw]'>
-//             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+//             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 //             </div>
-//             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+//             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 //               Sustainability Concerns
 //             </div>
 //           </div>
-//           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+//           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 //           </div>
 //         </div>
@@ -1919,14 +1919,14 @@ export default TruckAnimation;
 //       <div ref={card3Ref} className="absolute bg-white right-[10vw] top-[20vw] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
 //         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
 //           <div className='flex flex-col gap-[1vw]'>
-//             <div className='bg-[--blue3] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
+//             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
 //               <ArrowUpRight className='h-12 p-2 w-12 md:w-10 md:h-10 z-[222] text-white' />
 //             </div>
-//             <div className={`${Clash.className} text-[--blue3] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
+//             <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
 //               Sustainability Concerns
 //             </div>
 //           </div>
-//           <div className={`${Clash.className} text-[--blue3] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
+//           <div className={`${Clash.className} text-[#02123b] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] z-[2]`}>
 //             Our green cold chain initiatives prioritize energy-efficient solutions without compromising performance.
 //           </div>
 //         </div>

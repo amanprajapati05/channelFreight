@@ -9,8 +9,8 @@
 //         <div className=' flex md:justify-between md:items-center md:flex-row flex-col md:gap-0 gap-[8vw]'
 //         >
 //                 <div className='flex flex-col md:w-[35%]  md:gap-[1vw] gap-[2vw]'>
-//                     <div  className={`text-[--blue3] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>Why Choose Us? </div>
-//                     <div className={`text-[--blue3] ${Clash.className} text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>We’ve handled logistics for prestigious global exhibitions, earning a reputation for reliability, efficiency, and excellence. </div>
+//                     <div  className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>Why Choose Us? </div>
+//                     <div className={`text-[#02123b] ${Clash.className} text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>We’ve handled logistics for prestigious global exhibitions, earning a reputation for reliability, efficiency, and excellence. </div>
 //                     <Button text='Get In Touch' bgColor={'#02123B'} tColor={'#ffffff'} />
 //                 </div>
 //                 <div className=' flex relative md:w-[50%] h-full md:justify-end justify-center gap-[3vw] md:gap-[1vw] items-center '>
@@ -53,8 +53,8 @@ const BottomSector = ({
         <div className=' flex md:justify-between md:items-center md:flex-row flex-col md:gap-0 gap-[8vw]'
         >
                 <div className='flex flex-col md:w-[35%]  md:gap-[1vw] gap-[2vw]'>
-                    <div className={`text-[--blue3] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>{title}</div>
-                    <div className={`text-[--blue3] ${Clash.className} text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>{description}</div>
+                    <div className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>{title}</div>
+                    <div className={`text-[#02123b] ${Clash.className} text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>{description}</div>
                     <Button text={buttonText} bgColor={buttonBgColor} tColor={buttonTextColor} />
                 </div>
                 <div className=' flex relative md:w-[50%] h-full md:justify-end justify-center gap-[3vw] md:gap-[1vw] items-center '>

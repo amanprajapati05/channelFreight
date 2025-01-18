@@ -64,7 +64,7 @@ const text = [
     
     <div className='md:p-[2vw] lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
       <div className='flex flex-col justify-between h-full'>
-        <div className={`md:flex hidden md:flex-row flex-col justify-between gap-4 md:gap-0 ${Clash.className} text-[--blue3] `}>
+        <div className={`md:flex hidden md:flex-row flex-col justify-between gap-4 md:gap-0 ${Clash.className} text-[#02123b] `}>
           <div className='leading-[1.2] md:text-[4vw] text-[9vw] w-full md:w-[40%]'> Redefining Freight Excellence</div>
 
           <div className='text-[4vw] md:text-[1.3vw] w-full md:w-[40%] flex flex-col gap-4 md:gap-0 justify-between '>
@@ -136,7 +136,7 @@ const text = [
 </div>
                                 <div className='md:h-[50vw] md:hidden h-full mt-[125vw] md:mt-0 md:p-[2vw] lg:p-[4vw] px-4 py-4'>
                                     <div className='flex w-full flex-col md:justify-between md:flex-row h-full '>
-                                        <div className={`${Clash.className} flex flex-col md:flex-row md:justify-between text-[--blue3] py-[6vw]`}>
+                                        <div className={`${Clash.className} flex flex-col md:flex-row md:justify-between text-[#02123b] py-[6vw]`}>
                                             <div className='flex flex-col h-full justify-between md:w-[30%] w-full '>
                                                 <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
                                                 <div className='md:text-[2vw] text-[6vw] md:text-right'>Tailored Solutions</div>
@@ -164,7 +164,7 @@ const text = [
 
                                 <div className='md:p-[2vw] md:hidden block  lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
       <div className='flex flex-col justify-between h-full gap-4'>
-        <div className={`flex  md:flex-row flex-col justify-between gap-4 md:gap-0 ${Clash.className} text-[--blue3] `}>
+        <div className={`flex  md:flex-row flex-col justify-between gap-4 md:gap-0 ${Clash.className} text-[#02123b] `}>
           <div className='leading-[1.2] md:text-[4vw] text-[9vw] w-full md:w-[40%]'> Redefining Freight Excellence</div>
 
           <div className='text-[4vw] md:text-[1.3vw] w-full md:w-[40%] flex flex-col gap-4 md:gap-0 justify-between '>
@@ -210,7 +210,7 @@ const text = [
                         
    
     <div className='w-full h-full md:p-[2vw] lg:p-[4vw] px-4 py-4'>
-        <div className={`${Clash.className} text-[--blue3] flex flex-col w-full items-center`}>
+        <div className={`${Clash.className} text-[#02123b] flex flex-col w-full items-center`}>
             <div className='md:text-[4vw] text-[9vw] text-center'>Elevating Air Freight Excellence</div>
             <div className='text-[4vw] md:text-[1.3vw] text-[#333f5e] text-center '>Discover the stats, features, and solutions that make us your trusted air freight partner worldwide.</div>
         </div>
@@ -232,14 +232,14 @@ const text = [
         loop
     />
 
-    <div className={`${Clash.className} text-[--blue3] lg:text-[1vw] md:text-[1.8vw] text-[3vw]  `}>Partnerships</div>
+    <div className={`${Clash.className} text-[#02123b] lg:text-[1vw] md:text-[1.8vw] text-[3vw]  `}>Partnerships</div>
     <div className='h-full flex flex-col justify-end '>
-        <div className={`${Clash.className} text-[--blue3] lg:text-[3vw] md:text-[3.5vw] text-[6vw] text-right md:text-left`}>000+</div>
-        <div className={`${Clash.className} lg:text-[1vw] md:text-[1.8vw] text-[3vw] text-[--blue3] leading-[0] pb-[2vw] md:pb-0`}>Airlines Connected</div>
+        <div className={`${Clash.className} text-[#02123b] lg:text-[3vw] md:text-[3.5vw] text-[6vw] text-right md:text-left`}>000+</div>
+        <div className={`${Clash.className} lg:text-[1vw] md:text-[1.8vw] text-[3vw] text-[#02123b] leading-[0] pb-[2vw] md:pb-0`}>Airlines Connected</div>
     </div>
 
 </div>
-                <div className=' h-[64%] bg-[--blue3] rounded-2xl md:px-[1vw] px-[3vw] '>
+                <div className=' h-[64%] bg-[#02123b] rounded-2xl md:px-[1vw] px-[3vw] '>
                     <div className={`${Clash.className} text-[#c8c8c8] lg:text-[1vw] md:text-[1.8vw] text-[3vw] md:py-[1vw] py-[3vw]`}>Trusted Partner</div>
                     <div className='flex justify-center items-center h-[90%] relative'>
                         <div className={` md:text-[1.6vw] text-[4vw] text-white absolute  top-14 left-0   `}>

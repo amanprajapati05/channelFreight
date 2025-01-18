@@ -108,7 +108,7 @@
 //   });
 
 //   return (
-//     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[--blue3]">
+//     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[#02123b]">
 //       <div ref={triggerRef} className="h-full">
 //         {/* Text container that will be revealed */}
 //         <div 
@@ -263,7 +263,7 @@
 //   });
 
 //   return (
-//     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[--blue3]">
+//     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[#02123b]">
 //       <div ref={triggerRef} className="h-full">
 //         {/* Text container */}
 //         <div 
@@ -423,10 +423,10 @@ const ShipAnimation = () => {
           ref={textRef} 
           className="absolute inset-0 z-10 flex flex-col justify-center items-center h-full"
         >
-          <div className={` ${Clash.className} text-center md:text-[4vw] text-[7vw] px-2 md:px-0 text-[--blue3]`}>
+          <div className={` ${Clash.className} text-center md:text-[4vw] text-[7vw] px-2 md:px-0 text-[#02123b]`}>
             Your Cargo,
           </div>
-          <div className={`${ClashM.className} text-center md:text-[5vw] text-[10vw] text-[--blue3]`}>
+          <div className={`${ClashM.className} text-center md:text-[5vw] text-[10vw] text-[#02123b]`}>
             securely managed at every step.
           </div>
         </div>
@@ -560,7 +560,7 @@ export default ShipAnimation;
 // // // // // //   });
 
 // // // // // //   return (
-// // // // // //     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[--blue3]">
+// // // // // //     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[#02123b]">
 // // // // // //       <div ref={triggerRef} className="h-full">
 // // // // // //         {/* Static text that will be revealed */}
 // // // // // //         <div className="absolute inset-0 z-10 flex flex-col justify-center items-center h-full">
@@ -702,7 +702,7 @@ export default ShipAnimation;
 // // // // //   });
 
 // // // // //   return (
-// // // // //     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[--blue3]">
+// // // // //     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[#02123b]">
 // // // // //       <div ref={triggerRef} className="h-full">
 // // // // //         {/* Static text that will be revealed */}
 // // // // //         <div className={`${Clash.className} absolute inset-0 z-10 flex flex-col justify-center items-center h-full`}>
@@ -831,7 +831,7 @@ export default ShipAnimation;
 // // //   });
 
 // // //   return (
-// // //     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[--blue3]">
+// // //     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[#02123b]">
 // // //       <div ref={triggerRef} className="h-full">
 // // //         {/* Static text that will be revealed */}
 // // //         <div className="absolute inset-0 z-10 flex flex-col justify-center items-center h-full">
@@ -966,7 +966,7 @@ export default ShipAnimation;
 // //   });
 
 // //   return (
-// //     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[--blue3]">
+// //     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[#02123b]">
 // //       <div ref={triggerRef} className="h-full">
 // //         {/* Text is visible by default */}
 // //         <div className="absolute inset-0 z-10 flex flex-col justify-center items-center h-full">
@@ -1095,7 +1095,7 @@ export default ShipAnimation;
 //   });
 
 //   return (
-//     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[--blue3]">
+//     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[#02123b]">
 //       <div ref={triggerRef} className="h-full">
 //         {/* Text is visible by default */}
 //         <div className="absolute inset-0 z-10 flex flex-col justify-center items-center h-full">
@@ -1235,7 +1235,7 @@ export default ShipAnimation;
 //   });
 
 //   return (
-//     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[--blue3]">
+//     <div ref={containerRef} className="h-screen w-full relative overflow-hidden text-[#02123b]">
 //       <div ref={triggerRef} className="h-full">
 //         {/* Text is visible by default */}
 //         <div className="absolute inset-0 z-10 flex flex-col justify-center items-center h-full">

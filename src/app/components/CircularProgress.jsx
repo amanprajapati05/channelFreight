@@ -79,7 +79,7 @@ const CircularProgress = ({ kilometers = 777, hours = 19, progress = 55 }) => {
   return (
     <div 
       ref={wrapperRef}
-      className="w-full min-h-screen flex items-center justify-center bg-[--blue3]"
+      className="w-full min-h-screen flex items-center justify-center bg-[#02123b]"
     >
       <div 
         ref={containerRef}

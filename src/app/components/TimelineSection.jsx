@@ -79,7 +79,7 @@ const TimelineSection = () => {
   ];
 
   return (
-    <div ref={sectionRef} className="h-screen bg-[--blue3] md:px-[2vw] lg:px-[4vw] px-4">
+    <div ref={sectionRef} className="h-screen bg-[#02123b] md:px-[2vw] lg:px-[4vw] px-4">
       <div className="flex w-full h-full justify-between items-center">
         <div className="w-[30%] flex gap-[2vw] items-center">
           <div className="w-[1.8vw] h-[25vw] border-[#333f5e] flex justify-center border rounded-3xl relative">

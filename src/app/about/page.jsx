@@ -74,7 +74,7 @@ useEffect(() => {
         drawShip();
 
         // Calculate travel distance based on section height
-        const travelDistance = section.offsetHeight * 0.6; // Adjust multiplier as needed
+        const travelDistance = section.offsetHeight * 0.9; // Adjust multiplier as needed
 
         gsap.fromTo(shipDimensions, 
             { y: initialY }, // Start from initial position
@@ -125,6 +125,8 @@ useEffect(() => {
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
 }, []);
+
+
 
 
 
@@ -273,7 +275,7 @@ useEffect(() => {
    <div className='w-full '>
         
         <div className='md:h-screen h-[50vh] '>
-            <div className=' h-[100%] md:h-[100%] pb-4 md:pb-0  bg-[--blue3]'>
+            <div className=' h-[100%] md:h-[100%] pb-4 md:pb-0  bg-[#02123b]'>
                 <div className={`md:pl-[2vw] lg:pl-[4vw] px-4 md:px-0 flex flex-col md:flex-row h-[100%] gap-6 md:gap-0 justify-end md:justify-between md:items-center text-white ${Clash.className}  `}>
                     <div className=' text-[10vw] lg:text-[6vw] md:text-[8vw] h-auto md:h-[50%] uppercase'>ABOUT US</div>
                     <div className='text-base pr-[8vw]  md:w-[48%] md:text-[1.7vw] lg:text-[1.3vw] h-auto md:h-[50%] flex items-end'>As an AEO & IATA Certified Customs Clearing Agent, our credibility & goodwill are reinforced by our commitment to providing integrated logistics solutions at competitive prices.</div>
@@ -290,11 +292,11 @@ useEffect(() => {
         </div>
         </div>
 
-        <div className='flex justify-center items-center h-[60vw] md:h-[30vw] -top-1 relative bg-[--blue3] text-white'>
+        <div className='flex justify-center items-center h-[60vw] md:h-[30vw] -top-1 relative bg-[#02123b] text-white'>
             <div className=' w-[4vw] h-[4vw] absolute left-[10vw] top-[8vw] flex justify-center items-center'>
                 <img src="/images/invcommas.png" alt="" />
             </div>
-            <div className={`flex justify-center items-center h-[60vw] md:h-[30vw] bg-[--blue3] text-white ${Clash.className} px-[5vw]`}
+            <div className={`flex justify-center items-center h-[60vw] md:h-[30vw] bg-[#02123b] text-white ${Clash.className} px-[5vw]`}
             >
                 <div className='md:text-[2vw] text-[5vw] w-[75%] md:w-[70%] text-center' >To create customized solutions, provide unparalleled services at competitive costs, and foster long-term, sustainable partnerships with our clients.</div>
             </div>
@@ -304,7 +306,7 @@ useEffect(() => {
         </div>
 
 
-        <div ref={visionRef} className='bg-white text-[--blue3] w-screen h-screen '>
+        <div ref={visionRef} className='bg-white text-[#02123b] w-screen h-screen '>
             <div className='flex justify-center w-full'>
                 <div className='flex flex-col w-full  '>
             <div className={`${Clash.className} text-[8vw] text-center w-full   md:text-[5vw] lg:text-[4vw] py-[4vw]`}>Our Vision</div>
@@ -322,24 +324,11 @@ useEffect(() => {
     ref={canvasRef}
     className="fixed inset-0 pointer-events-none"
     style={{ zIndex: 10 }}
-/>
+/>  
 
-        {/* <img
-                        ref={shipRef}
-                        src="/images/ship-vertical.png"
-                        alt="Scrolling ship"
-                        className="pointer-events-none fixed z-10"
-                        style={{
-                            position: 'fixed',
-                            opacity: 0
-                        }}
-                    /> */}
-
-    
-
-  <div ref={sectionRef} className="h-screen bg-[--blue3] md:px-[2vw] lg:px-[4vw] px-4">
-        <div className="flex w-full md:flex-row flex-col h-full justify-between items-center">
-          <div className="md:w-[30%] w-full flex gap-[2vw] items-center ">
+  <div ref={sectionRef} className="h-screen bg-[#02123b] md:px-[2vw] lg:px-[4vw] px-4">
+        <div className="flex w-full md:flex-row flex-col h-full justify-between items-end md:items-center">
+          <div className="md:w-[30%] w-[70%] pt-[10vw]  md:pt-0  flex gap-[2vw] items-center ">
             <div className="w-[1.8vw] h-[25vw] border-[#333f5e] hidden md:flex justify-center border rounded-3xl relative ">
               <div 
                 ref={dotRef}
@@ -356,7 +345,7 @@ useEffect(() => {
             </div>
           </div>
   
-          <div className="w-[30%] h-full overflow-hidden relative">
+          <div className="md:w-[30%] w-[70%] h-full overflow-hidden relative">
             {/* Fixed gradient at top */}
             <div className="gradient1 w-full h-[14vw] absolute top-0 z-[2] " />
             
@@ -392,7 +381,7 @@ useEffect(() => {
 
         
 
-        <div className='md:px-[2vw] lg:px-[4vw] px-4 bg-[--blue3] pt-4 pb-[10vw] -mt-2 md:-mt-1 text-white'>
+        <div className='md:px-[2vw] lg:px-[4vw] px-4 bg-[#02123b] pt-4 pb-[10vw] -mt-2 md:-mt-1 text-white'>
             <div className={`${ClashM.className} text-white flex justify-between border-b py-2 border-[#ffffff] md:text-[1.9vw] lg:text-[1.5vw] text-lg `}>
                 <div>Airlines</div>
                 <div>Awards</div>
@@ -464,7 +453,7 @@ useEffect(() => {
         </div>
 
         <div>
-            <div className='w-full flex justify-center bg-[--blue3] -mt-1 -mb-1 pt-[4vw]'>
+            <div className='w-full flex justify-center bg-[#02123b] -mt-1 -mb-1 pt-[4vw]'>
                 <div>
                     <div className={`${Clash.className} text-[8vw] text-center w-full text-white  md:text-[5vw] lg:text-[4vw]`}>Our Offices</div>
                     <div className='w-full p-4 md:p-0  flex justify-center h-full pt-[3vw]'>
@@ -483,21 +472,21 @@ useEffect(() => {
 
 export default page
 {/* <div className=' bg-white flex justify-between px-[5vw]'>
-            <div className={`${Clash.className} text-[--blue3] flex flex-col text-center items-center justify-center w-[28%]`}>
+            <div className={`${Clash.className} text-[#02123b] flex flex-col text-center items-center justify-center w-[28%]`}>
                 <div className='text-[2vw]'>150+<br/>Countries Served</div>
                 <div className='text-[1vw]'>Providing reliable logistics solutions and deliveries worldwide.</div>
             </div>
-            <div className={`${Clash.className} text-[--blue3] flex flex-col text-center items-center justify-center w-[28%]`}>
+            <div className={`${Clash.className} text-[#02123b] flex flex-col text-center items-center justify-center w-[28%]`}>
                 <div className='text-[2vw]'>500+<br/>Satisfied Clients</div>
                 <div className='text-[1vw]'>Trusted by a diverse portfolio of clients worldwide.</div>
             </div>
-            <div className={`${Clash.className} text-[--blue3] flex flex-col text-center items-center justify-center w-[28%]`}>
+            <div className={`${Clash.className} text-[#02123b] flex flex-col text-center items-center justify-center w-[28%]`}>
                 <div className='text-[2vw]'>1,000,000+<br/>Shipments Delivered</div>
                 <div className='text-[1vw]'>Successfully handled over one million shipments across air, sea, and land.</div>
             </div>
         </div> */}
           {/* this part */}
-        {/* <div className='h-screen bg-[--blue3] md:px-[2vw] lg:px-[4vw] px-4 '>
+        {/* <div className='h-screen bg-[#02123b] md:px-[2vw] lg:px-[4vw] px-4 '>
             <div className='flex w-full h-full justify-between items-center'>
                 <div className='w-[30%] flex gap-[2vw] items-center'>
                     <div className='w-[1.8vw] h-[25vw] border-[#333f5e] flex justify-center  border rounded-3xl'>

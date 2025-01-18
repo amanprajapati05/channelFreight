@@ -99,16 +99,16 @@ const Gallery = () => {
  
       
       <div className='w-full h-screen'>
-        <div className='w-full h-full bg-[--blue3]'>
-          <div className='md:pt-[20vw] lg:pt-[16vw] xl:pt-[12vw] pt-[42vw] sm:pt-[32vw] bg-[--blue3]'>
+        <div className='w-full h-full bg-[#02123b]'>
+          <div className='md:pt-[20vw] lg:pt-[16vw] xl:pt-[12vw] pt-[42vw] sm:pt-[32vw] bg-[#02123b]'>
             <div className={`md:pl-[2vw] lg:pl-[4vw] px-4 md:px-0 flex flex-col md:flex-row gap-6 md:gap-0 justify-end md:justify-between text-white ${Clash.className}`}>
               <div className='text-[10vw] lg:text-[6vw] md:text-[8vw] h-auto md:h-[50%] uppercase'>Gallery</div>
             </div>
           </div>
 
-          <div className='bg-[--blue3] relative overflow-hidden'>
+          <div className='bg-[#02123b] relative overflow-hidden'>
             <div ref={triggerRef} className='flex'>
-              <div   className='md:pl-[2vw] lg:pl-[4vw] px-4 w-full overflow-hidden md:pt-[5vw] pt-[16vw] bg-[--blue3] pb-[16vw] md:pb-[10vw] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
+              <div   className='md:pl-[2vw] lg:pl-[4vw] px-4 w-full overflow-hidden md:pt-[5vw] pt-[16vw] bg-[#02123b] pb-[16vw] md:pb-[10vw] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
 
                 <div className='h-screen'>
                 <div  className='relative md:h-screen flex flex-col justify-around '>

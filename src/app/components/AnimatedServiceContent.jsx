@@ -58,7 +58,7 @@ const AnimatedContent = ({
   return (
     <div ref={containerRef} className='h-[50vw] md:p-[2vw] lg:p-[4vw] px-4 py-4'>
       <div className='flex w-full justify-between h-full'>
-        <div className={`${Clash.className} flex justify-between text-[--blue3] py-[6vw]`}>
+        <div className={`${Clash.className} flex justify-between text-[#02123b] py-[6vw]`}>
           {/* Left Column */}
           <div className='flex flex-col h-full justify-between w-[30%]'>
             {leftContent.map((content, index) => (

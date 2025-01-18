@@ -46,7 +46,7 @@ const page = () => {
     <div className='w-full -mt-1'>
     <TruckAnimation/>
     </div>
-    <div className='w-full h-screen bg-[--blue3]'></div>
+    <div className='w-full h-screen bg-[#02123b]'></div>
 
                 <div className='  my-[10vw] hidden md:block'>
                 <AnimatedTextSection

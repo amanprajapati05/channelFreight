@@ -43,7 +43,7 @@ const page = () => {
    
     <div  className='md:p-[2vw]  lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
       <div className='flex flex-col justify-between h-full'>
-        <div className={`flex  md:flex-row flex-col justify-between gap-4 md:gap-0 ${Clash.className} text-[--blue3] `}>
+        <div className={`flex  md:flex-row flex-col justify-between gap-4 md:gap-0 ${Clash.className} text-[#02123b] `}>
           <div className='leading-[1.2] md:text-[4vw] text-[9vw] w-full md:w-[40%]'>Driving Efficiency Across Borders</div>
 
           <div className='text-[4vw] md:text-[1.3vw] w-full md:w-[40%] flex flex-col gap-4 md:gap-0 justify-between '>
@@ -109,7 +109,7 @@ const page = () => {
     </div>
 
    <div className='w-full h-full md:p-[2vw] lg:p-[4vw] px-4 py-4'>
-          <div className={`${Clash.className} text-[--blue3] flex flex-col w-full items-center`}>
+          <div className={`${Clash.className} text-[#02123b] flex flex-col w-full items-center`}>
               <div className='md:text-[4vw] text-[9vw] text-center'>Global Expertise, Local Solutions</div>
               <div className='text-[4vw] md:text-[1.3vw] text-[#333f5e] text-center '>Empowering businesses with scalable and flexible logistics solutions worldwide.</div>
           </div>
@@ -131,14 +131,14 @@ const page = () => {
           loop
       />
   
-      <div className={`${Clash.className} text-[--blue3] lg:text-[1vw] md:text-[1.8vw] text-[3vw]  `}>Global Operations</div>
+      <div className={`${Clash.className} text-[#02123b] lg:text-[1vw] md:text-[1.8vw] text-[3vw]  `}>Global Operations</div>
       <div className='h-full flex flex-col justify-end '>
-          <div className={`${Clash.className} text-[--blue3] lg:text-[3vw] md:text-[3.5vw] text-[6vw] text-right md:text-left`}>000+</div>
-          <div className={`${Clash.className} lg:text-[1vw] md:text-[1.8vw] text-[3vw] text-[--blue3] leading-[0] pb-[2vw] md:pb-0`}>successful deliveries</div>
+          <div className={`${Clash.className} text-[#02123b] lg:text-[3vw] md:text-[3.5vw] text-[6vw] text-right md:text-left`}>000+</div>
+          <div className={`${Clash.className} lg:text-[1vw] md:text-[1.8vw] text-[3vw] text-[#02123b] leading-[0] pb-[2vw] md:pb-0`}>successful deliveries</div>
       </div>
   
   </div>
-                  <div className=' h-[45%] bg-[--blue3] rounded-2xl md:px-[1vw] px-[3vw] '>
+                  <div className=' h-[45%] bg-[#02123b] rounded-2xl md:px-[1vw] px-[3vw] '>
                       <div className={`${Clash.className} text-white flex w-full h-full items-center justify-between `}>
                         <div className='md:text-[8vw] text-[24vw] '>10K+</div>
                         <div className='w-[40%] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] text-center'>cross-border shipments cleared yearly.</div>

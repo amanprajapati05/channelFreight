@@ -20,7 +20,7 @@ const page = () => {
     
     <div className='md:p-[2vw] lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
       <div className='flex flex-col justify-between h-full'>
-        <div className={`flex md:flex-row flex-col justify-between ${Clash.className} text-[--blue3]`}>
+        <div className={`flex md:flex-row flex-col justify-between ${Clash.className} text-[#02123b]`}>
           <div className='leading-[1.2] md:text-[4vw] text-[9vw] w-full md:w-[50%]'>Driving Efficiency <br /> Across Borders</div>
           <div className='text-[4vw] md:text-[1.3vw] w-full md:w-[30%]'>Comprehensive and tailored supply chain strategies to ensure seamless global operations.</div>
         </div>

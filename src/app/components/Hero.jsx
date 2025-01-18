@@ -357,19 +357,19 @@ const Hero = () => {
         <div className=''>
             <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw] pt-[10vw] md:pt-[8vw] lg:pt-[6vw]'>
                 <div className='gap-4 flex flex-col '>
-                    <div className={`text-[--blue3] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>Reliable and Efficient Global Services</div>
-                    <div className={`text-[--blue3] ${Clash.className} text-[5vw] hidden md:block sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.
+                    <div className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>Reliable and Efficient Global Services</div>
+                    <div className={`text-[#02123b] ${Clash.className} text-[5vw] hidden md:block sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.
                         <br /> Our services are designed to ensure smooth operations and efficient delivery for all businesses.</div>
-                        <div className={`text-[--blue3] ${Clash.className} text-[5vw] md:hidden sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.
+                        <div className={`text-[#02123b] ${Clash.className} text-[5vw] md:hidden sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.
                        Our services are designed to ensure smooth operations and efficient delivery for all businesses.</div>
                 </div>
-                <Button bgColor='--blue3' tColor='#ffffff' text='View More' />
+                <Button bgColor='#02123b' tColor='#ffffff' text='View More' />
             </div>
         </div>
         <div className=''>
 <div className='flex md:hidden overflow-x-auto gap-4 h-[90vw] md:grid-cols-3 grid-cols-1 md:h-[90vw] lg:h-[120vw] sm:h-[60vw] md:grid-rows-7 scrollbar-hide px-[4vw] md:px-[2vw] lg:px-[4vw] py-4'>
     <div className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
-        <div className='bg-[--blue3] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
+        <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
             src="/videos/airfreight.mp4"
@@ -393,7 +393,7 @@ const Hero = () => {
     </div>
 
     <div className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-1 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
-        <div className='bg-[--blue3] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
+        <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
             src="/videos/seafreight.mp4"
@@ -417,7 +417,7 @@ const Hero = () => {
     </div>
 
     <div className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-1 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
-        <div className='bg-[--blue3] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
+        <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
             src="/videos/supplychain.mp4"
@@ -441,7 +441,7 @@ const Hero = () => {
     </div>
 
     <div className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
-        <div className='bg-[--blue3] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
+        <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
             src="/videos/projectlogistics.mp4"
@@ -477,7 +477,7 @@ const Hero = () => {
                         onMouseEnter={() => handleMouseEnter(card1Ref, card2Ref, false)}
                         onMouseLeave={() => handleMouseLeave(card1Ref, card2Ref, false)}
                     >   
-                     <div className='bg-[--blue3] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
+                     <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
                      <video 
             className="absolute inset-0 w-full h-full object-cover z-[0]"
             src="/videos/airfreight.mp4"
@@ -508,7 +508,7 @@ const Hero = () => {
                         onMouseEnter={() => handleMouseEnter(card2Ref, card1Ref, true)}
                         onMouseLeave={() => handleMouseLeave(card2Ref, card1Ref, true)}
                     >
-                        <div className='bg-[--blue3] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
+                        <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
                         {/* Same content structure as card1 */}
                         <video 
                             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -543,7 +543,7 @@ const Hero = () => {
                         onMouseEnter={() => handleMouseEnter(card3Ref, card4Ref, true)}
                         onMouseLeave={() => handleMouseLeave(card3Ref, card4Ref, true)}
                     >
-                        <div className='bg-[--blue3] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
+                        <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
                         {/* Same content structure as other cards */}
                         <video 
                             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -575,7 +575,7 @@ const Hero = () => {
                         onMouseEnter={() => handleMouseEnter(card4Ref, card3Ref, false)}
                         onMouseLeave={() => handleMouseLeave(card4Ref, card3Ref, false)}
                     >
-                        <div className='bg-[--blue3] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
+                        <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
                         {/* Same content structure as other cards */}
                         <video 
                             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -610,7 +610,7 @@ const Hero = () => {
             <div className='flex flex-col justify-center items-center h-full text-center text-white gap-4'>
                 <div className={`${Clash.className} text-white text-5xl`}>About Us</div>
                 <div className={`${Clash.className} text-white text-lg w-[80%] md:w-[50%] font-thin`}>Our team, comprising a young set of professionals ensures that the milestones achieved are pegged on every project they handle. They rise to every occasion with pure dedication and impeccable speed.</div>
-                <Button bgColor='#ffffff' tColor='--blue3' text='Read More' />
+                <Button bgColor='#ffffff' tColor='#02123b' text='Read More' />
             </div>
         </div>
         <div>
@@ -618,7 +618,7 @@ const Hero = () => {
        
         <StatsSection/>
        
-        <div className={`w-full md:h-[35vw] h-[70vw] bg-[--blue3]  relative ${Clash.className} -mt-1`}>
+        <div className={`w-full md:h-[35vw] h-[70vw] bg-[#02123b]  relative ${Clash.className} -mt-1`}>
             <div className=' whitespace-nowrap overflow-x-hidden overflow-y-hidden '>
                 <div className='container'>
                     <div className='md:text-[18vw] text-[40vw] text-white  inline-block'>
@@ -660,22 +660,22 @@ const Hero = () => {
          <div ref={triggerRef} className='bg-white  hidden md:block md:h-[36vw] w-full overflow-hidden'>
             <div ref={slider} className='flex md:flex-row flex-col gap-[8vw] py-[7vw]'>
                 <div className='md:w-[50%] ml-[4vw] flex flex-col gap-[2vw] flex-shrink-0'>
-                    <div className={`${Clash.className} leading-[1.2] md:text-[4vw] text-[9vw] text-[--blue3]`}>
+                    <div className={`${Clash.className} leading-[1.2] md:text-[4vw] text-[9vw] text-[#02123b]`}>
                         Innovative Solutions for Every Industry
                     </div>
-                    <div className={`${Clash.className} text-[4vw] md:text-[1.4vw] text-[--blue3]`}>
+                    <div className={`${Clash.className} text-[4vw] md:text-[1.4vw] text-[#02123b]`}>
                         With deep industry knowledge, we create logistics solutions that are efficient, compliant, and responsive to evolving market needs.
                     </div>
-                    {/* <div className={`${ClashM.className} text-white px-4 py-2 rounded-3xl bg-[--blue3] w-fit text-sm`}>
+                    {/* <div className={`${ClashM.className} text-white px-4 py-2 rounded-3xl bg-[#02123b] w-fit text-sm`}>
                         View More &gt;
                     </div> */}
-                    <Button bgColor='--blue3' tColor='#ffffff' text='View More' />
+                    <Button bgColor='#02123b' tColor='#ffffff' text='View More' />
                 </div>
             
                 <div className='flex md:w-[150%] ml-[4vw] md:ml-0 gap-[1.7vw]'>
                     <div onMouseEnter={() => setHoveredCard(1)}
                         onMouseLeave={() => setHoveredCard(null)}
-                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[--blue3]'>
+                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
                             src="/images/pharma.png" 
                             alt="" 
@@ -683,12 +683,12 @@ const Hero = () => {
                         />
                         <div className='flex flex-col justify-between h-full'>
                             <div className='flex justify-between my-[1.2vw] mx-[1.6vw]'>
-                                <div className={`uppercase ${Clash.className} ${hoveredCard === 1 ? 'text-white' : 'text-[--blue3]'} text-[2vw] z-[2]`}>PHARMACEuticals</div>
+                                <div className={`uppercase ${Clash.className} ${hoveredCard === 1 ? 'text-white' : 'text-[#02123b]'} text-[2vw] z-[2]`}>PHARMACEuticals</div>
                                 <div className={`${hoveredCard === 1 ? 'bg-[#ADEDFF]' : 'bg-[#333f5e]'} w-fit h-fit rounded-full flex items-center justify-center`}>
                                     <ArrowUpRight className={`h-12 p-2 w-12 md:w-10 md:h-10 z-[222] ${hoveredCard === 1 ? 'text-[#333f5e]' : 'text-[#ADEDFF]'}`} />
                                 </div>
                             </div>
-                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 1 ? 'text-white' : 'text-[--blue3]'} z-[2]`}>
+                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 1 ? 'text-white' : 'text-[#02123b]'} z-[2]`}>
                                 Pharmaceutical logistics is one of the most critical and regulated sectors, requiring precise handling of sensitive goods such as medicines, vaccines, APIs, and biological samples.
                             </div>
                         </div>
@@ -696,7 +696,7 @@ const Hero = () => {
 
                     <div onMouseEnter={() => setHoveredCard(2)}
                         onMouseLeave={() => setHoveredCard(null)}
-                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[--blue3]'>
+                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
                             src="/images/cold.png" 
                             alt="" 
@@ -704,12 +704,12 @@ const Hero = () => {
                         />
                         <div className='flex flex-col justify-between h-full'>
                             <div className='flex justify-between my-[1.2vw] mx-[1.6vw]'>
-                                <div className={`uppercase ${Clash.className} ${hoveredCard === 2 ? 'text-white' : 'text-[--blue3]'} text-[2vw] z-[2]`}>Cold Chain <br /> Products</div>
+                                <div className={`uppercase ${Clash.className} ${hoveredCard === 2 ? 'text-white' : 'text-[#02123b]'} text-[2vw] z-[2]`}>Cold Chain <br /> Products</div>
                                 <div className={`${hoveredCard === 2 ? 'bg-[#ADEDFF]' : 'bg-[#333f5e]'} w-fit h-fit rounded-full flex items-center justify-center`}>
                                     <ArrowUpRight className={`h-12 p-2 w-12 md:w-10 md:h-10 z-[222] ${hoveredCard === 2 ? 'text-[#333f5e]' : 'text-[#ADEDFF]'}`} />
                                 </div>
                             </div>
-                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 2 ? 'text-white' : 'text-[--blue3]'} z-[2]`}>
+                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 2 ? 'text-white' : 'text-[#02123b]'} z-[2]`}>
                             Cold chain logistics is vital for industries such as healthcare, food, agriculture, and chemicals. It involves the seamless movement of perishable goods under strict temperature controls to preserve quality and safety. 
                             </div>
                         </div>
@@ -717,7 +717,7 @@ const Hero = () => {
 
                     <div onMouseEnter={() => setHoveredCard(3)}
                         onMouseLeave={() => setHoveredCard(null)}
-                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[--blue3]'>
+                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
                             src="/images/hazd.png" 
                             alt="" 
@@ -725,12 +725,12 @@ const Hero = () => {
                         />
                         <div className='flex flex-col justify-between h-full'>
                             <div className='flex justify-between my-[1.2vw] mx-[1.6vw]'>
-                                <div className={`uppercase ${Clash.className} ${hoveredCard === 3 ? 'text-white' : 'text-[--blue3]'} text-[2vw] z-[2]`}>Hazardous <br /> chemicals</div>
+                                <div className={`uppercase ${Clash.className} ${hoveredCard === 3 ? 'text-white' : 'text-[#02123b]'} text-[2vw] z-[2]`}>Hazardous <br /> chemicals</div>
                                 <div className={`${hoveredCard === 3 ? 'bg-[#ADEDFF]' : 'bg-[#333f5e]'} w-fit h-fit rounded-full flex items-center justify-center`}>
                                     <ArrowUpRight className={`h-12 p-2 w-12 md:w-10 md:h-10 z-[222] ${hoveredCard === 3 ? 'text-[#333f5e]' : 'text-[#ADEDFF]'}`} />
                                 </div>
                             </div>
-                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 3 ? 'text-white' : 'text-[--blue3]'} z-[2]`}>
+                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 3 ? 'text-white' : 'text-[#02123b]'} z-[2]`}>
                             Transporting hazardous cargo involves high-stakes logistics due to the inherent risks to people, property, and the environment.
                             </div>
                         </div>
@@ -738,7 +738,7 @@ const Hero = () => {
 
                     <div onMouseEnter={() => setHoveredCard(4)}
                         onMouseLeave={() => setHoveredCard(null)}
-                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[--blue3]'>
+                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
                             src="/images/eng.png" 
                             alt="" 
@@ -746,12 +746,12 @@ const Hero = () => {
                         />
                         <div className='flex flex-col justify-between h-full'>
                             <div className='flex justify-between my-[1.2vw] mx-[1.6vw]'>
-                                <div className={`uppercase ${Clash.className} ${hoveredCard === 4 ? 'text-white' : 'text-[--blue3]'} text-[2vw] z-[2]`}>engineering</div>
+                                <div className={`uppercase ${Clash.className} ${hoveredCard === 4 ? 'text-white' : 'text-[#02123b]'} text-[2vw] z-[2]`}>engineering</div>
                                 <div className={`${hoveredCard === 4 ? 'bg-[#ADEDFF]' : 'bg-[#333f5e]'} w-fit h-fit rounded-full flex items-center justify-center`}>
                                     <ArrowUpRight className={`h-12 p-2 w-12 md:w-10 md:h-10 z-[222] ${hoveredCard === 4 ? 'text-[#333f5e]' : 'text-[#ADEDFF]'}`} />
                                 </div>
                             </div>
-                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 4 ? 'text-white' : 'text-[--blue3]'} z-[2]`}>
+                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 4 ? 'text-white' : 'text-[#02123b]'} z-[2]`}>
                             We ensure safe handling and transportation while accommodating rapid advancements in bio-technology.
                             </div>
                         </div>
@@ -759,7 +759,7 @@ const Hero = () => {
 
                     <div onMouseEnter={() => setHoveredCard(5)}
                         onMouseLeave={() => setHoveredCard(null)}
-                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[--blue3]'>
+                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
                             src="/images/exhib.png" 
                             alt="" 
@@ -767,19 +767,19 @@ const Hero = () => {
                         />
                         <div className='flex flex-col justify-between h-full'>
                             <div className='flex justify-between my-[1.2vw] mx-[1.6vw]'>
-                                <div className={`uppercase ${Clash.className} ${hoveredCard === 5 ? 'text-white' : 'text-[--blue3]'} text-[2vw] z-[2]`}>exhibition & <br /> relocation</div>
+                                <div className={`uppercase ${Clash.className} ${hoveredCard === 5 ? 'text-white' : 'text-[#02123b]'} text-[2vw] z-[2]`}>exhibition & <br /> relocation</div>
                                 <div className={`${hoveredCard === 5 ? 'bg-[#ADEDFF]' : 'bg-[#333f5e]'} w-fit h-fit rounded-full flex items-center justify-center`}>
                                     <ArrowUpRight className={`h-12 p-2 w-12 md:w-10 md:h-10 z-[222] ${hoveredCard === 5 ? 'text-[#333f5e]' : 'text-[#ADEDFF]'}`} />
                                 </div>
                             </div>
-                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 5 ? 'text-white' : 'text-[--blue3]'} z-[2]`}>
+                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 5 ? 'text-white' : 'text-[#02123b]'} z-[2]`}>
                             Exhibition cargo logistics involves the timely transport and setup of display materials for trade shows and events. Precision timing and damage-free delivery are critical to success.
                             </div>
                         </div>
                     </div>
                     <div onMouseEnter={() => setHoveredCard(6)}
                         onMouseLeave={() => setHoveredCard(null)}
-                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[--blue3]'>
+                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
                             src="/images/pack.png" 
                             alt="" 
@@ -787,12 +787,12 @@ const Hero = () => {
                         />
                         <div className='flex flex-col justify-between h-full'>
                             <div className='flex justify-between my-[1.2vw] mx-[1.6vw]'>
-                                <div className={`uppercase ${Clash.className} ${hoveredCard ===  6? 'text-white' : 'text-[--blue3]'} text-[2vw] z-[2]`}>packaging <br /> solutions</div>
+                                <div className={`uppercase ${Clash.className} ${hoveredCard ===  6? 'text-white' : 'text-[#02123b]'} text-[2vw] z-[2]`}>packaging <br /> solutions</div>
                                 <div className={`${hoveredCard === 6 ? 'bg-[#ADEDFF]' : 'bg-[#333f5e]'} w-fit h-fit rounded-full flex items-center justify-center`}>
                                     <ArrowUpRight className={`h-12 p-2 w-12 md:w-10 md:h-10 z-[222] ${hoveredCard === 6 ? 'text-[#333f5e]' : 'text-[#ADEDFF]'}`} />
                                 </div>
                             </div>
-                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 6 ? 'text-white' : 'text-[--blue3]'} z-[2]`}>
+                            <div className={`${Clash.className} text-[1.17vw] my-[1.2vw] mx-[1.6vw] ${hoveredCard === 6 ? 'text-white' : 'text-[#02123b]'} z-[2]`}>
                             We manage the end-to-end supply chain for clinical materials, ensuring timely and secure deliveries to research centers.
                             </div>
                         </div>
@@ -803,10 +803,10 @@ const Hero = () => {
         <div  className='bg-white md:hidden md:h-[40vw] '>
                 <div className='flex md:flex-row flex-col gap-[8vw] py-[7vw] overflow-hidden '>
                     <div className='md:w-[50%]  ml-[4vw]  flex flex-col gap-[2vw]'>
-                        <div className={`${Clash.className} leading-[1.2] md:text-[4vw] text-[9vw] text-[--blue3]`}>Innovative Solutions for Every Industry</div>
-                        <div className={`${Clash.className} text-[4vw] md:text-[1.4vw] text-[--blue3]`}
+                        <div className={`${Clash.className} leading-[1.2] md:text-[4vw] text-[9vw] text-[#02123b]`}>Innovative Solutions for Every Industry</div>
+                        <div className={`${Clash.className} text-[4vw] md:text-[1.4vw] text-[#02123b]`}
                         >With deep industry knowledge, we create logistics solutions that are efficient, compliant, and responsive to evolving market needs. </div>
-                        <div className={`${ClashM.className} text-white px-4 py-2 rounded-3xl bg-[--blue3] w-fit text-sm `}>View More &gt;</div>
+                        <div className={`${ClashM.className} text-white px-4 py-2 rounded-3xl bg-[#02123b] w-fit text-sm `}>View More &gt;</div>
                     </div>
                 
                     <div className='flex md:w-[50%]  ml-[4vw] md:ml-0  flex-nowrap gap-[1.7vw]'>
@@ -829,17 +829,17 @@ const Hero = () => {
                 </div>
         </div>
        
-       <div ref={containerRef2} className={`h-screen w-full relative overflow-hidden text-[--blue3]`}>
+       <div ref={containerRef2} className={`h-screen w-full relative overflow-hidden text-[#02123b]`}>
       <canvas 
         ref={canvasRef} 
         className="absolute inset-0 w-full h-full z-10 bg-white "
       />
       <div className="relative z-20 flex flex-col justify-center items-center h-full md:mt-5">
         <div ref={initialTextRef} className="transition-opacity duration-300">
-          <div className={`${Clash.className} text-center md:text-[4vw] text-[7vw] px-2 md:px-0 text-[--blue3]`}>
+          <div className={`${Clash.className} text-center md:text-[4vw] text-[7vw] px-2 md:px-0 text-[#02123b]`}>
             Logistics is more than moving goods,
           </div>
-          <div className={`${ClashM.className} text-center md:text-[5vw] text-[10vw] text-[--blue3]`}>
+          <div className={`${ClashM.className} text-center md:text-[5vw] text-[10vw] text-[#02123b]`}>
             It's About Trust
           </div>
         </div>
@@ -847,10 +847,10 @@ const Hero = () => {
           ref={finalTextRef} 
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity w-full duration-300"
         >
-          <div className={`${Clash.className} text-center md:text-[4vw] text-[7vw] text-[--blue3]`}>
+          <div className={`${Clash.className} text-center md:text-[4vw] text-[7vw] text-[#02123b]`}>
           Partner with us for
           </div>
-          <div className={`${ClashM.className} text-center md:text-[5vw] text-[10vw] text-[--blue3]`}>
+          <div className={`${ClashM.className} text-center md:text-[5vw] text-[10vw] text-[#02123b]`}>
           Seamless Freight Services
           </div>
         </div>

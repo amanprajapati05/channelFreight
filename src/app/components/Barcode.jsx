@@ -47,7 +47,7 @@ const Scale = ({ value = 2 }) => {
   };
 
   return (
-    <div className='flex justify-center bg-[--blue3]  gap-2 items-center  p-4'>
+    <div className='flex justify-center bg-[#02123b]  gap-2 items-center  p-4'>
       {renderScale()}
     </div>
   );
