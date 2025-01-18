@@ -312,7 +312,7 @@ const Navbar = () => {
               {activeMenu === 'services' && (
                 <>
                   <div className="flex justify-between md:px-[2vw] lg:px-[4vw]">
-                    <Link href='/services/air' className="flex flex-col hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl items-start w-[21%] gap-[0.5vw] cursor-pointer">
+                    <Link href='/services/air' className="flex flex-col hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl items-start w-[24%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><Airplane className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
                         <div className={`${ClashM.className} md:text-[1.8vw] lg:text-[1.6vw]  xl:text-[1.3vw]`}>Air Freight Services</div>
@@ -321,7 +321,7 @@ const Navbar = () => {
                         Rapid global air transport for urgent and critical shipments.
                       </div>
                     </Link>
-                    <Link href='/services/sea' className="hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[21%] gap-[0.5vw] cursor-pointer">
+                    <Link href='/services/sea' className="hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[24%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><Boat className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
                         <div className={`${ClashM.className} md:text-[1.8vw] lg:text-[1.6vw]  xl:text-[1.3vw]`}>Sea Freight Services</div>
@@ -330,7 +330,7 @@ const Navbar = () => {
                         Cost-effective ocean shipping for bulk or containerized cargo.
                       </div>
                     </Link>
-                    <Link href='/services/supply' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[21%] gap-[0.5vw] cursor-pointer">
+                    <Link href='/services/supply' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[24%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><Nut className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
                         <div className={`${ClashM.className} md:text-[1.8vw] lg:text-[1.6vw]  xl:text-[1.3vw]`}>Supply Chain Solutions</div>
@@ -339,7 +339,7 @@ const Navbar = () => {
                         End-to-end logistics management for streamlined business operations.
                       </div>
                     </Link>
-                    <Link href='/services/project' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[21%] gap-[0.5vw] cursor-pointer">
+                    <Link href='/services/project' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[24%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><ChartBar className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
                         <div className={`${ClashM.className} md:text-[1.8vw] lg:text-[1.6vw]  xl:text-[1.3vw]`}>Project Logistics</div>
@@ -350,7 +350,7 @@ const Navbar = () => {
                     </Link>
                   </div>
                   <div className="flex justify-between md:px-[2vw] lg:px-[4vw]">
-                    <Link href='/services/customs' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[21%] gap-[0.5vw] cursor-pointer">
+                    <Link href='/services/customs' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[24%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><TrainRegional className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
                         <div className={`${ClashM.className} md:text-[1.8vw] lg:text-[1.6vw]  xl:text-[1.3vw]`}>Customs Brokerage</div>
@@ -359,7 +359,7 @@ const Navbar = () => {
                         Simplifying customs clearance by expert compliance & minimal shipment delays.
                       </div>
                     </Link>
-                    <Link href='/services/charter' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[21%] gap-[0.5vw] cursor-pointer">
+                    <Link href='/services/charter' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[24%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><ShippingContainer className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
                         <div className={`${ClashM.className} md:text-[1.8vw] lg:text-[1.6vw]  xl:text-[1.3vw]`}>Charter Services</div>
@@ -368,7 +368,7 @@ const Navbar = () => {
                         On-demand air transport for urgent or specialized cargo.
                       </div>
                     </Link>
-                    <Link href='/services/cross' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[21%] gap-[0.5vw] cursor-pointer">
+                    <Link href='/services/cross' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[24%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><GlobeSimple className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
                         <div className={`${ClashM.className} md:text-[1.8vw] lg:text-[1.6vw]  xl:text-[1.3vw]`}>Cross Trade</div>
@@ -377,7 +377,7 @@ const Navbar = () => {
                         Expert logistics for international shipments across multiple countries.
                       </div>
                     </Link>
-                    <Link href='/services/value' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[21%] gap-[0.5vw] cursor-pointer">
+                    <Link href='/services/value' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[24%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><Package className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
                         <div className={`${ClashM.className} md:text-[1.8vw] lg:text-[1.6vw]  xl:text-[1.3vw]`}>Value Added Services</div>

@@ -9,33 +9,15 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Button  from './Button';
-import CircularProgress from './CircularProgress';
-
 import StatsSection from './Statsection';
 
 gsap.registerPlugin(ScrollTrigger);
 const Hero2 = () => {
     
-    useEffect( () => {
 
-        (
-    
-          async () => {
-    
-              const LocomotiveScroll = (await import('locomotive-scroll')).default
-    
-              const locomotiveScroll = new LocomotiveScroll();
-    
-          }
-    
-        )()
-    
-      }, [])
 
     const slider = useRef();
     const triggerRef = useRef();
-    const triggerRef2 = useRef();
-    const canvasRef = useRef(null);
     const [hoveredCard, setHoveredCard] = useState(null);
 
     const card1Ref = useRef();
@@ -44,578 +26,91 @@ const Hero2 = () => {
     const card4Ref = useRef();
 
 
-    // useEffect(() => {
-    //     const canvas = canvasRef.current;
-    //     const ctx = canvas.getContext('2d');
-        
-    //     const setCanvasSize = () => {
-    //       canvas.width = window.innerWidth;
-    //       canvas.height = window.innerHeight;
-    //     };
-    //     setCanvasSize();
-    //     window.addEventListener('resize', setCanvasSize);
-    
-    //     const image = new Image();
-    //     image.src = '/images/ship.png';
-    //     shipImage.current = image;
-    
-    //     image.onload = () => {
-    //       // Calculate initial position to start from right edge
-    //       const initialX = canvas.width + (image.width / 2);
-    //       // Calculate y position to vertically center the ship
-    //       const y = (canvas.height - image.height) / 2;
-    
-    //       const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //           trigger: containerRef2.current,
-    //           start: 'top top',
-    //           end: '2035vw center',
-    //         //   markers: true,
-    //           scrub: true,
-    //           pin: true,
-    //           onUpdate: (self) => {
-    //             ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-    //             const progress = self.progress;
-    //             // Calculate x position relative to canvas center
-    //             const totalDistance = canvas.width + image.width * 2;
-    //             const x = initialX - (progress * totalDistance);
-                
-    //             // Draw image centered vertically
-    //             ctx.drawImage(image, x, y);
-    
-    //             // Calculate the center of the ship instead of its end
-    //             const shipCenterX = x + (image.width / 2);
-    //             const canvasCenterX = canvas.width / 2;
-    //             const threshold = 50; // Reduced threshold for tighter transition
-    
-    //             // Check if ship's center is crossing canvas center
-    //             if (Math.abs(shipCenterX - canvasCenterX) < threshold) {
-    //               if (!hasPassedCenter.current) {
-    //                 // Ship's center is passing center point
-    //                 gsap.to(initialTextRef.current, { opacity: 0, duration: 0.3 });
-    //                 gsap.to(finalTextRef.current, { opacity: 1, duration: 0.3 });
-    //                 hasPassedCenter.current = true;
-    //               }
-    //             } else if (shipCenterX > canvasCenterX + threshold) {
-    //               if (hasPassedCenter.current) {
-    //                 // Ship's center has moved back past center
-    //                 gsap.to(initialTextRef.current, { opacity: 1, duration: 0.3 });
-    //                 gsap.to(finalTextRef.current, { opacity: 0, duration: 0.3 });
-    //                 hasPassedCenter.current = false;
-    //               }
-    //             }
-    //           },
-    //           onLeaveBack: () => {
-    //             // Reset text when scrolling back to top
-    //             gsap.set(initialTextRef.current, { opacity: 1 });
-    //             gsap.set(finalTextRef.current, { opacity: 0 });
-    //             hasPassedCenter.current = false;
-    //           }
-    //         }
-    //       });
-    
-    //       return () => {
-    //         tl.kill();
-    //         window.removeEventListener('resize', setCanvasSize);
-    //       };
-    //     };
-    //   }, []);
-
 
     // useEffect(() => {
-    //     const canvas = canvasRef.current;
-    //     const ctx = canvas.getContext('2d');
-    //     let timeline;
-        
-    //     // Canvas resize handler
-    //     const setCanvasSize = () => {
-    //       canvas.width = window.innerWidth;
-    //       canvas.height = window.innerHeight;
-    //     };
-        
-    //     setCanvasSize();
-    //     window.addEventListener('resize', setCanvasSize);
-      
-    //     // Image loading
-    //     const image = new Image();
-    //     image.src = '/images/ship.png';
-    //     shipImage.current = image;
-      
-    //     const setupAnimation = () => {
-    //       const initialX = canvas.width + (image.width / 2);
-    //       const y = (canvas.height - image.height) / 2;
-      
-    //       timeline = gsap.timeline({
-    //         scrollTrigger: {
-    //           trigger: containerRef2.current,
-    //           start: 'top top',
-    //           end: '2035vw center',
-    //           scrub: true,
-    //           pin: true,
-    //           onUpdate: (self) => {
-    //             ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-    //             const progress = self.progress;
-    //             const totalDistance = canvas.width + image.width * 2;
-    //             const x = initialX - (progress * totalDistance);
-                
-    //             ctx.drawImage(image, x, y);
-      
-    //             const shipCenterX = x + (image.width / 2);
-    //             const canvasCenterX = canvas.width / 2;
-    //             const threshold = 50;
-      
-    //             if (Math.abs(shipCenterX - canvasCenterX) < threshold) {
-    //               if (!hasPassedCenter.current) {
-    //                 gsap.to(initialTextRef.current, { opacity: 0, duration: 0.3 });
-    //                 gsap.to(finalTextRef.current, { opacity: 1, duration: 0.3 });
-    //                 hasPassedCenter.current = true;
-    //               }
-    //             } else if (shipCenterX > canvasCenterX + threshold) {
-    //               if (hasPassedCenter.current) {
-    //                 gsap.to(initialTextRef.current, { opacity: 1, duration: 0.3 });
-    //                 gsap.to(finalTextRef.current, { opacity: 0, duration: 0.3 });
-    //                 hasPassedCenter.current = false;
-    //               }
-    //             }
-    //           },
-    //           onLeaveBack: () => {
-    //             gsap.set(initialTextRef.current, { opacity: 1 });
-    //             gsap.set(finalTextRef.current, { opacity: 0 });
-    //             hasPassedCenter.current = false;
-    //           }
-    //         }
-    //       });
-    //     };
-      
-    //     // Set up load handler
-    //     image.onload = setupAnimation;
-      
-    //     // Cleanup function
-    //     return () => {
-    //       // Clean up the timeline if it exists
-    //       if (timeline) {
-    //         timeline.kill();
-    //       }
-          
-    //       // Remove resize listener
-    //       window.removeEventListener('resize', setCanvasSize);
-          
-    //       // Clear the canvas
-    //       if (canvas && ctx) {
-    //         ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //       }
-          
-    //       // Clean up image resources
-    //       if (shipImage.current) {
-    //         shipImage.current.onload = null;
-    //         shipImage.current = null;
-    //       }
-    //     };
-    //   }, []);
-  
-    // useEffect(() => {
-    //     const canvas = canvasRef.current;
-    //     const ctx = canvas.getContext('2d');
-        
-    //     const setCanvasSize = () => {
-    //       canvas.width = window.innerWidth;
-    //       canvas.height = window.innerHeight;
-    //     };
-    //     setCanvasSize();
-    //     window.addEventListener('resize', setCanvasSize);
-    
-    //     const image = new Image();
-    //     image.src = '/images/ship.png';
-    //     shipImage.current = image;
-    
-    //     image.onload = () => {
-    //       const initialX = canvas.width + (image.width / 2);
-    //       const y = (canvas.height - image.height) / 2;
-    
-    //       const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //           trigger: containerRef2.current,
-    //           start: 'top top',
-    //           end: '2035vw center',
-    //           scrub: true,
-    //           pin: true,
-    //           onUpdate: (self) => {
-    //             // Clear the canvas
-    //             ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-    //             const progress = self.progress;
-    //             const totalDistance = canvas.width + image.width * 2;
-    //             const x = initialX - (progress * totalDistance);
-                
-    //             // Draw white background rectangle specifically for the ship
-    //             ctx.fillStyle = 'white';
-    //             ctx.fillRect(x, y, image.width, image.height);
-                
-    //             // Draw the ship image on top
-    //             ctx.drawImage(image, x, y);
-    
-    //             const shipCenterX = x + (image.width / 2);
-    //             const canvasCenterX = canvas.width / 2;
-    //             const threshold = 50;
-    
-    //             if (Math.abs(shipCenterX - canvasCenterX) < threshold) {
-    //               if (!hasPassedCenter.current) {
-    //                 gsap.to(initialTextRef.current, { opacity: 0, duration: 0.3 });
-    //                 gsap.to(finalTextRef.current, { opacity: 1, duration: 0.3 });
-    //                 hasPassedCenter.current = true;
-    //               }
-    //             } else if (shipCenterX > canvasCenterX + threshold) {
-    //               if (hasPassedCenter.current) {
-    //                 gsap.to(initialTextRef.current, { opacity: 1, duration: 0.3 });
-    //                 gsap.to(finalTextRef.current, { opacity: 0, duration: 0.3 });
-    //                 hasPassedCenter.current = false;
-    //               }
-    //             }
-    //           },
-    //           onLeaveBack: () => {
-    //             gsap.set(initialTextRef.current, { opacity: 1 });
-    //             gsap.set(finalTextRef.current, { opacity: 0 });
-    //             hasPassedCenter.current = false;
-    //           }
-    //         }
-    //       });
-    
-    //       return () => {
-    //         tl.kill();
-    //         window.removeEventListener('resize', setCanvasSize);
-    //       };
-    //     };
-    // }, []);
-
-    // useEffect(() => {
-    //     const canvas = canvasRef.current;
-    //     const ctx = canvas.getContext('2d');
-    //     let timeline;
-        
-    //     const setCanvasSize = () => {
-    //         if (canvas) {
-    //             canvas.width = window.innerWidth;
-    //             canvas.height = window.innerHeight;
-    //         }
-    //     };
-        
-    //     setCanvasSize();
-    //     window.addEventListener('resize', setCanvasSize);
-    
-    //     const image = new Image();
-    //     image.src = '/images/ship.png';
-    //     shipImage.current = image;
-    
-    //     image.onload = () => {
-    //         if (!canvas) return; // Guard clause in case component unmounted
-    
-    //         const initialX = canvas.width + (image.width / 2);
-    //         const y = (canvas.height - image.height) / 2;
-    
-    //         // Kill any existing ScrollTrigger instances first
-    //         ScrollTrigger.getAll().forEach(st => st.kill());
-    
-    //         timeline = gsap.timeline({
-    //             scrollTrigger: {
-    //                 trigger: containerRef2.current,
-    //                 start: 'top top',
-    //                 end: '2035vw center',
-    //                 scrub: true,
-    //                 pin: true,
-    //                 onUpdate: (self) => {
-    //                     if (!canvas || !ctx) return; // Guard against null canvas
-    
-    //                     // Clear the canvas
-    //                     ctx.clearRect(0, 0, canvas.width, canvas.height);
-                        
-    //                     const progress = self.progress;
-    //                     const totalDistance = canvas.width + image.width * 2;
-    //                     const x = initialX - (progress * totalDistance);
-                        
-    //                     // Draw white background rectangle for the ship
-    //                     ctx.fillStyle = 'white';
-    //                     ctx.fillRect(x, y, image.width, image.height);
-                        
-    //                     // Draw the ship image
-    //                     ctx.drawImage(image, x, y);
-    
-    //                     const shipCenterX = x + (image.width / 2);
-    //                     const canvasCenterX = canvas.width / 2;
-    //                     const threshold = 50;
-    
-    //                     if (Math.abs(shipCenterX - canvasCenterX) < threshold) {
-    //                         if (!hasPassedCenter.current) {
-    //                             gsap.to(initialTextRef.current, { opacity: 0, duration: 0.3 });
-    //                             gsap.to(finalTextRef.current, { opacity: 1, duration: 0.3 });
-    //                             hasPassedCenter.current = true;
-    //                         }
-    //                     } else if (shipCenterX > canvasCenterX + threshold) {
-    //                         if (hasPassedCenter.current) {
-    //                             gsap.to(initialTextRef.current, { opacity: 1, duration: 0.3 });
-    //                             gsap.to(finalTextRef.current, { opacity: 0, duration: 0.3 });
-    //                             hasPassedCenter.current = false;
-    //                         }
-    //                     }
-    //                 },
-    //                 onLeaveBack: () => {
-    //                     if (initialTextRef.current && finalTextRef.current) {
-    //                         gsap.set(initialTextRef.current, { opacity: 1 });
-    //                         gsap.set(finalTextRef.current, { opacity: 0 });
-    //                         hasPassedCenter.current = false;
-    //                     }
-    //                 }
-    //             }
-    //         });
-    //     };
-    
-    //     // Cleanup function
-    //     return () => {
-    //         window.removeEventListener('resize', setCanvasSize);
+    //     const ctx = gsap.context(() => {
+    //       // Set initial ship position
+    //       const setInitialPosition = () => {
+    //         if (!shipRef.current) return;
             
-    //         // Kill the timeline if it exists
-    //         if (timeline) {
-    //             timeline.kill();
-    //         }
-    
-    //         // Kill all ScrollTrigger instances
-    //         ScrollTrigger.getAll().forEach(st => st.kill());
-    
-    //         // Kill any ongoing GSAP animations
-    //         gsap.killTweensOf([initialTextRef.current, finalTextRef.current]);
-    
-    //         // Clear the canvas if it exists
-    //         if (canvas && ctx) {
-    //             ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //         }
-    //     };
-    // }, []);
-
-    // useEffect(() => {
-    //     const canvas = canvasRef.current;
-    //     const ctx = canvas.getContext('2d');
-    //     let scrollTriggerInstance = null;
-        
-    //     const setCanvasSize = () => {
-    //         if (canvas) {
-    //             canvas.width = window.innerWidth;
-    //             canvas.height = window.innerHeight;
-    //         }
-    //     };
-        
-    //     setCanvasSize();
-    //     window.addEventListener('resize', setCanvasSize);
-    
-    //     const image = new Image();
-    //     image.src = '/images/ship.png';
-    //     shipImage.current = image;
-    
-    //     image.onload = () => {
-    //         if (!canvas) return;
-    
-    //         const initialX = canvas.width + (image.width / 2);
-    //         const y = (canvas.height - image.height) / 2;
-    
-    //         // Create ScrollTrigger instance
-    //         scrollTriggerInstance = ScrollTrigger.create({
-    //             trigger: containerRef2.current,
+    //         const windowWidth = window.innerWidth;
+    //         const shipWidth = shipRef.current.offsetWidth;
+            
+    //         gsap.set(shipRef.current, {
+    //           x: windowWidth + shipWidth / 2,
+    //           y: 0,
+    //           opacity: 1
+    //         });
+    //       };
+      
+    //       // Set up the animation timeline
+    //       const setupAnimation = () => {
+    //         const tl = gsap.timeline({
+    //           scrollTrigger: {
+    //             trigger: containerRef2.current, // Changed to containerRef2
     //             start: 'top top',
-    //             end: '2035vw center',
-    //             scrub: true,
+    //             end: '+=200%',
+    //             scrub: 1,
     //             pin: true,
-    //             anticipatePin: 1,
+    //             pinSpacing: true,
     //             onUpdate: (self) => {
-    //                 if (!canvas || !ctx) return;
-    
-    //                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    
-    //                 const progress = self.progress;
-    //                 const totalDistance = canvas.width + image.width * 2;
-    //                 const x = initialX - (progress * totalDistance);
-                    
-    //                 ctx.fillStyle = 'white';
-    //                 ctx.fillRect(x, y, image.width, image.height);
-    //                 ctx.drawImage(image, x, y);
-    
-    //                 const shipCenterX = x + (image.width / 2);
-    //                 const canvasCenterX = canvas.width / 2;
-    //                 const threshold = 50;
-    
-    //                 if (Math.abs(shipCenterX - canvasCenterX) < threshold) {
-    //                     if (!hasPassedCenter.current) {
-    //                         gsap.to(initialTextRef.current, { opacity: 0, duration: 0.3 });
-    //                         gsap.to(finalTextRef.current, { opacity: 1, duration: 0.3 });
-    //                         hasPassedCenter.current = true;
-    //                     }
-    //                 } else if (shipCenterX > canvasCenterX + threshold) {
-    //                     if (hasPassedCenter.current) {
-    //                         gsap.to(initialTextRef.current, { opacity: 1, duration: 0.3 });
-    //                         gsap.to(finalTextRef.current, { opacity: 0, duration: 0.3 });
-    //                         hasPassedCenter.current = false;
-    //                     }
+    //               if (!shipRef.current) return;
+                  
+    //               const progress = self.progress;
+    //               const windowWidth = window.innerWidth;
+    //               const shipWidth = shipRef.current.offsetWidth;
+    //               const totalDistance = windowWidth + shipWidth * 2;
+    //               const x = windowWidth + shipWidth / 2 - progress * totalDistance;
+                  
+    //               // Update ship position
+    //               gsap.set(shipRef.current, { x });
+      
+    //               // Handle text transitions
+    //               const shipCenterX = x + shipWidth / 2;
+    //               const windowCenterX = windowWidth / 2;
+    //               const threshold = 50;
+      
+    //               if (Math.abs(shipCenterX - windowCenterX) < threshold) {
+    //                 if (!hasPassedCenter.current) {
+    //                   gsap.to(initialTextRef.current, { opacity: 0, duration: 0.3 });
+    //                   gsap.to(finalTextRef.current, { opacity: 1, duration: 0.3 });
+    //                   hasPassedCenter.current = true;
     //                 }
+    //               } else if (shipCenterX > windowCenterX + threshold) {
+    //                 if (hasPassedCenter.current) {
+    //                   gsap.to(initialTextRef.current, { opacity: 1, duration: 0.3 });
+    //                   gsap.to(finalTextRef.current, { opacity: 0, duration: 0.3 });
+    //                   hasPassedCenter.current = false;
+    //                 }
+    //               }
     //             },
     //             onLeaveBack: () => {
-    //                 if (initialTextRef.current && finalTextRef.current) {
-    //                     gsap.set(initialTextRef.current, { opacity: 1 });
-    //                     gsap.set(finalTextRef.current, { opacity: 0 });
-    //                     hasPassedCenter.current = false;
-    //                 }
-    //             }
+    //               gsap.set(initialTextRef.current, { opacity: 1 });
+    //               gsap.set(finalTextRef.current, { opacity: 0 });
+    //               hasPassedCenter.current = false;
+    //             },
+    //           },
     //         });
-    //     };
-    
-    //     // Important: Clean up in this specific order
+    //       };
+      
+    //       // Initialize after a small delay to ensure elements are ready
+    //       setTimeout(() => {
+    //         setInitialPosition();
+    //         setupAnimation();
+    //       }, 100);
+      
+    //       // Handle window resize
+    //       window.addEventListener('resize', setInitialPosition);
+    //       return () => window.removeEventListener('resize', setInitialPosition);
+    //     }, containerRef2); // Changed to containerRef2
+      
     //     return () => {
-    //         // First remove event listener
-    //         window.removeEventListener('resize', setCanvasSize);
-    
-    //         // Kill any ongoing GSAP animations
-    //         gsap.killTweensOf([initialTextRef.current, finalTextRef.current]);
-    
-    //         // Clear the canvas
-    //         if (canvas && ctx) {
-    //             ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //         }
-    
-    //         // Finally, kill the ScrollTrigger instance
-    //         if (scrollTriggerInstance) {
-    //             scrollTriggerInstance.kill();
-    //         }
-    
-    //         // Revert any pins after a small delay to ensure proper cleanup
-    //         requestAnimationFrame(() => {
-    //             ScrollTrigger.refresh();
-    //         });
-    //     };
-    // }, []);
-
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        
-        const canvas = canvasRef.current;
-        const container = containerRef2.current;
-        const initialText = initialTextRef.current;
-        const finalText = finalTextRef.current;
-        
-        if (!canvas || !container) return;
-        
-        const ctx = canvas.getContext('2d');
-        let scrollTriggerInstance;
-        
-        // Canvas resize handler
-        const setCanvasSize = () => {
-            if (canvas) {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            }
-        };
-        
-        setCanvasSize();
-        window.addEventListener('resize', setCanvasSize);
-    
-        // Load image
-        const image = new Image();
-        image.src = '/images/ship.png';
-        
-        const initAnimation = () => {
-            if (!canvas || !ctx || !container) return;
-    
-            const initialX = canvas.width + (image.width / 2);
-            const y = (canvas.height - image.height) / 2;
-    
-            // Kill any existing instances first
-            if (scrollTriggerInstance) {
-                scrollTriggerInstance.kill();
-            }
-    
-            // Create new ScrollTrigger
-            scrollTriggerInstance = ScrollTrigger.create({
-                trigger: container,
-                start: 'top top',
-                end: '2035vw center',
-                scrub: true,
-                pin: true,
-                pinSpacing: true,
-                anticipatePin: 1,
-                onUpdate: (self) => {
-                    if (!canvas || !ctx) return;
-    
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    
-                    const progress = self.progress;
-                    const totalDistance = canvas.width + image.width * 2;
-                    const x = initialX - (progress * totalDistance);
-                    
-                    ctx.fillStyle = 'white';
-                    ctx.fillRect(x, y, image.width, image.height);
-                    ctx.drawImage(image, x, y);
-    
-                    const shipCenterX = x + (image.width / 2);
-                    const canvasCenterX = canvas.width / 2;
-                    const threshold = 50;
-    
-                    if (Math.abs(shipCenterX - canvasCenterX) < threshold) {
-                        if (!hasPassedCenter.current) {
-                            gsap.to(initialText, { opacity: 0, duration: 0.3 });
-                            gsap.to(finalText, { opacity: 1, duration: 0.3 });
-                            hasPassedCenter.current = true;
-                        }
-                    } else if (shipCenterX > canvasCenterX + threshold) {
-                        if (hasPassedCenter.current) {
-                            gsap.to(initialText, { opacity: 1, duration: 0.3 });
-                            gsap.to(finalText, { opacity: 0, duration: 0.3 });
-                            hasPassedCenter.current = false;
-                        }
-                    }
-                },
-                onLeaveBack: () => {
-                    if (initialText && finalText) {
-                        gsap.set(initialText, { opacity: 1 });
-                        gsap.set(finalText, { opacity: 0 });
-                        hasPassedCenter.current = false;
-                    }
-                }
-            });
-        };
-    
-        // Initialize once image is loaded
-        image.onload = () => {
-            shipImage.current = image;
-            initAnimation();
-        };
-    
-        // Cleanup function
-        return () => {
-            // First, kill GSAP animations
-            gsap.killTweensOf([initialText, finalText]);
-            
-            // Remove event listener
-            window.removeEventListener('resize', setCanvasSize);
-    
-            // Kill ScrollTrigger instance
-            if (scrollTriggerInstance) {
-                // Disable the pin before killing
-                scrollTriggerInstance.disable();
-                scrollTriggerInstance.kill(false); // false prevents clearing of vars
-            }
-    
-            // Clear ScrollTrigger cache
-            ScrollTrigger.clearMatchMedia();
-            ScrollTrigger.getAll().forEach(st => st.kill());
-    
-            // Clear canvas
-            if (canvas && ctx) {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-            }
-    
-            // Final refresh after a short delay
-            setTimeout(() => {
-                ScrollTrigger.refresh(true);
-            }, 100);
-        };
-    }, []);
+    //           // Need to explicitly kill ScrollTrigger instances
+    //     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    //     // Then revert the context
+    //     ctx.revert();
+    //     }; // Cleanup
+    //   }, []);
 
     const handleMouseEnter = (expandingCardRef, shrinkingCardRef, isSmallCard) => {
         if (isSmallCard) {
@@ -707,66 +202,51 @@ const Hero2 = () => {
           };
     })
    
-    const circle1Ref = useRef(null);
-    const circle2Ref = useRef(null);
-    const circle3Ref = useRef(null);
-    const dot1Ref = useRef(null);
-    const dot2Ref = useRef(null);
-    const dot3Ref = useRef(null);
     const containerRef = useRef(null);
 
     
     const shipImage = useRef(null);
+    const shipRef = useRef(null);
     const containerRef2 = useRef(null);
     const initialTextRef = useRef(null);
     const finalTextRef = useRef(null);
     const hasPassedCenter = useRef(false);
 
-    // useEffect(() => {
-    //     // Set initial states starting from bottom
-    //     [circle1Ref, circle2Ref, circle3Ref].forEach(ref => {
-    //         gsap.set(ref.current, {
-    //             strokeDasharray: '377, 377',
-    //             strokeDashoffset: -377  // Negative value to start from bottom
-    //         });
-    //     });
+    const titleSpans = useRef([]);
+  const descriptionRef = useRef(null);
 
-    //     [dot1Ref, dot2Ref, dot3Ref].forEach(ref => {
-    //         gsap.set(ref.current, {
-    //             rotation: -90,  // Start from bottom
-    //             transformOrigin: '50% 50%'
-    //         });
-    //     });
+  useGSAP(() => {
+    // Initial state - move elements below their final position
+    gsap.set([...titleSpans.current, descriptionRef.current], {
+      y: 100,
+      opacity: 0
+    });
 
-    //     const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: containerRef.current,
-    //             start: 'top center+=100',
-    //             end: 'center center',
-    //             scrub: 0.5
-    //         }
-    //     });
+    // Create animation timeline
+    const tl = gsap.timeline({
+      defaults: {
+        duration: 1,
+        ease: "power3.out"
+      }
+    });
 
-    //     [circle1Ref, circle2Ref, circle3Ref].forEach(ref => {
-    //         tl.to(ref.current, {
-    //             strokeDashoffset: 0,
-    //             duration: 1,
-    //             ease: 'none'
-    //         }, 0);
-    //     });
+    // Animate title spans sequentially
+    titleSpans.current.forEach((span, index) => {
+      tl.to(span, {
+        y: 0,
+        opacity: 1,
+        delay: index * 0.15
+      }, index * 0.2);
+    });
 
-    //     [dot1Ref, dot2Ref, dot3Ref].forEach(ref => {
-    //         tl.to(ref.current, {
-    //             rotation: 270,  // End at bottom (complete circle)
-    //             duration: 1,
-    //             ease: 'none'
-    //         }, 0);
-    //     });
+    // Animate description
+    tl.to(descriptionRef.current, {
+      y: 0,
+      opacity: 1
+    }, "-=0.5"); // Start slightly before the last title span finishes
+  }, []);
 
-    //     return () => {
-    //         ScrollTrigger.getAll().forEach(t => t.kill());
-    //     };
-    // }, []);
+
   return (
     <>
     <div className=''>
@@ -782,11 +262,25 @@ const Hero2 = () => {
                 <source src="/videos/Homepage-Hero.mp4" type="video/mp4"/>
             </video>
             <div  className='lg:pt-[9vw] md:pt-[20vw] flex h-[80%] md:h-auto'>
-                <div  className='flex md:flex-row flex-col justify-center   text-white md:justify-between px-[4vw] md:px-[2vw] lg:px-[4vw]   '>
-                    <div className={`${Clash.className} text-[14vw] sm:text-[9vw] leading-[1.2] xl:text-[6vw] md:text-[9vw] lg:text-[7.5vw] uppercase`}>Innovative,<br/> Pro Active <br/>
-                    & Speed. </div>
+                {/* <div  className='flex md:flex-row flex-col justify-center   text-white md:justify-between px-[4vw] md:px-[2vw] lg:px-[4vw]   '>
+                    <div className={`${Clash.className} text-[14vw] sm:text-[9vw] leading-[1.2] xl:text-[6vw] md:text-[9vw] lg:text-[7.5vw] uppercase`}>
+                        <span>Innovative,</span><br/> <span>Pro Active</span> <br/>
+                    <span>& Speed.</span></div>
                     <div className={`${Clash.className} leading-8  md:leading-normal text-[5vw] sm:text-[3.4vw] pt-[3.4vw] md:pt-0   xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] xl:w-[30%] md:w-[38%]  lg:w-[33%] text-start flex items-end`}>We create customised solutions to meet the changing demands of a dynamic industry and always stay a step ahead of contemporaries.</div>
-                </div>
+                </div> */}
+                <div className='flex md:flex-row flex-col justify-center text-white md:justify-between px-[4vw] md:px-[2vw] lg:px-[4vw]'>
+      <div className={`${Clash.className} text-[14vw] sm:text-[9vw] leading-[1.2] xl:text-[6vw] md:text-[9vw] lg:text-[7.5vw] uppercase overflow-hidden`}>
+        <span ref={el => titleSpans.current[0] = el} className="inline-block">Innovative,</span><br/>
+        <span ref={el => titleSpans.current[1] = el} className="inline-block">Pro Active</span><br/>
+        <span ref={el => titleSpans.current[2] = el} className="inline-block">& Speed.</span>
+      </div>
+      <div 
+        ref={descriptionRef}
+        className={`${Clash.className} leading-8 md:leading-normal text-[5vw] sm:text-[3.4vw] pt-[3.4vw] md:pt-0 xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] xl:w-[30%] md:w-[38%] lg:w-[33%] text-start flex items-end`}
+      >
+        We create customised solutions to meet the changing demands of a dynamic industry and always stay a step ahead of contemporaries.
+      </div>
+    </div>
             </div>
             <div className='flex flex-col items-center justify-center text-center w-full absolute bottom-10 '>
                     <div className={`${Clash.className} text-white font-thin`}>Scroll Down</div>
@@ -907,7 +401,7 @@ const Hero2 = () => {
                     <div className='px-[4vw] md:px-[2vw] lg:px-[4vw] pt-4 md:pb-20 pb-8'>
                         {/* First Row */}
                         <div className='flex gap-3 h-[30vw] mb-3'>
-                            <div 
+                            {/* <div 
                                 ref={card1Ref}
                                 className=" rounded-3xl relative overflow-hidden "
                                 style={{ width: '66%', transition: 'width 0.5s ease' }}
@@ -916,16 +410,47 @@ const Hero2 = () => {
                             >   
                              <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
                              <video 
-                    className="absolute inset-0 w-full h-full object-cover z-[0]"
+                    className="absolute inset-0 w-full h-full object-cover  z-[0]"
                     src="/videos/airfreight.mp4"
                     muted
                     playsInline
                     loop
                 />
-                                {/* Card content */}
+                               
                                 <div className='flex flex-col justify-between h-full p-6 lg:p-8 relative z-[2]'>
                                     <div className='gap-4 flex flex-col'>
                                         <div className='rounded-full w-fit bg-[--blue2] p-1'>
+                                            <ArrowUpRight color='#ADEDFF' className='h-12 w-12 md:w-8 md:h-8' />
+                                        </div>
+                                        <div className={`text-white text-[5vw] md:text-[2.2vw] lg:text-[2vw] ${Clash.className}`}>
+                                            AIR FREIGHT SERVICES
+                                        </div>
+                                    </div>
+                                    <div className={`${Clash.className} text-white text-base md:text-[1.5vw] lg:text-[1.4vw] md:leading-[1.4] lg:pr-3`}>
+                                        Whether it's urgent cargo, temperature-sensitive shipments, or complex global deliveries, we ensure your goods reach their destination on time, every time.
+                                    </div>
+                                </div>
+                            </div> */}
+                            <div 
+                                ref={card1Ref}
+                                className="bg-black rounded-3xl relative overflow-hidden"
+                                style={{ width: '66%', transition: 'width 0.5s ease' }}
+                                onMouseEnter={() => handleMouseEnter(card4Ref, card3Ref, false)}
+                                onMouseLeave={() => handleMouseLeave(card4Ref, card3Ref, false)}
+                            >
+                                <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-10 z-[1]'></div>
+                                {/* Same content structure as other cards */}
+                                <video 
+                                    className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
+                                    src="/videos/airfreight.mp4"
+                                    muted
+                                    playsInline
+                                    loop
+                                />
+                                {/* Card content */}
+                                <div className='flex flex-col justify-between h-full p-6 lg:p-8 relative z-10'>
+                                    <div className='gap-4 flex flex-col'>
+                                    <div className='rounded-full w-fit bg-[--blue2] p-1'>
                                             <ArrowUpRight color='#ADEDFF' className='h-12 w-12 md:w-8 md:h-8' />
                                         </div>
                                         <div className={`text-white text-[5vw] md:text-[2.2vw] lg:text-[2vw] ${Clash.className}`}>
@@ -945,7 +470,7 @@ const Hero2 = () => {
                                 onMouseEnter={() => handleMouseEnter(card2Ref, card1Ref, true)}
                                 onMouseLeave={() => handleMouseLeave(card2Ref, card1Ref, true)}
                             >
-                                <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
+                                <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-10 z-[1]'></div>
                                 {/* Same content structure as card1 */}
                                 <video 
                                     className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -980,7 +505,7 @@ const Hero2 = () => {
                                 onMouseEnter={() => handleMouseEnter(card3Ref, card4Ref, true)}
                                 onMouseLeave={() => handleMouseLeave(card3Ref, card4Ref, true)}
                             >
-                                <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
+                                <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-10 z-[1]'></div>
                                 {/* Same content structure as other cards */}
                                 <video 
                                     className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -1012,7 +537,7 @@ const Hero2 = () => {
                                 onMouseEnter={() => handleMouseEnter(card4Ref, card3Ref, false)}
                                 onMouseLeave={() => handleMouseLeave(card4Ref, card3Ref, false)}
                             >
-                                <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
+                                <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-10 z-[1]'></div>
                                 {/* Same content structure as other cards */}
                                 <video 
                                     className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -1094,7 +619,7 @@ const Hero2 = () => {
             </div>
                 </div>
                 </div>
-                <div ref={triggerRef} className='bg-white hidden md:block md:h-[35vw] mb-[2vw] w-full overflow-hidden'>
+                <div ref={triggerRef} className='bg-white hidden md:block md:h-[36vw] w-full overflow-hidden'>
             <div ref={slider} className='flex md:flex-row flex-col gap-[8vw] py-[7vw]'>
                 <div className='md:w-[50%] ml-[4vw] flex flex-col gap-[2vw] flex-shrink-0'>
                     <div className={`${Clash.className} leading-[1.2] md:text-[4vw] text-[9vw] text-[#02123b]`}>
@@ -1103,9 +628,6 @@ const Hero2 = () => {
                     <div className={`${Clash.className} text-[4vw] md:text-[1.4vw] text-[#02123b]`}>
                         With deep industry knowledge, we create logistics solutions that are efficient, compliant, and responsive to evolving market needs.
                     </div>
-                    {/* <div className={`${ClashM.className} text-white px-4 py-2 rounded-3xl bg-[#02123b] w-fit text-sm`}>
-                        View More &gt;
-                    </div> */}
                     <Button bgColor='#02123b' tColor='#ffffff' text='View More' />
                 </div>
             
@@ -1508,10 +1030,14 @@ const Hero2 = () => {
             </div>
         </div>
                  <div ref={containerRef2} className={`h-screen mt-[4vw] w-full relative overflow-hidden text-[#02123b]`}>
-                      <canvas 
-                        ref={canvasRef} 
-                        className="absolute inset-0 w-full h-full z-10 bg-white "
-                      />
+                    
+ <img
+        ref={shipRef}
+        src="/images/ship.png"
+        alt="Ship"
+        className="absolute transform-gpu will-change-transform opacity-0 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10"
+        style={{ height: '200px', width: 'auto' }}
+      />
                       <div className="relative z-20 flex flex-col justify-center items-center h-full md:mt-5">
                         <div ref={initialTextRef} className="transition-opacity duration-300">
                           <div className={`${Clash.className} text-center md:text-[4vw] text-[7vw] px-2 md:px-0 text-[#02123b]`}>

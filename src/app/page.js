@@ -1,3 +1,4 @@
+"use client"
 import Hero from "./components/Hero";
 import Hero2 from "./components/Hero2";
 

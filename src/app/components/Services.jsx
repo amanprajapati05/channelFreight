@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Clash, ClashM } from '../../../public/fonts/fonts'
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -28,98 +28,207 @@ const Services = () => {
         }
     };
 
-    const handleEnter = (index) => {
-        if (buttonRefs.current[index]) {
-            // First make the button visible
-            gsap.set(buttonRefs.current[index], {
-                display: 'block'
+    useEffect(() => {
+        // Set initial states for images
+        imageRefs.current.forEach((imageContainer) => {
+            gsap.set(imageContainer, {
+                width: '15%',
+                height: '10vw'
             });
-            // Then animate it
-            gsap.to(buttonRefs.current[index], {
-                y: 0,
-                opacity: 1,
-                duration: 0.4,
-                ease: "power2.out"
-            });
-        }
-    };
-    
-    const handleLeave = (index) => {
-        if (buttonRefs.current[index]) {
-            gsap.to(buttonRefs.current[index], {
-                y: 30,
-                opacity: 0,
-                duration: 0.4,
-                ease: "power2.in",
-                onComplete: () => {
-                    // Hide the button after animation completes
-                    gsap.set(buttonRefs.current[index], {
-                        display: 'none'
-                    });
-                }
-            });
-        }
-    };
+        });
 
+        // Set initial states for buttons
+        buttonRefs.current.forEach((button) => {
+            gsap.set(button, {
+                display: 'none',
+                opacity: 0,
+                y: 30
+            });
+        });
+    }, []);
+
+    // const handleEnter = (index) => {
+    //     if (buttonRefs.current[index]) {
+    //         // First make the button visible
+    //         gsap.set(buttonRefs.current[index], {
+    //             display: 'block'
+    //         });
+    //         // Then animate it
+    //         gsap.to(buttonRefs.current[index], {
+    //             y: 0,
+    //             opacity: 1,
+    //             duration: 0.4,
+    //             ease: "power2.out"
+    //         });
+    //     }
+    // };
+    
+    // const handleLeave = (index) => {
+    //     if (buttonRefs.current[index]) {
+    //         gsap.to(buttonRefs.current[index], {
+    //             y: 30,
+    //             opacity: 0,
+    //             duration: 0.4,
+    //             ease: "power2.in",
+    //             onComplete: () => {
+    //                 // Hide the button after animation completes
+    //                 gsap.set(buttonRefs.current[index], {
+    //                     display: 'none'
+    //                 });
+    //             }
+    //         });
+    //     }
+    // };
+
+
+
+// useGSAP(() => {
+//   imageRefs.current.forEach((imageContainer, index) => {
+//     // Set initial height for all cards
+//     gsap.set(imageContainer.parentElement, {
+//       height: 'auto' // This ensures each card takes its natural height
+//     });
+
+//     // Create timeline for each card
+//     const tl = gsap.timeline({
+//       scrollTrigger: {
+//         trigger: imageContainer.parentElement,
+//         // markers: true,
+//         start: "top bottom-=100",
+//         end: "top top+=100",
+//         toggleActions: "play none none reverse",
+//         scrub: true,
+//       }
+//     });
+
+//     // Add animation to timeline
+//     tl.fromTo(imageContainer,
+//       {
+//         width: '15%',
+//         height: '10vw'
+//       },
+//       {
+//         width: '40%',
+//         height: '25vw',
+//         ease: "none",
+//       }
+//     );
+
+//     // Add a scroll trigger to handle the next card
+//     if (index < imageRefs.current.length - 1) {
+//       ScrollTrigger.create({
+//         trigger: imageContainer.parentElement,
+//         start: "bottom bottom",
+//         onEnter: () => {
+//           // Only after current card is fully visible, enable next card's animation
+//           const nextCard = imageRefs.current[index + 1];
+//           if (nextCard) {
+//             gsap.set(nextCard.parentElement, { visibility: "visible" });
+//           }
+//         }
+//       });
+
+//       // Initially hide next card
+//       if (index > 0) {
+//         gsap.set(imageContainer.parentElement, { visibility: "hidden" });
+//       }
+//     }
+//   });
+
+//   return () => {
+//     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+//   };
+// }, []);
+
+const handleEnter = (index) => {
+    if (buttonRefs.current[index]) {
+        // First make the button visible
+        gsap.set(buttonRefs.current[index], {
+            display: 'block'
+        });
+        // Then animate it
+        gsap.to(buttonRefs.current[index], {
+            y: 0,
+            opacity: 1,
+            duration: 0.4,
+            ease: "power2.out"
+        });
+    }
+};
+
+const handleLeave = (index) => {
+    if (buttonRefs.current[index]) {
+        gsap.to(buttonRefs.current[index], {
+            y: 30,
+            opacity: 0,
+            duration: 0.4,
+            ease: "power2.in",
+            onComplete: () => {
+                gsap.set(buttonRefs.current[index], {
+                    display: 'none'
+                });
+            }
+        });
+    }
+};
 
 
 useGSAP(() => {
-  imageRefs.current.forEach((imageContainer, index) => {
-    // Set initial height for all cards
-    gsap.set(imageContainer.parentElement, {
-      height: 'auto' // This ensures each card takes its natural height
-    });
-
-    // Create timeline for each card
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: imageContainer.parentElement,
-        // markers: true,
-        start: "top bottom-=100",
-        end: "top top+=100",
-        toggleActions: "play none none reverse",
-        scrub: true,
-      }
-    });
-
-    // Add animation to timeline
-    tl.fromTo(imageContainer,
-      {
-        width: '15%',
-        height: '10vw'
-      },
-      {
-        width: '40%',
-        height: '25vw',
-        ease: "none",
-      }
-    );
-
-    // Add a scroll trigger to handle the next card
-    if (index < imageRefs.current.length - 1) {
-      ScrollTrigger.create({
-        trigger: imageContainer.parentElement,
-        start: "bottom bottom",
-        onEnter: () => {
-          // Only after current card is fully visible, enable next card's animation
-          const nextCard = imageRefs.current[index + 1];
-          if (nextCard) {
-            gsap.set(nextCard.parentElement, { visibility: "visible" });
-          }
+    imageRefs.current.forEach((imageContainer, index) => {
+      // Set initial height for all cards
+      gsap.set(imageContainer.parentElement, {
+        height: 'auto' // This ensures each card takes its natural height
+      });
+  
+      // Create timeline for each card
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: imageContainer.parentElement,
+          start: "top bottom-=100",
+          end: "top top+=100",
+          toggleActions: "restart reverse restart reverse",  // This ensures proper reversing
+          scrub: true,
         }
       });
-
-      // Initially hide next card
-      if (index > 0) {
-        gsap.set(imageContainer.parentElement, { visibility: "hidden" });
+  
+      // Add animation to timeline - exactly as it was in your original code
+      tl.fromTo(imageContainer,
+        {
+          width: '15%',
+          height: '10vw'
+        },
+        {
+          width: '40%',
+          height: '25vw',
+          ease: "none",
+        }
+      );
+  
+      // Add a scroll trigger to handle the next card
+      if (index < imageRefs.current.length - 1) {
+        ScrollTrigger.create({
+          trigger: imageContainer.parentElement,
+          start: "bottom bottom",
+          onEnter: () => {
+            // Only after current card is fully visible, enable next card's animation
+            const nextCard = imageRefs.current[index + 1];
+            if (nextCard) {
+              gsap.set(nextCard.parentElement, { visibility: "visible" });
+            }
+          }
+        });
+  
+        // Initially hide next card
+        if (index > 0) {
+          gsap.set(imageContainer.parentElement, { visibility: "hidden" });
+        }
       }
-    }
-  });
-
-  return () => {
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-  };
-}, []);
+    });
+  
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
 
   return (
     <div className='w-full h-screen'>
