@@ -319,12 +319,12 @@ useEffect(() => {
 
         {/* this canvas */}
         {/* <canvas></canvas> */}
-        <div className='h-[40vh]'></div>
+        {/* <div className='h-[40vh]'></div>
         <canvas
     ref={canvasRef}
     className="fixed inset-0 pointer-events-none"
     style={{ zIndex: 10 }}
-/>  
+/>   */}
 
   <div ref={sectionRef} className="h-screen bg-[#02123b] md:px-[2vw] lg:px-[4vw] px-4">
         <div className="flex w-full md:flex-row flex-col h-full justify-between items-end md:items-center">

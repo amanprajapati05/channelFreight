@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Navbar from '../components/Navbar'
 import { Clash,ClashM } from '../../../public/fonts/fonts'
 import Button from '../components/Button'
@@ -15,6 +15,33 @@ const page = () => {
     const imageRefs = useRef([]);
     const buttonRefs = useRef([]);
     const contentRefs = useRef([]);
+
+    const [isLoading, setIsLoading] = useState(true);
+  
+  // ... other refs and states
+
+  useEffect(() => {
+    // Force scroll to top
+    window.scrollTo(0, 0);
+    
+    // Disable scrolling initially
+    document.body.style.overflow = 'hidden';
+    
+    // Add a small delay to ensure everything is loaded
+    const timer = setTimeout(() => {
+      // Enable scrolling
+      document.body.style.overflow = 'auto';
+      // Hide loading state
+      setIsLoading(false);
+      // Refresh ScrollTrigger
+      ScrollTrigger.refresh();
+    }, 1000);
+    
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
 
     const addToImageRefs = (el) => {
       if (el && !imageRefs.current.includes(el)) {

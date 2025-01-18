@@ -182,7 +182,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-20 relative mt-2 " onMouseLeave={handleMouseLeave}>
+    <div className="h-20 relative mt-2 z-[99999999] " onMouseLeave={handleMouseLeave}>
       <MobileNavbar/>
 
       <div  ref={containerRef}  className={activeMenu ? 'mx-2  md:h-[28vw]  rounded-2xl bg-white' : 'h-[6vw]'}>
