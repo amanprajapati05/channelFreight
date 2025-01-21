@@ -18,46 +18,9 @@ const page = () => {
     const dotRef = useRef(null);
     const timelineItemsRef = useRef([]);
     const shipRef = useRef(null);
+    const shipRef2 = useRef(null);
     const visionRef = useRef(null);
     const shipContainerRef = useRef(null);
-
-// useGSAP(() => {
-//     const content = contentRef.current;
-//     const section = sectionRef.current;
-//     const dot = dotRef.current;
-//     const items = timelineItemsRef.current;
-//     const ship = shipRef.current;
-//     const vision = visionRef.current;
-    
-//     // Calculate the total scroll distance needed
-//     const totalScroll = (items.length - 3) * window.innerHeight;
-
-//     // Create a timeline for all animations
-//     const tl = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: section,
-//             start: "top top",
-//             end: `+=${totalScroll}px`,
-//             pin: true,
-//             scrub: 0.6,
-//         }
-//     });
-     
-//     // Add all animations to the same timeline
-//     tl.to(content, {
-//         y: -(totalScroll),
-//         ease: "none",
-//     })
-//     .to(dot, {
-//         y: `${23.5}vw`,
-//         ease: "none",
-//     }, 0)  // Start at the same time as content
-//     .to(ship, {
-//         y: "220%",
-//         ease: "none",
-//     }, 0); // Start at the same time as content
-    
-// }, { scope: sectionRef });
 
 useGSAP(() => {
     const content = contentRef.current;
@@ -65,10 +28,12 @@ useGSAP(() => {
     const dot = dotRef.current;
     const items = timelineItemsRef.current;
     const ship = shipRef.current;
+    const ship2 = shipRef2.current;
     const vision = visionRef.current;
     
     // Calculate the total scroll distance needed
     const totalScroll = (items.length - 3) * window.innerHeight;
+    const shipMovement = window.innerWidth < 768 ? "400%" : "220%";
 
     // Create a timeline for all animations
     const tl = gsap.timeline({
@@ -101,9 +66,14 @@ useGSAP(() => {
         ease: "none",
     }, 0)
     .to(ship, {
-        y: "220%",
+        y: shipMovement,
+        ease: "none",
+    }, 0)
+    .to(ship2, {
+        y: shipMovement,
         ease: "none",
     }, 0);
+    ;
     
 }, { scope: sectionRef });
 
@@ -252,10 +222,6 @@ useGSAP(() => {
         </div>
 
 
-{/* <div ref={shipContainerRef} className=' relative w-full h-full bg-black'>
-<img  ref={shipRef}  className=' w-[4vw] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-[9999]' src="/images/cargoship.png" alt="" />
-</div> */}
-
   <div ref={sectionRef} className="h-screen bg-[#02123b] md:px-[2vw] lg:px-[4vw] px-4 relative overflow-bottom-hidden">
       <div className='absolute md:block hidden inset-0'>
         <img  
@@ -267,7 +233,7 @@ useGSAP(() => {
     </div>
     <div className='absolute inset-0 md:hidden'>
         <img  
-            ref={shipRef}  
+            ref={shipRef2}  
             className='w-[10vw] absolute top-0 left-[10%] -translate-x-1/2 -translate-y-1/2 z-[2]' 
             src="/images/cargoship.png" 
             alt="" 

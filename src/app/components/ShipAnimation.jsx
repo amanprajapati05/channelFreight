@@ -136,8 +136,8 @@ const ShipAnimation = () => {
                 ref={shipRef}
                 src="/images/ship3.png"
                 alt="Ship"
-                className="absolute transform-gpu will-change-transform opacity-0 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[9999999]"
-                style={{ height: '200px', width: 'auto' }}
+                className="absolute transform-gpu will-change-transform md:h-[200px] opacity-0 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[9999999]"
+                style={{  width: 'auto' }}
             />
             <div className="relative z-20 flex flex-col justify-center items-center h-full md:mt-5">
                 <div ref={initialTextRef} className="transition-opacity duration-300">

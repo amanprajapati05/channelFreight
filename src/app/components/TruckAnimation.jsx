@@ -115,7 +115,7 @@ const TruckAnimation = () => {
       />
       
       {/* Cards */}
-      <div ref={card1Ref} className="absolute hidden md:block bg-white md:left-[10vw] left-[50%] md:top-[40%] -translate-x-1/2 -translate-y-1/2 md:-translate-x-0 md:-translate-y-0 top-[40%] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
+      <div ref={card1Ref} className="absolute block bg-white md:left-[10vw] left-[50%] md:top-[40%] -translate-x-1/2 -translate-y-1/2 md:-translate-x-0 md:-translate-y-0 top-[40%] rounded-xl w-[60vw] h-[60vw] lg:w-[25vw] md:w-[25vw] md:h-[25vw] lg:h-[25vw] sm:w-[40vw] sm:h-[40vw] border border-white">
         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
           <div className='flex flex-col gap-[1vw]'>
             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>
@@ -130,7 +130,7 @@ const TruckAnimation = () => {
           </div>
         </div>
       </div>
-
+     
       <div ref={card2Ref} className="absolute bg-white right-[10vw] top-[40%] rounded-xl w-[80vw] h-[80vw] lg:w-[25vw] md:w-[28vw] md:h-[28vw] lg:h-[25vw] sm:w-[60vw] sm:h-[60vw] border border-white">
         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
           <div className='flex flex-col gap-[1vw]'>

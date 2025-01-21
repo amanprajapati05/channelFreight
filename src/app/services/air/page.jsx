@@ -218,7 +218,7 @@ const text = [
           
             <div className='md:w-[32.5%] w-full  relative h-full overflow-hidden rounded-2xl flex flex-col justify-end'>
                 <img src='/images/card1.webp' className='absolute w-full  inset-0 z-[-1]'/>
-                <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>Global Network</div>
+                <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>Efficient Logistics</div>
             </div>
             <div className='md:w-[32.5%] w-full h-full rounded-2xl  '> 
                 <div className='flex flex-col h-full justify-between'>

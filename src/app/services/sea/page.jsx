@@ -13,6 +13,7 @@ import AnimatedTextSection from '../../components/SectorAnimated'
 import AirplaneCanvas from '../../components/AirplaneCanvas'
 import AnimatedContent from '../../components/AnimatedServiceContent'
 import ShipAnimation from '../../components/ShipAnimation'
+import ShipAnimation2 from '../../components/ShipAnimation2'
 
 const page = () => {
 
@@ -148,7 +149,7 @@ const text = [
 
 
 <div className=''>
-    <ShipAnimation/>
+    <ShipAnimation2/>
     </div>
 
    
@@ -206,7 +207,7 @@ const text = [
            <div className='flex w-full md:h-[28vw] h-[250vw] md:gap-0 gap-4 md:flex-row flex-col justify-between my-[4vw]'>
              
                <div className='md:w-[32.5%] w-full  relative h-full overflow-hidden rounded-2xl flex flex-col justify-end'>
-                   <img src='/images/card1.webp' className='absolute w-full  inset-0 z-[-1]'/>
+                   <img src='/images/services/card1.webp' className='absolute w-full  inset-0 z-[-1]'/>
                    <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>Flexible Routes</div>
                </div>
                <div className='md:w-[32.5%] w-full h-full rounded-2xl  '> 
@@ -241,7 +242,7 @@ const text = [
                    </div>
                </div>
                <div className='md:w-[32.5%] w-full  relative h-full overflow-hidden rounded-2xl flex flex-col justify-end'>
-               <img src='/images/card2.webp' className='w-full  absolute inset-0 z-[-1]'/>
+               <img src='/images/services/card2.webp' className='w-full  absolute inset-0 z-[-1]'/>
                    <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>Secured Storage</div>
                </div>
            </div>
