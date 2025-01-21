@@ -377,11 +377,11 @@ const Hero2 = () => {
                                             <ArrowUpRight color='#ADEDFF' className='h-12 w-12 md:w-8 md:h-8' />
                                         </div>
                                         <div className={`text-white text-[5vw] md:text-[2.2vw] lg:text-[2vw] ${Clash.className}`}>
-                                            AIR FREIGHT SERVICES
+                                        SEA FREIGHT SERVICES
                                         </div>
                                     </div>
                                     <div className={`${Clash.className} text-white text-base md:text-[1.5vw] lg:text-[1.4vw] md:leading-[1.4] lg:pr-3`}>
-                                        Whether it's urgent cargo, temperature-sensitive shipments, or complex global deliveries, we ensure your goods reach their destination on time, every time.
+                                    We excel in sea freight solutions with a focus on innovation & efficiency. We leverage a global network of shipping conferences & direct line movements to ensure cost-effective & timely delivery.
                                     </div>
                                 </div>
                             </div>
@@ -412,11 +412,11 @@ const Hero2 = () => {
                                             <ArrowUpRight color='#ADEDFF' className='h-12 w-12 md:w-8 md:h-8' />
                                         </div>
                                         <div className={`text-white text-[5vw] md:text-[2.2vw] lg:text-[2vw] ${Clash.className}`}>
-                                            AIR FREIGHT SERVICES
+                                        SUPPLY CHAIN SOLUTIONS
                                         </div>
                                     </div>
                                     <div className={`${Clash.className} text-white text-base md:text-[1.5vw] lg:text-[1.4vw] md:leading-[1.4] lg:pr-3`}>
-                                        Whether it's urgent cargo, temperature-sensitive shipments, or complex global deliveries, we ensure your goods reach their destination on time, every time.
+                                    Channel Freight Services offers tailored supply chain solutions, managing the end-to-end logistics process with precision and efficiency.
                                     </div>
                                 </div>
                             </div>
@@ -444,11 +444,11 @@ const Hero2 = () => {
                                             <ArrowUpRight color='#ADEDFF' className='h-12 w-12 md:w-8 md:h-8' />
                                         </div>
                                         <div className={`text-white text-[5vw] md:text-[2.2vw] lg:text-[2vw] ${Clash.className}`}>
-                                            AIR FREIGHT SERVICES
+                                        PROJECT LOGISTICS
                                         </div>
                                     </div>
                                     <div className={`${Clash.className} text-white text-base md:text-[1.5vw] lg:text-[1.4vw] md:leading-[1.4] lg:pr-3`}>
-                                        Whether it's urgent cargo, temperature-sensitive shipments, or complex global deliveries, we ensure your goods reach their destination on time, every time.
+                                    We specialize in Project Cargo Handling, offering expert solutions for the transportation of oversized and heavy cargo across India and internationally
                                     </div>
                                 </div>
                             </div>
