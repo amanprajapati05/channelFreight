@@ -13,6 +13,7 @@ import StatsSection from './Statsection';
 import ShipAnimation from './ShipAnimation';
 import locomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 const Hero2 = () => {
@@ -322,7 +323,8 @@ const Hero2 = () => {
                     <div className='px-[4vw] md:px-[2vw] lg:px-[4vw] pt-4 md:pb-20 pb-8'>
                         {/* First Row */}
                         <div className='flex gap-3 h-[30vw] mb-3'>
-                            <div 
+                            <Link 
+                                href='/services/air'
                                 ref={card1Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
                                 style={{ width: '66%', transition: 'width 0.5s ease' }}
@@ -352,9 +354,10 @@ const Hero2 = () => {
                                         Whether it's urgent cargo, temperature-sensitive shipments, or complex global deliveries, we ensure your goods reach their destination on time, every time.
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
         
-                            <div 
+                            <Link
+                                href='/services/sea'
                                 ref={card2Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
                                 style={{ width: '33%', transition: 'width 0.5s ease' }}
@@ -384,12 +387,13 @@ const Hero2 = () => {
                                     We excel in sea freight solutions with a focus on innovation & efficiency. We leverage a global network of shipping conferences & direct line movements to ensure cost-effective & timely delivery.
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
         
                         {/* Second Row */}
                         <div className='flex gap-3 h-[30vw]'>
-                            <div 
+                            <Link 
+                            href='/services/supply'
                                 ref={card3Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
                                 style={{ width: '33%', transition: 'width 0.5s ease' }}
@@ -419,9 +423,10 @@ const Hero2 = () => {
                                     Channel Freight Services offers tailored supply chain solutions, managing the end-to-end logistics process with precision and efficiency.
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
         
-                            <div 
+                            <Link
+                            href='/services/projectlogistics' 
                                 ref={card4Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
                                 style={{ width: '66%', transition: 'width 0.5s ease' }}
@@ -451,7 +456,7 @@ const Hero2 = () => {
                                     We specialize in Project Cargo Handling, offering expert solutions for the transportation of oversized and heavy cargo across India and internationally
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

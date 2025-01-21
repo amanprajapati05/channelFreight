@@ -133,8 +133,8 @@ const page = () => {
           onChange={handleFileChange}
         />
         
-        <div className="flex items-center justify-between text-gray-400">
-          <span className="text-lg">
+        <div className="flex items-center justify-between text-[#677189]">
+          <span className="text-[4vw] md:text-[2vw] lg:text-[1.2vw]">
             {fileName || 'CLICK HERE TO UPLOAD RESUME'}
           </span>
           <UploadSimple size={32} />
