@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import { Clash, ClashM } from '../../../public/fonts/fonts'
 import Footer from '../components/Footer'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,119 +19,47 @@ const page = () => {
     const timelineItemsRef = useRef([]);
     const shipRef = useRef(null);
     const visionRef = useRef(null);
-    const canvasRef = useRef(null);
-    const contextRef = useRef(null);
-    const shipImageRef = useRef(null);
+    const shipContainerRef = useRef(null);
 
-useEffect(() => {
-    const canvas = canvasRef.current;
-    const vision = visionRef.current;
-    const section = sectionRef.current;
+// useGSAP(() => {
+//     const content = contentRef.current;
+//     const section = sectionRef.current;
+//     const dot = dotRef.current;
+//     const items = timelineItemsRef.current;
+//     const ship = shipRef.current;
+//     const vision = visionRef.current;
     
-    if (!canvas || !vision || !section) return;
+//     // Calculate the total scroll distance needed
+//     const totalScroll = (items.length - 3) * window.innerHeight;
 
-    canvas.width = window.innerWidth;
-    canvas.height = document.documentElement.scrollHeight;
+//     // Create a timeline for all animations
+//     const tl = gsap.timeline({
+//         scrollTrigger: {
+//             trigger: section,
+//             start: "top top",
+//             end: `+=${totalScroll}px`,
+//             pin: true,
+//             scrub: 0.6,
+//         }
+//     });
+     
+//     // Add all animations to the same timeline
+//     tl.to(content, {
+//         y: -(totalScroll),
+//         ease: "none",
+//     })
+//     .to(dot, {
+//         y: `${23.5}vw`,
+//         ease: "none",
+//     }, 0)  // Start at the same time as content
+//     .to(ship, {
+//         y: "220%",
+//         ease: "none",
+//     }, 0); // Start at the same time as content
     
-    const ctx = canvas.getContext('2d');
-    contextRef.current = ctx;
-    
-    canvas.style.position = 'absolute';
-    canvas.style.top = '0';
-    canvas.style.left = '0';
-    canvas.style.zIndex = '10';
-    canvas.style.pointerEvents = 'none';
+// }, { scope: sectionRef });
 
-    const shipImage = new Image();
-    shipImage.src = '/images/ship-vertical.png';
-    shipImageRef.current = shipImage;
-
-    shipImage.onload = () => {
-        const shipWidth = window.innerWidth * 0.08;
-        const aspectRatio = shipImage.height / shipImage.width;
-        const shipHeight = shipWidth * aspectRatio;
-        const visionBottom = vision.offsetTop + vision.offsetHeight;
-        const initialY = visionBottom - 200; // Store initial Y position
-        
-        const shipDimensions = {
-            width: shipWidth,
-            height: shipHeight,
-            x: (window.innerWidth - shipWidth) / 2,
-            y: initialY
-        };
-
-        const drawShip = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(
-                shipImage,
-                shipDimensions.x,
-                shipDimensions.y,
-                shipDimensions.width,
-                shipDimensions.height
-            );
-        };
-
-        // Initial draw at starting position
-        drawShip();
-
-        // Calculate travel distance based on section height
-        const travelDistance = section.offsetHeight * 0.9; // Adjust multiplier as needed
-
-        gsap.fromTo(shipDimensions, 
-            { y: initialY }, // Start from initial position
-            {
-                y: initialY + travelDistance, // Move down by travel distance
-                ease: "none",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: "bottom bottom",
-                    // markers: true,
-                    scrub: true,
-                    onUpdate: () => drawShip(),
-                    onScrubComplete: () => {
-                        // Ensure ship is at correct position when scrolling stops
-                        drawShip();
-                    }
-                }
-            }
-        );
-    };
-
-    const handleResize = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = document.documentElement.scrollHeight;
-        
-        if (shipImageRef.current) {
-            const shipWidth = window.innerWidth * 0.08;
-            const aspectRatio = shipImageRef.current.height / shipImageRef.current.width;
-            const shipHeight = shipWidth * aspectRatio;
-            const visionBottom = vision.offsetTop + vision.offsetHeight;
-            const initialY = visionBottom - 200;
-            
-            ctx.drawImage(
-                shipImageRef.current,
-                (window.innerWidth - shipWidth) / 2,
-                initialY,
-                shipWidth,
-                shipHeight
-            );
-        }
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-        window.removeEventListener('resize', handleResize);
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-}, []);
-
-
-
-
-
-  useEffect(() => {
+useGSAP(() => {
     const content = contentRef.current;
     const section = sectionRef.current;
     const dot = dotRef.current;
@@ -138,41 +67,45 @@ useEffect(() => {
     const ship = shipRef.current;
     const vision = visionRef.current;
     
-    
-
-
     // Calculate the total scroll distance needed
     const totalScroll = (items.length - 3) * window.innerHeight;
 
-     
-   // Original timeline animations
-    gsap.to(content, {
-        y: -(totalScroll),
-        ease: "none",
+    // Create a timeline for all animations
+    const tl = gsap.timeline({
         scrollTrigger: {
             trigger: section,
             start: "top top",
             end: `+=${totalScroll}px`,
             pin: true,
-            scrub: 1,
+            scrub: 0.6,
+            onUpdate: (self) => {
+                // Change overflow based on scroll progress
+                if (self.progress < 0.1) { // At start
+                    section.style.overflow = 'visible';
+                } else if (self.progress > 0.9) { // Near end
+                    section.style.overflow = 'hidden';
+                } else { // During animation
+                    section.style.overflow = 'visible';
+                }
+            }
         }
     });
-
-    gsap.to(dot, {
+     
+    // Add all animations to the same timeline
+    tl.to(content, {
+        y: -(totalScroll),
+        ease: "none",
+    })
+    .to(dot, {
         y: `${23.5}vw`,
         ease: "none",
-        scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: `+=${totalScroll}px`,
-            scrub: 1,
-        }
-    });
-
-    return () => {
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-}, []);
+    }, 0)
+    .to(ship, {
+        y: "220%",
+        ease: "none",
+    }, 0);
+    
+}, { scope: sectionRef });
 
   const timelineData = [
     {
@@ -208,6 +141,7 @@ useEffect(() => {
             containerRefs.current.push(el);
         }
     };
+
     useEffect(() => {
         // Create overlay elements
         containerRefs.current.forEach((container, index) => {
@@ -306,7 +240,7 @@ useEffect(() => {
         </div>
 
 
-        <div ref={visionRef} className='bg-white text-[#02123b] w-screen h-screen '>
+        <div ref={visionRef} className='bg-white text-[#02123b] w-screen md:h-[50vw] '>
             <div className='flex justify-center w-full'>
                 <div className='flex flex-col w-full  '>
             <div className={`${Clash.className} text-[8vw] text-center w-full   md:text-[5vw] lg:text-[4vw] py-[4vw]`}>Our Vision</div>
@@ -317,16 +251,29 @@ useEffect(() => {
             </div>
         </div>
 
-        {/* this canvas */}
-        {/* <canvas></canvas> */}
-        {/* <div className='h-[40vh]'></div>
-        <canvas
-    ref={canvasRef}
-    className="fixed inset-0 pointer-events-none"
-    style={{ zIndex: 10 }}
-/>   */}
 
-  <div ref={sectionRef} className="h-screen bg-[#02123b] md:px-[2vw] lg:px-[4vw] px-4">
+{/* <div ref={shipContainerRef} className=' relative w-full h-full bg-black'>
+<img  ref={shipRef}  className=' w-[4vw] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-[9999]' src="/images/cargoship.png" alt="" />
+</div> */}
+
+  <div ref={sectionRef} className="h-screen bg-[#02123b] md:px-[2vw] lg:px-[4vw] px-4 relative overflow-bottom-hidden">
+      <div className='absolute md:block hidden inset-0'>
+        <img  
+            ref={shipRef}  
+            className='w-[5vw] absolute top-0 left-[50%] -translate-x-1/2 -translate-y-1/2 z-[2]' 
+            src="/images/cargoship.png" 
+            alt="" 
+        />
+    </div>
+    <div className='absolute inset-0 md:hidden'>
+        <img  
+            ref={shipRef}  
+            className='w-[10vw] absolute top-0 left-[10%] -translate-x-1/2 -translate-y-1/2 z-[2]' 
+            src="/images/cargoship.png" 
+            alt="" 
+        />
+    </div>
+
         <div className="flex w-full md:flex-row flex-col h-full justify-between items-end md:items-center">
           <div className="md:w-[30%] w-[70%] pt-[10vw]  md:pt-0  flex gap-[2vw] items-center ">
             <div className="w-[1.8vw] h-[25vw] border-[#333f5e] hidden md:flex justify-center border rounded-3xl relative ">
@@ -381,7 +328,7 @@ useEffect(() => {
 
         
 
-        <div className='md:px-[2vw] lg:px-[4vw] px-4 bg-[#02123b] pt-4 pb-[10vw] -mt-2 md:-mt-1 text-white'>
+        <div className='md:px-[2vw] lg:px-[4vw] px-4 bg-[#02123b] pt-4 pb-[10vw] -mt-2 md:-mt-1 text-white z-[999999999]'>
             <div className={`${ClashM.className} text-white flex justify-between border-b py-2 border-[#ffffff] md:text-[1.9vw] lg:text-[1.5vw] text-lg `}>
                 <div>Airlines</div>
                 <div>Awards</div>
@@ -471,60 +418,3 @@ useEffect(() => {
 }
 
 export default page
-{/* <div className=' bg-white flex justify-between px-[5vw]'>
-            <div className={`${Clash.className} text-[#02123b] flex flex-col text-center items-center justify-center w-[28%]`}>
-                <div className='text-[2vw]'>150+<br/>Countries Served</div>
-                <div className='text-[1vw]'>Providing reliable logistics solutions and deliveries worldwide.</div>
-            </div>
-            <div className={`${Clash.className} text-[#02123b] flex flex-col text-center items-center justify-center w-[28%]`}>
-                <div className='text-[2vw]'>500+<br/>Satisfied Clients</div>
-                <div className='text-[1vw]'>Trusted by a diverse portfolio of clients worldwide.</div>
-            </div>
-            <div className={`${Clash.className} text-[#02123b] flex flex-col text-center items-center justify-center w-[28%]`}>
-                <div className='text-[2vw]'>1,000,000+<br/>Shipments Delivered</div>
-                <div className='text-[1vw]'>Successfully handled over one million shipments across air, sea, and land.</div>
-            </div>
-        </div> */}
-          {/* this part */}
-        {/* <div className='h-screen bg-[#02123b] md:px-[2vw] lg:px-[4vw] px-4 '>
-            <div className='flex w-full h-full justify-between items-center'>
-                <div className='w-[30%] flex gap-[2vw] items-center'>
-                    <div className='w-[1.8vw] h-[25vw] border-[#333f5e] flex justify-center  border rounded-3xl'>
-                            <div className='w-[0.8vw] h-[0.8vw] mt-[2px] rounded-full bg-[#adedff] '></div>
-                    </div>
-                    <div>
-                        <div className={`${Clash.className} text-[8vw]  text-white  md:text-[5vw] lg:text-[4vw] `}>25 Years of Excellence</div>
-                        <div className={`${Clash.className} text-white  md:text-[1.7vw] lg:text-[1.3vw] text-base   `} >Celebrating a legacy of innovation, growth, and customer-centric service.</div>
-                    </div>
-                </div>
-                <div className='w-[30%] h-full gap-[20vh] overflow-hidden flex  flex-col relative'>
-                    <div className='gradient1 w-full h-[10vw] absolute top-0 z-[2]'></div>
-                    <div className=' flex-shrink-0' >
-                    <div  className={`${Clash.className} text-white  md:text-[1.7vw] lg:text-[1.3vw] text-base   `}>1999</div>
-                    <div className={`${Clash.className} text-[6vw]  text-white  md:text-[3.8vw] lg:text-[3vw] `} > Foundation Year</div>
-                    <div  className={`${Clash.className} text-white  md:text-[1.7vw] lg:text-[1.3vw] text-base   `}>Channel Freight was established with a vision to revolutionize logistics through efficient and reliable service.</div>
-                    </div>
-                    <div className=' flex-shrink-0'>
-                    <div  className={`${Clash.className} text-white  md:text-[1.7vw] lg:text-[1.3vw] text-base   `}>2005</div>
-                    <div className={`${Clash.className} text-[6vw]  text-white  md:text-[3.8vw] lg:text-[3vw] `} > First Major Expansion</div>
-                    <div  className={`${Clash.className} text-white  md:text-[1.7vw] lg:text-[1.3vw] text-base   `}>Expanded operations to include a comprehensive sea freight service, making global shipping more accessible.</div>
-                    </div>
-                    <div className=' flex-shrink-0 '>
-                    <div  className={`${Clash.className} text-white  md:text-[1.7vw] lg:text-[1.3vw] text-base   `}>2010</div>
-                    <div className={`${Clash.className} text-[6vw]  text-white  md:text-[3.8vw] lg:text-[3vw] leading-[1.2] `} >International Recognition</div>
-                    <div  className={`${Clash.className} text-white  md:text-[1.7vw] lg:text-[1.3vw] text-base   `}>Achieved global recognition by entering key international markets, handling large-scale projects.</div>
-                    </div>
-                    <div className=' flex-shrink-0 '>
-                    <div  className={`${Clash.className} text-white  md:text-[1.7vw] lg:text-[1.3vw] text-base   `}>2020</div>
-                    <div className={`${Clash.className} text-[6vw]  text-white  md:text-[3.8vw] lg:text-[3vw] leading-[1.2] `} >Resilience During Global Challenges</div>
-                    <div  className={`${Clash.className} text-white  md:text-[1.7vw] lg:text-[1.3vw] text-base   `}>Achieved global recognition by entering key international markets, handling large-scale projects.</div>
-                    </div>
-                    <div className=' flex-shrink-0 '>
-                    <div  className={`${Clash.className} text-white  md:text-[1.7vw] lg:text-[1.3vw] text-base   `}>2024</div>
-                    <div className={`${Clash.className} text-[6vw]  text-white  md:text-[3.8vw] lg:text-[3vw] leading-[1.2] `} >25 Years of Service</div>
-                    <div  className={`${Clash.className} text-white  md:text-[1.7vw] lg:text-[1.3vw] text-base   `}>Reached the 25-year milestone, with a strong reputation built on trust, efficiency, and innovation.</div>
-                    </div>
-                    <div className='gradient2 w-full h-[10vw] absolute bottom-0'></div>
-                </div>
-            </div>
-        </div> */}

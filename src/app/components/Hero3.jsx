@@ -11,10 +11,27 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Button  from './Button';
 import StatsSection from './Statsection';
 import ShipAnimation from './ShipAnimation';
+import locomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 gsap.registerPlugin(ScrollTrigger);
 const Hero2 = () => {
+
+      const scrollContainerRef = useRef(null);
     
+      useEffect(() => {
+        const scrollInstance = new locomotiveScroll({
+          el: scrollContainerRef.current,
+          smooth: true,
+          smoothMobile: true,
+          multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+          lerp: 0, // Adjust the easing (lower is smoother)
+        });
+    
+        return () => {
+          if (scrollInstance) scrollInstance.destroy();
+        };
+      }, []);
 
 
     const slider = useRef();
@@ -119,12 +136,6 @@ const Hero2 = () => {
             // pin.kill();
           };
     })
-   
-    const shipRef = useRef(null);
-    const containerRef2 = useRef(null);
-    const initialTextRef = useRef(null);
-    const finalTextRef = useRef(null);
-    const hasPassedCenter = useRef(false);
 
     const titleSpans = useRef([]);
   const descriptionRef = useRef(null);
@@ -161,92 +172,13 @@ const Hero2 = () => {
   }, []);
 
 
-//   useGSAP(() => {
-//     // Set initial ship position
-//     const setInitialPosition = () => {
-//       if (!shipRef.current) return;
-      
-//       const windowWidth = window.innerWidth;
-//       const shipWidth = shipRef.current.offsetWidth;
-      
-//       gsap.set(shipRef.current, {
-//         x: windowWidth + shipWidth / 2,
-//         y: 0,
-//         opacity: 1
-//       });
-//     };
-  
-//     // Set up the animation timeline
-//     const setupAnimation = () => {
-//       gsap.timeline({
-//         scrollTrigger: {
-//           trigger: containerRef2.current,
-//           start: 'top top',
-//           end: '+=200%',
-//           scrub: 1,
-//           pin: true,
-//           markers: true,
-//           pinSpacing: true,
-//           onUpdate: (self) => {
-//             if (!shipRef.current) return;
-            
-//             const progress = self.progress;
-//             const windowWidth = window.innerWidth;
-//             const shipWidth = shipRef.current.offsetWidth;
-//             const totalDistance = windowWidth + shipWidth * 2;
-//             const x = windowWidth + shipWidth / 2 - progress * totalDistance;
-            
-//             // Update ship position
-//             gsap.set(shipRef.current, { x });
-  
-//             // Handle text transitions
-//             const shipCenterX = x + shipWidth / 2;
-//             const windowCenterX = windowWidth / 2;
-//             const threshold = 50;
-  
-//             if (Math.abs(shipCenterX - windowCenterX) < threshold) {
-//               if (!hasPassedCenter.current) {
-//                 gsap.to(initialTextRef.current, { opacity: 0, duration: 0.3 });
-//                 gsap.to(finalTextRef.current, { opacity: 1, duration: 0.3 });
-//                 hasPassedCenter.current = true;
-//               }
-//             } else if (shipCenterX > windowCenterX + threshold) {
-//               if (hasPassedCenter.current) {
-//                 gsap.to(initialTextRef.current, { opacity: 1, duration: 0.3 });
-//                 gsap.to(finalTextRef.current, { opacity: 0, duration: 0.3 });
-//                 hasPassedCenter.current = false;
-//               }
-//             }
-//           },
-//           onLeaveBack: () => {
-//             gsap.set(initialTextRef.current, { opacity: 1 });
-//             gsap.set(finalTextRef.current, { opacity: 0 });
-//             hasPassedCenter.current = false;
-//           },
-//         },
-//       });
-//     };
-  
-//     // Initialize after a small delay to ensure elements are ready
-//     setTimeout(() => {
-//       setInitialPosition();
-//       setupAnimation();
-//     }, 100);
-  
-//     // Handle window resize
-//     window.addEventListener('resize', setInitialPosition);
-    
-//     // useGSAP will automatically clean up the resize listener
-//     return () => window.removeEventListener('resize', setInitialPosition);
-//   }, { scope: containerRef2 });
-
-
 
   return (
     <>
     <div className=''>
     <Navbar/>
     </div>
+    <div ref={scrollContainerRef}>
       <div className='  h-screen  '>
            
             <video   autoPlay 
@@ -859,39 +791,6 @@ const Hero2 = () => {
 
             </div>
         </div>
-                 {/* <div ref={containerRef2} className={`h-screen mt-[4vw] w-full relative overflow-hidden bg-white text-[#02123b]`}>
-                    
- <img
-        ref={shipRef}
-        src="/images/ship3.png"
-        alt="Ship"
-        className="absolute transform-gpu will-change-transform opacity-0 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[9999999]"
-        style={{ height: '200px', width: 'auto' }}
-      />
-                      <div className="relative z-20 flex flex-col justify-center items-center h-full md:mt-5">
-                        <div ref={initialTextRef} className="transition-opacity duration-300">
-                          <div className={`${Clash.className} text-center md:text-[4vw] text-[7vw] px-2 md:px-0 text-[#02123b]`}>
-                            Logistics is more than moving goods,
-                          </div>
-                          <div className={`${ClashM.className} text-center md:text-[5vw] text-[10vw] text-[#02123b]`}>
-                            It's About Trust
-                          </div>
-                        </div>
-                        <div 
-                          ref={finalTextRef} 
-                          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity w-full duration-300"
-                        >
-                          <div className={`${Clash.className} text-center md:text-[4vw] text-[7vw] text-[#02123b]`}>
-                          Partner with us for
-                          </div>
-                          <div className={`${ClashM.className} text-center md:text-[5vw] text-[10vw] text-[#02123b]`}>
-                          Seamless Freight Services
-                          </div>
-                        </div>
-                      </div>
-                
-                     
-                    </div> */}
                     <ShipAnimation/>
                     <div className='w-full'>
         <video
@@ -904,6 +803,7 @@ const Hero2 = () => {
         />
       </div>
         <Footer/>
+        </div>
     
     </>
   )
