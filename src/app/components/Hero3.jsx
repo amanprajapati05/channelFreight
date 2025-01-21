@@ -524,7 +524,7 @@ const Hero2 = () => {
                     <div className={`${Clash.className} text-[4vw] md:text-[1.4vw] text-[#02123b]`}>
                         With deep industry knowledge, we create logistics solutions that are efficient, compliant, and responsive to evolving market needs.
                     </div>
-                    <Button bgColor='#02123b' tColor='#ffffff' text='View More' />
+                    <Button bgColor='#02123b' tColor='#ffffff' text='View More' link='/sectors' />
                 </div>
             
                 <div className='flex md:w-[150%] ml-[4vw] md:ml-0 gap-[1.7vw]'>
