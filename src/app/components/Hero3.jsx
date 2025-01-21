@@ -217,7 +217,7 @@ const Hero2 = () => {
                         <div className={`text-[#02123b] ${Clash.className} text-[5vw] md:hidden sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.
                        Our services are designed to ensure smooth operations and efficient delivery for all businesses.</div>
                 </div>
-                <Button bgColor='#02123b' tColor='#ffffff' text='View More' />
+                <Button bgColor='#02123b' tColor='#ffffff' text='View More' link='/services' />
             </div>
         </div>
         <div className=''>
