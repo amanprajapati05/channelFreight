@@ -25,7 +25,7 @@ const page = () => {
         translateX: 0,
       },
       {
-        translateX: "-80%",
+        translateX: "-30%",
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -256,7 +256,7 @@ const text = [
           <div className='flex w-full md:h-[28vw] h-[250vw] md:gap-0 gap-4 md:flex-row flex-col justify-between my-[4vw]'>
             
               <div className='md:w-[32.5%] w-full  relative h-full overflow-hidden rounded-2xl flex flex-col justify-end'>
-                  <img src='/images/card1.webp' className='absolute w-full  inset-0 z-[-1]'/>
+                  <img src='/images/services/card9.webp' className='absolute w-full  inset-0 z-[-1]'/>
                   <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>IScalable Chartering</div>
               </div>
               <div className='md:w-[32.5%] w-full h-full rounded-2xl  '> 
@@ -291,7 +291,7 @@ const text = [
                   </div>
               </div>
               <div className='md:w-[32.5%] w-full  relative h-full overflow-hidden rounded-2xl flex flex-col justify-end'>
-              <img src='/images/card2.webp' className='w-full  absolute inset-0 z-[-1]'/>
+              <img src='/images/services/card10.webp' className='w-full  absolute inset-0 z-[-1]'/>
                   <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>Cargo Solutions</div>
               </div>
           </div>
