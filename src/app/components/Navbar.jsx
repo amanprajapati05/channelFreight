@@ -339,7 +339,7 @@ const Navbar = () => {
                         End-to-end logistics management for streamlined business operations.
                       </div>
                     </Link>
-                    <Link href='/services/project' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[24%] gap-[0.5vw] cursor-pointer">
+                    <Link href='/services/projectlogistics' className=" hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl flex flex-col items-start w-[24%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><ChartBar className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
                         <div className={`${ClashM.className} md:text-[1.8vw] lg:text-[1.6vw]  xl:text-[1.3vw]`}>Project Logistics</div>

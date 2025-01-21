@@ -10,6 +10,7 @@ import { useRef } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Button  from './Button';
 import StatsSection from './Statsection';
+import ShipAnimation from './ShipAnimation';
 
 gsap.registerPlugin(ScrollTrigger);
 const Hero2 = () => {
@@ -160,84 +161,84 @@ const Hero2 = () => {
   }, []);
 
 
-  useGSAP(() => {
-    // Set initial ship position
-    const setInitialPosition = () => {
-      if (!shipRef.current) return;
+//   useGSAP(() => {
+//     // Set initial ship position
+//     const setInitialPosition = () => {
+//       if (!shipRef.current) return;
       
-      const windowWidth = window.innerWidth;
-      const shipWidth = shipRef.current.offsetWidth;
+//       const windowWidth = window.innerWidth;
+//       const shipWidth = shipRef.current.offsetWidth;
       
-      gsap.set(shipRef.current, {
-        x: windowWidth + shipWidth / 2,
-        y: 0,
-        opacity: 1
-      });
-    };
+//       gsap.set(shipRef.current, {
+//         x: windowWidth + shipWidth / 2,
+//         y: 0,
+//         opacity: 1
+//       });
+//     };
   
-    // Set up the animation timeline
-    const setupAnimation = () => {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef2.current,
-          start: 'top top',
-          end: '+=200%',
-          scrub: 1,
-          pin: true,
-          markers: true,
-          pinSpacing: true,
-          onUpdate: (self) => {
-            if (!shipRef.current) return;
+//     // Set up the animation timeline
+//     const setupAnimation = () => {
+//       gsap.timeline({
+//         scrollTrigger: {
+//           trigger: containerRef2.current,
+//           start: 'top top',
+//           end: '+=200%',
+//           scrub: 1,
+//           pin: true,
+//           markers: true,
+//           pinSpacing: true,
+//           onUpdate: (self) => {
+//             if (!shipRef.current) return;
             
-            const progress = self.progress;
-            const windowWidth = window.innerWidth;
-            const shipWidth = shipRef.current.offsetWidth;
-            const totalDistance = windowWidth + shipWidth * 2;
-            const x = windowWidth + shipWidth / 2 - progress * totalDistance;
+//             const progress = self.progress;
+//             const windowWidth = window.innerWidth;
+//             const shipWidth = shipRef.current.offsetWidth;
+//             const totalDistance = windowWidth + shipWidth * 2;
+//             const x = windowWidth + shipWidth / 2 - progress * totalDistance;
             
-            // Update ship position
-            gsap.set(shipRef.current, { x });
+//             // Update ship position
+//             gsap.set(shipRef.current, { x });
   
-            // Handle text transitions
-            const shipCenterX = x + shipWidth / 2;
-            const windowCenterX = windowWidth / 2;
-            const threshold = 50;
+//             // Handle text transitions
+//             const shipCenterX = x + shipWidth / 2;
+//             const windowCenterX = windowWidth / 2;
+//             const threshold = 50;
   
-            if (Math.abs(shipCenterX - windowCenterX) < threshold) {
-              if (!hasPassedCenter.current) {
-                gsap.to(initialTextRef.current, { opacity: 0, duration: 0.3 });
-                gsap.to(finalTextRef.current, { opacity: 1, duration: 0.3 });
-                hasPassedCenter.current = true;
-              }
-            } else if (shipCenterX > windowCenterX + threshold) {
-              if (hasPassedCenter.current) {
-                gsap.to(initialTextRef.current, { opacity: 1, duration: 0.3 });
-                gsap.to(finalTextRef.current, { opacity: 0, duration: 0.3 });
-                hasPassedCenter.current = false;
-              }
-            }
-          },
-          onLeaveBack: () => {
-            gsap.set(initialTextRef.current, { opacity: 1 });
-            gsap.set(finalTextRef.current, { opacity: 0 });
-            hasPassedCenter.current = false;
-          },
-        },
-      });
-    };
+//             if (Math.abs(shipCenterX - windowCenterX) < threshold) {
+//               if (!hasPassedCenter.current) {
+//                 gsap.to(initialTextRef.current, { opacity: 0, duration: 0.3 });
+//                 gsap.to(finalTextRef.current, { opacity: 1, duration: 0.3 });
+//                 hasPassedCenter.current = true;
+//               }
+//             } else if (shipCenterX > windowCenterX + threshold) {
+//               if (hasPassedCenter.current) {
+//                 gsap.to(initialTextRef.current, { opacity: 1, duration: 0.3 });
+//                 gsap.to(finalTextRef.current, { opacity: 0, duration: 0.3 });
+//                 hasPassedCenter.current = false;
+//               }
+//             }
+//           },
+//           onLeaveBack: () => {
+//             gsap.set(initialTextRef.current, { opacity: 1 });
+//             gsap.set(finalTextRef.current, { opacity: 0 });
+//             hasPassedCenter.current = false;
+//           },
+//         },
+//       });
+//     };
   
-    // Initialize after a small delay to ensure elements are ready
-    setTimeout(() => {
-      setInitialPosition();
-      setupAnimation();
-    }, 100);
+//     // Initialize after a small delay to ensure elements are ready
+//     setTimeout(() => {
+//       setInitialPosition();
+//       setupAnimation();
+//     }, 100);
   
-    // Handle window resize
-    window.addEventListener('resize', setInitialPosition);
+//     // Handle window resize
+//     window.addEventListener('resize', setInitialPosition);
     
-    // useGSAP will automatically clean up the resize listener
-    return () => window.removeEventListener('resize', setInitialPosition);
-  }, { scope: containerRef2 });
+//     // useGSAP will automatically clean up the resize listener
+//     return () => window.removeEventListener('resize', setInitialPosition);
+//   }, { scope: containerRef2 });
 
 
 
@@ -256,12 +257,6 @@ const Hero2 = () => {
                 <source src="/videos/Homepage-Hero.mp4" type="video/mp4"/>
             </video>
             <div  className='lg:pt-[9vw] md:pt-[20vw] flex h-[80%] md:h-auto'>
-                {/* <div  className='flex md:flex-row flex-col justify-center   text-white md:justify-between px-[4vw] md:px-[2vw] lg:px-[4vw]   '>
-                    <div className={`${Clash.className} text-[14vw] sm:text-[9vw] leading-[1.2] xl:text-[6vw] md:text-[9vw] lg:text-[7.5vw] uppercase`}>
-                        <span>Innovative,</span><br/> <span>Pro Active</span> <br/>
-                    <span>& Speed.</span></div>
-                    <div className={`${Clash.className} leading-8  md:leading-normal text-[5vw] sm:text-[3.4vw] pt-[3.4vw] md:pt-0   xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] xl:w-[30%] md:w-[38%]  lg:w-[33%] text-start flex items-end`}>We create customised solutions to meet the changing demands of a dynamic industry and always stay a step ahead of contemporaries.</div>
-                </div> */}
                 <div className='flex md:flex-row flex-col justify-center text-white md:justify-between px-[4vw] md:px-[2vw] lg:px-[4vw]'>
       <div className={`${Clash.className} text-[14vw] sm:text-[9vw] leading-[1.2] xl:text-[6vw] md:text-[9vw] lg:text-[7.5vw] uppercase overflow-hidden`}>
         <span ref={el => titleSpans.current[0] = el} className="inline-block">Innovative,</span><br/>
@@ -395,36 +390,6 @@ const Hero2 = () => {
                     <div className='px-[4vw] md:px-[2vw] lg:px-[4vw] pt-4 md:pb-20 pb-8'>
                         {/* First Row */}
                         <div className='flex gap-3 h-[30vw] mb-3'>
-                            {/* <div 
-                                ref={card1Ref}
-                                className=" rounded-3xl relative overflow-hidden "
-                                style={{ width: '66%', transition: 'width 0.5s ease' }}
-                                onMouseEnter={() => handleMouseEnter(card1Ref, card2Ref, false)}
-                                onMouseLeave={() => handleMouseLeave(card1Ref, card2Ref, false)}
-                            >   
-                             <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
-                             <video 
-                    className="absolute inset-0 w-full h-full object-cover  z-[0]"
-                    src="/videos/airfreight.mp4"
-                    muted
-                    playsInline
-                    loop
-                />
-                               
-                                <div className='flex flex-col justify-between h-full p-6 lg:p-8 relative z-[2]'>
-                                    <div className='gap-4 flex flex-col'>
-                                        <div className='rounded-full w-fit bg-[--blue2] p-1'>
-                                            <ArrowUpRight color='#ADEDFF' className='h-12 w-12 md:w-8 md:h-8' />
-                                        </div>
-                                        <div className={`text-white text-[5vw] md:text-[2.2vw] lg:text-[2vw] ${Clash.className}`}>
-                                            AIR FREIGHT SERVICES
-                                        </div>
-                                    </div>
-                                    <div className={`${Clash.className} text-white text-base md:text-[1.5vw] lg:text-[1.4vw] md:leading-[1.4] lg:pr-3`}>
-                                        Whether it's urgent cargo, temperature-sensitive shipments, or complex global deliveries, we ensure your goods reach their destination on time, every time.
-                                    </div>
-                                </div>
-                            </div> */}
                             <div 
                                 ref={card1Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
@@ -761,10 +726,7 @@ const Hero2 = () => {
                     </div>
                     <div className={`${Clash.className} text-[4vw] md:text-[1.4vw] text-[#02123b]`}>
                         With deep industry knowledge, we create logistics solutions that are efficient, compliant, and responsive to evolving market needs.
-                    </div>
-                    {/* <div className={`${ClashM.className} text-white px-4 py-2 rounded-3xl bg-[#02123b] w-fit text-sm`}>
-                        View More &gt;
-                    </div> */}
+                    </div>  
                     <Button bgColor='#02123b' tColor='#ffffff' text='View More' />
                 </div>
             
@@ -897,11 +859,11 @@ const Hero2 = () => {
 
             </div>
         </div>
-                 <div ref={containerRef2} className={`h-screen mt-[4vw] w-full relative overflow-hidden bg-white text-[#02123b]`}>
+                 {/* <div ref={containerRef2} className={`h-screen mt-[4vw] w-full relative overflow-hidden bg-white text-[#02123b]`}>
                     
  <img
         ref={shipRef}
-        src="/images/ship2.png"
+        src="/images/ship3.png"
         alt="Ship"
         className="absolute transform-gpu will-change-transform opacity-0 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[9999999]"
         style={{ height: '200px', width: 'auto' }}
@@ -929,7 +891,8 @@ const Hero2 = () => {
                       </div>
                 
                      
-                    </div>
+                    </div> */}
+                    <ShipAnimation/>
                     <div className='w-full'>
         <video
         className=" inset-0 w-full h-full object-cover -mb-1 z-[0]"
