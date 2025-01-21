@@ -528,7 +528,7 @@ const Hero2 = () => {
                 </div>
             
                 <div className='flex md:w-[150%] ml-[4vw] md:ml-0 gap-[1.7vw]'>
-                    <div onMouseEnter={() => setHoveredCard(1)}
+                    <Link href='/sectors/pharma' onMouseEnter={() => setHoveredCard(1)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -547,9 +547,9 @@ const Hero2 = () => {
                                 Pharmaceutical logistics is one of the most critical and regulated sectors, requiring precise handling of sensitive goods such as medicines, vaccines, APIs, and biological samples.
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div onMouseEnter={() => setHoveredCard(2)}
+                    <Link href='/sectors/cold' onMouseEnter={() => setHoveredCard(2)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -568,9 +568,9 @@ const Hero2 = () => {
                             Cold chain logistics is vital for industries such as healthcare, food, agriculture, and chemicals. It involves the seamless movement of perishable goods under strict temperature controls to preserve quality and safety. 
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div onMouseEnter={() => setHoveredCard(3)}
+                    <Link href='/sectors/hazardous' onMouseEnter={() => setHoveredCard(3)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -589,9 +589,9 @@ const Hero2 = () => {
                             Transporting hazardous cargo involves high-stakes logistics due to the inherent risks to people, property, and the environment.
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div onMouseEnter={() => setHoveredCard(4)}
+                    <Link href='/sectors/engineering' onMouseEnter={() => setHoveredCard(4)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -610,9 +610,9 @@ const Hero2 = () => {
                             We ensure safe handling and transportation while accommodating rapid advancements in bio-technology.
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div onMouseEnter={() => setHoveredCard(5)}
+                    <Link href='/sectors/exhibition' onMouseEnter={() => setHoveredCard(5)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -631,8 +631,8 @@ const Hero2 = () => {
                             Exhibition cargo logistics involves the timely transport and setup of display materials for trade shows and events. Precision timing and damage-free delivery are critical to success.
                             </div>
                         </div>
-                    </div>
-                    <div onMouseEnter={() => setHoveredCard(6)}
+                    </Link>
+                    <Link href='/packaging' onMouseEnter={() => setHoveredCard(6)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -651,7 +651,7 @@ const Hero2 = () => {
                             We manage the end-to-end supply chain for clinical materials, ensuring timely and secure deliveries to research centers.
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>
