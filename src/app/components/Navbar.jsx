@@ -237,13 +237,13 @@ const Navbar = () => {
             >
               CONTACT
             </NavItem>
-            <NavItem 
+            {/* <NavItem 
               isActive={activeMenu}
               onMouseEnter={() => setActiveMenu(null)}
               link='/gallery'
             >
               GALLERY
-            </NavItem>
+            </NavItem> */}
           </div>
         </div>
 
