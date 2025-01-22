@@ -13,10 +13,75 @@ import AnimatedTextSection from '../../components/SectorAnimated'
 import AirplaneCanvas from '../../components/AirplaneCanvas'
 import AnimatedContent from '../../components/AnimatedServiceContent'
 import ServicesSlider from '../../components/ServicesSlider'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import locomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const page = () => {
       const slider = useRef();
       const triggerRef = useRef();
+      const [isLoading, setIsLoading] = useState(true);
+      const [isReady, setIsReady] = useState(false);
+      const [locomotiveInstance, setLocomotiveInstance] = useState(null);
+      const scrollContainerRef = useRef(null);
+
+       useEffect(() => {
+              const scrollInstance = new locomotiveScroll({
+                el: scrollContainerRef.current,
+                smooth: true,
+                smoothMobile: true,
+                multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+                lerp: 0, // Adjust the easing (lower is smoother)
+              });
+          
+              return () => {
+                if (scrollInstance) scrollInstance.destroy();
+              };
+            }, []);
+
+      // useEffect(() => {
+      //   // Force scroll to top
+      //   window.scrollTo(0, 0);
+        
+      //   // Disable scroll initially
+      //   document.body.style.overflow = 'hidden';
+        
+      //   // Initialize locomotive scroll
+      //   const scrollInstance = new locomotiveScroll({
+      //     el: scrollContainerRef.current,
+      //     smooth: true,
+      //     smoothMobile: true,
+      //     multiplier: 0.1,
+      //     lerp: 0,
+      //   });
+    
+      //   setLocomotiveInstance(scrollInstance);
+        
+      //   // Initially disable scroll
+      //   scrollInstance.stop();
+        
+      //   // Add delay before starting animations
+      //   const timer = setTimeout(() => {
+      //     setIsLoading(false);
+      //     setIsReady(true);
+      //     scrollInstance.start();
+      //     gsap.to(scrollContainerRef.current, {
+      //       opacity: 1,
+      //       duration: 0.5,
+      //     });
+      //   }, 2000); // 2 second delay
+        
+      //   return () => {
+      //     clearTimeout(timer);
+      //     if (scrollInstance) {
+      //       scrollInstance.destroy();
+      //     }
+      //     document.body.style.overflow = 'auto';
+      //   };
+      // }, []);
 
 const text = [
     "Whether it’s an industrial park setup, a ",
@@ -39,6 +104,9 @@ const text = [
   
 
   useGSAP(()=>{
+
+ // Only run when ready
+
     gsap.fromTo(slider.current,{
         translateX: 0,
       },
@@ -52,7 +120,7 @@ const text = [
           end: "1500 top",
           scrub: 0.6,
           pin: true,
-       
+          // markers: true,
           anticipatePin: 1, // This helps prevent jarring pin start
           fastScrollEnd: true, // Improves performance during fast scrolling
           preventOverlaps: true,
@@ -72,6 +140,39 @@ const text = [
         // pin.kill();
       };
 })
+
+// useGSAP(() => {
+//   if (!isReady) return; // Only run when ready
+
+//   gsap.fromTo(slider.current,
+//     {
+//       translateX: 0,
+//     },
+//     {
+//       translateX: "-30%",
+//       ease: "none",
+//       duration: 1,
+//       scrollTrigger: {
+//         trigger: triggerRef.current,
+//         start: "top top",
+//         end: "1500 top",
+//         scrub: 0.6,
+//         pin: true,
+//         markers: true,
+//         anticipatePin: 1,
+//         fastScrollEnd: true,
+//         preventOverlaps: true,
+//         invalidateOnRefresh: true,
+//         onEnter: () => {
+//           gsap.to(slider.current, {
+//             opacity: 1,
+//             duration: 0.3
+//           });
+//         },
+//       },
+//     }
+//   );
+// }, [isReady]);
 
 const slides = [
   {
@@ -98,7 +199,7 @@ const slides = [
     <Navbar/>
     </div>
  
-
+    <div ref={scrollContainerRef} data-scroll-container>
     <ServicesPage title={'project logistics'} img1={'/images/services/img3.png'} img2={'/images/services/img32.png'} desc={'Our team is dedicated to providing end-to-end solutions for transporting Over-Dimensional Cargo (ODC), Super-ODC, and other heavy lift equipment critical for large-scale industrial, commercial, and infrastructural projects.'}/>
     
     <div ref={triggerRef} className='md:p-[2vw] hidden md:block lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
@@ -267,37 +368,6 @@ const slides = [
                 <img src='/images/services/card3.webp' className='absolute w-full  inset-0 z-[-1]'/>
                 <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>Tailored Solutions</div>
             </div>
-            {/* <div className='md:w-[32.5%] w-full h-full rounded-2xl  '> 
-                <div className='flex flex-col h-full justify-between'>
-                <div className={`${Clash.className} w-full h-[32%] rounded-2xl border relative border-[#c8c8c8] overflow-hidden flex justify-between text-[--blue2] md:p-[1.5vw] p-[3vw] `}>
-    <video 
-        className="w-full h-full object-cover scale-[3] absolute right-52 opacity-25 z-[-1]"
-        src="/videos/air.mp4"
-        muted
-        playsInline
-        autoPlay
-        loop
-    />
-
-    <div className={`${Clash.className} text-[#02123b] lg:text-[1vw] md:text-[1.8vw] text-[3vw]  `}>Partnerships</div>
-    <div className='h-full flex flex-col justify-end '>
-        <div className={`${Clash.className} text-[#02123b] lg:text-[3vw] md:text-[3.5vw] text-[6vw] text-right md:text-left`}>000+</div>
-        <div className={`${Clash.className} lg:text-[1vw] md:text-[1.8vw] text-[3vw] text-[#02123b] leading-[0] pb-[2vw] md:pb-0`}>Airlines Connected</div>
-    </div>
-
-</div>
-                <div className=' h-[64%] bg-[#02123b] rounded-2xl md:px-[1vw] px-[3vw] '>
-                    <div className={`${Clash.className} text-[#c8c8c8] lg:text-[1vw] md:text-[1.8vw] text-[3vw] md:py-[1vw] py-[3vw]`}>Trusted Partner</div>
-                    <div className='flex justify-center items-center h-[90%] relative'>
-                        <div className={` md:text-[1.6vw] text-[4vw] text-white absolute  top-14 left-0   `}>
-                            <img src="/images/inv.png" alt="" />
-                        </div>
-                        <div className={`${ClashM.className} px-3   md:text-[1.6vw] md:text-center text-[4vw] text-white `}>From booking to delivery, every detail is managed with care.</div>
-                        <div className='absolute bottom-14 right-0 scale-x-[-1] scale-y-[-1]'><img  className='' src="/images/inv.png" alt="" /></div>
-                    </div>
-                </div>
-                </div>
-            </div> */}
              <div className='md:w-[32.5%] w-full h-full rounded-2xl  '> 
                   <div className='flex flex-col h-full justify-between'>
                   <div className={`${Clash.className} w-full h-[50%] rounded-2xl border relative border-[#c8c8c8] overflow-hidden flex justify-between text-[--blue2] md:p-[1.5vw] p-[3vw] `}>
@@ -330,6 +400,7 @@ const slides = [
                 <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>Unique Logistics</div>
             </div>
         </div>
+    </div>
     </div>
     <Footer/>
     </>

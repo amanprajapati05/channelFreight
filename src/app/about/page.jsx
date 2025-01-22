@@ -1,11 +1,13 @@
 "use client"
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import gsap from 'gsap';
 import Navbar from '../components/Navbar'
 import { Clash, ClashM } from '../../../public/fonts/fonts'
 import Footer from '../components/Footer'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
+import locomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +15,7 @@ const page = () => {
     const containerRefs = useRef([]);
     const overlayRefs = useRef([]);
     const textRefs = useRef([]);
-   const sectionRef = useRef(null);
+    const sectionRef = useRef(null);
     const contentRef = useRef(null);
     const dotRef = useRef(null);
     const timelineItemsRef = useRef([]);
@@ -21,21 +23,114 @@ const page = () => {
     const shipRef2 = useRef(null);
     const visionRef = useRef(null);
     const shipContainerRef = useRef(null);
+    const scrollContainerRef = useRef(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [isReady, setIsReady] = useState(false);
+    const [locomotiveInstance, setLocomotiveInstance] = useState(null);
+        
+    useEffect(() => {
+        // Force scroll to top
+        window.scrollTo(0, 0);
+        
+        // Initialize locomotive scroll
+        const scrollInstance = new locomotiveScroll({
+            el: scrollContainerRef.current,
+            smooth: true,
+            smoothMobile: true,
+            multiplier: 0.1,
+            lerp: 0,
+        });
+
+        setLocomotiveInstance(scrollInstance);
+        
+        // Disable scroll initially
+        scrollInstance.stop();
+        
+        // Add a delay before starting animations
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+            setIsReady(true);
+            scrollInstance.start();
+            ScrollTrigger.refresh();
+        }, 2000); // 2 second delay
+        
+        return () => {
+            clearTimeout(timer);
+            if (scrollInstance) {
+                scrollInstance.destroy();
+            }
+        };
+    }, []);
+
+// useGSAP(() => {
+//     if (!isReady) return;
+//     const content = contentRef.current;
+//     const section = sectionRef.current;
+//     const dot = dotRef.current;
+//     const items = timelineItemsRef.current;
+//     const ship = shipRef.current;
+//     const ship2 = shipRef2.current;
+//     const vision = visionRef.current;
+    
+//     // Calculate the total scroll distance needed
+//     const totalScroll = (items.length - 3) * window.innerHeight;
+//     const shipMovement = window.innerWidth < 768 ? "400%" : "220%";
+
+//     // Create a timeline for all animations
+//     const tl = gsap.timeline({
+//         scrollTrigger: {
+//             trigger: section,
+//             start: "top top",
+//             end: `+=${totalScroll}px`,
+//             pin: true,
+//             scrub: 0.6,
+//             onUpdate: (self) => {
+//                 // Change overflow based on scroll progress
+//                 if (self.progress < 0.1) { // At start
+//                     section.style.overflow = 'visible';
+//                 } else if (self.progress > 0.9) { // Near end
+//                     section.style.overflow = 'hidden';
+//                 } else { // During animation
+//                     section.style.overflow = 'visible';
+//                 }
+//             }
+//         }
+//     });
+     
+//     // Add all animations to the same timeline
+//     tl.to(content, {
+//         y: -(totalScroll),
+//         ease: "none",
+//     })
+//     .to(dot, {
+//         y: `${23.5}vw`,
+//         ease: "none",
+//     }, 0)
+//     .to(ship, {
+//         y: shipMovement,
+//         ease: "none",
+//     }, 0)
+//     .to(ship2, {
+//         y: shipMovement,
+//         ease: "none",
+//     }, 0);
+//     ;
+    
+// }, { scope: sectionRef });
 
 useGSAP(() => {
+    if (!isReady) return; // Only run when ready
+
     const content = contentRef.current;
     const section = sectionRef.current;
     const dot = dotRef.current;
     const items = timelineItemsRef.current;
     const ship = shipRef.current;
     const ship2 = shipRef2.current;
-    const vision = visionRef.current;
     
-    // Calculate the total scroll distance needed
     const totalScroll = (items.length - 3) * window.innerHeight;
     const shipMovement = window.innerWidth < 768 ? "400%" : "220%";
 
-    // Create a timeline for all animations
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: section,
@@ -44,19 +139,17 @@ useGSAP(() => {
             pin: true,
             scrub: 0.6,
             onUpdate: (self) => {
-                // Change overflow based on scroll progress
-                if (self.progress < 0.1) { // At start
+                if (self.progress < 0.1) {
                     section.style.overflow = 'visible';
-                } else if (self.progress > 0.9) { // Near end
+                } else if (self.progress > 0.9) {
                     section.style.overflow = 'hidden';
-                } else { // During animation
+                } else {
                     section.style.overflow = 'visible';
                 }
             }
         }
     });
-     
-    // Add all animations to the same timeline
+    
     tl.to(content, {
         y: -(totalScroll),
         ease: "none",
@@ -73,9 +166,11 @@ useGSAP(() => {
         y: shipMovement,
         ease: "none",
     }, 0);
-    ;
-    
-}, { scope: sectionRef });
+
+    return () => {
+        ScrollTrigger.getAll().forEach(st => st.kill());
+    };
+}, [isReady]); 
 
   const timelineData = [
     {
@@ -176,7 +271,7 @@ useGSAP(() => {
    <Navbar/>
    </div>
 
-   <div className='w-full '>
+   <div ref={scrollContainerRef} className='w-full '>
         
         <div className='md:h-screen h-[50vh] '>
             <div className=' h-[100%] md:h-[100%] pb-4 md:pb-0  bg-[#02123b]'>

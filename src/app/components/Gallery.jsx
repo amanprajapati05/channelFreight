@@ -8,17 +8,67 @@ import ToggleButton from '../components/Togglebutton'
 import Scale from '../components/Barcode'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import ScrollTrigger from "gsap/ScrollTrigger";
+import locomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+import { ScrollTrigger } from "gsap/ScrollTrigger"; 
 import Footer from './Footer'
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Gallery = () => {
+
   const [isActive, setIsActive] = useState(false);
   const cardsRef = useRef([]);
     const slider = useRef(null);
     const triggerRef = useRef(null);
     const containerRef = useRef(null);
+    const scrollContainerRef = useRef(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [isReady, setIsReady] = useState(false);
+    const [locomotiveInstance, setLocomotiveInstance] = useState(null);
+    useEffect(() => {
+      // Force scroll to top
+      window.scrollTo(0, 0);
+      
+      // Disable scroll initially
+      document.body.style.overflow = 'hidden';
+      
+      // Initialize locomotive scroll
+      const scrollInstance = new locomotiveScroll({
+        el: scrollContainerRef.current,
+        smooth: true,
+        smoothMobile: true,
+        multiplier: 0.1,
+        lerp: 0,
+      });
+  
+      setLocomotiveInstance(scrollInstance);
+      
+      // Initially disable scroll
+      scrollInstance.stop();
+      
+      // Add delay before starting animations
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        setIsReady(true);
+        scrollInstance.start();
+        scrollInstance.update();
+        
+        // Fade in the content
+        if (scrollContainerRef.current) {
+          scrollContainerRef.current.style.opacity = '1';
+        }
+      }, 2000); // 2 second delay
+      
+      return () => {
+        clearTimeout(timer);
+        if (scrollInstance) {
+          scrollInstance.destroy();
+        }
+        document.body.style.overflow = 'auto';
+      };
+    }, []);
+  
 
   useEffect(() => {
     const cards = cardsRef.current;
@@ -87,7 +137,7 @@ const Gallery = () => {
       
     )
     return () => {
-        pin.kill();
+        // pin.kill();
       };
 })
 
@@ -98,7 +148,7 @@ const Gallery = () => {
       </div>
  
       
-      <div className='w-full h-screen'>
+      <div ref={scrollContainerRef}  className='w-full h-screen'>
         <div className='w-full h-full bg-[#02123b]'>
           <div className='md:pt-[20vw] lg:pt-[16vw] xl:pt-[12vw] pt-[42vw] sm:pt-[32vw] bg-[#02123b]'>
             <div className={`md:pl-[2vw] lg:pl-[4vw] px-4 md:px-0 flex flex-col md:flex-row gap-6 md:gap-0 justify-end md:justify-between text-white ${Clash.className}`}>
@@ -115,25 +165,55 @@ const Gallery = () => {
                   {/* Regular image cards - add ref to each card */}
                   <div ref={slider} className='flex gap-[4vw] w-full relative pt-[10vw] md:pt-0 pb-[8vw] md:pb-0'>
                   <div ref={addToRefs} className='md:w-[30%] flex-shrink-0 lg:w-[25%] xl:w-[20%] w-[50%] rounded-xl h-[45vw] md:h-[28vw] lg:h-[23vw] xl:h-[19vw]'>
-                    <img src="/images/images.png" className='w-full h-full object-cover rounded-xl' alt="" />
+                    <img src="/images/gallery/g1.webp" className='w-full h-full object-cover rounded-xl' alt="" />
                   </div>
                   
                     
-                    <ImageCard ref={addToRefs}/>
+                 
+<ImageCard 
+ref={addToRefs}
+  images={[
+    "/images/images.png",
+    "/images/images2.png",
+    "/images/images3.png",
+    // Add up to 10 images
+  ]}
+  title="Start"
+  date="12th January 1999"
+/>
                    
                   
 
                   <div ref={addToRefs} className='md:w-[30%] flex-shrink-0 lg:w-[25%] xl:w-[20%] w-[50%] rounded-xl h-[45vw] md:h-[28vw] lg:h-[23vw] xl:h-[19vw]'>
-                    <img src="/images/images.png" className='w-full h-full object-cover rounded-xl' alt="" />
+                    <img src="/images/gallery/g2.webp" className='w-full h-full object-cover rounded-xl' alt="" />
                   </div>
 
-                  <div ref={addToRefs} className='md:w-[30%] flex-shrink-0 lg:w-[25%] xl:w-[20%] w-[50%] rounded-xl h-[45vw] md:h-[28vw] lg:h-[23vw] xl:h-[19vw]'>
-                    <img src="/images/images.png" className='w-full h-full object-cover rounded-xl' alt="" />
-                  </div>
+                  <ImageCard 
+ref={addToRefs}
+  images={[
+    "/images/images.png",
+    "/images/images2.png",
+    "/images/images3.png",
+    // Add up to 10 images
+  ]}
+  title="Air Charter"
+  date="18th June 2004"
+/>
 
                   <div ref={addToRefs} className='md:w-[30%] flex-shrink-0 lg:w-[25%] xl:w-[20%] w-[50%] rounded-xl h-[45vw] md:h-[28vw] lg:h-[23vw] xl:h-[19vw]'>
-                    <img src="/images/images.png" className='w-full h-full object-cover rounded-xl' alt="" />
+                    <img src="/images/gallery/g3.webp" className='w-full h-full object-cover rounded-xl' alt="" />
                   </div>
+                  <ImageCard 
+ref={addToRefs}
+  images={[
+    "/images/images.png",
+    "/images/images2.png",
+    "/images/images3.png",
+    // Add up to 10 images
+  ]}
+  title="Start"
+  date="12th January 1999"
+/>  
                   </div>
  <div className='w-full  flex justify-center absolute md:bottom-40 bottom-12 z-[999]'>
           <ToggleButton isActive={isActive} setIsActive={setIsActive} />
@@ -170,158 +250,3 @@ const Gallery = () => {
 }
 
 export default Gallery
-    
-        {/* <div className='w-full flex justify-center'>
-   {/* <div className='md:w-[30%] flex-shrink-0  lg:w-[25%] xl:w-[20%] w-[50%] rounded-xl h-[45vw] md:h-[28vw] lg:h-[23vw] xl:h-[19vw] '>
-                            <div className='w-full h-full bg-[#333f5e] flex flex-col rounded-xl p-2 gap-1 md:gap-3 md:p-3 lg:p-4 lg:gap-5'>
-                                <div className={`${Clash.className} text-white flex flex-col gap-[1px] lg:gap-[2px]`}>
-                                    <div className={`${ClashM.className} text-[4.2vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.5vw] tracking-wider leading-[0.9] md:leading-none `}>Start</div>
-                                    <div className='text-[3.6vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.2vw]'>12th January 1999</div>
-                                </div>
-                                <div
-                                    className='w-full rounded-xl h-[70%] relative  bg-gray-700'
-                                >
-                                    <img src="/images/images.png" className='absolute z-[3] object-cover rotate-2 translate-y-2 w-full rounded-xl h-full' alt="" />
-                                    <img src="/images/images2.png" className='absolute z-[1] rotate-12 translate-x-6 object-cover w-full rounded-xl h-full' alt="" />
-                                    <img src="/images/images3.png" className='absolute z-[2] -rotate-12 -translate-x-6 object-cover w-full rounded-xl h-full' alt="" />
-                                </div>
-
-                            </div>
-                        </div> */}
-                         {/* <div className='flex bg-[#333f5e] rounded-full p-1 gap-1'>
-                        <div className='flex '>
-                            <div className='bg-white '></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div className='bg-white rounded-full flex justify-between items-center'>
-                            <div className='bg-black w-1 h-2'></div>
-                            <div className='bg-black w-1 h-2'></div>
-                            <div className='bg-black w-1 h-2'></div>
-                        </div>
-                    </div> */}
-                    
-                {/* <div className='flex justify-center w-full gap-2 items-center'>
-                    <div className='w-[0.14vw] bg-white h-[1.4vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.14vw] bg-[#333f5e] h-[1.4vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.14vw] bg-[#333f5e] h-[1.4vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.14vw] bg-[#333f5e] h-[1.4vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.14vw] bg-[#333f5e] h-[1.4vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.14vw] bg-[#333f5e] h-[1.4vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='text-white  h-[1.4vw]'>1</div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.14vw] bg-[#333f5e] h-[1.4vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.14vw] bg-[#333f5e] h-[1.4vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.14vw] bg-[#333f5e] h-[1.4vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.14vw] bg-[#333f5e] h-[1.4vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.14vw] bg-[#333f5e] h-[1.4vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='w-[0.13vw] bg-[#333f5e] h-[1.1vw]'></div>
-                    <div className='text-white h-[1.4vw]'>2</div>
-
-
-                </div> */}

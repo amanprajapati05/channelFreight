@@ -237,6 +237,13 @@ const Navbar = () => {
             >
               CONTACT
             </NavItem>
+            <NavItem 
+              isActive={activeMenu}
+              onMouseEnter={() => setActiveMenu(null)}
+              link='/gallery'
+            >
+              GALLERY
+            </NavItem>
           </div>
         </div>
 

@@ -11,10 +11,25 @@ import { useGSAP } from '@gsap/react'
 import AnimatedCard from '../../components/AnimatedCard'
 import BottomSector from '../../components/BottomSector'
 import AnimatedTextSection from '../../components/SectorAnimated'
-
+import locomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 const page = () => {
-
+      const scrollContainerRef = useRef(null);
+                  
+                         useEffect(() => {
+                                const scrollInstance = new locomotiveScroll({
+                                  el: scrollContainerRef.current,
+                                  smooth: true,
+                                  smoothMobile: true,
+                                  multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+                                  lerp: 0, // Adjust the easing (lower is smoother)
+                                });
+                            
+                                return () => {
+                                  if (scrollInstance) scrollInstance.destroy();
+                                };
+                              }, []);
   const text = [
     "With certified personnel, ADR-compliant ",
     "vehicles, and a deep understanding of  ",
@@ -37,7 +52,7 @@ const page = () => {
     <Navbar/>
     </div>
  
-
+<div ref={scrollContainerRef} data-scroll-container>
     <ServicesPage title={'Hazardous Chemicals'} img1={'/images/sectors/ig71.png'} img2={'/images/sectors/ig72.png'} desc={'Transporting hazardous cargo involves high-stakes logistics due to the inherent risks to people, property, and the environment. These shipments require specialized handling, adherence to safety regulations, and robust contingency planning.'}/>
 
   <div className='w-full flex md:flex-row flex-col md:justify-between md:items-center md:p-[2vw] lg:p-[4vw] p-4 md:gap-0 gap-[3vw]'>
@@ -96,6 +111,7 @@ const page = () => {
                 </div>
   
     <Footer/>
+    </div>
     </>
   )
 }

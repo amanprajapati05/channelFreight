@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ServicesPage from '../../components/ServicesPage';
 import Navbar from '../../components/Navbar';
 import { Clash } from '../../../../public/fonts/fonts';
@@ -9,21 +9,57 @@ import BottomSector from '../../components/BottomSector';
 import AnimatedTextSection from '../../components/SectorAnimated';
 import locomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger"; 
+
+gsap.registerPlugin(ScrollTrigger);
 
 const page = () => {
   const scrollContainerRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isReady, setIsReady] = useState(false);
+  const [locomotiveInstance, setLocomotiveInstance] = useState(null);
 
   useEffect(() => {
+    // Force scroll to top
+    window.scrollTo(0, 0);
+    
+    // Disable scroll initially
+    document.body.style.overflow = 'hidden';
+    
+    // Initialize locomotive scroll
     const scrollInstance = new locomotiveScroll({
       el: scrollContainerRef.current,
       smooth: true,
       smoothMobile: true,
-      multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
-      lerp: 0, // Adjust the easing (lower is smoother)
+      multiplier: 0.1,
+      lerp: 0,
     });
 
+    setLocomotiveInstance(scrollInstance);
+    
+    // Initially disable scroll
+    scrollInstance.stop();
+    
+    // Add delay before starting animations
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      setIsReady(true);
+      scrollInstance.start();
+      scrollInstance.update();
+      
+      // Fade in the content
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.style.opacity = '1';
+      }
+    }, 2000); // 2 second delay
+    
     return () => {
-      if (scrollInstance) scrollInstance.destroy();
+      clearTimeout(timer);
+      if (scrollInstance) {
+        scrollInstance.destroy();
+      }
+      document.body.style.overflow = 'auto';
     };
   }, []);
 

@@ -13,10 +13,30 @@ import AnimatedTextSection from '../../components/SectorAnimated'
 import AirplaneCanvas from '../../components/AirplaneCanvas'
 import AnimatedContent from '../../components/AnimatedServiceContent'
 import ServicesSlider from '../../components/ServicesSlider'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import locomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const page = () => {
       const slider = useRef();
       const triggerRef = useRef();
+              const scrollContainerRef = useRef(null);
+          
+                 useEffect(() => {
+                        const scrollInstance = new locomotiveScroll({
+                          el: scrollContainerRef.current,
+                          smooth: true,
+                          smoothMobile: true,
+                          multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+                          lerp: 0, // Adjust the easing (lower is smoother)
+                        });
+                    
+                        return () => {
+                          if (scrollInstance) scrollInstance.destroy();
+                        };
+                      }, []);
 
 const text = [
     "Whether facilitating trade between nations ",
@@ -105,7 +125,7 @@ const slides = [
     <Navbar/>
     </div>
  
-
+    <div ref={scrollContainerRef} data-scroll-container className='overflow-hidden'>
     <ServicesPage title={'cross trade'} img1={'/images/services/img4.png'} img2={'/images/services/img42.png'} desc={'We excel in Cross Trade Logistics, enabling businesses to navigate the complexities of international shipments involving multiple countries.'}/>
     
     <div ref={triggerRef} className='md:p-[2vw] hidden md:block lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
@@ -253,10 +273,6 @@ const slides = [
 />
     </div>
 
-
-
-                        
-   
     <div className='w-full h-full md:p-[2vw] lg:p-[4vw] px-4 py-4'>
         <div className={`${Clash.className} text-[#02123b] flex flex-col w-full items-center`}>
             <div className='md:text-[4vw] text-[9vw] text-center'>Beyond Boundaries</div>
@@ -306,6 +322,7 @@ const slides = [
         </div>
     </div>
     <Footer/>
+    </div>
     </>
   )
 }

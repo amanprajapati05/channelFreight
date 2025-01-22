@@ -131,19 +131,58 @@ const Services = () => {
     };
 
     // Setup scroll animations
+    // useGSAP(() => {
+    //     if (!isReady) return;
+
+    //     imageRefs.current.forEach((imageContainer, index) => {
+    //         if (!imageContainer || !imageContainer.parentElement) return;
+
+    //         // Ensure parent container is visible
+    //         gsap.set(imageContainer.parentElement, {
+    //             height: 'auto',
+    //             visibility: "visible",
+    //             opacity: 1
+    //         });
+
+    //         // Create animation timeline
+    //         const tl = gsap.timeline({
+    //             scrollTrigger: {
+    //                 trigger: imageContainer.parentElement,
+    //                 start: "top bottom-=100",
+    //                 end: "top top+=100",
+    //                 toggleActions: "play none none reverse",
+    //                 scrub: true,
+    //             }
+    //         });
+
+    //         // Add animation to timeline
+    //         tl.fromTo(imageContainer,
+    //             {
+    //                 width: '15%',
+    //                 height: '10vw'
+    //             },
+    //             {
+    //                 width: '40%',
+    //                 height: '25vw',
+    //                 ease: "none",
+    //             }
+    //         );
+    //     });
+    // }, [isReady]);
+
     useGSAP(() => {
         if (!isReady) return;
-
+    
         imageRefs.current.forEach((imageContainer, index) => {
             if (!imageContainer || !imageContainer.parentElement) return;
-
+    
             // Ensure parent container is visible
             gsap.set(imageContainer.parentElement, {
                 height: 'auto',
                 visibility: "visible",
                 opacity: 1
             });
-
+    
             // Create animation timeline
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -152,9 +191,33 @@ const Services = () => {
                     end: "top top+=100",
                     toggleActions: "play none none reverse",
                     scrub: true,
+                    onUpdate: (self) => {
+                        // Show/hide button based on card expansion progress
+                        if (self.progress >= 0.8 && buttonRefs.current[index]) {
+                            gsap.to(buttonRefs.current[index], {
+                                display: 'block',
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.3,
+                                ease: "power2.out"
+                            });
+                        } else if (buttonRefs.current[index]) {
+                            gsap.to(buttonRefs.current[index], {
+                                opacity: 0,
+                                y: 30,
+                                duration: 0.3,
+                                ease: "power2.in",
+                                onComplete: () => {
+                                    gsap.set(buttonRefs.current[index], {
+                                        display: 'none'
+                                    });
+                                }
+                            });
+                        }
+                    }
                 }
             });
-
+    
             // Add animation to timeline
             tl.fromTo(imageContainer,
                 {
@@ -200,8 +263,8 @@ const Services = () => {
                            </div>
                            <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Air Freight</div>
-                               <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(0)}
-                                   onMouseLeave={() => handleLeave(0)}>
+                               <div className='flex flex-col gap-[2vw]'  
+                                   >
                                    <div className='text-[#02123b] text-[5vw] hidden md:block  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                    <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
@@ -216,8 +279,8 @@ const Services = () => {
                            </div>
                            <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Sea Freight</div>
-                               <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(1)}
-                                   onMouseLeave={() => handleLeave(1)}>
+                               <div className='flex flex-col gap-[2vw]'  
+                                  >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                    <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
@@ -232,8 +295,8 @@ const Services = () => {
                            </div>
                            <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Supply Chain</div>
-                               <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(2)}
-                                   onMouseLeave={() => handleLeave(2)}>
+                               <div className='flex flex-col gap-[2vw]'  
+                                   >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                    <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
@@ -248,8 +311,8 @@ const Services = () => {
                            </div>
                            <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Project Logistics</div>
-                               <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(3)}
-                                   onMouseLeave={() => handleLeave(3)}>
+                               <div className='flex flex-col gap-[2vw]'  
+                                  >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                    <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
@@ -264,8 +327,8 @@ const Services = () => {
                            </div>
                            <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Customs Brokerage</div>
-                               <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(4)}
-                                   onMouseLeave={() => handleLeave(4)}>
+                               <div className='flex flex-col gap-[2vw]' 
+                                   >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                    <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
@@ -280,8 +343,8 @@ const Services = () => {
                            </div>
                            <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Cross Trade</div>
-                               <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(5)}
-                                   onMouseLeave={() => handleLeave(5)}>
+                               <div className='flex flex-col gap-[2vw]' 
+                                 >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                    <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
@@ -296,8 +359,8 @@ const Services = () => {
                            </div>
                            <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Charter Services</div>
-                               <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(6)}
-                                   onMouseLeave={() => handleLeave(6)}>
+                               <div className='flex flex-col gap-[2vw]'  
+                                 >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                    <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
@@ -312,8 +375,8 @@ const Services = () => {
                            </div>
                            <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Value Added Services</div>
-                               <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(7)}
-                                   onMouseLeave={() => handleLeave(7)}>
+                               <div className='flex flex-col gap-[2vw]'  
+                                   >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
                                    <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>

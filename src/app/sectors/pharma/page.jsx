@@ -13,10 +13,26 @@ import BottomSector from '../../components/BottomSector'
 import SectorAnimated from '../../components/SectorAnimated'
 import AnimatedTextSection from '../../components/SectorAnimated'
 import CircularProgress from '../../components/CircularProgress'
+import locomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 
 const page = () => {
-  
+         const scrollContainerRef = useRef(null);
+                  
+                         useEffect(() => {
+                                const scrollInstance = new locomotiveScroll({
+                                  el: scrollContainerRef.current,
+                                  smooth: true,
+                                  smoothMobile: true,
+                                  multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+                                  lerp: 0, // Adjust the easing (lower is smoother)
+                                });
+                            
+                                return () => {
+                                  if (scrollInstance) scrollInstance.destroy();
+                                };
+                              }, []);
 
   const text = [
     "Our services include temperature-",
@@ -40,7 +56,7 @@ const page = () => {
     <Navbar/>
     </div>
  
-
+    <div ref={scrollContainerRef} data-scroll-container>
     <ServicesPage title={'Pharma'} img1={'/images/sectors/imgp62.png'} img2={'/images/sectors/imgp62.png'} desc={'Pharmaceutical logistics is one of the most critical and regulated sectors, requiring precise handling of sensitive goods such as medicines, vaccines, APIs, and biological samples.'}/>
 
   <div className='w-full flex md:flex-row flex-col md:justify-between md:items-center md:p-[2vw] lg:p-[4vw] p-4 md:gap-0 gap-[3vw]'>
@@ -98,6 +114,7 @@ const page = () => {
                 </div>
   
     <Footer/>
+    </div>
     </>
   )
 }

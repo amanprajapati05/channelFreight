@@ -12,11 +12,32 @@ import AnimatedCard from '../../components/AnimatedCard'
 import AnimatedTextSection from '../../components/SectorAnimated'
 import AirplaneCanvas from '../../components/AirplaneCanvas'
 import AnimatedServiceCards from '../../components/AnimatedServiceCards'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import locomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const page = () => {
 
     const slider = useRef();
     const triggerRef = useRef();
+
+          const scrollContainerRef = useRef(null);
+    
+           useEffect(() => {
+                  const scrollInstance = new locomotiveScroll({
+                    el: scrollContainerRef.current,
+                    smooth: true,
+                    smoothMobile: true,
+                    multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+                    lerp: 0, // Adjust the easing (lower is smoother)
+                  });
+              
+                  return () => {
+                    if (scrollInstance) scrollInstance.destroy();
+                  };
+                }, []);
 
 
 
@@ -79,8 +100,8 @@ const text = [
     <Navbar/>
     </div>
  
-
-    <ServicesPage title={'charter services'} img1={'/images/services/img1.png'} img2={'/images/services/img12.png'} desc={'Channel Freight Logistics India Pvt. Ltd. delivers tailored charter services, ensuring your cargo moves seamlessly across the globe with unmatched precision and speed.'}/>
+      <div ref={scrollContainerRef} className='w-full h-full overflow-hidden'>
+    <ServicesPage title={'charter services'} img1={'/images/services/img9.png'} img2={'/images/services/img92.png'} desc={'Channel Freight Logistics India Pvt. Ltd. delivers tailored charter services, ensuring your cargo moves seamlessly across the globe with unmatched precision and speed.'}/>
     
     <div ref={triggerRef} className='md:p-[2vw] hidden md:block lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
       <div className='flex flex-col justify-between h-full'>
@@ -297,6 +318,7 @@ const text = [
           </div>
       </div>
     <Footer/>
+    </div>
     </>
   )
 }

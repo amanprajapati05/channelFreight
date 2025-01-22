@@ -13,10 +13,30 @@ import AnimatedTextSection from '../../components/SectorAnimated'
 import AirplaneCanvas from '../../components/AirplaneCanvas'
 import AnimatedContent from '../../components/AnimatedServiceContent'
 import ServicesSlider from '../../components/ServicesSlider'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import locomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const page = () => {
       const slider = useRef();
       const triggerRef = useRef();
+            const scrollContainerRef = useRef(null);
+                
+                       useEffect(() => {
+                              const scrollInstance = new locomotiveScroll({
+                                el: scrollContainerRef.current,
+                                smooth: true,
+                                smoothMobile: true,
+                                multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+                                lerp: 0, // Adjust the easing (lower is smoother)
+                              });
+                          
+                              return () => {
+                                if (scrollInstance) scrollInstance.destroy();
+                              };
+                            }, []);
 
 const text = [
     "When traditional logistics options fall  ",
@@ -102,7 +122,7 @@ const slides = [
     <Navbar/>
     </div>
  
-
+    <div ref={scrollContainerRef} data-scroll-container className='w-full h-full overflow-hidden'>
     <ServicesPage title={'value added services'} img1={'/images/services/img5.png'} img2={'/images/services/img52.png'} desc={'At Channel Freight Logistics India, we recognize that modern businesses require more than just transportation; they need comprehensive, tailored solutions that enhance efficiency and customer satisfaction.'}/>
     
     <div ref={triggerRef} className='md:p-[2vw] hidden md:block lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
@@ -233,11 +253,7 @@ const slides = [
   heading="Benefits of Choosing Us" 
   slides={slides} 
 />
-    </div>
-
-
-
-                        
+    </div>                   
    
     <div className='w-full h-full md:p-[2vw] lg:p-[4vw] px-4 py-4'>
         <div className={`${Clash.className} text-[#02123b] flex flex-col w-full items-center`}>
@@ -288,6 +304,7 @@ const slides = [
         </div>
     </div>
     <Footer/>
+    </div>
     </>
   )
 }

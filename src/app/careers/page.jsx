@@ -142,11 +142,6 @@ const page = () => {
       </label>
     </div>
               </div>
-              {/* <div
-                className={`${Clash.className} cursor-pointer flex xl:text-[1vw] md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] w-fit bg-[#02123b] text-[#ffffff]  px-4 py-2 rounded-full items-center justify-center`}
-              >
-                Submit
-              </div> */}
               <Button text='Submit' tColor='#ffffff' bgColor='#02123B' />
             </div>
             <div className="md:w-[55%] h-[80vw] md:h-auto order-1 md:order-1">

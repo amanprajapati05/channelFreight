@@ -29,158 +29,6 @@ const page = () => {
           }, []);
     
 
-//     const imageRefs = useRef([]);
-//     const buttonRefs = useRef([]);
-//     const contentRefs = useRef([]);
-
-//     const [isLoading, setIsLoading] = useState(true);
-  
-//   // ... other refs and states
-
-//   useEffect(() => {
-//     // Force scroll to top
-//     window.scrollTo(0, 0);
-    
-//     // Disable scrolling initially
-//     document.body.style.overflow = 'hidden';
-    
-//     // Add a small delay to ensure everything is loaded
-//     const timer = setTimeout(() => {
-//       // Enable scrolling
-//       document.body.style.overflow = 'auto';
-//       // Hide loading state
-//       setIsLoading(false);
-//       // Refresh ScrollTrigger
-//       ScrollTrigger.refresh();
-//     }, 1000);
-    
-//     return () => {
-//       clearTimeout(timer);
-//       document.body.style.overflow = 'auto';
-//     };
-//   }, []);
-
-//     const addToImageRefs = (el) => {
-//       if (el && !imageRefs.current.includes(el)) {
-//         imageRefs.current.push(el);
-//       }
-//     };
-   
-    
-//     const addToButtonRefs = (el) => {
-//         if (el && !buttonRefs.current.includes(el)) {
-//             buttonRefs.current.push(el);
-//         }
-//     };
-
-//     useEffect(() => {
-//         // Set initial states for images
-//         imageRefs.current.forEach((imageContainer) => {
-//             gsap.set(imageContainer, {
-//                 width: '15%',
-//                 height: '10vw'
-//             });
-//         });
-
-//         // Set initial states for buttons
-//         buttonRefs.current.forEach((button) => {
-//             gsap.set(button, {
-//                 display: 'none',
-//                 opacity: 0,
-//                 y: 30
-//             });
-//         });
-//     }, []);
-
-//     const handleEnter = (index) => {
-//         if (buttonRefs.current[index]) {
-//             // First make the button visible
-//             gsap.set(buttonRefs.current[index], {
-//                 display: 'block'
-//             });
-//             // Then animate it
-//             gsap.to(buttonRefs.current[index], {
-//                 y: 0,
-//                 opacity: 1,
-//                 duration: 0.4,
-//                 ease: "power2.out"
-//             });
-//         }
-//     };
-    
-//     const handleLeave = (index) => {
-//         if (buttonRefs.current[index]) {
-//             gsap.to(buttonRefs.current[index], {
-//                 y: 30,
-//                 opacity: 0,
-//                 duration: 0.4,
-//                 ease: "power2.in",
-//                 onComplete: () => {
-//                     gsap.set(buttonRefs.current[index], {
-//                         display: 'none'
-//                     });
-//                 }
-//             });
-//         }
-//     };
-    
-
-// useGSAP(() => {
-//     imageRefs.current.forEach((imageContainer, index) => {
-//       // Set initial height for all cards
-//       gsap.set(imageContainer.parentElement, {
-//         height: 'auto' // This ensures each card takes its natural height
-//       });
-  
-//       // Create timeline for each card
-//       const tl = gsap.timeline({
-//         scrollTrigger: {
-//           trigger: imageContainer.parentElement,
-//           start: "top bottom-=100",
-//           end: "top top+=100",
-//           toggleActions: "restart reverse restart reverse",  // This ensures proper reversing
-//           scrub: true,
-//         }
-//       });
-  
-//       // Add animation to timeline - exactly as it was in your original code
-//       tl.fromTo(imageContainer,
-//         {
-//           width: '15%',
-//           height: '10vw'
-//         },
-//         {
-//           width: '40%',
-//           height: '25vw',
-//           ease: "none",
-//         }
-//       );
-  
-//       // Add a scroll trigger to handle the next card
-//       if (index < imageRefs.current.length - 1) {
-//         ScrollTrigger.create({
-//           trigger: imageContainer.parentElement,
-//           start: "bottom bottom",
-//           onEnter: () => {
-//             // Only after current card is fully visible, enable next card's animation
-//             const nextCard = imageRefs.current[index + 1];
-//             if (nextCard) {
-//               gsap.set(nextCard.parentElement, { visibility: "visible" });
-//             }
-//           }
-//         });
-  
-//         // Initially hide next card
-//         if (index > 0) {
-//           gsap.set(imageContainer.parentElement, { visibility: "hidden" });
-//         }
-//       }
-//     });
-  
-//     return () => {
-//       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-//     };
-//   }, []);
 
 const imageRefs = useRef([]);
     const buttonRefs = useRef([]);
@@ -282,19 +130,76 @@ const imageRefs = useRef([]);
         }
     };
 
+    // useGSAP(() => {
+    //     if (!isReady) return;
+
+    //     imageRefs.current.forEach((imageContainer, index) => {
+    //         if (!imageContainer || !imageContainer.parentElement) return;
+
+    //         // Ensure parent container is properly setup
+    //         gsap.set(imageContainer.parentElement, {
+    //             height: 'auto',
+    //             visibility: index === 0 ? "visible" : "hidden",
+    //             opacity: index === 0 ? 1 : 0
+    //         });
+
+    //         // Create animation timeline
+    //         const tl = gsap.timeline({
+    //             scrollTrigger: {
+    //                 trigger: imageContainer.parentElement,
+    //                 start: "top bottom-=100",
+    //                 end: "top top+=100",
+    //                 toggleActions: "play none none reverse",
+    //                 scrub: true,
+    //             }
+    //         });
+
+    //         // Add animation to timeline
+    //         tl.fromTo(imageContainer,
+    //             {
+    //                 width: '15%',
+    //                 height: '10vw'
+    //             },
+    //             {
+    //                 width: '40%',
+    //                 height: '25vw',
+    //                 ease: "none",
+    //             }
+    //         );
+
+    //         // Setup visibility for next card
+    //         if (index < imageRefs.current.length - 1) {
+    //             ScrollTrigger.create({
+    //                 trigger: imageContainer.parentElement,
+    //                 start: "center center",
+    //                 onEnter: () => {
+    //                     const nextCard = imageRefs.current[index + 1];
+    //                     if (nextCard?.parentElement) {
+    //                         gsap.to(nextCard.parentElement, {
+    //                             visibility: "visible",
+    //                             opacity: 1,
+    //                             duration: 0.4
+    //                         });
+    //                     }
+    //                 }
+    //             });
+    //         }
+    //     });
+    // }, [isReady]);
+
     useGSAP(() => {
         if (!isReady) return;
-
+    
         imageRefs.current.forEach((imageContainer, index) => {
             if (!imageContainer || !imageContainer.parentElement) return;
-
+    
             // Ensure parent container is properly setup
             gsap.set(imageContainer.parentElement, {
                 height: 'auto',
                 visibility: index === 0 ? "visible" : "hidden",
                 opacity: index === 0 ? 1 : 0
             });
-
+    
             // Create animation timeline
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -303,9 +208,31 @@ const imageRefs = useRef([]);
                     end: "top top+=100",
                     toggleActions: "play none none reverse",
                     scrub: true,
+                    onUpdate: (self) => {
+                        // Show/hide button based on card expansion
+                        if (self.progress >= 0.8 && buttonRefs.current[index]) {
+                            gsap.to(buttonRefs.current[index], {
+                                display: 'block',
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.3
+                            });
+                        } else if (buttonRefs.current[index]) {
+                            gsap.to(buttonRefs.current[index], {
+                                opacity: 0,
+                                y: 30,
+                                duration: 0.3,
+                                onComplete: () => {
+                                    gsap.set(buttonRefs.current[index], {
+                                        display: 'none'
+                                    });
+                                }
+                            });
+                        }
+                    }
                 }
             });
-
+    
             // Add animation to timeline
             tl.fromTo(imageContainer,
                 {
@@ -318,7 +245,7 @@ const imageRefs = useRef([]);
                     ease: "none",
                 }
             );
-
+    
             // Setup visibility for next card
             if (index < imageRefs.current.length - 1) {
                 ScrollTrigger.create({
@@ -376,8 +303,8 @@ const imageRefs = useRef([]);
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                     <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Pharmaceuticals</div>
-                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(0)}
-                                        onMouseLeave={() => handleLeave(0)}>
+                                    <div className='flex flex-col gap-[2vw]'  
+                                        >
                                         <div className='text-[#02123b] text-[5vw] hidden md:block  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Pharmaceutical logistics is one of the most critical and regulated sectors, requiring precise handling of sensitive goods such as medicines, vaccines, APIs, and biological samples.</div>
                                         <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/pharma' /></div>
                                         <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/pharma'  /></div>
@@ -393,8 +320,8 @@ const imageRefs = useRef([]);
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                     <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Hazardous
                                     Chemicals</div>
-                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(1)}
-                                        onMouseLeave={() => handleLeave(1)}>
+                                    <div className='flex flex-col gap-[2vw]'  
+                                       >
                                         <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Transporting hazardous cargo involves high-stakes logistics due to the inherent risks to people, property, and the environment.</div>
                                         <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/hazardous' /></div>
                                         <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/hazardous' /></div>
@@ -409,8 +336,8 @@ const imageRefs = useRef([]);
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                     <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Engineering</div>
-                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(2)}
-                                        onMouseLeave={() => handleLeave(2)}>
+                                    <div className='flex flex-col gap-[2vw]'  
+                                       >
                                         <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>We specialize in managing the transport of heavy machinery, oversized equipment, and engineering components.</div>
                                         <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/engineering'  /></div>
                                         <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  link='/sectors/engineering' /></div>
@@ -425,8 +352,8 @@ const imageRefs = useRef([]);
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                     <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Cold Chain Products</div>
-                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(3)}
-                                        onMouseLeave={() => handleLeave(3)}>
+                                    <div className='flex flex-col gap-[2vw]' 
+                                      >
                                         <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Cold chain logistics is vital for industries such as healthcare, food, agriculture, and chemicals</div>
                                         <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/col' /></div>
                                         <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/col' /></div>
@@ -441,8 +368,8 @@ const imageRefs = useRef([]);
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                     <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Packaging Solutions</div>
-                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(4)}
-                                        onMouseLeave={() => handleLeave(4)}>
+                                    <div className='flex flex-col gap-[2vw]'  
+                                        >
                                         <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Our packaging solutions are designed to safeguard your shipments, regardless of size or sensitivity. </div>
                                         <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  link='/sectors/packaging' /></div>
                                         <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/packaging' /></div>
@@ -457,8 +384,8 @@ const imageRefs = useRef([]);
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                     <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Exhibition & Relocation</div>
-                                    <div className='flex flex-col gap-[2vw]'  onMouseEnter={() => handleEnter(5)}
-                                        onMouseLeave={() => handleLeave(5)}>
+                                    <div className='flex flex-col gap-[2vw]'  
+                                       >
                                         <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Exhibition cargo logistics involves the timely transport and setup of display materials for trade shows and events. Precision timing and damage-free delivery are critical to success. </div>
                                         <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/exhibition'  /></div>
                                         <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/exhibition' /></div>

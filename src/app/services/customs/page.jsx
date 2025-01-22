@@ -13,6 +13,12 @@ import AnimatedTextSection from '../../components/SectorAnimated'
 import AirplaneCanvas from '../../components/AirplaneCanvas'
 import AnimatedContent from '../../components/AnimatedServiceContent'
 import ServicesSlider from '../../components/ServicesSlider'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import locomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const page = () => {
       const slider = useRef();
@@ -39,6 +45,22 @@ const text = [
     "  for our clients."
   ];
 
+      const scrollContainerRef = useRef(null);
+  
+         useEffect(() => {
+                const scrollInstance = new locomotiveScroll({
+                  el: scrollContainerRef.current,
+                  smooth: true,
+                  smoothMobile: true,
+                  multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+                  lerp: 0, // Adjust the easing (lower is smoother)
+                });
+            
+                return () => {
+                  if (scrollInstance) scrollInstance.destroy();
+                };
+              }, []);
+
   
 
   useGSAP(()=>{
@@ -46,7 +68,7 @@ const text = [
         translateX: 0,
       },
       {
-        translateX: "-80%",
+        translateX: "-70%",
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -83,7 +105,7 @@ const text = [
     <Navbar/>
     </div>
  
-
+    <div ref={scrollContainerRef} data-scroll-container>
     <ServicesPage title={'Customs Brokerage'} img1={'/images/services/img7.png'} img2={'/images/services/img72.png'} desc={'Our customs brokerage solutions transcend basic compliance to deliver seamless trade facilitation.'}/>
     
     <div ref={triggerRef} className='md:p-[2vw] hidden md:block lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
@@ -264,6 +286,7 @@ const text = [
                 <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>Customized Solutions</div>
             </div>
         </div>
+    </div>
     </div>
     <Footer/>
     </>

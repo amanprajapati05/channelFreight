@@ -14,8 +14,49 @@ import AirplaneCanvas from '../../components/AirplaneCanvas'
 import AnimatedContent from '../../components/AnimatedServiceContent'
 import ShipAnimation from '../../components/ShipAnimation'
 import ShipAnimation2 from '../../components/ShipAnimation2'
+import locomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 const page = () => {
+
+  const scrollContainerRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isReady, setIsReady] = useState(false);
+  const [locomotiveInstance, setLocomotiveInstance] = useState(null);
+      
+  useEffect(() => {
+      // Force scroll to top
+      window.scrollTo(0, 0);
+      
+      // Initialize locomotive scroll
+      const scrollInstance = new locomotiveScroll({
+          el: scrollContainerRef.current,
+          smooth: true,
+          smoothMobile: true,
+          multiplier: 0.1,
+          lerp: 0,
+      });
+
+      setLocomotiveInstance(scrollInstance);
+      
+      // Disable scroll initially
+      scrollInstance.stop();
+      
+      // Add a delay before starting animations
+      const timer = setTimeout(() => {
+          setIsLoading(false);
+          setIsReady(true);
+          scrollInstance.start();
+          ScrollTrigger.refresh();
+      }, 2000); // 2 second delay
+      
+      return () => {
+          clearTimeout(timer);
+          if (scrollInstance) {
+              scrollInstance.destroy();
+          }
+      };
+  }, []);
 
 const text = [
     "Transport large volumes",
@@ -53,6 +94,7 @@ const text = [
     </div>
  
 
+<div ref={scrollContainerRef} data-scroll-container>
     <ServicesPage title={'sea Freight'} img1={'/images/services/img2.png'} img2={'/images/services/img22.png'} desc={'With decades of experience in logistics, we excel in providing end-to-end support for businesses of all sizes, ensuring that your cargo reaches its destination efficiently and securely.'}/>
     
     <div className='md:p-[2vw] hidden md:block lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
@@ -246,6 +288,7 @@ const text = [
                    <div className={`${Clash.className} text-white md:text-[2vw] text-[5vw] md:p-[1.5vw] p-[3vw]`}>Secured Storage</div>
                </div>
            </div>
+       </div>
        </div>
     <Footer/>
     </>

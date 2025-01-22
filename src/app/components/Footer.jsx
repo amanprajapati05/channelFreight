@@ -79,7 +79,7 @@ const Footer = () => {
             <div className='flex flex-col md:flex-row justify-between gap-2 md:gap-0 relative  -bottom-10 tracking-wide'>
                 <div className={`${Clash.className} text-[#C8C8C8] text-[3vw] sm:text-[2vw] md:text-[0.8vw]`}>© 2024  Copyright - All Rights reserved </div>
                 <div className={`${Clash.className} text-[#C8C8C8] flex gap-1 text-[3vw] sm:text-[2vw] md:text-[0.8vw] `}>Designed by 
-                <div className={`${ClashM.className} text-[#C8C8C8] `}> Beeyond Tech</div>
+                <Link href='https://www.beeyond.agency' target='_blank' className={`${ClashM.className} text-[#C8C8C8] `}> Beeyond Tech</Link>
                 </div>
             </div>
         </div>
