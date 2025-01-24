@@ -101,7 +101,7 @@ const page = () => {
             scrollInstance.destroy();
             clearTimeout(timer);
           };
-        }, 1000); // Small delay for DOM loading
+        }, 2000); // Small delay for DOM loading
       }, []);
 
 const text = [
