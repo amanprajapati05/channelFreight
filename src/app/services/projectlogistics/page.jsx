@@ -28,19 +28,19 @@ const page = () => {
       const [locomotiveInstance, setLocomotiveInstance] = useState(null);
       const scrollContainerRef = useRef(null);
 
-       useEffect(() => {
-              const scrollInstance = new locomotiveScroll({
-                el: scrollContainerRef.current,
-                smooth: true,
-                smoothMobile: true,
-                multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
-                lerp: 0, // Adjust the easing (lower is smoother)
-              });
+      //  useEffect(() => {
+      //         const scrollInstance = new locomotiveScroll({
+      //           el: scrollContainerRef.current,
+      //           smooth: true,
+      //           smoothMobile: true,
+      //           multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+      //           lerp: 0, // Adjust the easing (lower is smoother)
+      //         });
           
-              return () => {
-                if (scrollInstance) scrollInstance.destroy();
-              };
-            }, []);
+      //         return () => {
+      //           if (scrollInstance) scrollInstance.destroy();
+      //         };
+      //       }, []);
 
       // useEffect(() => {
       //   // Force scroll to top
@@ -82,6 +82,27 @@ const page = () => {
       //     document.body.style.overflow = 'auto';
       //   };
       // }, []);
+
+
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          const scrollInstance = new locomotiveScroll({
+            el: scrollContainerRef.current,
+            smooth: true,
+            smoothMobile: true,
+            multiplier: 0.1,
+            lerp: 0,
+          });
+      
+          // Update ScrollTrigger when locomotive scroll updates
+          scrollInstance.on('scroll', ScrollTrigger.update);
+      
+          return () => {
+            scrollInstance.destroy();
+            clearTimeout(timer);
+          };
+        }, 1000); // Small delay for DOM loading
+      }, []);
 
 const text = [
     "Whether it’s an industrial park setup, a ",
