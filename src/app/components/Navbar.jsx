@@ -201,7 +201,7 @@ const Navbar = () => {
           <NavItem 
               isActive={activeMenu}
               onMouseEnter={() => setActiveMenu(null)}
-              link='/about'
+              link='/about-us'
             >
               ABOUT US
             </NavItem>

@@ -133,9 +133,9 @@ const MobileNavbar = () => {
             {isActivePath('/') && <ArrowUpRight size={28} weight="bold" />}
           </Link>
           
-          <Link href='/about' className="flex items-center h-fit gap-1">
+          <Link href='/about-us' className="flex items-center h-fit gap-1">
             ABOUT US
-            {isActivePath('/about') && <ArrowUpRight size={28} weight="bold" />}
+            {isActivePath('/about-us') && <ArrowUpRight size={28} weight="bold" />}
           </Link>
           
           <div className="flex items-center h-fit gap-1">

@@ -25,19 +25,19 @@ const page = () => {
       const triggerRef = useRef();
               const scrollContainerRef = useRef(null);
           
-                 useEffect(() => {
-                        const scrollInstance = new locomotiveScroll({
-                          el: scrollContainerRef.current,
-                          smooth: true,
-                          smoothMobile: true,
-                          multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
-                          lerp: 0, // Adjust the easing (lower is smoother)
-                        });
+                //  useEffect(() => {
+                //         const scrollInstance = new locomotiveScroll({
+                //           el: scrollContainerRef.current,
+                //           smooth: true,
+                //           smoothMobile: true,
+                //           multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+                //           lerp: 0, // Adjust the easing (lower is smoother)
+                //         });
                     
-                        return () => {
-                          if (scrollInstance) scrollInstance.destroy();
-                        };
-                      }, []);
+                //         return () => {
+                //           if (scrollInstance) scrollInstance.destroy();
+                //         };
+                //       }, []);
 
 const text = [
     "Whether facilitating trade between nations ",
