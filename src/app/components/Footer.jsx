@@ -46,6 +46,7 @@ const Footer = () => {
                        <Link href='/about'>About Us&nbsp;&nbsp;/</Link>
                        <Link href='/services'> Services&nbsp;&nbsp;/</Link>
                        <Link href='/sectors'> Sector Expertise&nbsp;&nbsp;/</Link>
+                       <Link href='/gallery'> Gallery&nbsp;&nbsp;/</Link>
                        <Link href='/careers'> Careers&nbsp;&nbsp;/</Link>
                        <Link href='/contact'> Contact</Link>
                     </div>
@@ -77,7 +78,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='flex flex-col md:flex-row justify-between gap-2 md:gap-0 relative  -bottom-10 tracking-wide'>
-                <div className={`${Clash.className} text-[#C8C8C8] text-[3vw] sm:text-[2vw] md:text-[0.8vw]`}>© 2024  Copyright - All Rights reserved </div>
+                <div className={`${Clash.className} text-[#C8C8C8] text-[3vw] sm:text-[2vw] md:text-[0.8vw]`}>© 2025  Copyright - All Rights reserved </div>
                 <div className={`${Clash.className} text-[#C8C8C8] flex gap-1 text-[3vw] sm:text-[2vw] md:text-[0.8vw] `}>Designed by 
                 <Link href='https://www.beeyond.agency' target='_blank' className={`${ClashM.className} text-[#C8C8C8] `}> Beeyond Tech</Link>
                 </div>

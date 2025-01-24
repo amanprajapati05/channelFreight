@@ -209,7 +209,7 @@ const Hero2 = () => {
             </div>
             </div>
             <div className=''>
-            <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw] pt-[10vw] md:pt-[8vw] lg:pt-[6vw]'>
+            <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw] pt-[8vw] md:pt-[6vw] lg:pt-[1vw]'>
                 <div className='gap-4 flex flex-col '>
                     <div className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>Reliable and Efficient Global Services</div>
                     <div className={`text-[#02123b] ${Clash.className} text-[5vw] hidden md:block sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.
@@ -328,8 +328,8 @@ const Hero2 = () => {
                                 ref={card1Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
                                 style={{ width: '66%', transition: 'width 0.5s ease' }}
-                                onMouseEnter={() => handleMouseEnter(card4Ref, card3Ref, false)}
-                                onMouseLeave={() => handleMouseLeave(card4Ref, card3Ref, false)}
+                                onMouseEnter={() => handleMouseEnter(card1Ref, card3Ref, false)}
+                                onMouseLeave={() => handleMouseLeave(card1Ref, card3Ref, false)}
                             >
                                 <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-10 z-[1]'></div>
                                 {/* Same content structure as other cards */}
