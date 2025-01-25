@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 import locomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
+import StatsSection2 from '../components/StatSection2';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -304,6 +305,9 @@ useGSAP(() => {
             </div>
         </div>
 
+<div>
+    <StatsSection2/>
+</div>
 
         <div ref={visionRef} className='bg-white text-[#02123b] w-screen md:h-[50vw] '>
             <div className='flex justify-center w-full'>

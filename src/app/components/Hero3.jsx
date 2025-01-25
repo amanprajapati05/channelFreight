@@ -474,7 +474,7 @@ const Hero2 = () => {
             <div className='flex flex-col justify-center items-center h-full text-center text-white gap-4'>
                 <div className={`${Clash.className} text-white text-5xl`}>About Us</div>
                 <div className={`${Clash.className} text-white text-lg w-[80%] md:w-[50%] font-thin`}>Our company is dedicated to upholding a set of core values that guide our operations and interactions. These values form the foundation of our identity and reflect our commitment to integrity, excellence, innovation, customer focus, sustainability, collaboration, reliability, and respect.</div>
-                <Button bgColor='#ffffff' tColor='#02123b' text='Read More' link='/about' />
+                <Button bgColor='#ffffff' tColor='#02123b' text='Read More' link='/about-us' />
             </div>
         </div>
         <div>
