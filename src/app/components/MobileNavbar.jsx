@@ -151,14 +151,14 @@ const MobileNavbar = () => {
           {servicesOpen && (
             <div className={`${Clash.className} tracking-wide text-[4vw] flex flex-col pl-4`}>
               {[
-                ['air', 'AIR FREIGHT'],
-                ['sea', 'SEA FREIGHT'],
-                ['projectlogistics', 'PROJECT LOGISTICS'],
-                ['charter', 'CHARTER SERVICES'],
-                ['cross', 'CROSS TRADE'],
-                ['supply', 'SUPPLY CHAIN SOLUTIONS'],
-                ['customs', 'CUSTOMS BROKERAGE'],
-                ['value', 'VALUE ADDED SERVICES']
+                ['air-freight', 'AIR FREIGHT'],
+                ['sea-freight', 'SEA FREIGHT'],
+                ['project-logistics', 'PROJECT LOGISTICS'],
+                ['charter-services', 'CHARTER SERVICES'],
+                ['cross-trade', 'CROSS TRADE'],
+                ['supply-chain', 'SUPPLY CHAIN SOLUTIONS'],
+                ['customs-brokerage', 'CUSTOMS BROKERAGE'],
+                ['value-added-services', 'VALUE ADDED SERVICES']
               ].map(([path, label]) => (
                 <Link 
                   key={path} 
@@ -185,11 +185,11 @@ const MobileNavbar = () => {
           {sectorsOpen && (
             <div className={`${Clash.className} tracking-wide text-[4vw] flex flex-col pl-4`}>
               {[
-                ['pharma', 'PHARMACEUTICALS'],
-                ['hazardous', 'HAZARDOUS CHEMICALS'],
-                ['cold', 'COLD CHAIN PRODUCTS'],
+                ['pharmaceuticals', 'PHARMACEUTICALS'],
+                ['hazardous-chemicals', 'HAZARDOUS CHEMICALS'],
+                ['cold-chain-products', 'COLD CHAIN PRODUCTS'],
                 ['packaging', 'PACKAGING SOLUTIONS'],
-                ['exhibition', 'EXHIBITION & RELOCATION'],
+                ['exhibition-relocation', 'EXHIBITION & RELOCATION'],
                 ['engineering', 'ENGINEERING']
               ].map(([path, label]) => (
                 <Link 

@@ -75,7 +75,7 @@ const ServicesSlider = ({
             duration: 0.5
           }, index)
           .to(dots[index + 1].querySelector('div'), {
-            backgroundColor: "var(#02123b)",
+            backgroundColor: "#02123b",
             duration: 0.5
           }, index);
         }

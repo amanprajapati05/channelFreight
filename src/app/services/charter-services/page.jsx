@@ -106,11 +106,11 @@ const text = [
     <div ref={triggerRef} className='md:p-[2vw] hidden md:block lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
       <div className='flex flex-col justify-between h-full'>
         <div className={`flex  md:flex-row flex-col justify-between gap-4 md:gap-0 ${Clash.className} text-[#02123b] `}>
-          <div className='leading-[1.2] md:text-[4vw] text-[9vw] w-full md:w-[40%]'> Enhancing Every Shipment</div>
+          <div className='leading-[1.2] md:text-[4vw] text-[9vw] w-full md:w-[40%]'> Your Trusted Partner in Critical Logistics</div>
 
           <div className='text-[4vw] md:text-[1.3vw] w-full md:w-[40%] flex flex-col gap-4 md:gap-0 justify-between '>
             <div>
-         Delivering tailored solutions that go beyond logistics, adding efficiency and excellence to your supply chain.
+            Trust Channel Freight to transform your logistics challenges into success stories. 
             </div>
             <div>
                 <Button text='Get in Touch' link='/contact' bgColor='#02123b' tColor='#ffffff' />
@@ -123,27 +123,27 @@ const text = [
              
                     <AnimatedCard
     index={1}
-    title="Specialized Packaging "
-    content="Custom-designed packaging to protect fragile, perishable, and high-value items."
+    title="Customized Approaches"
+    content="Every shipment is unique. We design solutions that cater to your specific requirements, ensuring seamless execution."
     Clash={Clash}
   />
 
 <AnimatedCard
     index={2}
-    title="Insurance Coverage"
-    content="Comprehensive cargo insurance to safeguard your goods against unforeseen risks."
+    title="Industry Expertise"
+    content="With seasoned professionals managing each charter, we bring unparalleled insight and efficiency to the process."
     Clash={Clash}
   />
   <AnimatedCard
     index={3}
-    title="Inventory Management"
-    content="Streamlined solutions for tracking and optimizing stock levels efficiently."
+    title="Global Reach"
+    content="Our expansive network ensures your cargo reaches even the most remote destinations, overcoming geographic and logistical challenges."
     Clash={Clash}
   />
     <AnimatedCard
     index={4}
-    title="Kitting & Labeling"
-    content="Personalized assembly and labeling to meet your business requirements."
+    title="End-to-End Management"
+    content="From route planning to customs clearance, we handle every aspect of your shipment, allowing you to focus on your core business operations."
     Clash={Clash}
   />        
                 </div>
@@ -157,11 +157,11 @@ const text = [
     <div  className='md:p-[2vw] md:hidden lg:p-[4vw] px-4 py-4  md:h-[50vw] '>
       <div className='flex flex-col justify-between h-full'>
         <div className={`flex  md:flex-row flex-col justify-between gap-4 md:gap-0 ${Clash.className} text-[#02123b] `}>
-          <div className='leading-[1.2] md:text-[4vw] text-[9vw] w-full md:w-[40%]'> Enhancing Every Shipment</div>
+          <div className='leading-[1.2] md:text-[4vw] text-[9vw] w-full md:w-[40%]'> Your Trusted Partner in Critical Logistics</div>
 
           <div className='text-[4vw] md:text-[1.3vw] w-full md:w-[40%] flex flex-col gap-4 md:gap-0 justify-between '>
             <div>
-         Delivering tailored solutions that go beyond logistics, adding efficiency and excellence to your supply chain.
+            Trust Channel Freight to transform your logistics challenges into success stories. 
             </div>
             <div>
                 <Button text='Get in Touch' link='/contact' bgColor='#02123b' tColor='#ffffff' />
@@ -172,31 +172,31 @@ const text = [
 <div  className='w-full h-full overflow-auto pt-[2vw] scrollbar-hide'>
         <div   className='flex md:w-full flex-nowrap scrollbar-hide  md:mx-0 justify-between gap-[1.7vw] md:gap-[2vw]'>   
              
-                    <AnimatedCard
+        <AnimatedCard
     index={1}
-    title="Comprehensive Project Management"
-    content="From site surveys and feasibility studies to engineering analysis, we meticulously plan every aspect of your shipment."
+    title="Customized Approaches"
+    content="Every shipment is unique. We design solutions that cater to your specific requirements, ensuring seamless execution."
     Clash={Clash}
   />
 
 <AnimatedCard
     index={2}
-    title="Specialized Equipment & Techniques"
-    content="We leverage state-of-the-art equipment, including hydraulic axles, flat racks, and modular trailers, tailored for oversized and over-weighted goods."
+    title="Industry Expertise"
+    content="With seasoned professionals managing each charter, we bring unparalleled insight and efficiency to the process."
     Clash={Clash}
   />
   <AnimatedCard
     index={3}
-    title="Multimodal Transportation Options"
-    content="Whether by sea, road, rail, or barge, our logistics network provides flexible and reliable transportation solutions to meet diverse project requirements. "
+    title="Global Reach"
+    content="Our expansive network ensures your cargo reaches even the most remote destinations, overcoming geographic and logistical challenges."
     Clash={Clash}
   />
     <AnimatedCard
     index={4}
-    title="Sector-Specific Expertise"
-    content="We have supported industries including energy, construction, heavy manufacturing, and technology."
+    title="End-to-End Management"
+    content="From route planning to customs clearance, we handle every aspect of your shipment, allowing you to focus on your core business operations."
     Clash={Clash}
-  />
+  />  
  
 
                   

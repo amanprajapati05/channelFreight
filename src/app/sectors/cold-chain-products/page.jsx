@@ -95,7 +95,7 @@ const page = () => {
           }
         />
 
-        <div className='w-full -mt-1' data-scroll-section>
+        <div className='w-full -mt-12' data-scroll-section>
           <TruckAnimation />
         </div>
 

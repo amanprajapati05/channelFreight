@@ -4,7 +4,7 @@ const ToggleButton = ({ isActive, setIsActive }) => {
   return (
     <button
     onClick={() => setIsActive(!isActive)}
-    className={`relative flex gap-2 items-center p-1 rounded-full bg-[#333f5e] transition-all duration-300`}
+    className={`relative flex gap-2 items-center p-1 md:p-2 rounded-full bg-[#333f5e] transition-all duration-300`}
   >
     {/* Left dot pattern */}
     <div className={`flex gap-1 transition-opacity duration-300 ${isActive ? 'opacity-30' : 'opacity-100'}`}>

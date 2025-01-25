@@ -1,6 +1,6 @@
 import React from 'react'
 import { Clash, ClashM } from '../../../public/fonts/fonts'
-import { FacebookLogo, SkypeLogo } from '@phosphor-icons/react/dist/ssr'
+import { FacebookLogo, LinkedinLogo, SkypeLogo } from '@phosphor-icons/react/dist/ssr'
 import Link from 'next/link'
 
 const Footer = () => {
@@ -69,10 +69,10 @@ const Footer = () => {
                                 <div><SkypeLogo  weight="fill"  color="#02123b" className='lg:w-[1.8vw] lg:h-[1.8vw] w-[6vw] h-[6vw] sm:w-[4vw] sm:h-[4vw] md:w-[1.8vw] md:h-[1.8vw]' /></div>
                             </div>
                             <div className='w-fit h-fit justify-center items-center flex p-1 bg-white rounded-full '>
-                                <div><SkypeLogo  weight="fill"  color="#02123b" className='md:w-[1.8vw] md:h-[1.8vw] w-[6vw] h-[6vw] sm:w-[4vw] sm:h-[4vw]' /></div>
+                                <div><LinkedinLogo  weight="fill"  color="#02123b" className='md:w-[1.8vw] md:h-[1.8vw] w-[6vw] h-[6vw] sm:w-[4vw] sm:h-[4vw]' /></div>
                             </div>
                             <div className='w-fit h-fit justify-center items-center flex p-1 bg-white rounded-full '>
-                                <div><FacebookLogo  weight="bold"  color="#02123b" className='md:w-[1.8vw] md:h-[1.8vw] w-[6vw] h-[6vw] sm:w-[4vw] sm:h-[4vw]' /></div>
+                                <div><FacebookLogo  weight="fill"  color="#02123b" className='md:w-[1.8vw] md:h-[1.8vw] w-[6vw] h-[6vw] sm:w-[4vw] sm:h-[4vw]' /></div>
                             </div>
                             </div>
                         </div>
