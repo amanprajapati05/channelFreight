@@ -500,8 +500,7 @@ const Services = () => {
            <div className='text-white md:text-[4vw] text-[9vw]  w-full  md:w-[40%]' >Ready to Optimize Your Logistics?</div>
            <div className='flex flex-col w-full md:w-[40%] gap-9 md:gap-4'>
                <div className='text-[#c8c8c8] md:text-[1.3vw] text-[4vw] sm:text-[3.5vw]'>Let us handle your freight and logistics needs with precision and care. Reach out to discover how our tailored solutions can empower your business.</div>
-               <Button bgColor='white' tColor='black' text='Contact us'/>
-
+               <Button bgColor='white' tColor='black' text='Contact us' link='/contact' />
            </div>
        </div>
 

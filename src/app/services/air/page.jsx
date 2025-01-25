@@ -12,6 +12,7 @@ import AnimatedCard from '../../components/AnimatedCard'
 import AnimatedTextSection from '../../components/SectorAnimated'
 import AirplaneCanvas from '../../components/AirplaneCanvas'
 import AnimatedContent from '../../components/AnimatedServiceContent'
+import Counter from '../../components/Counter'
 
 const page = () => {
 
@@ -234,7 +235,8 @@ const text = [
 
     <div className={`${Clash.className} text-[#02123b] lg:text-[1vw] md:text-[1.8vw] text-[3vw]  `}>Partnerships</div>
     <div className='h-full flex flex-col justify-end '>
-        <div className={`${Clash.className} text-[#02123b] lg:text-[3vw] md:text-[3.5vw] text-[6vw] text-right md:text-left`}>000+</div>
+        {/* <div className={`${Clash.className} text-[#02123b] lg:text-[3vw] md:text-[3.5vw] text-[6vw] text-right md:text-left`}>000+</div> */}
+        <Counter/>
         <div className={`${Clash.className} lg:text-[1vw] md:text-[1.8vw] text-[3vw] text-[#02123b] leading-[0] pb-[2vw] md:pb-0`}>Airlines Connected</div>
     </div>
 

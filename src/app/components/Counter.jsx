@@ -14,7 +14,7 @@ const Counter = () => {
     if (inView) {
       let start = 0;
       const end = 500; // Set your target number
-      const duration = 2000; // Animation duration in ms
+      const duration = 1000; // Animation duration in ms
       const increment = Math.ceil(end / (duration / 16)); // 60fps
 
       const timer = setInterval(() => {

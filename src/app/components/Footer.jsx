@@ -4,6 +4,8 @@ import { FacebookLogo, SkypeLogo } from '@phosphor-icons/react/dist/ssr'
 import Link from 'next/link'
 
 const Footer = () => {
+
+    const date = new Date().getFullYear()
   return (
     
     <footer>
@@ -78,7 +80,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='flex flex-col md:flex-row justify-between gap-2 md:gap-0 relative  -bottom-10 tracking-wide'>
-                <div className={`${Clash.className} text-[#C8C8C8] text-[3vw] sm:text-[2vw] md:text-[0.8vw]`}>© 2025  Copyright - All Rights reserved </div>
+                <div className={`${Clash.className} text-[#C8C8C8] text-[3vw] sm:text-[2vw] md:text-[0.8vw]`}>© {date}  Copyright - All Rights reserved </div>
                 <div className={`${Clash.className} text-[#C8C8C8] flex gap-1 text-[3vw] sm:text-[2vw] md:text-[0.8vw] `}>Designed by 
                 <Link href='https://www.beeyond.agency' target='_blank' className={`${ClashM.className} text-[#C8C8C8] `}> Beeyond Tech</Link>
                 </div>
