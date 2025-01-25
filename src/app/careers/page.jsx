@@ -83,7 +83,7 @@ const page = () => {
                     your Name
                   </div>
                   <input
-                    className={`bg-transparent text-white w-full h-full rounded-xl border-none focus:outline-none px-2 ${Clash.className}`}
+                    className={`bg-transparent pb-2 text-[#02123b] w-full h-full rounded-xl border-none focus:outline-none px-2 ${Clash.className}`}
                     type="text"
                   />
                 </div>
@@ -94,7 +94,7 @@ const page = () => {
                     phone number
                   </div>
                   <input
-                    className={`bg-transparent text-white w-full h-full rounded-xl border-none focus:outline-none px-2 ${Clash.className}`}
+                    className={`bg-transparent pb-2 text-[#02123b] w-full h-full rounded-xl border-none focus:outline-none px-2 ${Clash.className}`}
                     type="text"
                   />
                 </div>
@@ -105,11 +105,11 @@ const page = () => {
                     email
                   </div>
                   <input
-                    className={`bg-transparent text-white w-full h-full rounded-xl border-none focus:outline-none px-2 ${Clash.className}`}
+                    className={`bg-transparent pb-2 text-[#02123b] w-full h-full rounded-xl border-none focus:outline-none px-2 ${Clash.className}`}
                     type="text"
                   />
                 </div>
-                <div className="bg-transparent border text-[4vw] md:text-[2vw] lg:text-[1.2vw] border-[#515b73] rounded-xl w-full h-[15vw] md:h-[9.5vw] lg:h-[7vw] flex flex-col justify-center">
+                <div className="bg-transparent border text-[4vw] md:text-[2vw] lg:text-[1.2vw] border-[#515b73] rounded-xl w-full h-[15vw] md:h-[6.5vw] lg:h-[4vw] flex flex-col justify-center">
                   <div
                     className={`${Clash.className}  text-[#677189] uppercase px-2 pt-2`}
                   >
