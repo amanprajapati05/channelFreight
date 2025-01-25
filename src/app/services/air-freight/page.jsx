@@ -33,23 +33,23 @@ const text = [
   ];
   const leftContent = [
     {
-      title: "Full Container Load (FCL)",
-      description: "FCL shipments are ideal for bulk goods, providing direct port-to-port transit with minimal handling, reducing risks and delays."
+      title: "Tailored Solutions",
+      description: "Whether you need express delivery, specialized handling for pharmaceuticals, or temperature-controlled shipments, our services are customized to meet your unique requirements."
     },
     {
-      title: "Sea Charters",
-      description: "Ideal for urgent, large-scale, or exclusive shipments, sea charters offer full control over routes, schedules, and cargo specifications."
+      title: "Comprehensive Global Network",
+      description: "With access to key international airports and partnerships with leading carriers, we deliver your cargo to every corner of the world with speed and precision."
     }
   ];
   
   const rightContent = [
     {
-      title: "Loose Container Load (LCL)",
-      description: "This cost-effective solution allows businesses to ship without needing full container space, while still benefiting from our extensive global network and secure handling."
+      title: "Innovative Technology",
+      description: "Our advanced tracking systems provide real-time updates on your shipment, offering complete visibility and peace of mind throughout the transit, from origin to destination."
     },
     {
-      title: "Break Bulk Handling",
-      description: "Our expertise in break bulk cargo allows for safe transport of oversized, irregular, or heavy items that can't be containerized."
+      title: "Regulatory Expertise",
+      description: "Simplifying cross-border logistics with seamless customs clearance and compliance, reducing transit times, minimizing delays and eliminating barriers."
     }
   ];
 
@@ -70,7 +70,7 @@ const text = [
 
           <div className='text-[4vw] md:text-[1.3vw] w-full md:w-[40%] flex flex-col gap-4 md:gap-0 justify-between '>
             <div>
-            Our air freight services are backed by a commitment to reliability, agility, and exceptional customer support, making us a preferred partner for businesses worldwide.
+            Reliable air freight services with agility and exceptional support, a preferred partner worldwide.
             </div>
             <div>
                 <Button text='Get in Touch' link='/contact' bgColor='#02123b' tColor='#ffffff' />
@@ -154,8 +154,8 @@ const text = [
                                                 <div className='text-[4vw] md:text-[1.3vw] text-left'>Our advanced tracking systems provide real-time updates on your shipment, offering complete visibility and peace of mind throughout the transit, from origin to destination.</div>
                                                 </div>
                                                 <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
-                                                <div className='md:text-[2vw] text-[6vw] text-left'>Comprehensive Global Network</div>
-                                                <div className='text-[4vw] md:text-[1.3vw] text-left'>With access to key international airports and partnerships with leading carriers, we deliver your cargo to every corner of the world with speed and precision</div>
+                                                <div className='md:text-[2vw] text-[6vw] text-left'>Regulatory Expertise</div>
+                                                <div className='text-[4vw] md:text-[1.3vw] text-left'>Simplifying cross-border logistics with seamless customs clearance and compliance, reducing transit times, minimizing delays and eliminating barriers.</div>
                                                 </div>
                                             </div>
                                         </div>

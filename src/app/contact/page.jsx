@@ -7,7 +7,7 @@ import Button from "../components/Button";
 
 const page = () => {
   const inputContainerClasses = "bg-transparent border border-[#515b73] rounded-xl w-full flex flex-col justify-center group";
-  const inputClasses = "bg-transparent text-white w-full rounded-xl border-none focus:outline-none px-2";
+  const inputClasses = "bg-transparent text-white w-full rounded-xl border-none focus:outline-none px-2 pb-2  ";
   const labelClasses = "text-[#677189] uppercase px-2 pt-2";
 
   // Add focus state management
