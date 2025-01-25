@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import { Clash, ClashM } from '../../../public/fonts/fonts'
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight, CaretDown } from "@phosphor-icons/react/dist/ssr";
 import Footer from './Footer';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -204,9 +204,17 @@ const Hero2 = () => {
       </div>
     </div>
             </div>
-            <div className='flex flex-col items-center justify-center text-center w-full absolute bottom-10 '>
+            {/* <div className='flex flex-col items-center justify-center text-center w-full absolute bottom-10 '>
+                
                     <div className={`${Clash.className} text-white font-thin`}>Scroll Down</div>
-            </div>
+            </div> */}
+             <div className='flex flex-col items-center text-white justify-center text-center w-full absolute bottom-10 text-base '>
+                <div className='flex flex-col '>
+        <CaretDown weight='bold' size={19}/>
+        <CaretDown weight='bold' size={19}/>
+        </div>
+                <div className={`${Clash.className} text-white font-thin`}>Scroll Down</div>
+        </div>
             </div>
             <div className=''>
             <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw] pt-[8vw] md:pt-[6vw] lg:pt-[1vw]'>
