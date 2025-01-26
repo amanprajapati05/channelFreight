@@ -166,22 +166,22 @@ const text = [
                                         <div className={`${Clash.className} flex flex-col md:flex-row md:justify-between text-[#02123b] py-[6vw]`}>
                                             <div className='flex flex-col h-full justify-between md:w-[30%] w-full '>
                                                 <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
-                                                <div className='md:text-[2vw] text-[6vw] md:text-right'>Tailored Solutions</div>
-                                                <div className='text-[4vw] md:text-[1.3vw] md:text-right'>Whether you need express delivery, specialized handling for pharmaceuticals, or temperature-controlled shipments, our services are customized to meet your unique requirements.</div>
+                                                <div className='md:text-[2vw] text-[6vw] md:text-right'>Full Container Load (FCL)</div>
+                                                <div className='text-[4vw] md:text-[1.3vw] md:text-right'>FCL shipments are ideal for bulk goods, providing direct port-to-port transit with minimal handling, reducing risks and delays.</div>
                                                 </div>
                                                 <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
-                                                <div className='md:text-[2vw] text-[6vw] md:text-right'>Comprehensive Global Network</div>
-                                                <div className='text-[4vw] md:text-[1.3vw] md:text-right'>With access to key international airports and partnerships with leading carriers, we deliver your cargo to every corner of the world with speed and precision</div>
+                                                <div className='md:text-[2vw] text-[6vw] md:text-right'>Sea Charters</div>
+                                                <div className='text-[4vw] md:text-[1.3vw] md:text-right'>Ideal for urgent, large-scale, or exclusive shipments, sea charters offer full control over routes, schedules, and cargo specifications.</div>
                                                 </div>
                                             </div>
                                             <div className='flex flex-col h-full justify-between md:w-[30%] w-full'>
                                                 <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
-                                                <div className='md:text-[2vw] text-[6vw] text-left'>Innovative Technology</div>
-                                                <div className='text-[4vw] md:text-[1.3vw] text-left'>Our advanced tracking systems provide real-time updates on your shipment, offering complete visibility and peace of mind throughout the transit, from origin to destination.</div>
+                                                <div className='md:text-[2vw] text-[6vw] text-left'>Loose Container Load (LCL)</div>
+                                                <div className='text-[4vw] md:text-[1.3vw] text-left'>This cost-effective solution allows businesses to ship without needing full container space, while still benefiting from our extensive global network and secure handling.</div>
                                                 </div>
                                                 <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
-                                                <div className='md:text-[2vw] text-[6vw] text-left'>Comprehensive Global Network</div>
-                                                <div className='text-[4vw] md:text-[1.3vw] text-left'>With access to key international airports and partnerships with leading carriers, we deliver your cargo to every corner of the world with speed and precision</div>
+                                                <div className='md:text-[2vw] text-[6vw] text-left'>Break Bulk Handling</div>
+                                                <div className='text-[4vw] md:text-[1.3vw] text-left'>Our expertise in break bulk cargo allows for safe transport of oversized, irregular, or heavy items that can’t be containerized.</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -277,7 +277,7 @@ const text = [
                            <div className={` md:text-[1.6vw] text-[4vw] text-white absolute  top-14 left-0   `}>
                                <img src="/images/inv.png" alt="" />
                            </div>
-                           <div className={`${ClashM.className} px-3   md:text-[1.6vw] md:text-center text-[4vw] text-white `}>Where timing meets trust, and logistics meet excellence</div>
+                           <div className={`${ClashM.className} px-3 md:pl-0 pl-6  md:text-[1.6vw] md:text-center text-[4vw] text-white `}>Where timing meets trust, and logistics meet excellence</div>
                            <div className='absolute bottom-14 right-0 scale-x-[-1] scale-y-[-1]'><img  className='' src="/images/inv.png" alt="" /></div>
                        </div>
                    </div>

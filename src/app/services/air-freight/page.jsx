@@ -247,7 +247,7 @@ const text = [
                         <div className={` md:text-[1.6vw] text-[4vw] text-white absolute  top-14 left-0   `}>
                             <img src="/images/inv.png" alt="" />
                         </div>
-                        <div className={`${ClashM.className} px-3   md:text-[1.6vw] md:text-center text-[4vw] text-white `}>From booking to delivery, every detail is managed with care.</div>
+                        <div className={`${ClashM.className} md:px-3 px-3 pl-8   md:text-[1.6vw] md:text-center text-[4vw] text-white `}>From booking to delivery, every detail is managed with care.</div>
                         <div className='absolute bottom-14 right-0 scale-x-[-1] scale-y-[-1]'><img  className='' src="/images/inv.png" alt="" /></div>
                     </div>
                 </div>

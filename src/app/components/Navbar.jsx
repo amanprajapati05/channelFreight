@@ -189,7 +189,7 @@ const Navbar = () => {
       <div  ref={containerRef}  className={activeMenu ? 'mx-2  md:h-[28vw]  rounded-2xl bg-white' : 'h-[6vw]'}>
         {/* Main navbar */}
         <div className="hidden relative justify-end md:px-[2vw] lg:px-[4vw] px-4 items-center md:h-[10vw] lg:h-[8vw] xl:h-[6vw] text-[#02123b] md:flex rounded-2xl">
-          <div className="absolute md:left-[2vw] lg:left-[4vw] hidden md:block">
+          <div className="absolute md:left-[2vw] lg:left-[4vw] hidden cursor-pointer md:block">
             <Link href={'/'}>
             <img 
               src={activeMenu ? '/images/img4.png' : '/images/image5.png'} 

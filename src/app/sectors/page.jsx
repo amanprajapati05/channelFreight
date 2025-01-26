@@ -31,6 +31,7 @@ const page = () => {
 
 
 const imageRefs = useRef([]);
+    const imageRefs2 = useRef([]);
     const buttonRefs = useRef([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isReady, setIsReady] = useState(false);
@@ -57,6 +58,11 @@ const imageRefs = useRef([]);
     const addToImageRefs = (el) => {
         if (el && !imageRefs.current.includes(el)) {
             imageRefs.current.push(el);
+        }
+    };
+    const addToImageRefs2 = (el) => {
+        if (el && !imageRefs2.current.includes(el)) {
+            imageRefs2.current.push(el);
         }
     };
 
@@ -266,6 +272,46 @@ const imageRefs = useRef([]);
         });
     }, [isReady]);
 
+    useGSAP(() => {
+        if (!isReady) return;
+    
+        imageRefs2.current.forEach((imageContainer, index) => {
+            if (!imageContainer || !imageContainer.parentElement) return;
+    
+            // Ensure parent container is visible
+            gsap.set(imageContainer.parentElement, {
+                // height: 'auto',
+                visibility: "visible",
+                opacity: 1
+            });
+    
+            // Create animation timeline
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: imageContainer.parentElement,
+                    start: "top bottom-=100",
+                    end: "top center-=100",
+                    toggleActions: "play none none reverse",
+                    scrub: true,
+                    // markers: true,
+                }
+            });
+    
+            // Add animation to timeline
+            tl.fromTo(imageContainer,
+                {
+                    width: '15%',
+                    height: '100%'
+                },
+                {
+                    width: '40%',
+                    height: '100%',
+                    ease: "none",
+                }
+            );
+        });
+    }, [isReady]);
+
   return (
     <>
     <div className='absolute w-full'>
@@ -401,7 +447,7 @@ const imageRefs = useRef([]);
                         <div className='w-full h-auto bg-white md:p-[2vw] lg:p-[4vw] p-4 md:hidden'>
                     <div className='flex flex-col '>
                         <div className='flex h-56 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                            <div className='w-[40%] h-full '>
+                            <div ref={addToImageRefs2} className='w-[40%] h-full '>
                                 <img src="/images/sectors/pharma.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                             </div>
                             <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -414,7 +460,7 @@ const imageRefs = useRef([]);
                     </div>
                     <div className='flex flex-col '>
                         <div className='flex h-60 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                            <div className='w-[40%] h-full '>
+                            <div ref={addToImageRefs2} className='w-[40%] h-full '>
                                 <img src="/images/sectors/haz.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                             </div>
                             <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -428,7 +474,7 @@ const imageRefs = useRef([]);
                     </div>
                     <div className='flex flex-col '>
                         <div className='flex h-56 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                            <div className='w-[40%] h-full '>
+                            <div ref={addToImageRefs2} className='w-[40%] h-full '>
                                 <img src="/images/sectors/eng.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                             </div>
                             <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -441,7 +487,7 @@ const imageRefs = useRef([]);
                     </div>
                     <div className='flex flex-col '>
                         <div className='flex h-64 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                            <div className='w-[40%] h-full '>
+                            <div ref={addToImageRefs2} className='w-[40%] h-full '>
                                 <img src="/images/sectors/cold.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                             </div>
                             <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -454,7 +500,7 @@ const imageRefs = useRef([]);
                     </div>
                     <div className='flex flex-col '>
                         <div className='flex h-64 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                            <div className='w-[40%] h-full '>
+                            <div ref={addToImageRefs2} className='w-[40%] h-full '>
                                 <img src="/images/sectors/pac.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                             </div>
                             <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -467,7 +513,7 @@ const imageRefs = useRef([]);
                     </div>
                     <div className='flex flex-col '>
                         <div className='flex h-64 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                            <div className='w-[40%] h-full '>
+                            <div ref={addToImageRefs2} className='w-[40%] h-full '>
                                 <img src="/images/sectors/exh.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                             </div>
                             <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -482,12 +528,12 @@ const imageRefs = useRef([]);
                 </div>
 
 
-        <div className={`bg-[#02123b] px-4 py-4 md:px-[4vw] md:py-[3vw] md:h-[15vw] gap-3 md:gap-0 flex flex-col md:flex-row justify-between items-center ${Clash.className}`}>
+        <div className={`bg-[#02123b] px-4 py-4 md:px-[4vw] md:py-[3vw] md:h-[15vw] gap-3 md:gap-0 flex flex-col md:flex-row justify-between -mb-1 items-center ${Clash.className}`}>
                 <div className='text-white md:text-[4vw] text-[9vw] w-full  md:w-[40%]' >Partner with <br />
                 Industry Experts</div>
                 <div className='flex flex-col w-full md:w-[40%] gap-9 md:gap-4'>
                     <div className='text-[#c8c8c8] md:text-[1.3vw] text-[4vw] sm:text-[3.5vw]'>Rely on our specialized expertise to manage your sector’s unique logistics challenges. Let’s create a solution that works for you.</div>
-                    <Button bgColor='white' tColor='black' text='Contact us'/>
+                    <Button bgColor='white' tColor='black' text='Contact us' link='/contact'/>
 
                 </div>
             </div>

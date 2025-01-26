@@ -60,7 +60,7 @@ const page = () => {
     <div className={`text-[#02123b] ${Clash.className} text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] md:w-[35%] w-full `}>Channel Freight excels in the safe and efficient transportation of hazardous cargo, including chemicals, flammables, and radioactive materials.</div>
     </div>
 
-       <div   className='md:flex flex md:w-full md:px-[2vw] lg:px-[4vw] px-4 md:mx-0 justify-between gap-[1.7vw] md:gap-0'> 
+       <div   className='md:flex flex overflow-x-auto scrollbar-hide md:w-full md:px-[2vw] lg:px-[4vw] px-4 md:mx-0 justify-between gap-[1.7vw] md:gap-0'> 
                     <AnimatedCard
     index={1}
     title="Safety Risks"

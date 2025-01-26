@@ -45,7 +45,7 @@ const Footer = () => {
                 </div>
                 <div className=' flex flex-col justify-between md:w-[55%] w-full '>
                     <div className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] flex flex-wrap gap-3 pb-[4vw] md:pb-0`}>
-                       <Link href='/about'>About Us&nbsp;&nbsp;/</Link>
+                       <Link href='/about-us'>About Us&nbsp;&nbsp;/</Link>
                        <Link href='/services'> Services&nbsp;&nbsp;/</Link>
                        <Link href='/sectors'> Sector Expertise&nbsp;&nbsp;/</Link>
                        <Link href='/gallery'> Gallery&nbsp;&nbsp;/</Link>
@@ -55,12 +55,15 @@ const Footer = () => {
                     <div className='flex justify-between flex-wrap '>
                         <div className='md:w-[30%] w-[50%] flex flex-col gap-3'>
                             <div className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw]`}>Location</div>
-                            <div className={`${Clash.className} text-white tracking-wide text-[3.5vw] sm:text-[3vw] md:text-[1vw]`}>Suite# 112 A, Adarsh Industrial Estate, Chakala, Sahar Road, Andheri East,
-                            Mumbai - 400099, India</div>
+                            <Link href='https://maps.app.goo.gl/vJjGJPPNySKy9Eey8' className={`${Clash.className} text-white tracking-wide text-[3.5vw] sm:text-[3vw] md:text-[1vw]`}>Suite# 112 A, Adarsh Industrial Estate, Chakala, Sahar Road, Andheri East,
+                            Mumbai - 400099, India</Link>
                         </div>
                         <div className='md:w-[30%] w-[50%] flex flex-col gap-3'>
                             <div className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw]`}>Contact Us</div>
-                            <div className={`${Clash.className} text-white tracking-wide text-[3.5vw] sm:text-[3vw] md:text-[1vw]`}>sanjay@channel-freight.com<br/>022 4214 8000</div>
+                            <div className={`${Clash.className} text-white tracking-wide text-[3.5vw] sm:text-[3vw] md:text-[1vw]`}>
+                            <div><a href="mailto:sanjay@channel-freight.com">sanjay@channel-freight.com</a></div>
+                            <div><a href="tel:02242148000">022 4214 8000</a></div>
+                                 </div>
                         </div>
                         <div className='md:w-[30%] w-[50%] flex flex-col gap-3 pt-[3vw] md:pt-0'>
                             <div className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw]`}>Social Links</div>

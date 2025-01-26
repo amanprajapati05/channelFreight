@@ -350,32 +350,12 @@ const slides = [
     />
     </div>
 
-     <div className='md:p-[2vw] lg:p-[4vw] px-4 py-4 md:block hidden'>
+     <div className='md:p-[2vw] lg:p-[4vw] px-4 py-4 block '>
      <ServicesSlider 
   heading="Benefits of Choosing Us" 
   slides={slides} 
 />
     </div>
-
-    <div className='md:p-[2vw] lg:p-[4vw] px-4 py-4 block  md:hidden'>
-        <div className='flex flex-col gap-4 w-full'>
-          <div className={`text-[#02123b] ${Clash.className} text-[8vw] py-[2vw] md:text-[5vw] lg:text-[4vw]`}>
-            Benefits of Choosing Us
-          </div>
-          <div className={`${Clash.className} text-[#02123b] flex gap-3 flex-col w-[80%]`}>
-            <div className=' w-full inset-0' >
-              <img src="/images/services/p1.webp" className='w-full' alt="" />
-            </div>
-            <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw]`}>
-            Strategic Partnerships
-            </div>
-            <div className={`text-[#02123b] ${Clash.className} text-[3vw] sm:text-[3.2] xl:text-[1vw] md:text-[1.7vw] lg:text-[1.2vw] w-full text-left`}>
-            We collaborate with industry leaders to offer competitive pricing and innovative transport solutions.
-            </div>
-          </div>
-        </div>
-    </div>
-
 
                         
    
@@ -413,7 +393,7 @@ const slides = [
                   <div className=' h-[45%] bg-[#02123b] rounded-2xl md:px-[1vw] px-[3vw] '>
                       <div className={`${Clash.className} text-white flex w-full h-full items-center justify-between `}>
                         <div className='md:text-[8vw] text-[24vw] '>20+</div>
-                        <div className='w-[40%] text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] text-center'>years of expertise to deliver on time and within budget.</div>
+                        <div className='w-[40%] text-[4.5vw] py-2 md:py-0 sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] text-center'>years of expertise to deliver on time and within budget.</div>
                       </div>
                   </div>
                   </div>

@@ -132,13 +132,25 @@ const ShipAnimation = () => {
 
     return (
         <div ref={containerRef} className={`h-screen mt-[4vw] w-full relative overflow-hidden bg-white text-[#02123b]`}>
-            <img
+            {/* <img
                 ref={shipRef}
                 src="/images/ship3.png"
                 alt="Ship"
-                className="absolute transform-gpu will-change-transform md:h-[200px] opacity-0 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[9999999]"
-                style={{  width: 'auto' }}
-            />
+                className="absolute transform-gpu  will-change-transform h-[600px] md:w-auto  md:h-[200px] opacity-0 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[9999999]"
+                style={{  objectFit: 'contain'}}
+            /> */}
+  <img
+   ref={shipRef}
+   src="/images/ship3.png"
+   alt="Ship"
+   className="absolute transform-gpu will-change-transform opacity-0 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-[9999999]"
+   style={{ 
+     height: window.innerWidth <= 768 ? '500px' : '200px',
+     width: window.innerWidth <= 768 ? '1000px' : 'auto',
+     objectFit: 'contain',
+     maxWidth: 'none'
+   }}
+/>
             <div className="relative z-20 flex flex-col justify-center items-center h-full md:mt-5">
                 <div ref={initialTextRef} className="transition-opacity duration-300">
                     <div className={`${Clash.className} text-center md:text-[4vw] text-[7vw] px-2 md:px-0 text-[#02123b]`}>

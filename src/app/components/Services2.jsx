@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
     const imageRefs = useRef([]);
+    const imageRefs2 = useRef([]);
     const buttonRefs = useRef([]);
     const contentRefs = useRef([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -54,6 +55,11 @@ const Services = () => {
     const addToImageRefs = (el) => {
         if (el && !imageRefs.current.includes(el)) {
             imageRefs.current.push(el);
+        }
+    };
+    const addToImageRefs2 = (el) => {
+        if (el && !imageRefs2.current.includes(el)) {
+            imageRefs2.current.push(el);
         }
     };
     
@@ -130,45 +136,6 @@ const Services = () => {
         }
     };
 
-    // Setup scroll animations
-    // useGSAP(() => {
-    //     if (!isReady) return;
-
-    //     imageRefs.current.forEach((imageContainer, index) => {
-    //         if (!imageContainer || !imageContainer.parentElement) return;
-
-    //         // Ensure parent container is visible
-    //         gsap.set(imageContainer.parentElement, {
-    //             height: 'auto',
-    //             visibility: "visible",
-    //             opacity: 1
-    //         });
-
-    //         // Create animation timeline
-    //         const tl = gsap.timeline({
-    //             scrollTrigger: {
-    //                 trigger: imageContainer.parentElement,
-    //                 start: "top bottom-=100",
-    //                 end: "top top+=100",
-    //                 toggleActions: "play none none reverse",
-    //                 scrub: true,
-    //             }
-    //         });
-
-    //         // Add animation to timeline
-    //         tl.fromTo(imageContainer,
-    //             {
-    //                 width: '15%',
-    //                 height: '10vw'
-    //             },
-    //             {
-    //                 width: '40%',
-    //                 height: '25vw',
-    //                 ease: "none",
-    //             }
-    //         );
-    //     });
-    // }, [isReady]);
 
     useGSAP(() => {
         if (!isReady) return;
@@ -227,6 +194,110 @@ const Services = () => {
                 {
                     width: '40%',
                     height: '25vw',
+                    ease: "none",
+                }
+            );
+        });
+    }, [isReady]);
+
+    // useGSAP(() => {
+    //     if (!isReady) return;
+       
+    //     const mobileContainers = document.querySelectorAll('.md\\:hidden .flex.flex-col > div');
+        
+    //     mobileContainers.forEach((container) => {
+    //       const imageContainer = container.querySelector('div:first-child');
+    //       const contentContainer = container.querySelector('div:last-child');
+          
+    //       gsap.set(container, {
+    //         visibility: "visible", 
+    //         opacity: 1
+    //       });
+       
+    //       gsap.timeline({
+    //         scrollTrigger: {
+    //           trigger: container,
+    //           start: "top bottom-=100",
+    //           end: "top top+=100",
+    //           toggleActions: "play none none reverse",
+    //           scrub: true
+    //         }
+    //       })
+    //       .fromTo(imageContainer, {
+    //         width: '15%',
+    //         height: '10rem'
+    //       }, {
+    //         width: '100%',
+    //         height: '100%',
+    //         ease: "none"
+    //       });
+    //     });
+    //    }, [isReady]);
+
+    // useGSAP(() => {
+    //     if (!isReady) return;
+       
+    //     const mobileContainers = document.querySelectorAll('.md\\:hidden .flex.flex-col > div');
+        
+    //     mobileContainers.forEach((container) => {
+    //       const imageContainer = container.querySelector('div:first-child');
+          
+    //       gsap.timeline({
+    //         scrollTrigger: {
+    //           trigger: container,
+    //           start: "top bottom-=100",
+    //           end: "top center",
+    //           markers: true,
+    //           toggleActions: "play none none reverse",
+    //           scrub: true
+    //         }
+    //       })
+    //       .fromTo(imageContainer, {
+    //         width: '15%',
+    //         height: '56px'
+    //       }, {
+    //         width: '80%', 
+    //         height: '14rem',
+    //         ease: "none"
+    //       });
+    //     });
+    //    }, [isReady]);
+
+
+    useGSAP(() => {
+        if (!isReady) return;
+    
+        imageRefs2.current.forEach((imageContainer, index) => {
+            if (!imageContainer || !imageContainer.parentElement) return;
+    
+            // Ensure parent container is visible
+            gsap.set(imageContainer.parentElement, {
+                // height: 'auto',
+                visibility: "visible",
+                opacity: 1
+            });
+    
+            // Create animation timeline
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: imageContainer.parentElement,
+                    start: "top bottom-=100",
+                    end: "top center-=100",
+                    toggleActions: "play none none reverse",
+                    scrub: true,
+                    // markers: true,
+                }
+            });
+    
+            // Add animation to timeline
+            tl.fromTo(imageContainer,
+                {
+                    width: '15%',
+                    height: '100%'
+                },
+                {
+                    width: '40%',
+                    height: '100%',
                     ease: "none",
                 }
             );
@@ -391,7 +462,7 @@ const Services = () => {
            <div className='w-full h-auto bg-white md:p-[2vw] lg:p-[4vw] p-4 md:hidden'>
                <div className='flex flex-col '>
                    <div className='flex h-56 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                       <div className='w-[40%] h-full '>
+                       <div ref={addToImageRefs2} className='w-[40%] h-full '>
                            <img src="/images/services/service/air.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                        </div>
                        <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -404,7 +475,7 @@ const Services = () => {
                </div>
                <div className='flex flex-col '>
                    <div className='flex h-56 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                       <div className='w-[40%] h-full '>
+                       <div ref={addToImageRefs2} className='w-[40%] h-full '>
                            <img src="/images/services/service/sea.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                        </div>
                        <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -417,7 +488,7 @@ const Services = () => {
                </div>
                <div className='flex flex-col '>
                    <div className='flex h-56 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                       <div className='w-[40%] h-full '>
+                       <div ref={addToImageRefs2} className='w-[40%] h-full '>
                            <img src="/images/services/service/supply.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                        </div>
                        <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -429,8 +500,8 @@ const Services = () => {
                
                </div>
                <div className='flex flex-col '>
-                   <div className='flex h-60 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                       <div className='w-[40%] h-full '>
+                   <div className='flex h-56 gap-4 bg-blac border-b-2 pt-3 pb-6'>
+                       <div ref={addToImageRefs2} className='w-[40%] h-full '>
                            <img src="/images/services/service/project.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                        </div>
                        <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -442,8 +513,8 @@ const Services = () => {
                
                </div>
                <div className='flex flex-col '>
-                   <div className='flex h-64 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                       <div className='w-[40%] h-full '>
+                   <div className='flex h-60 gap-4 bg-blac border-b-2 pt-3 pb-6'>
+                       <div ref={addToImageRefs2} className='w-[40%] h-full '>
                            <img src="/images/services/service/customs.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                        </div>
                        <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -456,7 +527,7 @@ const Services = () => {
                </div>
                <div className='flex flex-col '>
                    <div className='flex h-56 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                       <div className='w-[40%] h-full '>
+                       <div ref={addToImageRefs2} className='w-[40%] h-full '>
                            <img src="/images/services/service/cross.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                        </div>
                        <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -468,8 +539,8 @@ const Services = () => {
                
                </div>
                <div className='flex flex-col '>
-                   <div className='flex h-60 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                       <div className='w-[40%] h-full '>
+                   <div className='flex h-56 gap-4 bg-blac border-b-2 pt-3 pb-6'>
+                       <div ref={addToImageRefs2} className='w-[40%] h-full '>
                            <img src="/images/services/service/charter.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                        </div>
                        <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -481,8 +552,8 @@ const Services = () => {
                
                </div>
                <div className='flex flex-col '>
-                   <div className='flex h-56 gap-4 bg-blac border-b-2 pt-3 pb-6'>
-                       <div className='w-[40%] h-full '>
+                   <div className='flex h-64 gap-4 bg-blac border-b-2 pt-3 pb-6'>
+                       <div ref={addToImageRefs2} className='w-[40%] h-full '>
                            <img src="/images/services/service/value.webp" className='h-full w-full object-cover rounded-xl' alt="" />
                        </div>
                        <div className='flex flex-col h-full justify-between w-[60%]'>
@@ -495,6 +566,80 @@ const Services = () => {
                </div>
                
            </div>
+           {/* <div className='w-full h-auto bg-white md:p-[2vw] lg:p-[4vw] p-4 md:hidden'>
+ <div className='flex flex-col'>
+   {[
+     {
+       img: "/images/services/service/air.webp",
+       title: "Air Freight",
+       desc: "Experience precision and efficiency with our air freight services, designed to meet...",
+       link: "/services/air"
+     },
+     {
+       img: "/images/services/service/sea.webp", 
+       title: "Sea Freight",
+       desc: "Our Sea Freight Services are designed to simplify global trade by offering tailored...",
+       link: "/services/sea"
+     },
+     {
+       img: "/images/services/service/supply.webp",
+       title: "Supply Chain",
+       desc: "We redefine supply chain management through our integrated and...",
+       link: "/services/supply"
+     },
+     {
+       img: "/images/services/service/project.webp",
+       title: "Project Logistics", 
+       desc: "Our team is dedicated to providing end-to-end solutions for transporting...",
+       link: "/services/projectlogistics",
+       height: "h-60"
+     },
+     {
+       img: "/images/services/service/customs.webp",
+       title: "Customs Brokerage",
+       desc: "Our customs brokerage solutions transcend basic compliance to deliver..",
+       link: "/services/customs",
+       height: "h-64"
+     },
+     {
+       img: "/images/services/service/cross.webp",
+       title: "Cross Trade",
+       desc: "We excel in Cross Trade Logistics, enabling businesses to navigate the complexities...",
+       link: "/services/cross"
+     },
+     {
+       img: "/images/services/service/charter.webp",
+       title: "Charter Services",
+       desc: "We deliver tailored charter services, ensuring your cargo moves seamlessly...",
+       link: "/services/charter",
+       height: "h-60"
+     },
+     {
+       img: "/images/services/service/value.webp",
+       title: "Value Added Services",
+       desc: "We recognize that modern businesses require more than just...",
+       link: "/services/value"
+     }
+   ].map((service, index) => (
+     <div key={index} className='flex flex-col'>
+       <div className={`flex ${'h-56'} w-full gap-4 bg-blac border-b-2 pt-3 pb-6`}>
+         <div className='w-[40%] h-full ref={addToImageRefs}'>
+           <img src={service.img} className='h-full w-full object-cover rounded-xl' alt="" />
+         </div>
+         <div className='flex flex-col h-full justify-between w-[100%]'>
+           <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b]`}>
+             {service.title}
+           </div>
+           <div className={`${Clash.className} text-[#02123b] text-[4vw] sm:text-[3vw]`}>
+             {service.desc}
+           </div>
+           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link={service.link} />
+         </div>
+       </div>
+     </div>
+   ))}
+ </div>
+</div> */}
 
        <div className={`bg-[#02123b] px-4 py-4 md:px-[4vw] md:py-[3vw] md:h-[15vw] md:flex-row flex-col gap-3 md:gap-0  -mb-1 md:-mb-0 flex justify-between items-center ${Clash.className}`}>
            <div className='text-white md:text-[4vw] text-[9vw]  w-full  md:w-[40%]' >Ready to Optimize Your Logistics?</div>
