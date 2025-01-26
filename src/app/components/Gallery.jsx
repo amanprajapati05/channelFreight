@@ -577,6 +577,8 @@ const Gallery = () => {
   const triggerRef = useRef(null);
   const triggerRef2 = useRef(null);
   const containerRef = useRef(null);
+  const scaleRef = useRef(null);
+  const scaleMobileRef = useRef(null);
 
   useEffect(() => {
     const cards = cardsRef.current;
@@ -610,9 +612,65 @@ const Gallery = () => {
     }
   };
 
+  // useGSAP(() => {
+  //   // Desktop animation
+  //   gsap.fromTo([slider.current, containerRef.current], {
+  //     translateX: 0,
+  //   }, {
+  //     translateX: "-120%",
+  //     ease: "none",
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: triggerRef.current,
+  //       start: "top top",
+  //       end: "2000 top",
+  //       scrub: 2,
+  //       pin: true,
+  //       anticipatePin: 1,
+  //       fastScrollEnd: true,
+  //       preventOverlaps: true,
+  //       invalidateOnRefresh: true,
+  //       onEnter: () => {
+  //         gsap.to(slider.current, {
+  //           opacity: 1,
+  //           duration: 0.3
+  //         });
+  //       },
+  //     },
+  //   });
+  // });
+
+  // useGSAP(() => {
+  //   // Mobile animation
+  //   gsap.fromTo([slider2.current, containerRef.current], {
+  //     translateX: 0,
+  //   }, {
+  //     translateX: "-300%",
+  //     ease: "none",
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: triggerRef2.current,
+  //       start: "top top",
+  //       end: "2000 top",
+  //       scrub: 2,
+  //       pin: true,
+  //       anticipatePin: 1,
+  //       fastScrollEnd: true,
+  //       preventOverlaps: true,
+  //       invalidateOnRefresh: true,
+  //       onEnter: () => {
+  //         gsap.to(slider2.current, {
+  //           opacity: 1,
+  //           duration: 0.3
+  //         });
+  //       },
+  //     },
+  //   });
+  // });
+
   useGSAP(() => {
     // Desktop animation
-    gsap.fromTo([slider.current, containerRef.current], {
+    gsap.fromTo([slider.current, scaleRef.current], {
       translateX: 0,
     }, {
       translateX: "-120%",
@@ -628,19 +686,19 @@ const Gallery = () => {
         fastScrollEnd: true,
         preventOverlaps: true,
         invalidateOnRefresh: true,
-        onEnter: () => {
-          gsap.to(slider.current, {
-            opacity: 1,
-            duration: 0.3
+        onUpdate: (self) => {
+          // Move Scale component with slider
+          gsap.set(scaleRef.current, {
+            x: self.progress * -120 + "%"
           });
-        },
+        }
       },
     });
   });
-
+  
   useGSAP(() => {
     // Mobile animation
-    gsap.fromTo([slider2.current, containerRef.current], {
+    gsap.fromTo([slider2.current, scaleMobileRef.current], {
       translateX: 0,
     }, {
       translateX: "-300%",
@@ -648,7 +706,7 @@ const Gallery = () => {
       duration: 1,
       scrollTrigger: {
         trigger: triggerRef2.current,
-        start: "top top",
+        start: "top top", 
         end: "2000 top",
         scrub: 2,
         pin: true,
@@ -656,12 +714,12 @@ const Gallery = () => {
         fastScrollEnd: true,
         preventOverlaps: true,
         invalidateOnRefresh: true,
-        onEnter: () => {
-          gsap.to(slider2.current, {
-            opacity: 1,
-            duration: 0.3
+        onUpdate: (self) => {
+          // Move Scale component with slider
+          gsap.set(scaleMobileRef.current, {
+            x: self.progress * -300 + "%"
           });
-        },
+        }
       },
     });
   });
@@ -744,7 +802,7 @@ const Gallery = () => {
                     <div className='w-full flex justify-center absolute md:bottom-44 bottom-12 z-[999]'>
                       <ToggleButton isActive={isActive} setIsActive={setIsActive} />
                     </div>
-                    <div ref={containerRef} className='flex pt-[10vw] md:pt-0'>
+                    <div ref={scaleRef} className='flex pt-[10vw] md:pt-0'>
                       <Scale value={5} />
                     </div>
                   </div>
@@ -776,7 +834,7 @@ const Gallery = () => {
                     <div className='w-full flex justify-center absolute bottom-0 z-[999]'>
                       <ToggleButton isActive={isActive} setIsActive={setIsActive} />
                     </div>
-                    <div ref={containerRef} className='flex'>
+                    <div ref={scaleMobileRef} className='flex'>
                       <Scale value={8} />
                     </div>
                   </div>
