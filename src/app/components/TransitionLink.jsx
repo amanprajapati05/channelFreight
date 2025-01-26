@@ -13,38 +13,44 @@
 // //   const router = useRouter();
 
 // //   const createOverlays = () => {
+// //     const container = document.createElement('div');
+// //     container.className = 'fixed inset-0 z-[9999] pointer-events-none';
+// //     document.body.appendChild(container);
+
 // //     const overlays = Array.from({ length: 5 }, (_, i) => {
 // //       const overlay = document.createElement('div');
-// //       overlay.className = 'fixed top-0 h-screen bg-white';
+// //       overlay.className = 'absolute top-0 h-screen bg-white';
 // //       overlay.style.width = '20%';
 // //       overlay.style.left = `${i * 20}%`;
 // //       overlay.style.transform = 'translateY(-100%)';
-// //       overlay.style.zIndex = '9999';
-// //       document.body.appendChild(overlay);
+// //       container.appendChild(overlay);
 // //       return overlay;
 // //     });
-// //     return overlays;
+// //     return { container, overlays };
 // //   };
 
 // //   const handleTransition = async (e) => {
 // //     e.preventDefault();
-// //     const overlays = createOverlays();
     
+// //     const { container, overlays } = createOverlays();
+
 // //     // Cover animation
-// //     await gsap.to(overlays, {
+// //     const coverTl = gsap.timeline();
+// //     await coverTl.to(overlays, {
 // //       yPercent: 0,
-// //       duration: 0.5,
+// //       duration: 1,
 // //       ease: "power2.inOut",
 // //       stagger: {
 // //         amount: 0.3,
 // //         from: "start"
 // //       }
+// //     }).then(async () => {
+// //       router.push(href);
 // //     });
 
-// //     // Pause and route change
+// //     // Wait for new page
 // //     await new Promise(resolve => setTimeout(resolve, 1000));
-// //     router.push(href);
-    
+
 // //     // Reveal animation
 // //     await gsap.to(overlays, {
 // //       yPercent: 100,
@@ -56,7 +62,7 @@
 // //       }
 // //     });
 
-// //     overlays.forEach(overlay => overlay.remove());
+// //     container.remove();
 // //   };
 
 // //   return (
@@ -80,41 +86,48 @@
 //   const router = useRouter();
 
 //   const createOverlays = () => {
+//     const container = document.createElement('div');
+//     container.className = 'fixed inset-0 z-[9999] pointer-events-none';
+//     document.body.appendChild(container);
+
 //     const overlays = Array.from({ length: 5 }, (_, i) => {
 //       const overlay = document.createElement('div');
-//       overlay.className = 'fixed top-0 h-screen bg-white';
+//       overlay.className = 'absolute top-0 h-screen bg-white';
 //       overlay.style.width = '20%';
 //       overlay.style.left = `${i * 20}%`;
 //       overlay.style.transform = 'translateY(-100%)';
-//       overlay.style.zIndex = '9999';
-//       document.body.appendChild(overlay);
+//       container.appendChild(overlay);
 //       return overlay;
 //     });
-//     return overlays;
+//     return { container, overlays };
 //   };
 
 //   const handleTransition = async (e) => {
 //     e.preventDefault();
-//     const overlays = createOverlays();
     
-//     // Exit animation - cover the current page
-//     await gsap.to(overlays, {
-//       yPercent: 0,
-//       duration: 0.5,
-//       ease: "power2.inOut",
-//       stagger: {
-//         amount: 0.3,
-//         from: "start"
-//       }
+//     const { container, overlays } = createOverlays();
+
+//     // Cover animation with completion callback
+//     await new Promise(resolve => {
+//       gsap.to(overlays, {
+//         yPercent: 0,
+//         duration: 1,
+//         ease: "power2.inOut",
+//         stagger: {
+//           amount: 0.3,
+//           from: "start"
+//         },
+//         onComplete: resolve
+//       });
 //     });
-//     await new Promise(resolve => setTimeout(resolve, 1000));
-//     // Change route after cover animation
+
+//     // After cover is complete, change route
 //     router.push(href);
 
-//     // Wait for content to load
+//     // Wait for new page
 //     await new Promise(resolve => setTimeout(resolve, 1000));
-    
-//     // Entrance animation - reveal the new page
+
+//     // Reveal animation
 //     await gsap.to(overlays, {
 //       yPercent: 100,
 //       duration: 0.5,
@@ -125,8 +138,7 @@
 //       }
 //     });
 
-//     // Cleanup
-//     overlays.forEach(overlay => overlay.remove());
+//     container.remove();
 //   };
 
 //   return (
@@ -172,34 +184,38 @@ export const TransitionLink = ({
     const { container, overlays } = createOverlays();
 
     // Cover animation
-    const coverTl = gsap.timeline();
-    await coverTl.to(overlays, {
-      yPercent: 0,
-      duration: 0.5,
+    await new Promise(resolve => {
+      gsap.to(overlays, {
+        yPercent: 0,
+        duration: 0.7,
+        ease: "power2.inOut",
+        stagger: {
+          amount: 0.3,
+          from: "start"
+        },
+        onComplete: () => {
+          setTimeout(resolve, 500); // Additional pause when screen is white
+          router.push(href)
+        }
+      });
+    });
+
+  ;
+
+    // Wait for new page with white screen
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    // Reveal animation
+    gsap.to(overlays, {
+      yPercent: 100,
+      duration: 0.7,
       ease: "power2.inOut",
       stagger: {
         amount: 0.3,
         from: "start"
-      }
-    }).then(() => {
-      router.push(href);
+      },
+      onComplete: () => container.remove()
     });
-
-    // Wait for new page
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    // Reveal animation
-    await gsap.to(overlays, {
-      yPercent: 100,
-      duration: 0.5,
-      ease: "power2.inOut",
-      stagger: {
-        amount: 0.3,
-        from: "end"
-      }
-    });
-
-    container.remove();
   };
 
   return (
