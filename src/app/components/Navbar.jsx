@@ -7,8 +7,8 @@ import gsap from "gsap";
 import { Airplane,  Boat, ChartBar, Cube, DropboxLogo, Flask, GearFine, GlobeSimple, Nut, Package, Pill, ShippingContainer, ThermometerSimple, TrainRegional } from '@phosphor-icons/react/dist/ssr'
 import MobileNavbar from './MobileNavbar'
 import Link from 'next/link';
-import {TransitionLink} from './TransitionLink';
-import TransitionLink2 from './TransitionLink2';
+// import {TransitionLink} from './TransitionLink';
+// import TransitionLink2 from './Transitionlink2';
 
 
 const NavItem = ({ children, onMouseEnter, isActive, isPersistent,link }) => {
