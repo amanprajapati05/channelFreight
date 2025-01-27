@@ -192,8 +192,8 @@ const Navbar = () => {
           <div className="absolute md:left-[2vw] lg:left-[4vw] hidden cursor-pointer md:block">
             <Link href={'/'}>
             <img 
-              src={activeMenu ? '/images/img4.png' : '/images/image5.png'} 
-              className="md:w-[15vw] lg:w-[14vw] xl:w-[10vw]" 
+              src={activeMenu ? '/images/logo2.png' : '/images/logo.png'} 
+              className="md:w-[15vw] lg:w-[14vw] xl:w-[12vw]" 
               alt="logo" 
             />
             </Link>

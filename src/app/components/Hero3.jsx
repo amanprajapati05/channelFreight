@@ -198,7 +198,7 @@ const Hero2 = () => {
       </div>
       <div 
         ref={descriptionRef}
-        className={`${Clash.className} leading-8 md:leading-normal text-[5vw] sm:text-[3.4vw] pt-[3.4vw] md:pt-0 xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] xl:w-[30%] md:w-[38%] lg:w-[33%] text-start flex items-end`}
+        className={`${Clash.className} leading-8 md:leading-normal text-[5vw] sm:text-[3.4vw] pt-[3.4vw] md:pt-0 xl:text-[1.5vw] md:text-[1.9vw] lg:text-[1.7vw] xl:w-[30%] md:w-[38%] lg:w-[33%] text-start flex items-end`}
       >
         We create customised solutions to meet the changing demands of a dynamic industry and always stay a step ahead of contemporaries.
       </div>
@@ -210,7 +210,8 @@ const Hero2 = () => {
             </div> */}
              <div className='flex flex-col items-center text-white justify-center text-center w-full absolute bottom-10 text-base '>
                 <div className='flex flex-col '>
-        <CaretDown weight='bold' size={19}/>
+                    
+        <CaretDown weight='bold' className='-mb-2' size={19}/>
         <CaretDown weight='bold' size={19}/>
         </div>
                 <div className={`${Clash.className} text-white font-thin`}>Scroll Down</div>
@@ -229,7 +230,7 @@ const Hero2 = () => {
             </div>
         </div>
         <div className=''>
-<div className='flex md:hidden overflow-x-auto gap-4 h-[90vw] md:grid-cols-3 grid-cols-1 md:h-[90vw] lg:h-[120vw] sm:h-[60vw] md:grid-rows-7 scrollbar-hide px-[4vw] md:px-[2vw] lg:px-[4vw] py-4'>
+<div className='flex md:hidden overflow-x-auto gap-4 h-[90vw] md:grid-cols-3 grid-cols-1 md:h-[90vw] lg:h-[120vw] sm:h-[60vw] md:grid-rows-7 scrollbar-hide px-[4vw] md:px-[2vw] lg:px-[4vw] py-4 '>
     <Link href='/services/air-freight' className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
         <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
@@ -328,7 +329,7 @@ const Hero2 = () => {
 </div>
         </div>
         <div className='bg-white h-full hidden md:block'>
-                    <div className='px-[4vw] md:px-[2vw] lg:px-[4vw] pt-4 md:pb-20 pb-8'>
+                    <div className='px-[4vw] md:px-[2vw] lg:px-[4vw] pt-10 bg-bla md:pb-20 pb-8'>
                         {/* First Row */}
                         <div className='flex gap-3 h-[30vw] mb-3'>
                             <Link 
@@ -479,9 +480,9 @@ const Hero2 = () => {
         </div>
         <div>
                    
-               <div className='-mt-1'>
+               {/* <div className='-mt-1'>
                <StatsSection/>
-               </div>
+               </div> */}
                 
                
                 <div className={`w-full md:h-[35vw] h-[70vw] bg-[#02123b]  relative ${Clash.className} -mt-1`}>
@@ -525,9 +526,9 @@ const Hero2 = () => {
                 </div>
                 <div ref={triggerRef} className='bg-white hidden md:block md:h-[36vw] w-full overflow-hidden'>
             <div ref={slider} className='flex md:flex-row flex-col gap-[8vw] py-[7vw]'>
-                <div className='md:w-[50%] ml-[4vw] flex flex-col gap-[2vw] flex-shrink-0'>
+                <div className='md:w-[40%] ml-[4vw] flex flex-col gap-[2vw] flex-shrink-0'>
                     <div className={`${Clash.className} leading-[1.2] md:text-[4vw] text-[9vw] text-[#02123b]`}>
-                        Innovative Solutions for Every Industry
+                        Innovative Solutions for <br/> Every Industry
                     </div>
                     <div className={`${Clash.className} text-[4vw] md:text-[1.4vw] text-[#02123b]`}>
                         With deep industry knowledge, we create logistics solutions that are efficient, compliant, and responsive to evolving market needs.

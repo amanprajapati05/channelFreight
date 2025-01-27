@@ -243,8 +243,8 @@ const text = [
 
      <div className='w-full h-full md:p-[2vw] lg:p-[4vw] px-4 py-4'>
            <div className={`${Clash.className} text-[#02123b] flex flex-col w-full items-center`}>
-               <div className='md:text-[4vw] text-[9vw] text-center'>Elevating Air Freight Excellence</div>
-               <div className='text-[4vw] md:text-[1.3vw] text-[#333f5e] text-center '>Discover the stats, features, and solutions that make us your trusted air freight partner worldwide.</div>
+               <div className='md:text-[4vw] text-[9vw] text-center'>Efficient, Secure, & Scalable</div>
+               <div className='text-[4vw] md:text-[1.3vw] text-[#333f5e] text-center '>Transport large volumes with precision and flexibility, tailored to meet your unique shipping needs.</div>
            </div>
            <div className='flex w-full md:h-[28vw] h-[250vw] md:gap-0 gap-4 md:flex-row flex-col justify-between my-[4vw]'>
              
