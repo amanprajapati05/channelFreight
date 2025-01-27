@@ -599,7 +599,7 @@ const Hero2 = () => {
                         </div>
                     </Link>
 
-                    <Link href='/sectors/engineering' onMouseEnter={() => setHoveredCard(4)}
+                    <Link href='/sectors' onMouseEnter={() => setHoveredCard(4)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -640,7 +640,7 @@ const Hero2 = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link href='/packaging' onMouseEnter={() => setHoveredCard(6)}
+                    <Link href='/' onMouseEnter={() => setHoveredCard(6)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -739,7 +739,7 @@ const Hero2 = () => {
                 </div>
             </Link>
 
-            <Link href='/sectors/' onMouseEnter={() => setHoveredCard(4)}
+            <Link href='/sectors' onMouseEnter={() => setHoveredCard(4)}
                 onMouseLeave={() => setHoveredCard(null)}
                 className='rounded-xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                 <img 
@@ -780,7 +780,7 @@ const Hero2 = () => {
                     </div>
                 </div>
             </Link>
-            <Link href='/sectors/' onMouseEnter={() => setHoveredCard(6)}
+            <Link href='/sectors' onMouseEnter={() => setHoveredCard(6)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
