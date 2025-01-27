@@ -204,10 +204,6 @@ const Hero2 = () => {
       </div>
     </div>
             </div>
-            {/* <div className='flex flex-col items-center justify-center text-center w-full absolute bottom-10 '>
-                
-                    <div className={`${Clash.className} text-white font-thin`}>Scroll Down</div>
-            </div> */}
              <div className='flex flex-col items-center text-white justify-center text-center w-full absolute bottom-10 text-base '>
                 <div className='flex flex-col '>
                     
@@ -218,7 +214,7 @@ const Hero2 = () => {
         </div>
             </div>
             <div className=''>
-            <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw] pt-[8vw] md:pt-[6vw] lg:pt-[1vw]'>
+            <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw] pt-[0vw] md:pt-[6vw] lg:pt-[1vw]'>
                 <div className='gap-4 flex flex-col '>
                     <div className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>Reliable and Efficient Global Services</div>
                     <div className={`text-[#02123b] ${Clash.className} text-[5vw] hidden md:block sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.

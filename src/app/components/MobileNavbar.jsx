@@ -98,8 +98,8 @@ const MobileNavbar = () => {
         <div className="flex justify-between items-center px-2 py-3 z-[99999]">
           <div className="md:hidden">
             {isOpen ? 
-              <img src="/images/logo21.png" className="w-full h-full" alt="logo" /> : 
-              <img src="/images/logo22.png" className="w-full h-full" alt="logo" />
+              <img src="/images/logo2.png" className="w-[35vw] " alt="logo" /> : 
+              <img src="/images/logo.png" className="w-[35vw] h-full" alt="logo" />
             }
           </div>
           <button

@@ -13,7 +13,7 @@ const Footer = () => {
             <div className='flex md:flex-row flex-col md:justify-between gap-[8vh] md:gap-0 h-[85%]'>
                 <div className='md:w-[30%] w-full   flex flex-col justify-between gap-5 md:gap-1 lg:gap-0 '>
                     <div className='flex flex-col gap-4 md:gap-0 lg:gap-4 '>
-                    <img src="/images/logo.png" alt="" className='w-fit h-fit object-cover md:object-contain lg:object-cover md:w-[9vw] md:h-[9vw] lg:w-[14vw] lg:h-fit' />
+                    <img src="/images/logo.png" alt="" className='w-[36vw] h-fit object-cover md:object-contain lg:object-cover md:w-[9vw] md:h-[9vw] lg:w-[14vw] lg:h-fit' />
                     <div className={`${Clash.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw]`}>Delivering excellence in air, sea, and surface logistics worldwide.</div>
                     </div>
                     <div className='flex flex-col md:gap-3 gap-4  pb-[3.2vw]'>

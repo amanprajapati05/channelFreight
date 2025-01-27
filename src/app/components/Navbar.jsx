@@ -8,6 +8,7 @@ import { Airplane,  Boat, ChartBar, Cube, DropboxLogo, Flask, GearFine, GlobeSim
 import MobileNavbar from './MobileNavbar'
 import Link from 'next/link';
 import {TransitionLink} from './TransitionLink';
+import TransitionLink2 from './TransitionLink2';
 
 
 const NavItem = ({ children, onMouseEnter, isActive, isPersistent,link }) => {

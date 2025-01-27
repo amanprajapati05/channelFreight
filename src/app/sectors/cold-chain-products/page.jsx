@@ -20,103 +20,103 @@ const page = () => {
   const [isReady, setIsReady] = useState(false);
   const [locomotiveInstance, setLocomotiveInstance] = useState(null);
 
-  // useEffect(() => {
-  //   // Force scroll to top
-  //   window.scrollTo(0, 0);
-    
-  //   // Disable scroll initially
-  //   document.body.style.overflow = 'hidden';
-    
-  //   // Initialize locomotive scroll
-  //   const scrollInstance = new locomotiveScroll({
-  //     el: scrollContainerRef.current,
-  //     smooth: true,
-  //     smoothMobile: true,
-  //     multiplier: 0.1,
-  //     lerp: 0,
-  //   });
-
-  //   setLocomotiveInstance(scrollInstance);
-    
-  //   // Initially disable scroll
-  //   scrollInstance.stop();
-    
-  //   // Add delay before starting animations
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //     setIsReady(true);
-  //     scrollInstance.start();
-  //     scrollInstance.update();
-      
-  //     // Fade in the content
-  //     if (scrollContainerRef.current) {
-  //       scrollContainerRef.current.style.opacity = '1';
-  //     }
-  //   }, 2000); // 2 second delay
-    
-  //   return () => {
-  //     clearTimeout(timer);
-  //     if (scrollInstance) {
-  //       scrollInstance.destroy();
-  //     }
-  //     document.body.style.overflow = 'auto';
-  //   };
-  // }, []);
-
   useEffect(() => {
+    // Force scroll to top
     window.scrollTo(0, 0);
+    
+    // Disable scroll initially
     document.body.style.overflow = 'hidden';
     
+    // Initialize locomotive scroll
     const scrollInstance = new locomotiveScroll({
       el: scrollContainerRef.current,
       smooth: true,
       smoothMobile: true,
       multiplier: 0.1,
       lerp: 0,
-      onScroll: () => {
-        ScrollTrigger.update();
-      }
     });
-  
-    ScrollTrigger.scrollerProxy(scrollContainerRef.current, {
-      scrollTop(value) {
-        return arguments.length 
-          ? scrollInstance.scrollTo(value, 0, 0) 
-          : scrollInstance.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight
-        };
-      }
-    });
-  
+
     setLocomotiveInstance(scrollInstance);
     
+    // Initially disable scroll
+    scrollInstance.stop();
+    
+    // Add delay before starting animations
     const timer = setTimeout(() => {
       setIsLoading(false);
       setIsReady(true);
       scrollInstance.start();
       scrollInstance.update();
-      ScrollTrigger.refresh();
       
+      // Fade in the content
       if (scrollContainerRef.current) {
         scrollContainerRef.current.style.opacity = '1';
       }
-    }, 2000);
+    }, 2000); // 2 second delay
     
     return () => {
       clearTimeout(timer);
       if (scrollInstance) {
         scrollInstance.destroy();
       }
-      ScrollTrigger.getAll().forEach(t => t.kill());
       document.body.style.overflow = 'auto';
     };
   }, []);
+
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  //   document.body.style.overflow = 'hidden';
+    
+  //   const scrollInstance = new locomotiveScroll({
+  //     el: scrollContainerRef.current,
+  //     smooth: true,
+  //     smoothMobile: true,
+  //     multiplier: 0.1,
+  //     lerp: 0,
+  //     onScroll: () => {
+  //       ScrollTrigger.update();
+  //     }
+  //   });
+  
+  //   ScrollTrigger.scrollerProxy(scrollContainerRef.current, {
+  //     scrollTop(value) {
+  //       return arguments.length 
+  //         ? scrollInstance.scrollTo(value, 0, 0) 
+  //         : scrollInstance.scroll.instance.scroll.y;
+  //     },
+  //     getBoundingClientRect() {
+  //       return {
+  //         top: 0,
+  //         left: 0,
+  //         width: window.innerWidth,
+  //         height: window.innerHeight
+  //       };
+  //     }
+  //   });
+  
+  //   setLocomotiveInstance(scrollInstance);
+    
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //     setIsReady(true);
+  //     scrollInstance.start();
+  //     scrollInstance.update();
+  //     ScrollTrigger.refresh();
+      
+  //     if (scrollContainerRef.current) {
+  //       scrollContainerRef.current.style.opacity = '1';
+  //     }
+  //   }, 2000);
+    
+  //   return () => {
+  //     clearTimeout(timer);
+  //     if (scrollInstance) {
+  //       scrollInstance.destroy();
+  //     }
+  //     ScrollTrigger.getAll().forEach(t => t.kill());
+  //     document.body.style.overflow = 'auto';
+  //   };
+  // }, []);
 
   const text = [
     "We offer industry-leading cold chain ",
