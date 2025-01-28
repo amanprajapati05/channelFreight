@@ -180,7 +180,7 @@ const Hero2 = () => {
     <Navbar/>
     </div>
     <div ref={scrollContainerRef}>
-      <div className='  h-screen  '>
+      <div className='  h-screen  -mb-[14vw] md:-mb-0'>
            
             <video   autoPlay 
           muted 

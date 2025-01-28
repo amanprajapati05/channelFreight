@@ -19,26 +19,26 @@ const Footer = () => {
                     <div className='flex flex-col md:gap-3 gap-4  pb-[3.2vw]'>
                         <div  className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] tracking-wide`}>Accreditation</div>
                         <div className='flex justify-between '>
-                            <div>
-                            <img src="/images/1.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit' />
+                            <div className='bg-white w-[3rem] md:w-[3vw] md:h-[3vw] h-[3rem] rounded-full flex justify-center items-center'>
+                            <img src="/images/footer/1.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div>
-                            <img src="/images/2.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit' />
+                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'> 
+                            <img src="/images/footer/2.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div>
-                            <img src="/images/3.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit' />
+                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                            <img src="/images/footer/3.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div>
-                            <img src="/images/4.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit' />
+                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                            <img src="/images/footer/4.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div>
-                            <img src="/images/gdp.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit' />
+                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                            <img src="/images/footer/5.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div>
-                            <img src="/images/6.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit' />
+                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                            <img src="/images/footer/6.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div>
-                            <img src="/images/7.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit' />
+                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                            <img src="/images/footer/7.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
                         </div>
                     </div>

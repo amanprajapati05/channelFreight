@@ -481,7 +481,7 @@ useGSAP(() => {
             Our Offices
           </div>
           <div className="flex flex-col gap-8 md:gap-[3vw] lg:pt-[4vw] pt-[10vw]  md:pt-[6vw]">
-            <div className="flex flex-row  justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0 ">
+            <div className="flex md:flex-row flex-col justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0 ">
               <div
                 className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
               >
@@ -517,7 +517,7 @@ useGSAP(() => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row  justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0 ">
+            <div className="flex md:flex-row flex-col justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0 ">
               <div
                 className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
               >
@@ -555,7 +555,7 @@ useGSAP(() => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row  justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0">
+            <div className="flex md:flex-row flex-col justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0">
               <div
                 className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
               >
@@ -590,7 +590,7 @@ useGSAP(() => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row  justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0">
+            <div className="flex md:flex-row flex-col justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0">
               <div
                 className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
               >

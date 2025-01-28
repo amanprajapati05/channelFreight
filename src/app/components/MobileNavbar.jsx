@@ -54,14 +54,14 @@ const MobileNavbar = () => {
         rotate: 50,
         y: 2,
         duration: 0.6,
-        backgroundColor: "var(#02123b)"
+        backgroundColor: "#02123b"
       }, "-=0.6");
       
       tl.to(hamburgerLinesRef.current[1], {
         rotate: -50,
         y: -2,
         duration: 0.6,
-        backgroundColor: "var(#02123b)"
+        backgroundColor: "#02123b"
       }, "-=0.6");
 
     } else {
@@ -96,12 +96,12 @@ const MobileNavbar = () => {
     <>
       <div ref={navbarRef} className={`${isOpen ? 'fixed' : 'absolute'} top-0 left-0 w-full z-[999999]`}>
         <div className="flex justify-between items-center px-2 py-3 z-[99999]">
-          <div className="md:hidden">
+          <Link href='/' className="md:hidden">
             {isOpen ? 
               <img src="/images/logo2.png" className="w-[35vw] " alt="logo" /> : 
               <img src="/images/logo.png" className="w-[35vw] h-full" alt="logo" />
             }
-          </div>
+          </Link>
           <button
             onClick={toggleNav}
             className={`md:hidden h-fit text-center flex gap-2 items-center border px-2 py-1 rounded ${isOpen ? 'text-[#02123b] border-[#02123b]' : 'text-white border-white'}`}
