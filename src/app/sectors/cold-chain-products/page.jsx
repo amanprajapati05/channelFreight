@@ -202,7 +202,72 @@ const page = () => {
   //     document.body.style.overflow = 'auto';
   //   };
   // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.style.overflow = 'hidden';
 
+    const isMobile = window.innerWidth <= 768;
+    
+    // Simpler configuration for mobile
+    const scrollInstance = new locomotiveScroll({
+      el: scrollContainerRef.current,
+      smooth: !isMobile, // Disable smooth scroll on mobile
+      multiplier: isMobile ? 1 : 0.5,
+      lerp: isMobile ? 1 : 0.1,
+      reloadOnContextChange: true,
+      getDirection: true,
+      mobile: {
+        breakpoint: 0,
+        smooth: false,
+        getDirection: true,
+      },
+      tablet: {
+        breakpoint: 0,
+        smooth: false,
+        getDirection: true,
+      }
+    });
+
+    setLocomotiveInstance(scrollInstance);
+    
+    // Initially disable scroll
+    if (scrollInstance && scrollInstance.stop) {
+      scrollInstance.stop();
+    }
+
+    // Add delay before starting animations
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      setIsReady(true);
+      if (scrollInstance && scrollInstance.start) {
+        scrollInstance.start();
+        scrollInstance.update();
+      }
+      
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.style.opacity = '1';
+      }
+      document.body.style.overflow = '';
+    }, 2000);
+    
+    // Handle resize
+    const handleResize = () => {
+      if (scrollInstance && scrollInstance.update) {
+        scrollInstance.update();
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', handleResize);
+      if (scrollInstance && scrollInstance.destroy) {
+        scrollInstance.destroy();
+      }
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
   const text = [
     "We offer industry-leading cold chain ",
     "logistics, integrating refrigerated transport, ",
