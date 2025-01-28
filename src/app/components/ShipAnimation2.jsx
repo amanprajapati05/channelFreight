@@ -160,10 +160,10 @@ const ShipAnimation = () => {
           className="absolute inset-0 z-10 flex flex-col justify-center items-center h-full"
           style={{ opacity: isReady ? 1 : 0, transition: 'opacity 0.5s ease-in-out' }}
         >
-          <div className={`${Clash.className} text-center md:text-[4vw] text-[7vw] px-2 md:px-0 text-[--blue3]`}>
+          <div className={`${Clash.className} text-center md:text-[4vw] text-[7vw] px-2 md:px-0 text-[#02123B]`}>
             Your Cargo,
           </div>
-          <div className={`${ClashM.className} text-center md:text-[5vw] text-[10vw] text-[--blue3]`}>
+          <div className={`${ClashM.className} text-center md:text-[5vw] text-[10vw] text-[#02123B]`}>
             securely managed at every step.
           </div>
         </div>

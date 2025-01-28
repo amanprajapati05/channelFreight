@@ -118,90 +118,90 @@ const page = () => {
   //   };
   // }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.style.overflow = 'hidden';
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  //   document.body.style.overflow = 'hidden';
     
-    // Create scroll instance
-    const scrollInstance = new locomotiveScroll({
-      el: scrollContainerRef.current,
-      smooth: true,
-      smoothMobile: true,
-      multiplier: 1,
-      lerp: 0.1,
-      smartphone: {
-        smooth: true,
-        multiplier: 1,
-        breakpoint: 767
-      },
-      tablet: {
-        smooth: true,
-        multiplier: 1,
-        breakpoint: 1024
-      },
-      gestureDirection: 'vertical',
-      touchMultiplier: 2,
-      resetNativeScroll: true
-    });
+  //   // Create scroll instance
+  //   const scrollInstance = new locomotiveScroll({
+  //     el: scrollContainerRef.current,
+  //     smooth: true,
+  //     smoothMobile: true,
+  //     multiplier: 1,
+  //     lerp: 0.1,
+  //     smartphone: {
+  //       smooth: true,
+  //       multiplier: 1,
+  //       breakpoint: 767
+  //     },
+  //     tablet: {
+  //       smooth: true,
+  //       multiplier: 1,
+  //       breakpoint: 1024
+  //     },
+  //     gestureDirection: 'vertical',
+  //     touchMultiplier: 2,
+  //     resetNativeScroll: true
+  //   });
 
-    setLocomotiveInstance(scrollInstance);
+  //   setLocomotiveInstance(scrollInstance);
     
-    // Initially disable scroll
-    if (scrollInstance && scrollInstance.stop) {
-      scrollInstance.stop();
-    }
+  //   // Initially disable scroll
+  //   if (scrollInstance && scrollInstance.stop) {
+  //     scrollInstance.stop();
+  //   }
 
-    // Setup ScrollTrigger proxy
-    ScrollTrigger.scrollerProxy(scrollContainerRef.current, {
-      scrollTop(value) {
-        if (!scrollInstance) return 0;
-        return arguments.length 
-          ? scrollInstance.scrollTo(value, { duration: 0, disableLerp: true })
-          : scrollInstance.scroll.instance?.scroll?.y || 0;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight
-        };
-      }
-    });
+  //   // Setup ScrollTrigger proxy
+  //   ScrollTrigger.scrollerProxy(scrollContainerRef.current, {
+  //     scrollTop(value) {
+  //       if (!scrollInstance) return 0;
+  //       return arguments.length 
+  //         ? scrollInstance.scrollTo(value, { duration: 0, disableLerp: true })
+  //         : scrollInstance.scroll.instance?.scroll?.y || 0;
+  //     },
+  //     getBoundingClientRect() {
+  //       return {
+  //         top: 0,
+  //         left: 0,
+  //         width: window.innerWidth,
+  //         height: window.innerHeight
+  //       };
+  //     }
+  //   });
 
-    // Add scroll listener for ScrollTrigger update
-    const scrollHandler = () => {
-      ScrollTrigger.update();
-    };
-    scrollContainerRef.current?.addEventListener('scroll', scrollHandler);
+  //   // Add scroll listener for ScrollTrigger update
+  //   const scrollHandler = () => {
+  //     ScrollTrigger.update();
+  //   };
+  //   scrollContainerRef.current?.addEventListener('scroll', scrollHandler);
 
-    // Add delay before starting animations
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      setIsReady(true);
-      if (scrollInstance && scrollInstance.start) {
-        scrollInstance.start();
-        scrollInstance.update();
-      }
-      ScrollTrigger.refresh();
+  //   // Add delay before starting animations
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //     setIsReady(true);
+  //     if (scrollInstance && scrollInstance.start) {
+  //       scrollInstance.start();
+  //       scrollInstance.update();
+  //     }
+  //     ScrollTrigger.refresh();
       
-      if (scrollContainerRef.current) {
-        scrollContainerRef.current.style.opacity = '1';
-      }
-      document.body.style.overflow = '';
-    }, 2000);
+  //     if (scrollContainerRef.current) {
+  //       scrollContainerRef.current.style.opacity = '1';
+  //     }
+  //     document.body.style.overflow = '';
+  //   }, 2000);
     
-    // Cleanup
-    return () => {
-      clearTimeout(timer);
-      scrollContainerRef.current?.removeEventListener('scroll', scrollHandler);
-      if (scrollInstance && scrollInstance.destroy) {
-        scrollInstance.destroy();
-      }
-      ScrollTrigger.getAll().forEach(t => t.kill());
-      document.body.style.overflow = 'auto';
-    };
-  }, []);
+  //   // Cleanup
+  //   return () => {
+  //     clearTimeout(timer);
+  //     scrollContainerRef.current?.removeEventListener('scroll', scrollHandler);
+  //     if (scrollInstance && scrollInstance.destroy) {
+  //       scrollInstance.destroy();
+  //     }
+  //     ScrollTrigger.getAll().forEach(t => t.kill());
+  //     document.body.style.overflow = 'auto';
+  //   };
+  // }, []);
 
   const text = [
     "We offer industry-leading cold chain ",

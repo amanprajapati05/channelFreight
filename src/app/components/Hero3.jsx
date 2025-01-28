@@ -180,7 +180,7 @@ const Hero2 = () => {
     <Navbar/>
     </div>
     <div ref={scrollContainerRef}>
-      <div className='  h-screen  -mb-[14vw] md:-mb-0'>
+      <div className='  h-screen  -mb-[14vw] md:-mb-[4vw] lg:-mb-0'>
            
             <video   autoPlay 
           muted 
@@ -214,7 +214,7 @@ const Hero2 = () => {
         </div>
             </div>
             <div className=''>
-            <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw] pt-[0vw] md:pt-[6vw] lg:pt-[1vw]'>
+            <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw] pt-[4vw] md:pt-[0vw] lg:pt-[1vw]'>
                 <div className='gap-4 flex flex-col '>
                     <div className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>Reliable and Efficient Global Services</div>
                     <div className={`text-[#02123b] ${Clash.className} text-[5vw] hidden md:block sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.
