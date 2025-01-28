@@ -200,68 +200,6 @@ const Services = () => {
         });
     }, [isReady]);
 
-    // useGSAP(() => {
-    //     if (!isReady) return;
-       
-    //     const mobileContainers = document.querySelectorAll('.md\\:hidden .flex.flex-col > div');
-        
-    //     mobileContainers.forEach((container) => {
-    //       const imageContainer = container.querySelector('div:first-child');
-    //       const contentContainer = container.querySelector('div:last-child');
-          
-    //       gsap.set(container, {
-    //         visibility: "visible", 
-    //         opacity: 1
-    //       });
-       
-    //       gsap.timeline({
-    //         scrollTrigger: {
-    //           trigger: container,
-    //           start: "top bottom-=100",
-    //           end: "top top+=100",
-    //           toggleActions: "play none none reverse",
-    //           scrub: true
-    //         }
-    //       })
-    //       .fromTo(imageContainer, {
-    //         width: '15%',
-    //         height: '10rem'
-    //       }, {
-    //         width: '100%',
-    //         height: '100%',
-    //         ease: "none"
-    //       });
-    //     });
-    //    }, [isReady]);
-
-    // useGSAP(() => {
-    //     if (!isReady) return;
-       
-    //     const mobileContainers = document.querySelectorAll('.md\\:hidden .flex.flex-col > div');
-        
-    //     mobileContainers.forEach((container) => {
-    //       const imageContainer = container.querySelector('div:first-child');
-          
-    //       gsap.timeline({
-    //         scrollTrigger: {
-    //           trigger: container,
-    //           start: "top bottom-=100",
-    //           end: "top center",
-    //           markers: true,
-    //           toggleActions: "play none none reverse",
-    //           scrub: true
-    //         }
-    //       })
-    //       .fromTo(imageContainer, {
-    //         width: '15%',
-    //         height: '56px'
-    //       }, {
-    //         width: '80%', 
-    //         height: '14rem',
-    //         ease: "none"
-    //       });
-    //     });
-    //    }, [isReady]);
 
 
     useGSAP(() => {
@@ -337,8 +275,8 @@ const Services = () => {
                                <div className='flex flex-col gap-[2vw]'  
                                    >
                                    <div className='text-[#02123b] text-[5vw] hidden md:block  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
-                                   <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/air-freight' /></div>
+                                  
                                </div>
                            </div>
                        </div>
@@ -353,8 +291,7 @@ const Services = () => {
                                <div className='flex flex-col gap-[2vw]'  
                                   >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
-                                   <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/sea-freight'  /></div>
                                </div>
                            </div>
                        </div>
@@ -369,8 +306,7 @@ const Services = () => {
                                <div className='flex flex-col gap-[2vw]'  
                                    >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
-                                   <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/supply-chain' /></div>
                                </div>
                            </div>
                        </div>
@@ -385,8 +321,7 @@ const Services = () => {
                                <div className='flex flex-col gap-[2vw]'  
                                   >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
-                                   <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/project-logistics' /></div>
                                </div>
                            </div>
                        </div>
@@ -401,8 +336,7 @@ const Services = () => {
                                <div className='flex flex-col gap-[2vw]' 
                                    >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
-                                   <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/customs-brokerage' /></div>
                                </div>
                            </div>
                        </div>
@@ -417,8 +351,7 @@ const Services = () => {
                                <div className='flex flex-col gap-[2vw]' 
                                  >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
-                                   <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/cross-trade'  /></div>
                                </div>
                            </div>
                        </div>
@@ -433,8 +366,7 @@ const Services = () => {
                                <div className='flex flex-col gap-[2vw]'  
                                  >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
-                                   <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/charter-services' /></div>
                                </div>
                            </div>
                        </div>
@@ -449,8 +381,7 @@ const Services = () => {
                                <div className='flex flex-col gap-[2vw]'  
                                    >
                                    <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
-                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
-                                   <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  /></div>
+                                   <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/value-added-services' /></div>
                                </div>
                            </div>
                        </div>
@@ -468,7 +399,7 @@ const Services = () => {
                        <div className='flex flex-col h-full justify-between w-[60%]'>
                            <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Air Freight</div>
                            <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>Experience precision and efficiency with our air freight services, designed to meet...</div>
-                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/air'  />
+                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/air-freight'  />
                        </div>
                    </div>
                
@@ -481,7 +412,7 @@ const Services = () => {
                        <div className='flex flex-col h-full justify-between w-[60%]'>
                            <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Sea Freight</div>
                            <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>Our Sea Freight Services are designed to simplify global trade by offering tailored...</div>
-                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/sea'  />
+                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/sea-freight'  />
                        </div>
                    </div>
                
@@ -494,7 +425,7 @@ const Services = () => {
                        <div className='flex flex-col h-full justify-between w-[60%]'>
                            <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Supply Chain</div>
                            <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>We redefine supply chain management through our integrated and...</div>
-                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/supply' />
+                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/supply-chain' />
                        </div>
                    </div>
                
@@ -507,7 +438,7 @@ const Services = () => {
                        <div className='flex flex-col h-full justify-between w-[60%]'>
                            <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Project Logistics</div>
                            <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>Our team is dedicated to providing end-to-end solutions for transporting...</div>
-                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/projectlogistics'  />
+                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/project-logistics'  />
                        </div>
                    </div>
                
@@ -520,7 +451,7 @@ const Services = () => {
                        <div className='flex flex-col h-full justify-between w-[60%]'>
                            <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Customs Brokerage</div>
                            <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>Our customs brokerage solutions transcend basic compliance to deliver..</div>
-                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/customs' />
+                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/customs-brokerage' />
                        </div>
                    </div>
                
@@ -533,7 +464,7 @@ const Services = () => {
                        <div className='flex flex-col h-full justify-between w-[60%]'>
                            <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Cross Trade</div>
                            <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>We excel in Cross Trade Logistics, enabling businesses to navigate the complexities...</div>
-                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/cross' />
+                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/cross-trade' />
                        </div>
                    </div>
                
@@ -546,7 +477,7 @@ const Services = () => {
                        <div className='flex flex-col h-full justify-between w-[60%]'>
                            <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Charter Services</div>
                            <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>We deliver tailored charter services, ensuring your cargo moves seamlessly...</div>
-                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/charter' />
+                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/charter-services' />
                        </div>
                    </div>
                
@@ -559,88 +490,13 @@ const Services = () => {
                        <div className='flex flex-col h-full justify-between w-[60%]'>
                            <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Value Added Services</div>
                            <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>We recognize that modern businesses require more than just...</div>
-                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/value'  />
+                           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/value-added-services'  />
                        </div>
                    </div>
                
                </div>
                
            </div>
-           {/* <div className='w-full h-auto bg-white md:p-[2vw] lg:p-[4vw] p-4 md:hidden'>
- <div className='flex flex-col'>
-   {[
-     {
-       img: "/images/services/service/air.webp",
-       title: "Air Freight",
-       desc: "Experience precision and efficiency with our air freight services, designed to meet...",
-       link: "/services/air"
-     },
-     {
-       img: "/images/services/service/sea.webp", 
-       title: "Sea Freight",
-       desc: "Our Sea Freight Services are designed to simplify global trade by offering tailored...",
-       link: "/services/sea"
-     },
-     {
-       img: "/images/services/service/supply.webp",
-       title: "Supply Chain",
-       desc: "We redefine supply chain management through our integrated and...",
-       link: "/services/supply"
-     },
-     {
-       img: "/images/services/service/project.webp",
-       title: "Project Logistics", 
-       desc: "Our team is dedicated to providing end-to-end solutions for transporting...",
-       link: "/services/projectlogistics",
-       height: "h-60"
-     },
-     {
-       img: "/images/services/service/customs.webp",
-       title: "Customs Brokerage",
-       desc: "Our customs brokerage solutions transcend basic compliance to deliver..",
-       link: "/services/customs",
-       height: "h-64"
-     },
-     {
-       img: "/images/services/service/cross.webp",
-       title: "Cross Trade",
-       desc: "We excel in Cross Trade Logistics, enabling businesses to navigate the complexities...",
-       link: "/services/cross"
-     },
-     {
-       img: "/images/services/service/charter.webp",
-       title: "Charter Services",
-       desc: "We deliver tailored charter services, ensuring your cargo moves seamlessly...",
-       link: "/services/charter",
-       height: "h-60"
-     },
-     {
-       img: "/images/services/service/value.webp",
-       title: "Value Added Services",
-       desc: "We recognize that modern businesses require more than just...",
-       link: "/services/value"
-     }
-   ].map((service, index) => (
-     <div key={index} className='flex flex-col'>
-       <div className={`flex ${'h-56'} w-full gap-4 bg-blac border-b-2 pt-3 pb-6`}>
-         <div className='w-[40%] h-full ref={addToImageRefs}'>
-           <img src={service.img} className='h-full w-full object-cover rounded-xl' alt="" />
-         </div>
-         <div className='flex flex-col h-full justify-between w-[100%]'>
-           <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b]`}>
-             {service.title}
-           </div>
-           <div className={`${Clash.className} text-[#02123b] text-[4vw] sm:text-[3vw]`}>
-             {service.desc}
-           </div>
-           <Button text='View More' tColor='#ffffff' bgColor='#02123B' link={service.link} />
-         </div>
-       </div>
-     </div>
-   ))}
- </div>
-</div> */}
-
        <div className={`bg-[#02123b] px-4 py-4 md:px-[4vw] md:py-[3vw] md:h-[15vw] md:flex-row flex-col gap-3 md:gap-0  -mb-1 md:-mb-0 flex justify-between items-center ${Clash.className}`}>
            <div className='text-white md:text-[4vw] text-[9vw]  w-full  md:w-[40%]' >Ready to Optimize Your Logistics?</div>
            <div className='flex flex-col w-full md:w-[40%] gap-9 md:gap-4'>

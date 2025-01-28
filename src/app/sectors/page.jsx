@@ -352,8 +352,7 @@ const imageRefs = useRef([]);
                                     <div className='flex flex-col gap-[2vw]'  
                                         >
                                         <div className='text-[#02123b] text-[5vw] hidden md:block  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Pharmaceutical logistics is one of the most critical and regulated sectors, requiring precise handling of sensitive goods such as medicines, vaccines, APIs, and biological samples.</div>
-                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/pharma' /></div>
-                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/pharma'  /></div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/pharmaceuticals' /></div>
                                     </div>
                                 </div>
                             </div>
@@ -369,8 +368,7 @@ const imageRefs = useRef([]);
                                     <div className='flex flex-col gap-[2vw]'  
                                        >
                                         <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Transporting hazardous cargo involves high-stakes logistics due to the inherent risks to people, property, and the environment.</div>
-                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/hazardous' /></div>
-                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/hazardous' /></div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/hazardous-chemicals' /></div>
                                     </div>
                                 </div>
                             </div>
@@ -386,7 +384,6 @@ const imageRefs = useRef([]);
                                        >
                                         <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>We specialize in managing the transport of heavy machinery, oversized equipment, and engineering components.</div>
                                         <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/engineering'  /></div>
-                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  link='/sectors/engineering' /></div>
                                     </div>
                                 </div>
                             </div>
@@ -401,8 +398,7 @@ const imageRefs = useRef([]);
                                     <div className='flex flex-col gap-[2vw]' 
                                       >
                                         <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Cold chain logistics is vital for industries such as healthcare, food, agriculture, and chemicals</div>
-                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/col' /></div>
-                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/col' /></div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/cold-chain-products' /></div>
                                     </div>
                                 </div>
                             </div>
@@ -418,7 +414,6 @@ const imageRefs = useRef([]);
                                         >
                                         <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Our packaging solutions are designed to safeguard your shipments, regardless of size or sensitivity. </div>
                                         <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  link='/sectors/packaging' /></div>
-                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/packaging' /></div>
                                     </div>
                                 </div>
                             </div>
@@ -433,8 +428,7 @@ const imageRefs = useRef([]);
                                     <div className='flex flex-col gap-[2vw]'  
                                        >
                                         <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Exhibition cargo logistics involves the timely transport and setup of display materials for trade shows and events. Precision timing and damage-free delivery are critical to success. </div>
-                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/exhibition'  /></div>
-                                        <div  className='block md:hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/exhibition' /></div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/exhibition-relocation'  /></div>
                                     </div>
                                 </div>
                             </div>
@@ -453,7 +447,7 @@ const imageRefs = useRef([]);
                             <div className='flex flex-col h-full justify-between w-[60%]'>
                                 <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Pharmaceuticals</div>
                                 <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>Pharmaceutical logistics is one of the most critical and regulated sectors, requiring ...</div>
-                                <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/pharma'  />
+                                <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/pharmaceuticals'  />
                             </div>
                         </div>
                     
@@ -467,7 +461,7 @@ const imageRefs = useRef([]);
                                 <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Hazardous
                                 Chemicals</div>
                                 <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>Transporting hazardous cargo involves high-stakes logistics due to the inherent...</div>
-                                <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/hazardous'  />
+                                <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/hazardous-chemicals'  />
                             </div>
                         </div>
                     
@@ -493,7 +487,7 @@ const imageRefs = useRef([]);
                             <div className='flex flex-col h-full justify-between w-[60%]'>
                                 <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Cold Chain Products</div>
                                 <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>Cold chain logistics is vital for industries such as healthcare, food, agriculture...</div>
-                                <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/cold'  />
+                                <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/cold-chain-products'  />
                             </div>
                         </div>
                     
@@ -519,7 +513,7 @@ const imageRefs = useRef([]);
                             <div className='flex flex-col h-full justify-between w-[60%]'>
                                 <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Exhibition & Relocation</div>
                                 <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>Exhibition cargo logistics involves the timely transport and setup of display...</div>
-                                <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/exhibition' />
+                                <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/exhibition-relocation' />
                             </div>
                         </div>
                     

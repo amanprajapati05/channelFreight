@@ -329,7 +329,7 @@ const Hero2 = () => {
                         {/* First Row */}
                         <div className='flex gap-3 h-[30vw] mb-3'>
                             <Link 
-                                href='/services/air'
+                                href='/services/air-freight'
                                 ref={card1Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
                                 style={{ width: '66%', transition: 'width 0.5s ease' }}
@@ -362,7 +362,7 @@ const Hero2 = () => {
                             </Link>
         
                             <Link
-                                href='/services/sea'
+                                href='/services/sea-freight'
                                 ref={card2Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
                                 style={{ width: '33%', transition: 'width 0.5s ease' }}
@@ -398,7 +398,7 @@ const Hero2 = () => {
                         {/* Second Row */}
                         <div className='flex gap-3 h-[30vw]'>
                             <Link 
-                            href='/services/supply'
+                            href='/services/supply-chain'
                                 ref={card3Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
                                 style={{ width: '33%', transition: 'width 0.5s ease' }}
@@ -431,7 +431,7 @@ const Hero2 = () => {
                             </Link>
         
                             <Link
-                            href='/services/projectlogistics' 
+                            href='/services/project-logistics' 
                                 ref={card4Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
                                 style={{ width: '66%', transition: 'width 0.5s ease' }}
