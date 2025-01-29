@@ -43,7 +43,7 @@ const Services = () => {
             setIsLoading(false);
             setIsReady(true);
             ScrollTrigger.refresh();
-        }, 1500);
+        }, 500);
         
         return () => {
             clearTimeout(timer);

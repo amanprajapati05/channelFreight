@@ -2,11 +2,16 @@
 
 import { animatePageIn } from "../app/utils/animation"
 import { useEffect } from "react"
+import { gsap } from "gsap"
 
 export default function Template({ children }) {
   useEffect(() => {
 
-      animatePageIn()
+    const ctx = gsap.context(() => {
+      animatePageIn();
+    });
+  
+    return () => ctx.revert();
     
   }, [])
   return (
