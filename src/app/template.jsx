@@ -5,9 +5,9 @@ import { useEffect } from "react"
 
 export default function Template({ children }) {
   useEffect(() => {
-    setTimeout(() => {
+
       animatePageIn()
-    }, 1000)
+    
   }, [])
   return (
     <div>
