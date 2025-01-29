@@ -14,6 +14,7 @@ import ShipAnimation from './ShipAnimation';
 import locomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import Link from 'next/link';
+import TransitionLink from './TransitionLink';
 
 gsap.registerPlugin(ScrollTrigger);
 const Hero2 = () => {
@@ -227,7 +228,7 @@ const Hero2 = () => {
         </div>
         <div className=''>
 <div className='flex md:hidden overflow-x-auto gap-4 h-[90vw] md:grid-cols-3 grid-cols-1 md:h-[90vw] lg:h-[120vw] sm:h-[60vw] md:grid-rows-7 scrollbar-hide px-[4vw] md:px-[2vw] lg:px-[4vw] py-4 '>
-    <Link href='/services/air-freight' className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
+    <TransitionLink href='/services/air-freight' className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
         <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -249,9 +250,9 @@ const Hero2 = () => {
                 Whether it's urgent cargo, temperature-sensitive shipments, or complex global deliveries, we ensure your goods reach their destination on time, every time.
             </div>
         </div>
-    </Link>
+    </TransitionLink>
 
-    <Link href='/services/sea-freight'className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-1 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
+    <TransitionLink href='/services/sea-freight'className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-1 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
         <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -273,9 +274,9 @@ const Hero2 = () => {
                 We excel in sea freight solutions with a focus on innovation & efficiency. We leverage a global network of shipping conferences & direct line movements to ensure cost-effective & timely delivery.
             </div>
         </div>
-    </Link>
+    </TransitionLink>
 
-    <Link href='/services/supply-chain' className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-1 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
+    <TransitionLink href='/services/supply-chain' className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-1 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
         <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -297,9 +298,9 @@ const Hero2 = () => {
                 Channel Freight Services offers tailored supply chain solutions, managing the end-to-end logistics process with precision and efficiency.
             </div>
         </div>
-    </Link>
+    </TransitionLink>
 
-    <Link href='/services/project-logistics' className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
+    <TransitionLink href='/services/project-logistics' className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
         <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -321,14 +322,14 @@ const Hero2 = () => {
                 We specialize in Project Cargo Handling, offering expert solutions for the transportation of oversized and heavy cargo across India and internationally
             </div>
         </div>
-    </Link>
+    </TransitionLink>
 </div>
         </div>
         <div className='bg-white h-full hidden md:block'>
                     <div className='px-[4vw] md:px-[2vw] lg:px-[4vw] pt-10 bg-bla md:pb-20 pb-8'>
                         {/* First Row */}
                         <div className='flex gap-3 h-[30vw] mb-3'>
-                            <Link 
+                            <TransitionLink 
                                 href='/services/air-freight'
                                 ref={card1Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
@@ -359,9 +360,9 @@ const Hero2 = () => {
                                         Whether it's urgent cargo, temperature-sensitive shipments, or complex global deliveries, we ensure your goods reach their destination on time, every time.
                                     </div>
                                 </div>
-                            </Link>
+                            </TransitionLink>
         
-                            <Link
+                            <TransitionLink
                                 href='/services/sea-freight'
                                 ref={card2Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
@@ -392,12 +393,12 @@ const Hero2 = () => {
                                     We excel in sea freight solutions with a focus on innovation & efficiency. We leverage a global network of shipping conferences & direct line movements to ensure cost-effective & timely delivery.
                                     </div>
                                 </div>
-                            </Link>
+                            </TransitionLink>
                         </div>
         
                         {/* Second Row */}
                         <div className='flex gap-3 h-[30vw]'>
-                            <Link 
+                            <TransitionLink 
                             href='/services/supply-chain'
                                 ref={card3Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
@@ -428,9 +429,9 @@ const Hero2 = () => {
                                     Channel Freight Services offers tailored supply chain solutions, managing the end-to-end logistics process with precision and efficiency.
                                     </div>
                                 </div>
-                            </Link>
+                            </TransitionLink>
         
-                            <Link
+                            <TransitionLink
                             href='/services/project-logistics' 
                                 ref={card4Ref}
                                 className="bg-black rounded-3xl relative overflow-hidden"
@@ -461,7 +462,7 @@ const Hero2 = () => {
                                     We specialize in Project Cargo Handling, offering expert solutions for the transportation of oversized and heavy cargo across India and internationally
                                     </div>
                                 </div>
-                            </Link>
+                            </TransitionLink>
                         </div>
                     </div>
                 </div>
@@ -533,7 +534,7 @@ const Hero2 = () => {
                 </div>
             
                 <div className='flex md:w-[150%] ml-[4vw] md:ml-0 gap-[1.7vw]'>
-                    <Link href='/sectors/pharmaceuticals' onMouseEnter={() => setHoveredCard(1)}
+                    <TransitionLink href='/sectors/pharmaceuticals' onMouseEnter={() => setHoveredCard(1)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -552,9 +553,9 @@ const Hero2 = () => {
                                 Pharmaceutical logistics is one of the most critical and regulated sectors, requiring precise handling of sensitive goods such as medicines, vaccines, APIs, and biological samples.
                             </div>
                         </div>
-                    </Link>
+                    </TransitionLink>
 
-                    <Link href='/sectors/cold-chain-products' onMouseEnter={() => setHoveredCard(2)}
+                    <TransitionLink href='/sectors/cold-chain-products' onMouseEnter={() => setHoveredCard(2)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -573,9 +574,9 @@ const Hero2 = () => {
                             Cold chain logistics is vital for industries such as healthcare, food, agriculture, and chemicals. It involves the seamless movement of perishable goods under strict temperature controls to preserve quality and safety. 
                             </div>
                         </div>
-                    </Link>
+                    </TransitionLink>
 
-                    <Link href='/sectors/hazardous-chemicals' onMouseEnter={() => setHoveredCard(3)}
+                    <TransitionLink href='/sectors/hazardous-chemicals' onMouseEnter={() => setHoveredCard(3)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -594,9 +595,9 @@ const Hero2 = () => {
                             Transporting hazardous cargo involves high-stakes logistics due to the inherent risks to people, property, and the environment.
                             </div>
                         </div>
-                    </Link>
+                    </TransitionLink>
 
-                    <Link href='/sectors' onMouseEnter={() => setHoveredCard(4)}
+                    <TransitionLink href='/sectors' onMouseEnter={() => setHoveredCard(4)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -615,9 +616,9 @@ const Hero2 = () => {
                             We ensure safe handling and transportation while accommodating rapid advancements in bio-technology.
                             </div>
                         </div>
-                    </Link>
+                    </TransitionLink>
 
-                    <Link href='/sectors/exhibition-relocation' onMouseEnter={() => setHoveredCard(5)}
+                    <TransitionLink href='/sectors/exhibition-relocation' onMouseEnter={() => setHoveredCard(5)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -636,8 +637,8 @@ const Hero2 = () => {
                             Exhibition cargo logistics involves the timely transport and setup of display materials for trade shows and events. Precision timing and damage-free delivery are critical to success.
                             </div>
                         </div>
-                    </Link>
-                    <Link href='/' onMouseEnter={() => setHoveredCard(6)}
+                    </TransitionLink>
+                    <TransitionLink href='/' onMouseEnter={() => setHoveredCard(6)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -656,7 +657,7 @@ const Hero2 = () => {
                             We manage the end-to-end supply chain for clinical materials, ensuring timely and secure deliveries to research centers.
                             </div>
                         </div>
-                    </Link>
+                    </TransitionLink>
                 </div>
             </div>
         </div>
@@ -673,7 +674,7 @@ const Hero2 = () => {
                 </div>
             
                 <div className='flex md:w-[150%] ml-[4vw] overflow-auto scrollbar-hide md:ml-0 gap-[1.7vw]'>
-            <Link href='/sectors/pharmaceuticals' onMouseEnter={() => setHoveredCard(1)}
+            <TransitionLink href='/sectors/pharmaceuticals' onMouseEnter={() => setHoveredCard(1)}
                 onMouseLeave={() => setHoveredCard(null)}
                 className='rounded-xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                 <img 
@@ -692,9 +693,9 @@ const Hero2 = () => {
                         Pharmaceutical logistics is one of the most critical and regulated sectors, requiring precise handling of sensitive goods such as medicines, vaccines, APIs, and biological samples.
                     </div>
                 </div>
-            </Link>
+            </TransitionLink>
 
-            <Link href='/sectors/cold-chain-products' onMouseEnter={() => setHoveredCard(2)}
+            <TransitionLink href='/sectors/cold-chain-products' onMouseEnter={() => setHoveredCard(2)}
                 onMouseLeave={() => setHoveredCard(null)}
                 className='rounded-xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                 <img 
@@ -713,9 +714,9 @@ const Hero2 = () => {
                         Cold chain logistics is vital for industries such as healthcare, food, agriculture, and chemicals. It involves the seamless movement of perishable goods under strict temperature controls to preserve quality and safety.
                     </div>
                 </div>
-            </Link>
+            </TransitionLink>
 
-            <Link href='/sectors/hazardous-chemicals' onMouseEnter={() => setHoveredCard(3)}
+            <TransitionLink href='/sectors/hazardous-chemicals' onMouseEnter={() => setHoveredCard(3)}
                 onMouseLeave={() => setHoveredCard(null)}
                 className='rounded-xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                 <img 
@@ -734,9 +735,9 @@ const Hero2 = () => {
                         Transporting hazardous cargo involves high-stakes logistics due to the inherent risks to people, property, and the environment.
                     </div>
                 </div>
-            </Link>
+            </TransitionLink>
 
-            <Link href='/sectors' onMouseEnter={() => setHoveredCard(4)}
+            <TransitionLink href='/sectors' onMouseEnter={() => setHoveredCard(4)}
                 onMouseLeave={() => setHoveredCard(null)}
                 className='rounded-xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                 <img 
@@ -755,9 +756,9 @@ const Hero2 = () => {
                         We ensure safe handling and transportation while accommodating rapid advancements in bio-technology.
                     </div>
                 </div>
-            </Link>
+            </TransitionLink>
 
-            <Link href='/sectors/exhibition-relocation' onMouseEnter={() => setHoveredCard(5)}
+            <TransitionLink href='/sectors/exhibition-relocation' onMouseEnter={() => setHoveredCard(5)}
                 onMouseLeave={() => setHoveredCard(null)}
                 className='rounded-xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                 <img 
@@ -776,8 +777,8 @@ const Hero2 = () => {
                         Exhibition cargo logistics involves the timely transport and setup of display materials for trade shows and events. Precision timing and damage-free delivery are critical to success.
                     </div>
                 </div>
-            </Link>
-            <Link href='/sectors' onMouseEnter={() => setHoveredCard(6)}
+            </TransitionLink>
+            <TransitionLink href='/sectors' onMouseEnter={() => setHoveredCard(6)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -796,7 +797,7 @@ const Hero2 = () => {
                             We manage the end-to-end supply chain for clinical materials, ensuring timely and secure deliveries to research centers.
                             </div>
                         </div>
-                    </Link>
+                    </TransitionLink>
                 </div>
 
             </div>

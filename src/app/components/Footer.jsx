@@ -2,6 +2,7 @@ import React from 'react'
 import { Clash, ClashM } from '../../../public/fonts/fonts'
 import { FacebookLogo, LinkedinLogo, SkypeLogo } from '@phosphor-icons/react/dist/ssr'
 import Link from 'next/link'
+import TransitionLink from './TransitionLink'
 
 const Footer = () => {
 
@@ -45,12 +46,12 @@ const Footer = () => {
                 </div>
                 <div className=' flex flex-col justify-between md:w-[55%] w-full '>
                     <div className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] flex flex-wrap gap-3 pb-[4vw] md:pb-0`}>
-                       <Link href='/about-us'>About Us&nbsp;&nbsp;/</Link>
-                       <Link href='/services'> Services&nbsp;&nbsp;/</Link>
-                       <Link href='/sectors'> Sector Expertise&nbsp;&nbsp;/</Link>
-                       <Link href='/gallery'> Gallery&nbsp;&nbsp;/</Link>
-                       <Link href='/careers'> Careers&nbsp;&nbsp;/</Link>
-                       <Link href='/contact'> Contact</Link>
+                       <TransitionLink href='/about-us'>About Us&nbsp;&nbsp;/</TransitionLink>
+                       <TransitionLink href='/services'> Services&nbsp;&nbsp;/</TransitionLink>
+                       <TransitionLink href='/sectors'> Sector Expertise&nbsp;&nbsp;/</TransitionLink>
+                       <TransitionLink href='/gallery'> Gallery&nbsp;&nbsp;/</TransitionLink>
+                       <TransitionLink href='/careers'> Careers&nbsp;&nbsp;/</TransitionLink>
+                       <TransitionLink href='/contact'> Contact</TransitionLink>
                     </div>
                     <div className='flex justify-between flex-wrap '>
                         <div className='md:w-[30%] w-[50%] flex flex-col gap-3'>

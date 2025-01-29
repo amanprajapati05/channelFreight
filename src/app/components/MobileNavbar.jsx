@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Clash, ClashM } from '../../../public/fonts/fonts';
 import { usePathname } from 'next/navigation';
 import { CaretDown, ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
+import TransitionLink from './TransitionLink';
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,12 +97,12 @@ const MobileNavbar = () => {
     <>
       <div ref={navbarRef} className={`${isOpen ? 'fixed' : 'absolute'} top-0 left-0 w-full z-[999999]`}>
         <div className="flex justify-between items-center px-2 py-3 z-[99999]">
-          <Link href='/' className="md:hidden">
+          <TransitionLink href='/' className="md:hidden">
             {isOpen ? 
               <img src="/images/logo2.png" className="w-[35vw] " alt="logo" /> : 
               <img src="/images/logo.png" className="w-[35vw] h-full" alt="logo" />
             }
-          </Link>
+          </TransitionLink>
           <button
             onClick={toggleNav}
             className={`md:hidden h-fit text-center flex gap-2 items-center border px-2 py-1 rounded ${isOpen ? 'text-[#02123b] border-[#02123b]' : 'text-white border-white'}`}
@@ -128,18 +129,18 @@ const MobileNavbar = () => {
         className="fixed pt-[20vw] left-0 w-full h-screen bg-white md:hidden overflow-y-auto z-[9999]"
       >
         <div className={`${Clash.className} flex flex-col text-[#02123b] text-[7.5vw] px-2 pt-4 pb-20`}>
-          <Link href='/' className="flex items-center h-fit gap-1">
+          <TransitionLink href='/' className="flex items-center h-fit gap-1">
             HOME
             {isActivePath('/') && <ArrowUpRight size={28} weight="bold" />}
-          </Link>
+          </TransitionLink>
           
-          <Link href='/about-us' className="flex items-center h-fit gap-1">
+          <TransitionLink href='/about-us' className="flex items-center h-fit gap-1">
             ABOUT US
             {isActivePath('/about-us') && <ArrowUpRight size={28} weight="bold" />}
-          </Link>
+          </TransitionLink>
           
           <div className="flex items-center h-fit gap-1">
-            <Link href='/services' className="flex-1">SERVICES</Link>
+            <TransitionLink href='/services' className="flex-1">SERVICES</TransitionLink>
             {isActivePath('/services') && <ArrowUpRight size={28} weight="bold" />}
             <CaretDown 
               size={28} 
@@ -160,20 +161,20 @@ const MobileNavbar = () => {
                 ['customs-brokerage', 'CUSTOMS BROKERAGE'],
                 ['value-added-services', 'VALUE ADDED SERVICES']
               ].map(([path, label]) => (
-                <Link 
+                <TransitionLink 
                   key={path} 
                   href={`/services/${path}`}
                   className="flex items-center h-fit gap-1"
                 >
                   {label}
                   {isActivePath(`/services/${path}`) && <ArrowUpRight size={20} weight="bold" />}
-                </Link>
+                </TransitionLink>
               ))}
             </div>
           )}
           
           <div className="flex items-center h-fit gap-1">
-            <Link href='/sectors' className="flex-1">SECTOR EXPERTISE</Link>
+            <TransitionLink href='/sectors' className="flex-1">SECTOR EXPERTISE</TransitionLink>
             {isActivePath('/sectors') && <ArrowUpRight size={28} weight="bold" />}
             <CaretDown 
               size={28} 
@@ -192,32 +193,32 @@ const MobileNavbar = () => {
                 ['exhibition-relocation', 'EXHIBITION & RELOCATION'],
                 ['engineering', 'ENGINEERING']
               ].map(([path, label]) => (
-                <Link 
+                <TransitionLink 
                   key={path} 
                   href={`/sectors/${path}`}
                   className="flex items-center h-fit gap-1"
                 >
                   {label}
                   {isActivePath(`/sectors/${path}`) && <ArrowUpRight size={20} weight="bold" />}
-                </Link>
+                </TransitionLink>
               ))}
             </div>
           )}
           
-          <Link href='/contact' className="flex items-center h-fit gap-1">
+          <TransitionLink href='/contact' className="flex items-center h-fit gap-1">
             CONTACT
             {isActivePath('/contact') && <ArrowUpRight size={28} weight="bold" />}
-          </Link>
+          </TransitionLink>
           
-          <Link href='/careers' className="flex items-center h-fit gap-1">
+          <TransitionLink href='/careers' className="flex items-center h-fit gap-1">
             CAREERS
             {isActivePath('/careers') && <ArrowUpRight size={28} weight="bold" />}
-          </Link>
+          </TransitionLink>
           
-          <Link href='/gallery' className="flex items-center h-fit gap-1">
+          <TransitionLink href='/gallery' className="flex items-center h-fit gap-1">
             GALLERY
             {isActivePath('/gallery') && <ArrowUpRight size={28} weight="bold" />}
-          </Link>
+          </TransitionLink>
         </div>
       </div>
     </>
