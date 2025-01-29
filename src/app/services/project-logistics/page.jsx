@@ -17,7 +17,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import locomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import Counter from '../../components/Counter'
-
+import ServicesBottom from '../../components/ServicesBottom'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -163,38 +163,6 @@ const text = [
       };
 })
 
-// useGSAP(() => {
-//   if (!isReady) return; // Only run when ready
-
-//   gsap.fromTo(slider.current,
-//     {
-//       translateX: 0,
-//     },
-//     {
-//       translateX: "-30%",
-//       ease: "none",
-//       duration: 1,
-//       scrollTrigger: {
-//         trigger: triggerRef.current,
-//         start: "top top",
-//         end: "1500 top",
-//         scrub: 0.6,
-//         pin: true,
-//         markers: true,
-//         anticipatePin: 1,
-//         fastScrollEnd: true,
-//         preventOverlaps: true,
-//         invalidateOnRefresh: true,
-//         onEnter: () => {
-//           gsap.to(slider.current, {
-//             opacity: 1,
-//             duration: 0.3
-//           });
-//         },
-//       },
-//     }
-//   );
-// }, [isReady]);
 
 const slides = [
   {
@@ -355,6 +323,10 @@ const slides = [
   heading="Benefits of Choosing Us" 
   slides={slides} 
 />
+    </div>
+
+    <div>
+      <ServicesBottom/>
     </div>
 
                         

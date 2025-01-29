@@ -58,7 +58,7 @@ const page = () => {
     </div>
  
     <div ref={scrollContainerRef} data-scroll-container>
-    <ServicesPage title={'Engineering'} img1={'/images/sectors/imgp62.png'} img2={'/images/sectors/imgp61.png'} desc={'The engineering industry is the backbone of modern infrastructure and technology, encompassing everything from heavy machinery and industrial equipment to intricate components and tools.'}/>
+    <ServicesPage title={'Engineering'} img1={'/images/sectors/imgen1.png'} img2={'/images/sectors/imgen2.png'} desc={'The engineering industry is the backbone of modern infrastructure and technology, encompassing everything from heavy machinery and industrial equipment to intricate components and tools.'}/>
 
   <div className='w-full flex md:flex-row flex-col md:justify-between md:items-center md:p-[2vw] lg:p-[4vw] p-4 md:gap-0 gap-[3vw]'>
     <div  className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] md:w-[30%] w-full `} >Challenges & Solutions</div>

@@ -17,6 +17,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import locomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import Counter2 from '../../components/Counter2'
+import ServicesBottom from '../../components/ServicesBottom'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -272,6 +273,10 @@ const slides = [
   heading="Benefits of Choosing Us" 
   slides={slides} 
 />
+    </div>
+
+    <div>
+      <ServicesBottom/>
     </div>
 
     <div className='w-full h-full md:p-[2vw] lg:p-[4vw] px-4 py-4'>

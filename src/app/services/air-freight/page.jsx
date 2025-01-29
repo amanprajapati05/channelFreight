@@ -13,6 +13,7 @@ import AnimatedTextSection from '../../components/SectorAnimated'
 import AirplaneCanvas from '../../components/AirplaneCanvas'
 import AnimatedContent from '../../components/AnimatedServiceContent'
 import Counter from '../../components/Counter'
+import ServicesBottom from '../../components/ServicesBottom'
 
 const page = () => {
 
@@ -207,7 +208,10 @@ const text = [
       </div>
     
     </div>
-                                
+
+       <div>
+      <ServicesBottom/>
+    </div>                    
                         
    
     <div className='w-full h-full md:p-[2vw] lg:p-[4vw] px-4 py-4'>

@@ -16,6 +16,8 @@ import ShipAnimation from '../../components/ShipAnimation'
 import ShipAnimation2 from '../../components/ShipAnimation2'
 import locomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
+import ServicesBottom from '../../components/ServicesBottom'
+import Counter from '../../components/Counter'
 
 const page = () => {
 
@@ -240,6 +242,9 @@ const text = [
     
     </div>
 
+    <div>
+      <ServicesBottom/>
+    </div>
 
      <div className='w-full h-full md:p-[2vw] lg:p-[4vw] px-4 py-4'>
            <div className={`${Clash.className} text-[#02123b] flex flex-col w-full items-center`}>
@@ -266,7 +271,8 @@ const text = [
    
        <div className={`${Clash.className} text-[#02123b] lg:text-[1vw] md:text-[1.8vw] text-[3vw]  `}>Global Reach</div>
        <div className='h-full flex flex-col justify-end '>
-           <div className={`${Clash.className} text-[#02123b] lg:text-[3vw] md:text-[3.5vw] text-[6vw] text-right md:text-left`}>000+</div>
+           {/* <div className={`${Clash.className} text-[#02123b] lg:text-[3vw] md:text-[3.5vw] text-[6vw] text-right md:text-left`}>000+</div> */}
+           <Counter/>
            <div className={`${Clash.className} lg:text-[1vw] md:text-[1.8vw] text-[3vw] text-[#02123b] leading-[0] pb-[2vw] md:pb-0`}>Countries Served</div>
        </div>
    

@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { Airplane,  Boat, ChartBar, Cube, DropboxLogo, Flask, GearFine, GlobeSimple, Nut, Package, Pill, ShippingContainer, ThermometerSimple, TrainRegional } from '@phosphor-icons/react/dist/ssr'
 import MobileNavbar from './MobileNavbar'
 import Link from 'next/link';
-// import {TransitionLink} from './TransitionLink';
+import TransitionLink from './TransitionLink';
 // import TransitionLink2 from './Transitionlink2';
 
 
@@ -277,7 +277,7 @@ const Navbar = () => {
                         Secure handling and transport solutions for regulated and hazardous materials.
                       </div>
                     </Link>
-                    <Link href='/sectors/cold-chain-products' className="flex flex-col hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl items-start w-[30%] gap-[0.5vw] cursor-pointer">
+                    <TransitionLink href='/sectors/cold-chain-products' className="flex flex-col hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl items-start w-[30%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><ThermometerSimple className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
                         <div className={`${ClashM.className} md:text-[1.8vw] lg:text-[1.6vw]  xl:text-[1.3vw]`}>Cold Chain Products</div>
@@ -285,7 +285,7 @@ const Navbar = () => {
                       <div className={`${Clash.className} text-[#02123b] md:text-[1.6vw] lg:text-[1.4vw] xl:text-[1vw]`}>
                         Efficient temperature-controlled logistics for sensitive goods, ensuring freshness and safety.
                       </div>
-                    </Link>
+                    </TransitionLink>
                   </div>
                   <div className="flex justify-between md:px-[2vw] lg:px-[4vw]">
                     <div className="flex flex-col hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl items-start w-[30%] gap-[0.5vw] cursor-pointer">
@@ -297,7 +297,7 @@ const Navbar = () => {
                         Tailored logistics for complex machinery and engineering equipment across industries.
                       </div>
                     </div>
-                    <div className="flex flex-col hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl items-start w-[30%] gap-[0.5vw] cursor-pointer">
+                    <Link href='/sectors/packaging-solutions' className="flex flex-col hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl items-start w-[30%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><Cube className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
                         <div className={`${ClashM.className} md:text-[1.8vw] lg:text-[1.6vw]  xl:text-[1.3vw]`}>Packaging Solutions</div>
@@ -305,7 +305,7 @@ const Navbar = () => {
                       <div className={`${Clash.className} text-[#02123b] md:text-[1.6vw] lg:text-[1.4vw] xl:text-[1vw]`}>
                         Customized packaging designed for secure, efficient transport of various goods.
                       </div>
-                    </div>
+                    </Link>
                     <Link href='/sectors/exhibition-relocation' className="flex flex-col hover:bg-[#f5f5f5] py-[1vw] px-[2vw] hover:rounded-xl items-start w-[30%] gap-[0.5vw] cursor-pointer">
                       <div className="flex justify-center items-center text-[#02123b] gap-[0.5vw]">
                         <div><DropboxLogo className="w-[1.4vw] h-[1.4vw]" color="#02123b" /></div>
