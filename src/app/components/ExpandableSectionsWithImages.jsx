@@ -1509,7 +1509,7 @@ const ExpandableSectionsWithImages = ({ Clash }) => {
             {
               height: 'auto',
               opacity: 1,
-              duration: 0.5,
+              duration: 1,
               ease: 'power2.out'
             }
           );
@@ -1523,7 +1523,7 @@ const ExpandableSectionsWithImages = ({ Clash }) => {
           gsap.to(contentRefs.current[index], {
             height: 0,
             opacity: 0,
-            duration: 0.5,
+            duration: 1,
             ease: 'power2.out'
           });
         }
@@ -1547,8 +1547,8 @@ const ExpandableSectionsWithImages = ({ Clash }) => {
       // Slide in the clicked section's image
       gsap.to(images[index], {
         x: '0%',
-        duration: 0.5,
-        ease: 'power2.inOut'
+        duration: 1,
+        ease: 'power1.inOut'
       });
 
       setZIndex(newZIndex);

@@ -156,33 +156,33 @@ const Gallery = () => {
     });
   });
   
-  useGSAP(() => {
-    // Mobile animation
-    gsap.fromTo([slider2.current, scaleMobileRef.current], {
-      translateX: 0,
-    }, {
-      translateX: "-300%",
-      ease: "none",
-      duration: 1,
-      scrollTrigger: {
-        trigger: triggerRef2.current,
-        start: "top top", 
-        end: "2000 top",
-        scrub: 2,
-        pin: true,
-        anticipatePin: 1,
-        fastScrollEnd: true,
-        preventOverlaps: true,
-        invalidateOnRefresh: true,
-        onUpdate: (self) => {
-          // Move Scale component with slider
-          gsap.set(scaleMobileRef.current, {
-            x: self.progress * -300 + "%"
-          });
-        }
-      },
-    });
-  });
+  // useGSAP(() => {
+  //   // Mobile animation
+  //   gsap.fromTo([slider2.current, scaleMobileRef.current], {
+  //     translateX: 0,
+  //   }, {
+  //     translateX: "-300%",
+  //     ease: "none",
+  //     duration: 1,
+  //     scrollTrigger: {
+  //       trigger: triggerRef2.current,
+  //       start: "top top", 
+  //       end: "2000 top",
+  //       scrub: 2,
+  //       pin: true,
+  //       anticipatePin: 1,
+  //       fastScrollEnd: true,
+  //       preventOverlaps: true,
+  //       invalidateOnRefresh: true,
+  //       onUpdate: (self) => {
+  //         // Move Scale component with slider
+  //         gsap.set(scaleMobileRef.current, {
+  //           x: self.progress * -300 + "%"
+  //         });
+  //       }
+  //     },
+  //   });
+  // });
 
   const renderGalleryContent = (sliderRef) => (
     <>
@@ -265,7 +265,7 @@ const Gallery = () => {
                     <div ref={slider} className='flex gap-[4vw] w-full pt-[10vw] md:pt-0 pb-[8vw] md:pb-0'>
                       {renderGalleryContent(slider)}
                     </div>
-                    <div className='w-full flex justify-center absolute md:bottom-44 bottom-12 z-[999]'>
+                    <div className='w-full flex justify-center absolute md:bottom-44  z-[999]'>
                       <ToggleButton isActive={isActive} setIsActive={setIsActive} />
                     </div>
                     <div ref={scaleRef} className='flex pt-[10vw] md:pt-0'>
@@ -281,7 +281,7 @@ const Gallery = () => {
       </div>
 
       {/* Mobile Layout */}
-      <div ref={triggerRef2} className='w-full h-screen md:hidden'>
+      <div ref={triggerRef2} className='w-full h-screen md:hidden '>
         <div className='w-full h-full bg-[#02123b]'>
           <div className='pt-[42vw] sm:pt-[32vw] bg-[#02123b]'>
             <div className={`px-4 flex flex-col gap-6 justify-end text-white ${Clash.className}`}>
@@ -289,22 +289,22 @@ const Gallery = () => {
             </div>
           </div>
 
-          <div className='bg-[#02123b] relative overflow-hidden'>
+          <div className='bg-[#02123b] relative '>
             <div className='flex'>
-              <div className='px-4 w-full overflow-hidden bg-[#02123b]'>
+              <div className='px-4 w-full bg-[#02123b]'>
                 <div className='h-screen'>
-                  <div className='relative h-[70%] flex flex-col justify-around'>
+                  <div className='relative h-[70%] flex flex-col justify-around  overflow-x-auto'>
                     <div ref={slider2} className='flex gap-[4vw] w-full relative pt-[10vw] pb-[8vw]'>
                       {renderGalleryContent(slider2)}
-                    </div>
-                    <div className='w-full flex justify-center absolute bottom-0 z-[999]'>
-                      <ToggleButton isActive={isActive} setIsActive={setIsActive} />
                     </div>
                     <div ref={scaleMobileRef} className='flex'>
                       <Scale value={8} />
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className='w-full flex justify-center absolute bottom-[75vw] z-[999]'>
+                      <ToggleButton isActive={isActive} setIsActive={setIsActive} />
               </div>
             </div>
           </div>
