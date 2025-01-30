@@ -10,43 +10,45 @@ const Footer = () => {
   return (
     
     <footer>
-        <div className='w-full h-screen md:h-[32vw] bg-[#02123b] px-4 py-4 md:px-[4vw] md:py-[3vw] relative'>
+        <div className='w-full h-screen md:h-[32vw] bg-[#02123b] px-4 py-4 md:px-[4vw] md:py-[3vw] relative -mt-1'>
             <div className='flex md:flex-row flex-col md:justify-between gap-[8vh] md:gap-0 h-[85%]'>
                 <div className='md:w-[30%] w-full   flex flex-col justify-between gap-5 md:gap-1 lg:gap-0 '>
                     <div className='flex flex-col gap-4 md:gap-0 lg:gap-4 '>
+                        <TransitionLink href='/'>
                     <img src="/images/logo.png" alt="" className='w-[36vw] h-fit object-cover md:object-contain lg:object-cover md:w-[9vw] md:h-[9vw] lg:w-[14vw] lg:h-fit' />
+                    </TransitionLink>
                     <div className={`${Clash.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw]`}>Delivering excellence in air, sea, and surface logistics worldwide.</div>
                     </div>
                     <div className='flex flex-col md:gap-3 gap-4  pb-[3.2vw]'>
                         <div  className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] tracking-wide`}>Accreditation</div>
                         <div className='flex justify-between '>
-                            <div className='bg-white w-[3rem] md:w-[3vw] md:h-[3vw] h-[3rem] rounded-full flex justify-center items-center relative'>
+                            <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw]  rounded-full flex justify-center items-center relative'>
                                 <div className={`absolute hidden ${Clash.className} text-xs text-white w-[23vw] rounded-lg -left-11 -top-12 bg-[#333f5e] py-2 px-3 `}>International Federation of Freight Forwarders Associations</div>
                             <img src="/images/footer/1.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'> 
+                            <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'> 
                             <img src="/images/footer/2.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                            <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
                             <img src="/images/footer/3.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                            <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
                             <img src="/images/footer/4.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                            <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
                             <img src="/images/footer/5.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                            <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
                             <img src="/images/footer/6.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
-                            <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                            <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
                             <img src="/images/footer/7.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className=' flex flex-col justify-between md:w-[55%] w-full '>
-                    <div className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] flex flex-wrap gap-3 pb-[4vw] md:pb-0`}>
+                    <div className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] flex flex-wrap gap-3 pb-[8vw] md:pb-0 leading-4`}>
                        <TransitionLink href='/about-us'>About Us&nbsp;&nbsp;/</TransitionLink>
                        <TransitionLink href='/services'> Services&nbsp;&nbsp;/</TransitionLink>
                        <TransitionLink href='/sectors'> Sector Expertise&nbsp;&nbsp;/</TransitionLink>

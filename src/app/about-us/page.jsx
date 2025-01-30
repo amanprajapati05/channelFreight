@@ -129,8 +129,8 @@ useGSAP(() => {
     const ship = shipRef.current;
     const ship2 = shipRef2.current;
     
-    const totalScroll = (items.length - 6.4) * window.innerHeight;
-    const shipMovement = window.innerWidth < 768 ? "400%" : "220%";
+    const totalScroll = window.innerWidth < 768 ?(items.length - 6.3) * window.innerHeight:(items.length - 6.4) * window.innerHeight;
+    const shipMovement = window.innerWidth < 768 ? "210%" : "220%";
 
     const tl = gsap.timeline({
         scrollTrigger: {
@@ -367,7 +367,7 @@ useGSAP(() => {
     <StatsSection2/>
 </div> */}
 
-        <div ref={visionRef} className='bg-white text-[#02123b] w-screen md:h-[50vw] '>
+        <div ref={visionRef} className='bg-white text-[#02123b] w-screen md:h-[50vw] h-[120vw] '>
             <div className='flex justify-center w-full'>
                 <div className='flex flex-col w-full  '>
             <div className={`${Clash.className} text-[8vw] text-center w-full   md:text-[5vw] lg:text-[4vw] py-[4vw]`}>Our Vision</div>
@@ -391,7 +391,7 @@ useGSAP(() => {
     <div className='absolute inset-0 md:hidden'>
         <img  
             ref={shipRef2}  
-            className='w-[10vw] absolute top-0 left-[10%] -translate-x-1/2 -translate-y-1/2 z-[2]' 
+            className='w-[14vw] absolute top-0 left-[10%] -translate-x-1/2 -translate-y-1/2 z-[2]' 
             src="/images/cargoship.png" 
             alt="" 
         />

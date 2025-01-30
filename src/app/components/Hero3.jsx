@@ -227,7 +227,7 @@ const Hero2 = () => {
             </div>
         </div>
         <div className=''>
-<div className='flex md:hidden overflow-x-auto gap-4 h-[90vw] md:grid-cols-3 grid-cols-1 md:h-[90vw] lg:h-[120vw] sm:h-[60vw] md:grid-rows-7 scrollbar-hide px-[4vw] md:px-[2vw] lg:px-[4vw] py-4 '>
+<div className='flex md:hidden overflow-x-auto gap-4 h-[90vw] md:grid-cols-3 grid-cols-1 md:h-[90vw] lg:h-[120vw] sm:h-[60vw] md:grid-rows-7 scrollbar-hide px-[4vw] md:px-[2vw] lg:px-[4vw] py-4 pt-12 '>
     <TransitionLink href='/services/air-freight' className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
         <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
@@ -533,14 +533,14 @@ const Hero2 = () => {
                     <Button bgColor='#02123b' tColor='#ffffff' text='View More' link='/sectors' />
                 </div>
             
-                <div className='flex md:w-[150%] ml-[4vw] md:ml-0 gap-[1.7vw]'>
+                <div className='flex md:w-[150%] ml-[4vw] md:ml-0 '>
                     <TransitionLink href='/sectors/pharmaceuticals' onMouseEnter={() => setHoveredCard(1)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
                             src="/images/pharma.png" 
                             alt="" 
-                            className={`absolute inset-0 w-full h-full z-[-1] transition-opacity duration-300 ${hoveredCard === 1 ? 'opacity-100' : 'opacity-0'}`}
+                            className={`absolute inset-0 w-full h-full z-[-1] object-cover transition-opacity duration-300 ${hoveredCard === 1 ? 'opacity-100' : 'opacity-0'}`}
                         />
                         <div className='flex flex-col justify-between h-full'>
                             <div className='flex justify-between my-[1.2vw] mx-[1.6vw]'>
@@ -597,7 +597,7 @@ const Hero2 = () => {
                         </div>
                     </TransitionLink>
 
-                    <TransitionLink href='/sectors' onMouseEnter={() => setHoveredCard(4)}
+                    <TransitionLink href='/sectors/engineering' onMouseEnter={() => setHoveredCard(4)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -638,7 +638,7 @@ const Hero2 = () => {
                             </div>
                         </div>
                     </TransitionLink>
-                    <TransitionLink href='/' onMouseEnter={() => setHoveredCard(6)}
+                    <TransitionLink href='/sectors/packaging-solutions' onMouseEnter={() => setHoveredCard(6)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
@@ -663,7 +663,7 @@ const Hero2 = () => {
         </div>
         <div className='bg-white md:hidden block md:h-[35vw] w-full overflow-hidden'>
             <div  className='flex md:flex-row flex-col gap-[8vw] py-[7vw]'>
-                <div className='md:w-[50%] ml-[4vw] flex flex-col gap-[2vw] flex-shrink-0'>
+                <div className='md:w-[50%] ml-[4vw] flex flex-col gap-[4vw] flex-shrink-0'>
                     <div className={`${Clash.className} leading-[1.2] md:text-[4vw] text-[9vw] text-[#02123b]`}>
                         Innovative Solutions for Every Industry
                     </div>
@@ -673,14 +673,14 @@ const Hero2 = () => {
                     <Button bgColor='#02123b' tColor='#ffffff' text='View More' />
                 </div>
             
-                <div className='flex md:w-[150%] ml-[4vw] overflow-auto scrollbar-hide md:ml-0 gap-[1.7vw]'>
+                <div className='flex md:w-[150%] ml-[4vw] overflow-auto scrollbar-hide md:ml-0 gap-6'>
             <TransitionLink href='/sectors/pharmaceuticals' onMouseEnter={() => setHoveredCard(1)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className='rounded-xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
+                className='rounded-2xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                 <img 
                     src="/images/pharma.png" 
                     alt="" 
-                    className={`absolute inset-0 w-full h-full object-cover z-[-1] transition-opacity duration-300 ${hoveredCard === 1 ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0  w-full h-full object-cover z-[1] transition-opacity duration-300 ${hoveredCard === 1 ? 'opacity-100' : 'opacity-0'}`}
                 />
                 <div className='flex flex-col justify-between h-full'>
                     <div className='flex justify-between md:my-[1.2vw] my-[2.4vw] mx-[3.2vw] md:mx-[1.6vw]'>
@@ -697,11 +697,11 @@ const Hero2 = () => {
 
             <TransitionLink href='/sectors/cold-chain-products' onMouseEnter={() => setHoveredCard(2)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className='rounded-xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
+                className='rounded-2xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                 <img 
                     src="/images/cold.png" 
                     alt="" 
-                    className={`absolute inset-0 w-full h-full object-cover z-[-1] transition-opacity duration-300 ${hoveredCard === 2 ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 w-full h-full object-cover z-[1] transition-opacity duration-300 ${hoveredCard === 2 ? 'opacity-100' : 'opacity-0'}`}
                 />
                 <div className='flex flex-col justify-between h-full'>
                     <div className='flex justify-between md:my-[1.2vw] my-[2.4vw] mx-[3.2vw] md:mx-[1.6vw]'>
@@ -718,11 +718,11 @@ const Hero2 = () => {
 
             <TransitionLink href='/sectors/hazardous-chemicals' onMouseEnter={() => setHoveredCard(3)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className='rounded-xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
+                className='rounded-2xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                 <img 
                     src="/images/hazd.png" 
                     alt="" 
-                    className={`absolute inset-0 w-full h-full object-cover z-[-1] transition-opacity duration-300 ${hoveredCard === 3 ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 w-full h-full object-cover z-[1] transition-opacity duration-300 ${hoveredCard === 3 ? 'opacity-100' : 'opacity-0'}`}
                 />
                 <div className='flex flex-col justify-between h-full'>
                     <div className='flex justify-between md:my-[1.2vw] my-[2.4vw] mx-[3.2vw] md:mx-[1.6vw]'>
@@ -737,13 +737,13 @@ const Hero2 = () => {
                 </div>
             </TransitionLink>
 
-            <TransitionLink href='/sectors' onMouseEnter={() => setHoveredCard(4)}
+            <TransitionLink href='/sectors/engineering' onMouseEnter={() => setHoveredCard(4)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className='rounded-xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
+                className='rounded-2xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                 <img 
                     src="/images/eng.png" 
                     alt="" 
-                    className={`absolute inset-0 w-full h-full object-cover z-[-1] transition-opacity duration-300 ${hoveredCard === 4 ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 w-full h-full object-cover z-[1] transition-opacity duration-300 ${hoveredCard === 4 ? 'opacity-100' : 'opacity-0'}`}
                 />
                 <div className='flex flex-col justify-between h-full'>
                     <div className='flex justify-between md:my-[1.2vw] my-[2.4vw] mx-[3.2vw] md:mx-[1.6vw]'>
@@ -760,11 +760,11 @@ const Hero2 = () => {
 
             <TransitionLink href='/sectors/exhibition-relocation' onMouseEnter={() => setHoveredCard(5)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className='rounded-xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
+                className='rounded-2xl flex-shrink-0 w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                 <img 
                     src="/images/exhib.png" 
                     alt="" 
-                    className={`absolute inset-0 w-full h-full object-cover z-[-1] transition-opacity duration-300 ${hoveredCard === 5 ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 w-full h-full object-cover z-[1] transition-opacity duration-300 ${hoveredCard === 5 ? 'opacity-100' : 'opacity-0'}`}
                 />
                 <div className='flex flex-col justify-between h-full'>
                     <div className='flex justify-between md:my-[1.2vw] my-[2.4vw] mx-[3.2vw] md:mx-[1.6vw]'>
@@ -778,13 +778,13 @@ const Hero2 = () => {
                     </div>
                 </div>
             </TransitionLink>
-            <TransitionLink href='/sectors' onMouseEnter={() => setHoveredCard(6)}
+            <TransitionLink href='/sectors/packaging-solutions' onMouseEnter={() => setHoveredCard(6)}
                         onMouseLeave={() => setHoveredCard(null)}
-                        className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
+                        className='rounded-2xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>
                         <img 
                             src="/images/pack.png" 
                             alt="" 
-                            className={`absolute inset-0 w-full h-full z-[-1] transition-opacity duration-300 ${hoveredCard === 6 ? 'opacity-100' : 'opacity-0'}`}
+                            className={`absolute inset-0 w-full h-full z-[1] transition-opacity duration-300 ${hoveredCard === 6 ? 'opacity-100' : 'opacity-0'}`}
                         />
                         <div className='flex flex-col justify-between h-full'>
                             <div className='flex justify-between md:my-[1.2vw] my-[2.4vw] mx-[3.2vw] md:mx-[1.6vw]'>

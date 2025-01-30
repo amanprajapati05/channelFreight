@@ -303,7 +303,7 @@ const Gallery = () => {
                   </div>
                 </div>
               </div>
-              <div className='w-full flex justify-center absolute bottom-[75vw] z-[999]'>
+              <div className='w-full flex justify-center absolute bottom-[75vw] z-[99]'>
                       <ToggleButton isActive={isActive} setIsActive={setIsActive} />
               </div>
             </div>

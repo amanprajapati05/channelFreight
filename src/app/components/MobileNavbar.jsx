@@ -53,14 +53,16 @@ const MobileNavbar = () => {
 
       tl.to(hamburgerLinesRef.current[0], {
         rotate: 50,
-        y: 2,
+        y: 3,
+       
         duration: 0.6,
         backgroundColor: "#02123b"
       }, "-=0.6");
       
       tl.to(hamburgerLinesRef.current[1], {
         rotate: -50,
-        y: -2,
+        y: -3,
+        
         duration: 0.6,
         backgroundColor: "#02123b"
       }, "-=0.6");
@@ -95,7 +97,7 @@ const MobileNavbar = () => {
 
   return (
     <>
-      <div ref={navbarRef} className={`${isOpen ? 'fixed' : 'absolute'} top-0 left-0 w-full z-[999999]`}>
+      <div ref={navbarRef} className={`${isOpen ? 'fixed' : 'absolute'} top-0 left-0 w-full z-[9999999]`}>
         <div className="flex justify-between items-center px-2 py-3 z-[99999]">
           <TransitionLink href='/' className="md:hidden">
             {isOpen ? 
@@ -219,6 +221,47 @@ const MobileNavbar = () => {
             GALLERY
             {isActivePath('/gallery') && <ArrowUpRight size={28} weight="bold" />}
           </TransitionLink>
+
+          <div className='pt-[12vw]'>
+           <div className={`text-[4vw] ${ClashM.className}`}>Accrediation</div>
+            <div className='flex flex-col md:gap-3 gap-4 py-4 '>
+                                    <div className='flex justify-between '>
+                                        <div className='bg-white w-[10vw] h-[10vw] md:w-[3vw] md:h-[3vw]   flex justify-center items-center relative'>
+                                        <img src="/images/footer/1.png" alt="" className='w-full h-full  md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
+                                        </div>
+                                        <div className='bg-white w-[10vw] h-[10vw] md:w-[3vw] md:h-[3vw]  flex justify-center items-center'> 
+                                        <img src="/images/footer/2.png" alt="" className='w-full h-full  md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
+                                        </div>
+                                        <div className='bg-white w-[10vw] h-[10vw] md:w-[3vw] md:h-[3vw]  flex justify-center items-center'>
+                                        <img src="/images/footer/3.png" alt="" className='w-full h-full  md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
+                                        </div>
+                                        <div className='bg-white w-[10vw] h-[10vw] md:w-[3vw] md:h-[3vw]  flex justify-center items-center'>
+                                        <img src="/images/footer/4.png" alt="" className='w-full h-full  md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
+                                        </div>
+                                        <div className='bg-white w-[10vw] h-[10vw] md:w-[3vw] md:h-[3vw]  flex justify-center items-center'>
+                                        <img src="/images/footer/5.png" alt="" className='w-full h-full  md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
+                                        </div>
+                                        <div className='bg-white w-[10vw] h-[10vw] md:w-[3vw] md:h-[3vw]  flex justify-center items-center'>
+                                        <img src="/images/footer/6.png" alt="" className='w-full h-full  md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
+                                        </div>
+                                        <div className='bg-white w-[10vw] h-[10vw] md:w-[3vw] md:h-[3vw]  flex justify-center items-center'>
+                                        <img src="/images/footer/7.png" alt="" className='w-full h-full  md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
+                                        </div>
+                                    </div>
+                                </div>
+          </div>
+
+          <div className='flex gap-[6vw] pt-[6vw]'>
+            <div className={` flex text-[4vw] items-center gap-1 ${ClashM.className}`}>
+              Facebook <ArrowUpRight  weight="bold" />
+            </div>
+            <div className={` flex text-[4vw] items-center gap-1 ${ClashM.className}`}>
+              Linkedin <ArrowUpRight  weight="bold" />
+            </div>
+            <div className={` flex text-[4vw] items-center gap-1 ${ClashM.className}`}>
+              Skype <ArrowUpRight  weight="bold" />
+            </div>
+          </div>
         </div>
       </div>
     </>
