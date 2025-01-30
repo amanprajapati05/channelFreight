@@ -2,6 +2,7 @@
 import { usePathname, useRouter } from "next/navigation"
 import { animatePageOut } from "../utils/animation"
 import { useEffect } from "react"
+import Link from "next/link"
 
 
 const TransitionLink = ({ children, href, ...props }) => {
@@ -14,19 +15,21 @@ const TransitionLink = ({ children, href, ...props }) => {
     }
   }, [href]);
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     if (pathname !== href) {
       animatePageOut(href, router)
     }
   }
 
   return (
-    <div
+    <Link
     {...props}
+    href={  href}
       onClick={handleClick}
     >
       {children}
-    </div>
+    </Link>
   )
 }
 

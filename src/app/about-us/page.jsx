@@ -129,7 +129,7 @@ useGSAP(() => {
     const ship = shipRef.current;
     const ship2 = shipRef2.current;
     
-    const totalScroll = (items.length - 3) * window.innerHeight;
+    const totalScroll = (items.length - 6.4) * window.innerHeight;
     const shipMovement = window.innerWidth < 768 ? "400%" : "220%";
 
     const tl = gsap.timeline({
@@ -173,33 +173,91 @@ useGSAP(() => {
     };
 }, [isReady]); 
 
+  // const timelineData = [
+  //   {
+  //     year: "1999",
+  //     title: "Foundation Year",
+  //     description: "Channel Freight was established with a vision to revolutionize logistics through efficient and reliable service."
+  //   },
+  //   {
+  //     year: "2005",
+  //     title: "First Major Expansion",
+  //     description: "Expanded operations to include a comprehensive sea freight service, making global shipping more accessible."
+  //   },
+  //   {
+  //     year: "2010",
+  //     title: "International Recognition",
+  //     description: "Achieved global recognition by entering key international markets, handling large-scale projects."
+  //   },
+  //   {
+  //     year: "2020",
+  //     title: "Resilience During Global Challenges",
+  //     description: "Achieved global recognition by entering key international markets, handling large-scale projects."
+  //   },
+  //   {
+  //     year: "2024",
+  //     title: "25 Years of Service",
+  //     description: "Reached the 25-year milestone, with a strong reputation built on trust, efficiency, and innovation."
+  //   }
+  // ];
   const timelineData = [
     {
       year: "1999",
       title: "Foundation Year",
-      description: "Channel Freight was established with a vision to revolutionize logistics through efficient and reliable service."
+      description: "Channel Freight was established with a vision to revolutionize logistics through efficient and reliable service delivery worldwide."
+    },
+    {
+      year: "2001",
+      title: "Launch of Freight Forwarding Operations",
+      description: "Began freight forwarding operations in Mumbai, offering both air and ocean freight services to meet growing market demands."
+    },
+    {
+      year: "2002",
+      title: "International Recognition",
+      description: "Achieved global recognition by entering key international markets and handling large-scale projects."
     },
     {
       year: "2005",
-      title: "First Major Expansion",
-      description: "Expanded operations to include a comprehensive sea freight service, making global shipping more accessible."
+      title: "Expansion in Major Indian Cities",
+      description: "Expanded footprint by opening branches in major cities across India, strengthening market presence and enhancing customer service."
     },
     {
       year: "2010",
-      title: "International Recognition",
-      description: "Achieved global recognition by entering key international markets, handling large-scale projects."
+      title: "Industry Leader in Air Export Freight",
+      description: "Emerged as a market leader in Air Export Freight across India, setting new benchmarks in efficiency and reliability."
     },
     {
-      year: "2020",
-      title: "Resilience During Global Challenges",
-      description: "Achieved global recognition by entering key international markets, handling large-scale projects."
+      year: "2012",
+      title: "PAN India Presence",
+      description: "Established a PAN India presence by opening 14 branches across the country, enhancing service capabilities."
     },
     {
-      year: "2024",
-      title: "25 Years of Service",
-      description: "Reached the 25-year milestone, with a strong reputation built on trust, efficiency, and innovation."
+      year: "2015",
+      title: "Major Airfreight Feeder",
+      description: "Became a key airfreight feeder for all major carriers in India, strengthening its role in logistics and supply chain."
+    },
+    {
+      year: "2017",
+      title: "Customs Broker License",
+      description: "Obtained its own Customs Broker License under 'CHANNEL LOGISTIC SERVICES' for seamless customs clearance services."
+    },
+    {
+      year: "2019",
+      title: "Global Delivery of Life-Saving Medicines",
+      description: "Played a crucial role in the global supply chain by successfully delivering life-saving medicines worldwide during the COVID-19 pandemic."
+    },
+    {
+      year: "2021",
+      title: "Launch of C-Cool Temperature Control Facility",
+      description: "Introduced a temperature-controlled packing facility under the brand C-Cool for handling sensitive shipments."
+    },
+    {
+      year: "2025",
+      title: "25 Years of Excellence",
+      description: "Marking 25 years of excellence in the industry with a legacy of innovation, reliability, and customer trust."
     }
   ];
+  
   
 
     const addToContainerRefs = (el) => {
