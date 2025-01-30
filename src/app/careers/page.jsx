@@ -43,7 +43,7 @@ const page = () => {
         </div>
 
         <div className={`bg-bla flex  md:px-[2vw] lg:px-[4vw] px-4 ${Clash.className} h-auto lg:h-[40vw] xl:h-[30vw] md:h-[60vw]  md:items-center`}>
-            <div className='flex md:justify-between w-full md:flex-row flex-col  pt-6 md:pt-0 gap-14 '>
+            <div className='flex md:justify-between w-full md:flex-row flex-col  pt-6 md:pt-0 md:gap-14 gap-6'>
             <div className='  md:w-[30%] w-full text-[#02123b] capitalize l:text-[4vw] md:text-[4.9vw] lg:text-[4.5vw] text-[10vw]'>
             Why Work With Us?
             </div>

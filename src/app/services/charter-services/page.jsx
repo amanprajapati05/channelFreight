@@ -173,7 +173,7 @@ const text = [
         </div>
         <div>
 <div  className='w-full h-full overflow-auto pt-[2vw] scrollbar-hide'>
-        <div   className='flex md:w-full flex-nowrap scrollbar-hide  md:mx-0 justify-between gap-[1.7vw] md:gap-[2vw]'>   
+        <div   className='flex md:w-full flex-nowrap scrollbar-hide  md:mx-0 justify-between gap-[4vw] pt-[6vw] md:gap-[2vw]'>   
              
         <AnimatedCard
     index={1}

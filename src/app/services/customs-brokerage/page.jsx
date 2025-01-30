@@ -183,7 +183,7 @@ const text = [
         </div>
         <div>
 <div  className='w-full h-full overflow-hidden pt-[2vw]'>
-        <div   className='flex md:w-full flex-nowrap   md:mx-0 justify-between gap-[1.7vw] md:gap-[2vw]'>   
+        <div   className='flex md:w-full flex-nowrap   md:mx-0 justify-between gap-[4vw] pt-[6vw] md:gap-[2vw]'>   
              
                     <AnimatedCard
     index={1}

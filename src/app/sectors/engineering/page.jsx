@@ -65,7 +65,7 @@ const page = () => {
     <div className={`text-[#02123b] ${Clash.className} text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] md:w-[35%] w-full `}>Our expertise spans sectors like energy, infrastructure, and industrial projects.</div>
     </div>
 
-       <div   className='md:flex flex md:w-full overflow-x-auto scrollbar-hide md:px-[2vw] lg:px-[4vw] px-4 md:mx-0 justify-between gap-[1.7vw] md:gap-0'> 
+       <div   className='md:flex flex md:w-full overflow-x-auto scrollbar-hide md:px-[2vw] lg:px-[4vw] px-4 md:mx-0 justify-between gap-[4vw] pt-[6vw] md:gap-0'> 
                     <AnimatedCard
     index={1}
     title="Handling Oversized & Heavy Cargo"

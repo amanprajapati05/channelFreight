@@ -294,7 +294,7 @@ const Gallery = () => {
               <div className='px-4 w-full bg-[#02123b]'>
                 <div className='h-screen'>
                   <div className='relative h-[70%] flex flex-col justify-around  overflow-x-auto'>
-                    <div ref={slider2} className='flex gap-[4vw] w-full relative pt-[10vw] pb-[8vw]'>
+                    <div ref={slider2} className='flex gap-[4vw] w-full relative pt-[10vw] pb-[12vw]'>
                       {renderGalleryContent(slider2)}
                     </div>
                     <div ref={scaleMobileRef} className='flex'>

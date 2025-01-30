@@ -24,25 +24,64 @@ const page = () => {
          const scrollContainerRef = useRef(null);
          const slider = useRef();
          const [expandedIndex, setExpandedIndex] = useState(null);
+
+          const [isLoading, setIsLoading] = useState(true);
+          const [isReady, setIsReady] = useState(false);
+          const [locomotiveInstance, setLocomotiveInstance] = useState(null);
   
          const verticalLineRefs = useRef([null, null, null]);
          const contentRefs = useRef([null, null, null]);
   const containerRef = useRef(null);
                const triggerRef = useRef();
                   
-                         useEffect(() => {
-                                const scrollInstance = new locomotiveScroll({
-                                  el: scrollContainerRef.current,
-                                  smooth: true,
-                                  smoothMobile: true,
-                                  multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
-                                  lerp: 0, // Adjust the easing (lower is smoother)
-                                });
+                        //  useEffect(() => {
+                        //         const scrollInstance = new locomotiveScroll({
+                        //           el: scrollContainerRef.current,
+                        //           smooth: true,
+                        //           smoothMobile: true,
+                        //           multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+                        //           lerp: 0, // Adjust the easing (lower is smoother)
+                        //         });
                             
+                        //         return () => {
+                        //           if (scrollInstance) scrollInstance.destroy();
+                        //         };
+                        //       }, []);
+
+                            useEffect(() => {
+                                // Force scroll to top
+                                window.scrollTo(0, 0);
+                                
+                                // Initialize locomotive scroll
+                                const scrollInstance = new locomotiveScroll({
+                                    el: scrollContainerRef.current,
+                                    smooth: true,
+                                    smoothMobile: true,
+                                    multiplier: 0.1,
+                                    lerp: 0,
+                                });
+                        
+                                setLocomotiveInstance(scrollInstance);
+                                
+                                // Disable scroll initially
+                                scrollInstance.stop();
+                                
+                                // Add a delay before starting animations
+                                const timer = setTimeout(() => {
+                                    setIsLoading(false);
+                                    setIsReady(true);
+                                    scrollInstance.start();
+                                    ScrollTrigger.refresh();
+                                }, 500); // 2 second delay
+                                
                                 return () => {
-                                  if (scrollInstance) scrollInstance.destroy();
+                                    clearTimeout(timer);
+                                    if (scrollInstance) {
+                                        scrollInstance.destroy();
+                                    }
                                 };
-                              }, []);
+                            }, []);
+                        
 
   const text = [
     "Our expertise lies in understanding the ",
@@ -256,7 +295,7 @@ useGSAP(() => {
     <div className={`text-[#02123b] ${Clash.className} text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] md:w-[35%] w-full `}>At Channel Freight, we are industry leaders in offering innovative, reliable, and customized packaging solutions.</div>
     </div>
 
-       <div  className='flex md:hidden md:w-full overflow-x-auto scrollbar-hide md:px-[2vw] lg:px-[4vw] px-4 md:mx-0 justify-between gap-[1.7vw] md:gap-0'> 
+       <div  className='flex md:hidden md:w-full overflow-x-auto scrollbar-hide md:px-[2vw] lg:px-[4vw] px-4 md:mx-0 justify-between gap-[4vw] pt-[6vw] md:gap-0'> 
                     <AnimatedCard
     index={1}
     title="Tailored Solutions for Unique Needs"

@@ -8,7 +8,7 @@ const ServicesPage = ({title,desc,img1,img2}) => {
 <>
     <div className='w-full '>
              
-             <div className='md:h-screen h-[50vh] '>
+             <div className='md:h-screen h-[120vw] '>
              <div className=' w-full h-full  '>
                  <div className=' h-[100%] md:h-[100%] pb-4 md:pb-0  bg-[#02123b]'>
                      <div className={`md:pl-[2vw] lg:pl-[4vw] px-4 md:px-0 flex flex-col md:flex-row h-[100%] gap-6 md:gap-0 justify-end md:justify-between md:items-center text-white ${Clash.className}  `}>

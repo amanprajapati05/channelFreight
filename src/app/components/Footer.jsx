@@ -20,7 +20,8 @@ const Footer = () => {
                     <div className='flex flex-col md:gap-3 gap-4  pb-[3.2vw]'>
                         <div  className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] tracking-wide`}>Accreditation</div>
                         <div className='flex justify-between '>
-                            <div className='bg-white w-[3rem] md:w-[3vw] md:h-[3vw] h-[3rem] rounded-full flex justify-center items-center'>
+                            <div className='bg-white w-[3rem] md:w-[3vw] md:h-[3vw] h-[3rem] rounded-full flex justify-center items-center relative'>
+                                <div className={`absolute ${Clash.className} text-xs text-white w-[23vw] rounded-lg -left-11 -top-12 bg-[#333f5e] py-2 px-3 `}>International Federation of Freight Forwarders Associations</div>
                             <img src="/images/footer/1.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
                             <div className='bg-white w-[3rem] h-[3rem] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'> 

@@ -167,21 +167,21 @@ const text = [
                                     <div className='flex w-full flex-col md:justify-between md:flex-row h-full '>
                                         <div className={`${Clash.className} flex flex-col md:flex-row md:justify-between text-[#02123b] py-[6vw]`}>
                                             <div className='flex flex-col h-full justify-between md:w-[30%] w-full '>
-                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
+                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8] gap-[2vw] flex flex-col'>
                                                 <div className='md:text-[2vw] text-[6vw] md:text-right'>Full Container Load (FCL)</div>
                                                 <div className='text-[4vw] md:text-[1.3vw] md:text-right'>FCL shipments are ideal for bulk goods, providing direct port-to-port transit with minimal handling, reducing risks and delays.</div>
                                                 </div>
-                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
+                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8] gap-[2vw] flex flex-col'>
                                                 <div className='md:text-[2vw] text-[6vw] md:text-right'>Sea Charters</div>
                                                 <div className='text-[4vw] md:text-[1.3vw] md:text-right'>Ideal for urgent, large-scale, or exclusive shipments, sea charters offer full control over routes, schedules, and cargo specifications.</div>
                                                 </div>
                                             </div>
                                             <div className='flex flex-col h-full justify-between md:w-[30%] w-full'>
-                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
+                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8] gap-[2vw] flex flex-col'>
                                                 <div className='md:text-[2vw] text-[6vw] text-left'>Loose Container Load (LCL)</div>
                                                 <div className='text-[4vw] md:text-[1.3vw] text-left'>This cost-effective solution allows businesses to ship without needing full container space, while still benefiting from our extensive global network and secure handling.</div>
                                                 </div>
-                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
+                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8] gap-[2vw] flex flex-col'>
                                                 <div className='md:text-[2vw] text-[6vw] text-left'>Break Bulk Handling</div>
                                                 <div className='text-[4vw] md:text-[1.3vw] text-left'>Our expertise in break bulk cargo allows for safe transport of oversized, irregular, or heavy items that can’t be containerized.</div>
                                                 </div>
@@ -212,7 +212,7 @@ const text = [
             </div>
         </div>
         <div>
-        <div   className='flex flex-nowrap overflow-auto scrollbar-hide md:w-full  md:mx-0 justify-between gap-[1.7vw] md:gap-0'>            
+        <div   className='flex flex-nowrap overflow-auto scrollbar-hide md:w-full  md:mx-0 justify-between gap-[4vw] pt-[6vw] md:gap-0'>            
                     <AnimatedCard
     index={1}
     title="Unmatched Reliability"

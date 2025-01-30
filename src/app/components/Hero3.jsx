@@ -181,7 +181,7 @@ const Hero2 = () => {
     <Navbar/>
     </div>
     <div ref={scrollContainerRef}>
-      <div className='  h-screen  -mb-[14vw] md:-mb-[4vw] lg:-mb-0'>
+      <div className='  h-screen  -mb-[8vh] md:-mb-[4vw] lg:-mb-0'>
            
             <video   autoPlay 
           muted 
@@ -240,7 +240,7 @@ const Hero2 = () => {
         <div className='flex flex-col justify-between h-full p-6 lg:p-8 relative z-[2]'>
             <div className='gap-4 flex flex-col'>
                 <div className='rounded-full w-fit bg-[--blue2]'>
-                    <ArrowUpRight color='#ADEDFF' className='h-12 w-12 md:w-7 md:h-7' />
+                    <ArrowUpRight color='#ADEDFF' className='h-12 w-12 p-2 md:w-7 md:h-7' />
                 </div>
                 <div className={`text-white text-[5vw] md:text-[2.2vw] lg:text-[2vw] ${Clash.className}`}>
                     AIR FREIGHT SERVICES
@@ -264,7 +264,7 @@ const Hero2 = () => {
         <div className='flex flex-col justify-between h-full p-6 lg:p-8 relative z-[2]'>
             <div className='gap-4 flex flex-col'>
                 <div className='rounded-full w-fit bg-[--blue2]'>
-                    <ArrowUpRight color='#ADEDFF' className='h-12 w-12 md:w-7 md:h-7' />
+                    <ArrowUpRight color='#ADEDFF' className='h-12 w-12 p-2 md:w-7 md:h-7' />
                 </div>
                 <div className={`text-white text-[5vw] md:text-[2.2vw] lg:text-[2vw] ${Clash.className}`}>
                     SEA FREIGHT SERVICES
@@ -288,7 +288,7 @@ const Hero2 = () => {
         <div className='flex flex-col justify-between h-full p-6 lg:p-8 relative z-[2]'>
             <div className='gap-4 flex flex-col'>
                 <div className='rounded-full w-fit bg-[--blue2]'>
-                    <ArrowUpRight color='#ADEDFF' className='h-12 w-12 md:w-10 md:h-10' />
+                    <ArrowUpRight color='#ADEDFF' className='h-12 w-12 p-2 md:w-10 md:h-10' />
                 </div>
                 <div className={`text-white text-[5vw] md:text-[2.2vw] lg:text-[2vw] ${Clash.className}`}>
                     SUPPLY CHAIN SOLUTIONS
@@ -312,7 +312,7 @@ const Hero2 = () => {
         <div className='flex flex-col justify-between h-full p-6 lg:p-8 relative z-[2]'>
             <div className='gap-4 flex flex-col'>
                 <div className='rounded-full w-fit bg-[--blue2]'>
-                    <ArrowUpRight color='#ADEDFF' className='h-12 w-12 md:w-10 md:h-10' />
+                    <ArrowUpRight color='#ADEDFF' className='h-12 w-12 p-2 md:w-10 md:h-10' />
                 </div>
                 <div className={`text-white text-[5vw] md:text-[2.2vw] lg:text-[2vw] ${Clash.className}`}>
                     PROJECT LOGISTICS

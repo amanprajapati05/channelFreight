@@ -343,7 +343,7 @@ const imageRefs = useRef([]);
 <div className='w-full bg-white md:p-[2vw] lg:p-[4vw] p-4 md:block hidden '>
                             <div className='flex flex-col gap-4'>
                             <div className='relative' style={{ height: '26vw' }}>
-                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                            <div   className='w-full  flex gap-[8vw] border-b border-[#c8c8c8] pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
                                     <img src="/images/sectors/pharma.webp" className='w-full h-full' alt="" />
                                 </div>
@@ -358,7 +358,7 @@ const imageRefs = useRef([]);
                             </div>
                             </div>
                             <div className='relative' style={{ height: '26vw' }}>
-                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                            <div   className='w-full  flex gap-[8vw] border-b border-[#c8c8c8] pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
                                     <img src="/images/sectors/haz.webp" className='w-full h-full' alt="" />
                                 </div>
@@ -374,7 +374,7 @@ const imageRefs = useRef([]);
                             </div>
                             </div>
                             <div className='relative' style={{ height: '26vw' }}>
-                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                            <div   className='w-full  flex gap-[8vw] border-b border-[#c8c8c8] pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
                                     <img src="/images/sectors/eng.webp" className='w-full h-full' alt="" />
                                 </div>
@@ -389,7 +389,7 @@ const imageRefs = useRef([]);
                             </div>
                             </div>
                             <div className='relative' style={{ height: '26vw' }}>
-                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                            <div   className='w-full  flex gap-[8vw] border-b border-[#c8c8c8] pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
                                     <img src="/images/sectors/cold.webp" className='w-full h-full' alt="" />
                                 </div>
@@ -404,7 +404,7 @@ const imageRefs = useRef([]);
                             </div>
                             </div>
                             <div className='relative' style={{ height: '26vw' }}>
-                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                            <div   className='w-full  flex gap-[8vw] border-b border-[#c8c8c8] pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
                                     <img src="/images/sectors/pac.webp" className='w-full h-full' alt="" />
                                 </div>
@@ -419,7 +419,7 @@ const imageRefs = useRef([]);
                             </div>
                             </div>
                             <div className='relative' style={{ height: '26vw' }}>
-                            <div   className='w-full  flex gap-[8vw] border-b border-black pb-4'>
+                            <div   className='w-full  flex gap-[8vw] border-b border-[#c8c8c8] pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
                                     <img src="/images/sectors/exh.webp" className='w-full h-full' alt="" />
                                 </div>

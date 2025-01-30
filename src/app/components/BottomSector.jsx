@@ -52,9 +52,9 @@ const BottomSector = ({
     <div className='md:p-[2vw] lg:p-[4vw] p-4'>
         <div className=' flex md:justify-between md:items-center md:flex-row flex-col md:gap-0 gap-[8vw]'
         >
-                <div className='flex flex-col md:w-[35%]  md:gap-[1vw] gap-[2vw]'>
+                <div className='flex flex-col md:w-[35%]  md:gap-[1vw] gap-[3vw]'>
                     <div className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>{title}</div>
-                    <div className={`text-[#02123b] ${Clash.className} text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>{description}</div>
+                    <div className={`text-[#02123b] ${Clash.className} text-[4.6vw]  sm:text-[3vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>{description}</div>
                     <Button text={buttonText} bgColor={buttonBgColor} tColor={buttonTextColor} link='/contact' />
                 </div>
                 <div className=' flex relative md:w-[50%] h-full md:justify-end justify-center gap-[3vw] md:gap-[1vw] items-center '>

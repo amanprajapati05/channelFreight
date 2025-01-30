@@ -140,21 +140,21 @@ const text = [
                                     <div className='flex w-full flex-col md:justify-between md:flex-row h-full '>
                                         <div className={`${Clash.className} flex flex-col md:flex-row md:justify-between text-[#02123b] py-[6vw]`}>
                                             <div className='flex flex-col h-full justify-between md:w-[30%] w-full '>
-                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
+                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8] gap-[2vw] flex flex-col'>
                                                 <div className='md:text-[2vw] text-[6vw] md:text-right'>Tailored Solutions</div>
                                                 <div className='text-[4vw] md:text-[1.3vw] md:text-right'>Whether you need express delivery, specialized handling for pharmaceuticals, or temperature-controlled shipments, our services are customized to meet your unique requirements.</div>
                                                 </div>
-                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
+                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8] gap-[2vw] flex flex-col'>
                                                 <div className='md:text-[2vw] text-[6vw] md:text-right'>Comprehensive Global Network</div>
                                                 <div className='text-[4vw] md:text-[1.3vw] md:text-right'>With access to key international airports and partnerships with leading carriers, we deliver your cargo to every corner of the world with speed and precision</div>
                                                 </div>
                                             </div>
                                             <div className='flex flex-col h-full justify-between md:w-[30%] w-full'>
-                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
+                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8] gap-[2vw] flex flex-col'>
                                                 <div className='md:text-[2vw] text-[6vw] text-left'>Innovative Technology</div>
                                                 <div className='text-[4vw] md:text-[1.3vw] text-left'>Our advanced tracking systems provide real-time updates on your shipment, offering complete visibility and peace of mind throughout the transit, from origin to destination.</div>
                                                 </div>
-                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8]'>
+                                                <div className='border-b-2 md:border-0 pb-4 md:pb-0 mb-4 md:mb-0 border-[#c8c8c8] gap-[2vw] flex flex-col'>
                                                 <div className='md:text-[2vw] text-[6vw] text-left'>Regulatory Expertise</div>
                                                 <div className='text-[4vw] md:text-[1.3vw] text-left'>Simplifying cross-border logistics with seamless customs clearance and compliance, reducing transit times, minimizing delays and eliminating barriers.</div>
                                                 </div>
@@ -179,7 +179,7 @@ const text = [
             </div>
         </div>
         <div>
-        <div   className='flex flex-nowrap overflow-auto scrollbar-hide md:w-full  md:mx-0 justify-between gap-[1.7vw] md:gap-0'>            
+        <div   className='flex flex-nowrap overflow-auto scrollbar-hide md:w-full  md:mx-0 justify-between gap-[4vw] pt-[6vw] md:gap-0'>            
                     <AnimatedCard
     index={1}
     title="Safety & Security"

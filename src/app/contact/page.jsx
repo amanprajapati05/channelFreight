@@ -105,7 +105,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="py-[32vw] sm:py-[20vw] md:py-[16vw] lg:py-[9vw] ">
+        <div className="pb-[32vw] pt-[18vw] sm:py-[20vw] md:py-[16vw] lg:py-[9vw] ">
           <div
             className={`${Clash.className} text-center text-[#ffffff] text-[8vw] md:text-[5vw] lg:text-[4vw] `}
           >
