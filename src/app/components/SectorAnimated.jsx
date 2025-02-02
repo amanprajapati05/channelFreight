@@ -40,7 +40,7 @@ const AnimatedTextSection = ({
       { scaleY: 0 },
       { 
         scaleY: 1, 
-        duration: 1, 
+        duration: 0.8, 
         transformOrigin: "top"
       }
     );
@@ -55,7 +55,7 @@ const AnimatedTextSection = ({
         { 
           y: 0,
           opacity: 1,
-          duration: 0.6,
+          duration: 0.5,
           ease: "power2.out"
         },
         // Slight overlap between animations
@@ -68,7 +68,7 @@ const AnimatedTextSection = ({
       { scaleY: 0 },
       { 
         scaleY: 1, 
-        duration: 1,
+        duration: 0.8,
         transformOrigin: "top"
       },
       "-=0.2"
@@ -81,7 +81,7 @@ const AnimatedTextSection = ({
   }, [textLines]); // Re-run effect when textLines changes
 
   return (
-    <div ref={componentRef} className={`w-full flex h-full flex-col items-center my-[3vw] ${className}`}>
+    <div ref={componentRef} className={`w-full flex  flex-col items-center my-[3vw] ${className}`}>
       <div 
         ref={topLineRef} 
         className={`${lineColor} ${lineWidth} ${lineHeight}`}

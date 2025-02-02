@@ -1558,7 +1558,7 @@ const ExpandableSectionsWithImages = ({ Clash }) => {
   };
 
   return (
-    <div className="md:p-[2vw] lg:p-[4vw] p-4">
+    <div className="md:p-[2vw] h-full lg:p-[4vw] p-4">
       <div className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw]`}>
         Redefining Packaging Excellence
       </div>

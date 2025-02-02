@@ -7,6 +7,36 @@ import TransitionLink from './TransitionLink'
 const Footer = () => {
 
     const date = new Date().getFullYear()
+    const accreditations = [
+        {
+            img: "/images/footer/1.png",
+            tooltip: "International Federation of Freight Forwarders Associations"
+        },
+        {
+            img: "/images/footer/2.png",
+            tooltip: "International Air Transport Association"
+        },
+        {
+            img: "/images/footer/3.png",
+            tooltip: "Multimodal Transport Operator "
+        },
+        {
+            img: "/images/footer/4.png",
+            tooltip: "Federation of Freight Forwarders' Associations in India"
+        },
+        {
+            img: "/images/footer/5.png",
+            tooltip: "Good Distribution Practices"
+        },
+        {
+            img: "/images/footer/6.png",
+            tooltip: "World Cargo Alliance"
+        },
+        {
+            img: "/images/footer/7.png",
+            tooltip: "Authorised Economic Operator"
+        }
+    ]
   return (
     
     <footer>
@@ -22,7 +52,7 @@ const Footer = () => {
                     <div className='flex flex-col md:gap-3 gap-4  pb-[3.2vw]'>
                         <div  className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] tracking-wide`}>Accreditation</div>
                         <div className='flex justify-between '>
-                            <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw]  rounded-full flex justify-center items-center relative'>
+                            {/* <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw]  rounded-full flex justify-center items-center relative'>
                                 <div className={`absolute hidden ${Clash.className} text-xs text-white w-[23vw] rounded-lg -left-11 -top-12 bg-[#333f5e] py-2 px-3 `}>International Federation of Freight Forwarders Associations</div>
                             <img src="/images/footer/1.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
                             </div>
@@ -43,7 +73,48 @@ const Footer = () => {
                             </div>
                             <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
                             <img src="/images/footer/7.png" alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
-                            </div>
+                            </div> */}
+                            {/* {accreditations.map((item, index) => (
+                                    <div key={index} className='group relative'>
+                                        <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                                            <img src={item.img} alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
+                                        </div>
+                                        <div className={`absolute hidden group-hover:block ${Clash.className} text-xs text-white w-[23vw] rounded-lg -left-11 -top-12 bg-[#333f5e] py-2 px-3`}>
+                                            {item.tooltip}
+                                        </div>
+                                    </div>
+                                ))} */}
+                                {/* {accreditations.map((item, index) => (
+                                    <div key={index} className='group relative'>
+                                        <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                                            <img src={item.img} alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
+                                        </div>
+                                        <div className={`absolute hidden group-hover:block ${Clash.className} text-xs text-white whitespace-nowrap rounded-lg -translate-x-1/2 -top-12 left-1/2`}>
+                                            <div className="relative">
+                                                <div className="bg-[#333f5e] py-2 px-3 rounded-lg">
+                                                    {item.tooltip}
+                                                </div>
+                                                <div className="absolute w-3 h-3 bg-[#333f5e] rotate-45 left-1/2 -bottom-1.5 -translate-x-1/2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))} */}
+                                {accreditations.map((item, index) => (
+                                    <div key={index} className='group relative'>
+                                        <div className='bg-white w-[12vw] h-[12vw] md:w-[3vw] md:h-[3vw] rounded-full flex justify-center items-center'>
+                                            <img src={item.img} alt="" className='w-full h-full rounded-full md:w-[3vw] md:h-[3vw] lg:w-fit lg:h-fit object-contain' />
+                                        </div>
+                                        <div className={`absolute hidden group-hover:block ${Clash.className} text-xs text-white whitespace-nowrap rounded-lg -top-12 ${index === 0 ? 'left-0' : 'left-1/2 -translate-x-1/2'}`}>
+                                            <div className="relative">
+                                                <div className="bg-[#333f5e] py-2 px-3 rounded-lg">
+                                                    {item.tooltip}
+                                                </div>
+                                                <div className={`absolute w-3 h-3 bg-[#333f5e] rotate-45 -bottom-1.5 ${index === 0 ? 'left-6' : 'left-1/2 -translate-x-1/2'}`}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+
                         </div>
                     </div>
                 </div>
