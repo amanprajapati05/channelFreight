@@ -187,7 +187,7 @@ const Navbar = () => {
     <div className="h-20 relative mt-2 z-[99999] " onMouseLeave={handleMouseLeave}>
       <MobileNavbar/>
 
-      <div  ref={containerRef}  className={activeMenu ? 'mx-2  md:h-[28vw]  rounded-2xl bg-white' : 'h-[6vw]'}>
+      <div  ref={containerRef}  className={activeMenu ? 'mx-2  md:h-[28vw]  rounded-2xl bg-white' : 'h-[6vw] bg-transparent '}>
         {/* Main navbar */}
         <div className="hidden relative justify-end md:px-[2vw] lg:px-[4vw] px-4 items-center md:h-[10vw] lg:h-[8vw] xl:h-[6vw] text-[#02123b] md:flex rounded-2xl">
           <div className="absolute md:left-[2vw] lg:left-[4vw] hidden cursor-pointer md:block">

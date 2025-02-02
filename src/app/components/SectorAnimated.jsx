@@ -81,7 +81,7 @@ const AnimatedTextSection = ({
   }, [textLines]); // Re-run effect when textLines changes
 
   return (
-    <div ref={componentRef} className={`w-full flex flex-col items-center my-[3vw] ${className}`}>
+    <div ref={componentRef} className={`w-full flex h-full flex-col items-center my-[3vw] ${className}`}>
       <div 
         ref={topLineRef} 
         className={`${lineColor} ${lineWidth} ${lineHeight}`}

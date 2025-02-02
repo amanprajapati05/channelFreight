@@ -181,7 +181,7 @@ const Hero2 = () => {
     <Navbar/>
     </div>
     <div ref={scrollContainerRef}>
-      <div className='  h-screen  -mb-[8vh] md:-mb-[4vw] lg:-mb-0'>
+      <div className=' h-screen  -mb-[8vh] md:-mb-[4vw] lg:-mb-0'>
            
             <video   autoPlay 
           muted 
@@ -533,7 +533,7 @@ const Hero2 = () => {
                     <Button bgColor='#02123b' tColor='#ffffff' text='View More' link='/sectors' />
                 </div>
             
-                <div className='flex md:w-[150%] ml-[4vw] md:ml-0 '>
+                <div className='flex md:w-[150%] ml-[4vw] md:ml-0 gap-[2vw] '>
                     <TransitionLink href='/sectors/pharmaceuticals' onMouseEnter={() => setHoveredCard(1)}
                         onMouseLeave={() => setHoveredCard(null)}
                         className='rounded-xl flex-shrink-0  w-[80vw] h-[80vw] md:w-[28vw] md:h-[28vw] sm:w-[60vw] sm:h-[60vw] relative border border-[#02123b]'>

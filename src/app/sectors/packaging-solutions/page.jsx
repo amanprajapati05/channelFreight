@@ -17,6 +17,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import locomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import ExpandableSectionsWithImages from '../../components/ExpandableSectionsWithImages';
+import TruckAnimation2 from '../../components/TruckAnimation2'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -325,7 +326,7 @@ useGSAP(() => {
                   
                 </div>    
 
-                <div className='my-[10vw] hidden md:block'>
+                <div className='my-[10vw] h-full hidden md:block'>
                 <AnimatedTextSection
       textLines={text}
       font={Clash.className}
@@ -342,51 +343,15 @@ useGSAP(() => {
     />
                 </div> 
 
-                {/* <div className='md:p-[2vw] lg:p-[4vw] p-4'>
-                    <div className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>Redefining Packaging Excellence</div>
-                    <div className='flex justify-between w-full bg-bl items-start pt-[4vw] '>
-                        <div className='w-[30%] h-auto'>
-                            <img src="/images/sectors/images.png" className='w-full' alt="" />
-                            <img src="/images/sectors/images2.png" className='w-full' alt="" />
-                            <img src="/images/sectors/images3.png" className='w-full' alt="" />
-                        </div>
-                        <div className='w-[65%]'>
-                             {sections.map((section, index) => (
-        <div key={index} className="border-t w-full flex gap-[3vw] items-start py-[2vw]">
-          <div>
-            <div 
-              onClick={() => handleClick(index)}
-              className="border-[#c8c8c8] border rounded-full w-[4vw] h-[4vw] flex justify-center items-center relative cursor-pointer"
-            >
-              <div className="w-[25px] h-[2px] bg-gray-500"></div>
-              <div 
-                ref={el => verticalLineRefs.current[index] = el}
-                className="w-[2px] h-[25px] bg-gray-500 absolute"
-              ></div>
-            </div>
-          </div>
-          
-          <div className="flex flex-col gap-[1vw]">
-            <div className={`${Clash.className} text-[#02123b] text-[6vw] md:text-[2.2vw] lg:text-[2vw] z-[2]`}>
-              {section.title}
-            </div>
-            
-            <div 
-              ref={el => contentRefs.current[index] = el}
-              style={{ height: 0, overflow: 'hidden' }}
-              className="content-wrapper"
-            >
-              <div className={`${Clash.className} text-[5vw] sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] text-[#02123b] z-[2] w-[70%]`}>
-                {section.content}
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
-                        </div>
-                    </div>
-                </div> */}
+
+              <div className='h-full'>
+
                <ExpandableSectionsWithImages Clash={Clash} />
+               </div>
+              {/* <div>
+              <TruckAnimation2/>
+              </div> */}
+              
                 
                 <div>
                 <BottomSector 
