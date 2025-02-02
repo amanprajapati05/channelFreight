@@ -74,7 +74,7 @@ const page = () => {
                                     setIsReady(true);
                                     scrollInstance.start();
                                     ScrollTrigger.refresh();
-                                }, 500); // 2 second delay
+                                }, 2000); // 2 second delay
                                 
                                 return () => {
                                     clearTimeout(timer);
