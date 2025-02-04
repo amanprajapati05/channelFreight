@@ -193,7 +193,7 @@ const slides = [
             </div>
         </div>
         <div>
-<div  className='w-full h-full overflow-hidden pt-[2vw]'>
+<div  className='w-full h-full overflow-x-auto scrollbar-hide pt-[2vw]'>
         <div   className='flex md:w-full flex-nowrap   md:mx-0 justify-between gap-[4vw] pt-[6vw] md:gap-[2vw]'>   
              
                     <AnimatedCard

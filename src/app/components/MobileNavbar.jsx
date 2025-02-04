@@ -98,7 +98,7 @@ const MobileNavbar = () => {
   return (
     <>
       <div ref={navbarRef} className={`${isOpen ? 'fixed' : 'absolute'} top-0 left-0 w-full z-[9999999]`}>
-        <div className="flex justify-between items-center px-2 py-3 z-[99999]">
+        <div className="flex justify-between items-center px-4 py-3 z-[99999]">
           <TransitionLink href='/' className="md:hidden">
             {isOpen ? 
               <img src="/images/logo2.png" className="w-[35vw] " alt="logo" /> : 
@@ -130,7 +130,7 @@ const MobileNavbar = () => {
         ref={navRef}
         className="fixed pt-[20vw] left-0 w-full h-screen bg-white md:hidden overflow-y-auto z-[9999]"
       >
-        <div className={`${Clash.className} flex flex-col text-[#02123b] text-[7.5vw] px-2 pt-4 pb-20`}>
+        <div className={`${Clash.className} flex flex-col text-[#02123b] text-[7.5vw] px-4 pt-4 pb-20`}>
           <TransitionLink href='/' className="flex items-center h-fit gap-1">
             HOME
             {isActivePath('/') && <ArrowUpRight size={28} weight="bold" />}
@@ -152,7 +152,7 @@ const MobileNavbar = () => {
           </div>
           
           {servicesOpen && (
-            <div className={`${Clash.className} tracking-wide text-[4vw] flex flex-col pl-4`}>
+            <div className={`${Clash.className} tracking-wide text-[4.2vw] flex flex-col pl-4`}>
               {[
                 ['air-freight', 'AIR FREIGHT'],
                 ['sea-freight', 'SEA FREIGHT'],
@@ -186,12 +186,12 @@ const MobileNavbar = () => {
           </div>
           
           {sectorsOpen && (
-            <div className={`${Clash.className} tracking-wide text-[4vw] flex flex-col pl-4`}>
+            <div className={`${Clash.className} tracking-wide text-[4.2vw] flex flex-col pl-4`}>
               {[
                 ['pharmaceuticals', 'PHARMACEUTICALS'],
                 ['hazardous-chemicals', 'HAZARDOUS CHEMICALS'],
                 ['cold-chain-products', 'COLD CHAIN PRODUCTS'],
-                ['packaging', 'PACKAGING SOLUTIONS'],
+                ['packaging-solutions', 'PACKAGING SOLUTIONS'],
                 ['exhibition-relocation', 'EXHIBITION & RELOCATION'],
                 ['engineering', 'ENGINEERING']
               ].map(([path, label]) => (
