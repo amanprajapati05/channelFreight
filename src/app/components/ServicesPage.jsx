@@ -24,7 +24,7 @@ const ServicesPage = ({title,desc,img1,img2}) => {
               <div className='w-full h-[50vw] overflow-hidden hidden md:block'>
                   <img src={img1} alt="" className='md:w-screen   object-cover'/>
               </div>
-              <div className='w-full h-full overflow-hidden md:hidden block'>
+              <div className='w-full h-[135vw] overflow-hidden md:hidden block'>
                   <img src={img2} alt="" className='w-full  object-cover'/>
               </div>
           </div>
