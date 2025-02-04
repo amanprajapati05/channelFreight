@@ -247,7 +247,7 @@ const page = () => {
              <div className=' h-[100%] md:h-[100%] pb-4 md:pb-0  bg-[#02123b]'>
                  <div className={`md:pl-[2vw] lg:pl-[4vw] px-4 md:px-0 flex flex-col md:flex-row h-[100%] gap-6 md:gap-0 justify-end md:justify-between md:items-center text-white ${Clash.className}  `}>
                      <div className=' text-[10vw] lg:text-[6vw] md:text-[8vw] h-auto md:h-[50%] uppercase'>CAreers</div>
-                     <div className='text-base pr-[8vw]  md:w-[48%] md:text-[1.7vw] lg:text-[1.4vw] h-auto md:h-[50%] flex items-end'>By joining our team, you'll be part of a company that values innovation, integrity, and collaboration. We are committed to providing an environment where talent thrives, and individuals grow both personally and professionally.</div>
+                     <div className='text-base pr-[8vw]  md:w-[48%] xl:text-[1.5vw] md:text-[1.9vw] lg:text-[1.7vw] h-auto md:h-[50%] flex items-end'>By joining our team, you'll be part of a company that values innovation, integrity, and collaboration. We are committed to providing an environment where talent thrives, and individuals grow both personally and professionally.</div>
                  </div>
              </div>
          </div>
