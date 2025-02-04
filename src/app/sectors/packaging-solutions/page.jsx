@@ -101,83 +101,78 @@ const page = () => {
     "compliance, and cost ",
     "efficiency."
   ];
-  useGSAP(()=>{
+  // useGSAP(()=>{
 
-    // Only run when ready
+  //   // Only run when ready
    
-       gsap.fromTo(slider.current,{
-           translateX: 0,
-         },
-         {
-           translateX: "-30%",
-           ease: "none",
-           duration: 1,
-           scrollTrigger: {
-             trigger: triggerRef.current,
-             start: "top top",
-             end: "1500 top",
-             scrub: 0.6,
-             pin: true,
-             // markers: true,
-             anticipatePin: 1, // This helps prevent jarring pin start
-             fastScrollEnd: true, // Improves performance during fast scrolling
-             preventOverlaps: true,
-             invalidateOnRefresh: true,
-             onEnter: () => {
-               // Ensure smooth start of animation
-               gsap.to(slider.current, {
-                 opacity: 1,
-                 duration: 0.3
-               });
-             },
-           },
-         }
+  //      gsap.fromTo(slider.current,{
+  //          translateX: 0,
+  //        },
+  //        {
+  //          translateX: "-30%",
+  //          ease: "none",
+  //          duration: 1,
+  //          scrollTrigger: {
+  //            trigger: triggerRef.current,
+  //            start: "top top",
+  //            end: "1500 top",
+  //            scrub: 0.6,
+  //            pin: true,
+  //            // markers: true,
+  //            anticipatePin: 1, // This helps prevent jarring pin start
+  //            fastScrollEnd: true, // Improves performance during fast scrolling
+  //            preventOverlaps: true,
+  //            invalidateOnRefresh: true,
+  //            onEnter: () => {
+  //              // Ensure smooth start of animation
+  //              gsap.to(slider.current, {
+  //                opacity: 1,
+  //                duration: 0.3
+  //              });
+  //            },
+  //          },
+  //        }
          
-       )
-       return () => {
-           // pin.kill();
-         };
-   })
+  //      )
+  //      return () => {
+  //          // pin.kill();
+  //        };
+  //  })
 
-//    useGSAP(() => {
-//     if (isExpanded) {
-//       // Animate vertical line to disappear (minus sign)
-//       gsap.to(verticalLineRef.current, {
-//         scaleY: 0,
-//         duration: 0.3,
-//         ease: 'power2.inOut'
-//       });
-      
-//       // Reveal content
-//       gsap.fromTo(contentRef.current,
-//         {
-//           height: 0,
-//           opacity: 0,
-//         },
-//         {
-//           height: 'auto',
-//           opacity: 1,
-//           duration: 0.5,
-//           ease: 'power2.out'
-//         }
-//       );
-//     } else {
-//       // Animate vertical line to appear (plus sign)
-//       gsap.to(verticalLineRef.current, {
-//         scaleY: 1,
-//         duration: 0.3,
-//         ease: 'power2.inOut'
-//       });
-      
-//       // Hide content
-//       gsap.to(contentRef.current, {
-//         height: 0,
-//         opacity: 0,
-//         duration: 0.5,
-//         ease: 'power2.out'
-//       });
-//     }
-//   }, [isExpanded]);
+  useGSAP(() => {
+    gsap.fromTo(slider.current,
+      {
+        translateX: 0,
+      },
+      {
+        translateX: "-30%",
+        ease: "none",
+        duration: 1,
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "top top",
+          end: "1500 top",
+          scrub: 0.6,
+          pin: true,
+          anticipatePin: 1,
+          fastScrollEnd: true,
+          preventOverlaps: true,
+          invalidateOnRefresh: true,
+          pinSpacing: false, // Add this
+          onEnter: () => {
+            gsap.to(slider.current, {
+              opacity: 1,
+              duration: 0.3
+            });
+          },
+        },
+      }
+    );
+  
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  });
 
 useGSAP(() => {
     verticalLineRefs.current.forEach((ref, index) => {
@@ -248,7 +243,8 @@ useGSAP(() => {
     <div ref={scrollContainerRef} data-scroll-container>
     <ServicesPage title={'Packaging Solutions'} img1={'/images/sectors/imgpa1.png'} img2={'/images/sectors/imgpa2.png'} desc={'The engineering industry is the backbone of modern infrastructure and technology, encompassing everything from heavy machinery and industrial equipment to intricate components and tools.'}/>
 
-    {/* <div ref={triggerRef} className='hidden md:block' >
+
+    <div ref={triggerRef} className='hidden md:h-[250vw] lg:h-[200vw] xl:h-[170vw]  md:block' >
   <div  className='w-full hidden md:flex md:flex-row flex-col md:justify-between md:items-center md:p-[2vw] lg:p-[4vw] p-4 md:gap-0 gap-[3vw]'>
     <div  className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] md:w-[30%] w-full `} >Challenges & Solutions</div>
     <div className={`text-[#02123b] ${Clash.className} text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] md:w-[35%] w-full `}>At Channel Freight, we are industry leaders in offering innovative, reliable, and customized packaging solutions.</div>
@@ -288,7 +284,9 @@ useGSAP(() => {
                   
                 </div>
                 </div>
-    </div> */}
+    </div>
+
+
 
       
               

@@ -1,9 +1,11 @@
 "use client"
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import { Clash } from "../../../public/fonts/fonts";
+import { Clash, ClashM } from "../../../public/fonts/fonts";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
+import { CaretRight } from "@phosphor-icons/react/dist/ssr";
+import ContactForm from "../components/ContactForm";
 
 const page = () => {
   const inputContainerClasses = "bg-transparent border border-[#515b73] rounded-xl w-full flex flex-col justify-center group";
@@ -33,7 +35,7 @@ const page = () => {
           </div>
           <div className="flex justify-between md:flex-row flex-col gap-[8vw] md:gap-0 ">
            
-             <div className={`${Clash.className} md:w-[38%] flex flex-col gap-[6vw] md:gap-[3vw] lg:gap-[2vw] `}>
+             {/* <div className={`${Clash.className} md:w-[38%] flex flex-col gap-[6vw] md:gap-[3vw] lg:gap-[2vw] `}>
       <div className="text-white xl:text-[1.5vw] md:text-[2.4vw] lg:text-[2vw] text-[5vw] tracking-wide leading-[1.2]">
         Seeking personalized support?
         <br /> Request a call from our team
@@ -90,8 +92,16 @@ const page = () => {
         </div>
       </div>
 
-      <Button text='Submit' bgColor='#ffffff' tColor='#02123B' />
+      <div  style={
+        {
+            backgroundColor: '#ffffff',
+            color: '#02123B'
+        }
+    } className={`${ClashM.className} cursor-pointer flex xl:text-[1vw] md:text-[1.3vw] text-[4vw] sm:text-[3.5vw] w-fit   px-4 py-2 rounded-full items-center justify-center`}>
+        Submit <CaretRight className='w-[4vw] h-[4vw] md:w-[1.5vw] md:h-[1.5vw] xl:w-[1.2vw] xl:h-[1.2vw] sm:w-[3.5vw] sm:h-[3.5vw]' />
     </div>
+    </div> */}
+    <ContactForm />
             <div className="md:w-[55%] h-[80vw] md:h-auto ">
               <iframe
                 className="rounded-2xl w-full h-full"

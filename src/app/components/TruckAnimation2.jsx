@@ -866,18 +866,18 @@ const TruckAnimation2 = () => {
             </div>
             <div 
                 ref={containerRef}
-                className='absolute md:top-[46%] lg:top-[49%] top-[90vw] left-[25%] transform -translate-x-1/2 -translate-y-1/2'
+                className='absolute md:top-[46%] lg:top-[37vw] xl:top-[28vw] top-[90vw] left-[25%] transform -translate-x-1/2 -translate-y-1/2'
             >
                 <img 
-                    src="/images/packaging/container.png" 
+                    src="/images/packaging/container2.png" 
                     className='w-[30vw] h-full object-contain' 
                     alt="Container" 
                 />
             </div>
             <img 
                 ref={topImageRef}
-                src="/images/packaging/top.png" 
-                className='absolute md:top-[50%] lg:top-[50%] top-[90vw] left-[25%] transform -translate-x-1/2 -translate-y-1/2 w-[30vw] object-contain' 
+                src="/images/packaging/top2.png" 
+                className='absolute md:top-[50%] lg:top-[50%]  top-[90vw] left-[25%] transform -translate-x-1/2 -translate-y-1/2 w-[30vw] object-contain' 
                 alt="Container Top" 
             />
 
@@ -885,21 +885,21 @@ const TruckAnimation2 = () => {
             <div className="absolute md:top-[52%] top-[95.4vw] xl:top-[52.5%] left-[31%] z-[9999] transform -translate-x-1/2 -translate-y-1/2">
                 <img 
                     ref={truckRef}
-                    src="/images/packaging/truck2.png" 
+                    src="/images/packaging/truck3.png" 
                     className='w-[42vw] object-contain'
                     alt="Truck" 
                 />
             </div>
 
-            <div className='absolute bg-white top-[103vw] md:top-[59%] lg:top-[65%] xl:top-[65%] left-[55%] w-full transform z-[99] -translate-x-1/2 -translate-y-1/2'>
+            <div className='absolute bg-white top-[103vw] md:top-[59%] lg:top-[4vw] xl:top-[65%] left-[55%] w-full transform z-[99] -translate-x-1/2 -translate-y-1/2'>
                 <img 
                     ref={roadRef}
-                    src="/images/packaging/road.png" 
+                    src="/images/packaging/road2.png" 
                     className='w-[90vw] h-full' 
                     alt="" 
                 />
             </div>
-            <div className='absolute top-[84.5vw]  md:top-[41.2%] lg:top-[34%] xl:top-[36%] left-[125%] w-full transform z-[-1] -translate-x-1/2 -translate-y-1/2'>
+            <div className='absolute top-[84.5vw]  md:top-[41.2%] lg:top-[30vw] xl:top-[36%] left-[125%] w-full transform z-[-1] -translate-x-1/2 -translate-y-1/2'>
                 <img 
                     ref={lampRef}
                     src="/images/packaging/lamp.png" 

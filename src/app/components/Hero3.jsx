@@ -806,7 +806,7 @@ const Hero2 = () => {
                     <div className='w-full'>
         <video
         className=" inset-0 w-full h-full object-cover -mb-1 z-[0]"
-        src="/videos/freight.mp4"
+        src="/videos/freight2.mp4"
         muted
         playsInline
         autoPlay
