@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
-import Link from 'next/link';
 import { Clash, ClashM } from '../../../public/fonts/fonts';
 import { usePathname } from 'next/navigation';
 import { CaretDown, ArrowUpRight } from '@phosphor-icons/react/dist/ssr';

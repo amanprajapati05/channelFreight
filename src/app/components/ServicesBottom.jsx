@@ -14,7 +14,7 @@ const ServicesBottom = () => {
                     <Button text='View Project' bgColor={'#02123B'} tColor={'#ffffff'} link='/gallery' />
                 </div>
                 <div className='pb-[8vw] md:pb-0'>
-                    <img src="/images/air.webp" className='w-full h-full' alt="" />
+                    <img src="/images/air2.png" className='w-full h-full' alt="" />
                 </div>
             </div>
         </div>
