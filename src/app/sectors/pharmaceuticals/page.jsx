@@ -13,6 +13,7 @@ import BottomSector from '../../components/BottomSector'
 import SectorAnimated from '../../components/SectorAnimated'
 import AnimatedTextSection from '../../components/SectorAnimated'
 import CircularProgress from '../../components/CircularProgress'
+import AnimatedPharma from '../../components/AnimatedPharma'
 import locomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 
@@ -48,6 +49,28 @@ const page = () => {
     "for critical shipments, and",
     "meticulous compliance with",
     "international GDP and WHO",
+  ];
+
+  const leftContent = [
+    {
+      title: "Strict Temperature Control",
+      description: "Advanced cold chain solutions to maintain product integrity from pickup to delivery."
+    },
+    {
+      title: "Secure Packaging & Handling",
+      description: "Tamper-proof packaging and expert handling to ensure your shipments arrive in perfect condition."
+    }
+  ];
+  
+  const rightContent = [
+    {
+      title: "Regulatory Compliance",
+      description: "Adhering to international pharmaceutical shipping guidelines for safe and legal transportation."
+    },
+    {
+      title: "Real-Time Tracking",
+      description: "24/7 shipment visibility to provide complete transparency and peace of mind."
+    }
   ];
 
   return (
@@ -87,7 +110,7 @@ const page = () => {
                   
                 </div>  
 
-                <div className='my-[10vw] hidden md:block'>
+                <div className='my-[10vw] lg:h-[50vw] md:h-[65vw] hidden md:block'>
                 <AnimatedTextSection
       textLines={text}
       font={Clash.className}
@@ -103,8 +126,23 @@ const page = () => {
     //   showMarkers={true} // Useful for debugging animations// Additional classes for the container
     />
                 </div>
+
+              
+
+                <div className=''>
+                <AnimatedPharma
+  leftContent={leftContent}
+  rightContent={rightContent}
+  fallingItems={[
+    "/images/pharma/pills.png",
+    "/images/pharma/syringe.png",
+    "/images/pharma/bag.png",
+    "/images/pharma/dropper.png",
+  ]}
+/>
+                </div>
                 
-                <div>
+                <div className='pt-[20vw] md:pt-0'>
                 <BottomSector 
   description="Our in-depth knowledge, technological edge, and unparalleled commitment to quality have made us the preferred logistics partner for pharmaceutical giants worldwide. "
   image1="/images/sectors/ph1.webp"

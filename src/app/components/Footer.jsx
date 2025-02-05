@@ -45,7 +45,7 @@ const Footer = () => {
                 <div className='md:w-[30%] w-full   flex flex-col justify-between gap-5 md:gap-1 lg:gap-0 '>
                     <div className='flex flex-col gap-4 md:gap-0 lg:gap-4 '>
                         <TransitionLink href='/'>
-                    <img src="/images/logo3.png" alt="" className='w-[36vw] h-fit object-cover md:object-contain lg:object-cover md:w-[9vw] md:h-[9vw] lg:w-[14vw] lg:h-fit' />
+                    <img src="/images/logo4.png" alt="" className='w-[36vw] h-fit object-cover md:object-contain lg:object-cover md:w-[9vw] md:h-[9vw] lg:w-[14vw] lg:h-fit' />
                     </TransitionLink>
                     <div className={`${Clash.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw]`}>Delivering excellence in air, sea, and surface logistics worldwide.</div>
                     </div>
@@ -140,7 +140,7 @@ const Footer = () => {
                             <div><a href="tel:02242148000">022 4214 8000</a></div>
                                  </div>
                         </div>
-                        <div className='md:w-[30%] w-[50%] flex flex-col gap-3 pt-[3vw] md:pt-0'>
+                        {/* <div className='md:w-[30%] w-[50%] flex flex-col gap-3 pt-[3vw] md:pt-0'>
                             <div className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw]`}>Social Links</div>
                             <div className='flex gap-2'>
                             <div className='w-fit h-fit justify-center items-center flex p-1 bg-white rounded-full '>
@@ -153,7 +153,7 @@ const Footer = () => {
                                 <div><FacebookLogo  weight="fill"  color="#02123b" className='md:w-[1.8vw] md:h-[1.8vw] w-[6vw] h-[6vw] sm:w-[4vw] sm:h-[4vw]' /></div>
                             </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

@@ -101,7 +101,7 @@ const MobileNavbar = () => {
           <TransitionLink href='/' className="md:hidden">
             {isOpen ? 
               <img src="/images/logo2.png" className="w-[35vw] " alt="logo" /> : 
-              <img src="/images/logo3.png" className="w-[35vw] h-full" alt="logo" />
+              <img src="/images/logo4.png" className="w-[35vw] h-full" alt="logo" />
             }
           </TransitionLink>
           <button
@@ -250,7 +250,7 @@ const MobileNavbar = () => {
                                 </div>
           </div>
 
-          <div className='flex gap-[6vw] pt-[6vw]'>
+          {/* <div className='flex gap-[6vw] pt-[6vw]'>
             <div className={` flex text-[4vw] items-center gap-1 ${ClashM.className}`}>
               Facebook <ArrowUpRight  weight="bold" />
             </div>
@@ -260,7 +260,7 @@ const MobileNavbar = () => {
             <div className={` flex text-[4vw] items-center gap-1 ${ClashM.className}`}>
               Skype <ArrowUpRight  weight="bold" />
             </div>
-          </div>
+          </div> */} 
         </div>
       </div>
     </>
