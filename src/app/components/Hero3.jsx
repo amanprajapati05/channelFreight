@@ -181,7 +181,7 @@ const Hero2 = () => {
     <Navbar/>
     </div>
     <div ref={scrollContainerRef}>
-      <div className=' h-screen  -mb-[8vh] md:-mb-[4vw] lg:-mb-0'>
+      <div className=' h-screen hidden md:block -mb-[8vh] md:-mb-[4vw] lg:-mb-0'>
            
             <video   autoPlay 
           muted 
@@ -214,10 +214,43 @@ const Hero2 = () => {
                 <div className={`${Clash.className} text-white font-thin`}>Scroll Down</div>
         </div>
             </div>
+            <div className=' h-[90vh] md:hidden  md:-mb-[4vw] lg:-mb-0'>
+           
+           <video   autoPlay 
+         muted 
+         loop 
+         playsInline
+         className=" absolute top-0 z-[-1] w-full h-full object-cover  ">
+               <source src="/videos/Homepage-Hero.mp4" type="video/mp4"/>
+           </video>
+           <div  className='lg:pt-[9vw] md:pt-[20vw] flex h-[80%] md:h-auto'>
+               <div className='flex md:flex-row flex-col justify-center text-white md:justify-between px-[4vw] md:px-[2vw] lg:px-[4vw]'>
+     <div className={`${Clash.className} text-[14vw] sm:text-[9vw] leading-[1.2] xl:text-[6vw] md:text-[9vw] lg:text-[7.5vw] uppercase overflow-hidden`}>
+       <span ref={el => titleSpans.current[0] = el} className="inline-block">Innovative,</span><br/>
+       <span ref={el => titleSpans.current[1] = el} className="inline-block">Pro Active</span><br/>
+       <span ref={el => titleSpans.current[2] = el} className="inline-block">& Speed.</span>
+     </div>
+     <div 
+       ref={descriptionRef}
+       className={`${Clash.className} leading-8 md:leading-normal text-[5vw] sm:text-[3.4vw] pt-[3.4vw] md:pt-0 xl:text-[1.5vw] md:text-[1.9vw] lg:text-[1.7vw] xl:w-[30%] md:w-[38%] lg:w-[33%] text-start flex items-end`}
+     >
+       We create customised solutions to meet the changing demands of a dynamic industry and always stay a step ahead of contemporaries.
+     </div>
+   </div>
+           </div>
+            <div className='flex flex-col items-center text-white justify-center text-center w-full absolute bottom-10 text-base '>
+               <div className='flex flex-col '>
+                   
+       <CaretDown weight='bold' className='-mb-2' size={19}/>
+       <CaretDown weight='bold' size={19}/>
+       </div>
+               <div className={`${Clash.className} text-white font-thin`}>Scroll Down</div>
+       </div>
+           </div>
             <div className=''>
-            <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw] pt-[4vw] md:pt-[0vw] lg:pt-[1vw]'>
+            <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw]  md:pt-[0vw] pt-[4vw] lg:pt-[1vw]'>
                 <div className='gap-4 flex flex-col '>
-                    <div className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] `}>Reliable and Efficient Global Services</div>
+                    <div className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw]  lg:text-[4vw] `}>Reliable and Efficient Global Services</div>
                     <div className={`text-[#02123b] ${Clash.className} text-[5vw] hidden md:block sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.
                         <br /> Our services are designed to ensure smooth operations and efficient delivery for all businesses.</div>
                         <div className={`text-[#02123b] ${Clash.className} text-[5vw] md:hidden sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.
