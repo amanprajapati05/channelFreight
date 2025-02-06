@@ -177,12 +177,12 @@ const Hero2 = () => {
 
   return (
     <>
-    <div className=''>
+    {/* <div className='hidden md:block'>
     <Navbar/>
-    </div>
+    </div> */}
     <div ref={scrollContainerRef}>
-      <div className=' h-screen hidden md:block -mb-[8vh] md:-mb-[4vw] lg:-mb-0'>
-           
+      <div className=' h-screen block '>
+      <Navbar/>
             <video   autoPlay 
           muted 
           loop 
@@ -214,8 +214,8 @@ const Hero2 = () => {
                 <div className={`${Clash.className} text-white font-thin`}>Scroll Down</div>
         </div>
             </div>
-            <div className=' h-[90vh] md:hidden  md:-mb-[4vw] lg:-mb-0'>
-           
+            {/* <div className=' h-[100vh] md:hidden  md:-mb-[4vw] lg:-mb-0'>
+            <Navbar/>
            <video   autoPlay 
          muted 
          loop 
@@ -246,9 +246,9 @@ const Hero2 = () => {
        </div>
                <div className={`${Clash.className} text-white font-thin`}>Scroll Down</div>
        </div>
-           </div>
+           </div> */}
             <div className=''>
-            <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw]  md:pt-[0vw] pt-[4vw] lg:pt-[1vw]'>
+            <div className=' flex md:flex-row flex-col gap-9 md:gap-0 justify-between bg-white md:items-center px-[4vw] md:px-[2vw] lg:px-[4vw]  md:pt-[4vw] pt-[6vw]  lg:pt-[4vw]'>
                 <div className='gap-4 flex flex-col '>
                     <div className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw]  lg:text-[4vw] `}>Reliable and Efficient Global Services</div>
                     <div className={`text-[#02123b] ${Clash.className} text-[5vw] hidden md:block sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>From air and sea freight to warehousing and distribution , we provide a full suite of logistics solutions.
@@ -260,8 +260,8 @@ const Hero2 = () => {
             </div>
         </div>
         <div className=''>
-<div className='flex md:hidden overflow-x-auto gap-4 h-[90vw] md:grid-cols-3 grid-cols-1 md:h-[90vw] lg:h-[120vw] sm:h-[60vw] md:grid-rows-7 scrollbar-hide px-[4vw] md:px-[2vw] lg:px-[4vw] py-4 pt-12 '>
-    <TransitionLink href='/services/air-freight' className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
+<div className='flex md:hidden overflow-x-auto gap-4 h-[93vw] md:grid-cols-3 grid-cols-1 md:h-[90vw] lg:h-[120vw] sm:h-[60vw] md:grid-rows-7 scrollbar-hide px-[4vw] md:px-[2vw] lg:px-[4vw] py-4 pt-12 '>
+    <TransitionLink href='/services/air-freight' className='bg-black rounded-2xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
         <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -285,7 +285,7 @@ const Hero2 = () => {
         </div>
     </TransitionLink>
 
-    <TransitionLink href='/services/sea-freight'className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-1 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
+    <TransitionLink href='/services/sea-freight'className='bg-black rounded-2xl flex-shrink-0 md:row-span-2 md:col-span-1 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
         <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -309,7 +309,7 @@ const Hero2 = () => {
         </div>
     </TransitionLink>
 
-    <TransitionLink href='/services/supply-chain' className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-1 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
+    <TransitionLink href='/services/supply-chain' className='bg-black rounded-2xl flex-shrink-0 md:row-span-2 md:col-span-1 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
         <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"
@@ -333,7 +333,7 @@ const Hero2 = () => {
         </div>
     </TransitionLink>
 
-    <TransitionLink href='/services/project-logistics' className='bg-black rounded-3xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
+    <TransitionLink href='/services/project-logistics' className='bg-black rounded-2xl flex-shrink-0 md:row-span-2 md:col-span-2 h-full w-[80vw] sm:w-[60vw] md:w-auto relative overflow-hidden'>
         <div className='bg-[#02123b] absolute inset-0 w-full h-full opacity-60 z-[1]'></div>
         <video 
             className="absolute inset-0 w-full h-full object-cover opacity-50 z-[0]"

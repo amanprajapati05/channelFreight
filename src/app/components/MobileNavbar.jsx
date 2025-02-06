@@ -101,7 +101,7 @@ const MobileNavbar = () => {
           <TransitionLink href='/' className="md:hidden">
             {isOpen ? 
               <img src="/images/logo2.png" className="w-[35vw] " alt="logo" /> : 
-              <img src="/images/logo4.png" className="w-[42vw] h-full" alt="logo" />
+              <img src="/images/logo5.png" className="w-[37.5vw] h-full" alt="logo" />
             }
           </TransitionLink>
           <button

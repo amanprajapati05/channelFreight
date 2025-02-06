@@ -20,37 +20,68 @@ const Services = () => {
     const [isReady, setIsReady] = useState(false);
 
       const scrollContainerRef = useRef(null);
-              useEffect(() => {
-                const scrollInstance = new locomotiveScroll({
-                  el: scrollContainerRef.current,
-                  smooth: true,
-                  smoothMobile: true,
-                  multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
-                  lerp: 0, // Adjust the easing (lower is smoother)
-                });
+            //   useEffect(() => {
+            //     const scrollInstance = new locomotiveScroll({
+            //       el: scrollContainerRef.current,
+            //       smooth: true,
+            //       smoothMobile: true,
+            //       multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+            //       lerp: 0, // Adjust the easing (lower is smoother)
+            //     });
             
-                return () => {
-                  if (scrollInstance) scrollInstance.destroy();
-                };
-              }, []);
+            //     return () => {
+            //       if (scrollInstance) scrollInstance.destroy();
+            //     };
+            //   }, []);
     // Force initial scroll and handle loading state
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        document.body.style.overflow = 'hidden';
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    //     document.body.style.overflow = 'hidden';
         
-        const timer = setTimeout(() => {
-            document.body.style.overflow = 'auto';
-            setIsLoading(false);
-            setIsReady(true);
-            ScrollTrigger.refresh();
-        }, 500);
+    //     const timer = setTimeout(() => {
+    //         document.body.style.overflow = 'auto';
+    //         setIsLoading(false);
+    //         setIsReady(true);
+    //         ScrollTrigger.refresh();
+    //     }, 500);
         
-        return () => {
-            clearTimeout(timer);
-            document.body.style.overflow = 'auto';
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        };
-    }, []);
+    //     return () => {
+    //         clearTimeout(timer);
+    //         document.body.style.overflow = 'auto';
+    //         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    //     };
+    // }, []);
+  useEffect(() => {
+             const scrollInstance = new locomotiveScroll({
+               el: scrollContainerRef.current,
+               smooth: true,
+               smoothMobile: true,
+               multiplier: 0.1, // Adjust the speed of the scrolling (lower is slower)
+               lerp: 0, // Adjust the easing (lower is smoother)
+             });
+         
+             return () => {
+               if (scrollInstance) scrollInstance.destroy();
+             };
+           }, []);
+
+           useEffect(() => {
+            window.scrollTo(0, 0);
+            document.body.style.overflow = 'hidden';
+            
+            const timer = setTimeout(() => {
+                document.body.style.overflow = 'auto';
+                setIsLoading(false);
+                setIsReady(true);
+                ScrollTrigger.refresh();
+            }, 1500);
+            
+            return () => {
+                clearTimeout(timer);
+                document.body.style.overflow = 'auto';
+                ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            };
+        }, []);
 
     const addToImageRefs = (el) => {
         if (el && !imageRefs.current.includes(el)) {
@@ -70,6 +101,40 @@ const Services = () => {
     };
 
     // Initialize refs and set initial states
+    // useEffect(() => {
+    //     if (isReady && imageRefs.current.length > 0) {
+    //         // Set initial states for images
+    //         imageRefs.current.forEach((imageContainer) => {
+    //             if (imageContainer) {
+    //                 gsap.set(imageContainer, {
+    //                     width: '15%',
+    //                     height: '10vw'
+    //                 });
+    //             }
+    //         });
+
+    //         // Set initial states for buttons
+    //         buttonRefs.current.forEach((button) => {
+    //             if (button) {
+    //                 gsap.set(button, {
+    //                     display: 'none',
+    //                     opacity: 0,
+    //                     y: 30
+    //                 });
+    //             }
+    //         });
+
+    //         // Ensure all cards are visible
+    //         imageRefs.current.forEach((imageContainer) => {
+    //             if (imageContainer?.parentElement) {
+    //                 gsap.set(imageContainer.parentElement, { 
+    //                     visibility: "visible",
+    //                     opacity: 1 
+    //                 });
+    //             }
+    //         });
+    //     }
+    // }, [isReady]);
     useEffect(() => {
         if (isReady && imageRefs.current.length > 0) {
             // Set initial states for images
@@ -93,15 +158,13 @@ const Services = () => {
                 }
             });
 
-            // Ensure all cards are visible
-            imageRefs.current.forEach((imageContainer) => {
-                if (imageContainer?.parentElement) {
-                    gsap.set(imageContainer.parentElement, { 
-                        visibility: "visible",
-                        opacity: 1 
-                    });
-                }
-            });
+            // Ensure first card is visible
+            if (imageRefs.current[0]?.parentElement) {
+                gsap.set(imageRefs.current[0].parentElement, { 
+                    visibility: "visible",
+                    opacity: 1 
+                });
+            }
         }
     }, [isReady]);
 
