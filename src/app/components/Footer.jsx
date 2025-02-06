@@ -45,7 +45,7 @@ const Footer = () => {
                 <div className='md:w-[30%] w-full   flex flex-col justify-between gap-5 md:gap-1 lg:gap-0 '>
                     <div className='flex flex-col gap-4 md:gap-0 lg:gap-4 '>
                         <TransitionLink href='/'>
-                    <img src="/images/logo5.png" alt="" className='w-[45vw] h-fit object-contain md:object-contain lg:object-cover md:w-[9vw] md:h-[9vw] lg:w-[14vw] lg:h-fit' />
+                    <img src="/images/logo6.png" alt="" className='w-[45vw] h-fit object-contain md:object-contain lg:object-cover md:w-[9vw] md:h-[9vw] lg:w-[14vw] lg:h-fit' />
                     </TransitionLink>
                     <div className={`${Clash.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw]`}>Delivering excellence in air, sea, and surface logistics worldwide.</div>
                     </div>

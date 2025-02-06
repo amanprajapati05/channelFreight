@@ -193,8 +193,8 @@ const Navbar = () => {
           <div className="absolute md:left-[2vw] lg:left-[4vw] hidden cursor-pointer md:block">
             <TransitionLink href={'/'}>
             <img 
-              src={activeMenu ? '/images/logo2.png' : '/images/logo5.png'} 
-              className={`${activeMenu? 'md:w-[15vw] lg:w-[14vw] xl:w-[12vw]':'md:w-[17vw] lg:w-[16vw] xl:w-[14vw]'}`}
+              src={activeMenu ? '/images/logo2.png' : '/images/logo6.png'} 
+              className={`${activeMenu? 'md:w-[15vw] lg:w-[14vw] xl:w-[12vw]':'md:w-[16vw] lg:w-[15vw] xl:w-[13vw]'}`}
               alt="logo" 
             />
             </TransitionLink>
