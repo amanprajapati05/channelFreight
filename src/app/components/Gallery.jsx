@@ -298,12 +298,12 @@ const Gallery = () => {
                       {renderGalleryContent(slider2)}
                     </div>
                     <div ref={scaleMobileRef} className='flex'>
-                      <Scale value={8} />
+                      <Scale value={5} />
                     </div>
                   </div>
                 </div>
               </div>
-              <div className='w-full flex justify-center absolute bottom-[75vw] z-[99]'>
+              <div className='w-full flex justify-center absolute bottom-[45vh] z-[99]'>
                       <ToggleButton isActive={isActive} setIsActive={setIsActive} />
               </div>
             </div>

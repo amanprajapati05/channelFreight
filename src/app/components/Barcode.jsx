@@ -14,7 +14,7 @@ const Scale = ({ value = 2 }) => {
         <div 
           key={`unit-${unitNumber}-bar-${i}`}
           className={`
-            ${isFirstBar ? 'w-[1px]' : 'w-[0.02vw]'}
+            ${isFirstBar ? 'w-[1px]' : 'md:w-[0.02vw] w-[0.08vw]'}
             ${isFirstBar ? 'bg-white' : 'bg-[#333f5e]'}
             ${isTallBar || isFirstBar ? 'h-6' : 'h-5'}
           `}
@@ -47,7 +47,7 @@ const Scale = ({ value = 2 }) => {
   };
 
   return (
-    <div className='flex justify-center bg-[#02123b]  gap-[0.5vw] items-center  p-4'>
+    <div className='flex justify-center bg-[#02123b] gap-[1vw] md:gap-[0.5vw] items-center  p-4'>
       {renderScale()}
     </div>
   );
