@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Clash } from '../../../public/fonts/fonts';
 
-const Counter = () => {
+const Counter = ({end=500}) => {
   const [count, setCount] = useState(0);
   const countRef = useRef(null);
   const { ref, inView } = useInView({
@@ -13,7 +13,7 @@ const Counter = () => {
   useEffect(() => {
     if (inView) {
       let start = 0;
-      const end = 500; // Set your target number
+      const target = end ; // Set your target number
       const duration = 1000; // Animation duration in ms
       const increment = Math.ceil(end / (duration / 16)); // 60fps
 
