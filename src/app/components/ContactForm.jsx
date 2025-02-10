@@ -577,7 +577,7 @@ const ContactForm = () => {
     setSubmitStatus({ message: '', isError: false });
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://channel-freight.vercel.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
