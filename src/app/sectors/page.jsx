@@ -413,7 +413,7 @@ const imageRefs = useRef([]);
                                     <div className='flex flex-col gap-[2vw]'  
                                         >
                                         <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Our packaging solutions are designed to safeguard your shipments, regardless of size or sensitivity. </div>
-                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  link='/sectors/packaging' /></div>
+                                        <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B'  link='/sectors/packaging-solutions' /></div>
                                     </div>
                                 </div>
                             </div>
@@ -500,7 +500,7 @@ const imageRefs = useRef([]);
                             <div className='flex flex-col h-full justify-between w-[60%]'>
                                 <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Packaging Solutions</div>
                                 <div className={` ${Clash.className} text-[#02123b] text-[4vw]  sm:text-[3vw]  `}>Our packaging solutions are designed to safeguard your shipments, regardless of...</div>
-                                <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/packaging' />
+                                <Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/sectors/packaging-solutions' />
                             </div>
                         </div>
                     
