@@ -580,9 +580,11 @@ const ContactForm = () => {
       const response = await fetch('https://channel-freight.vercel.app/api/contact', {
         method: 'POST',
         headers: {
+          
           'Content-Type': 'application/json',
          
         },
+        mode: 'cors',
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
