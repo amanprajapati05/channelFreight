@@ -355,7 +355,7 @@ const TruckAnimation = () => {
         </div>
       </div>
 
-      <div ref={card3Ref} className="absolute bg-white right-[10vw] top-[30%] rounded-xl w-[80vw] h-[80vw] lg:w-[25vw] md:w-[30vw] md:h-[30vw] lg:h-[25vw] sm:w-[60vw] sm:h-[60vw] border border-white">
+      <div ref={card3Ref} className="absolute bg-white right-[10vw] top-[20%] rounded-xl w-[80vw] h-[80vw] lg:w-[25vw] md:w-[30vw] md:h-[30vw] lg:h-[25vw] sm:w-[60vw] sm:h-[60vw] border border-white">
         <div className='flex flex-col justify-between h-full md:py-[1.2vw] px-[6vw] py-[6vw] md:px-[1.6vw]'>
           <div className='flex flex-col gap-[1vw]'>
             <div className='bg-[#02123b] w-fit h-fit rounded-full flex items-center justify-center relative overflow-hidden transition-colors duration-300'>

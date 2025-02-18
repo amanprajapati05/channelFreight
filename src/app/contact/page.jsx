@@ -121,7 +121,7 @@ const page = () => {
           >
             Our Offices
           </div>
-          <div className="flex flex-col gap-8 md:gap-[3vw] lg:pt-[4vw] pt-[10vw]  md:pt-[6vw]">
+          {/* <div className="flex flex-col gap-8 md:gap-[3vw] lg:pt-[4vw] pt-[10vw]  md:pt-[6vw]">
             <div className="flex md:flex-row flex-col justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0 ">
               <div
                 className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
@@ -267,7 +267,172 @@ const page = () => {
               </div>
             
           </div>
-        </div>
+        </div> */}
+          <div className="flex flex-col gap-8 md:gap-[3vw] lg:pt-[4vw] pt-[10vw]  md:pt-[6vw]">
+                    <div className="flex md:flex-row flex-col justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0 ">
+                      <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Head Office</div>
+                        <div className="text-lg">
+                          112 A, Adarsh Industrial Estate, Chakala, Sahar Road, Andheri
+                          (E), Mumbai 400 099, Maharashtra, India. 
+                        </div>
+                        <div className="text-lg">
+                          Tel: <a href="tel:02242148000">+91 022-42148000</a>
+                        </div>
+                      </div>
+                      <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Mumbai Office</div>
+                        <div className="text-lg">
+                        306, 313 - B Wing, 119, Business Point, Opp. Intl Air Cargo Complex, Sahar Road, Andheri (E), Mumbai - 400 099, India
+                        </div>
+                        <div className="text-lg">
+                          Tel: <a href="tel:+9102242149500">+91 022-42149500</a>
+                        </div>
+                      </div>
+                      <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Delhi Office</div>
+                        <div className="text-lg">
+                        Khasra No. 836, Block K2, Near E2 Block, Mahipalpur Extension, New Delhi - 110 037, India
+                        </div>
+                        <div className="text-lg">
+                          Tel: <a href="tel:+9101142641240">+91 011-42641240</a>
+                        </div>
+                      </div>
+                     
+                    </div>
+                    <div className="flex md:flex-row flex-col justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0">
+                    <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Chennai Office</div>
+                        <div className="text-lg">
+                        New No. 5, Old No.69, Southern Side, 1st Floor, Kalajmagal Nagar, Chennai - 600 032, India
+                        </div>
+                        <div className="text-lg">
+                          Tel: <a href="tel:+910444804595">+91 044-4804595</a>
+                        </div>
+                        <div className="text-lg">
+                          Cell: <a href="tel:+918095761028">+91 80957 61028</a>
+                        </div>
+                      </div>
+                      <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Bangalore Office</div>
+                        <div className="text-lg">
+                        Building No. 4-598/16/2/4, 2nd Floor, Above Axis Bank, Amruthahalli Main Road, Amurathahalli, Bangalore - 560 092, India
+                        </div>
+                        <div className="text-lg">
+                          Tel: <a href="tel:+9108049020700">+91 080-49020700</a>
+                        </div>
+                      </div>
+                      <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Hyderabad Office</div>
+                        <div className="text-lg">
+                        10-3-273/8/A First Floor, Humayun Nagar,Mehdipatnam, Hyderabad - 500 028Telangana, India
+                        </div>
+                        <div className="text-lg">
+                          Mob: <a href="tel:+919618051042">+91 96180 51042</a>
+                        </div>
+                      </div>
+                     
+                    
+                  </div>
+                    <div className="flex md:flex-row flex-col justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0 ">
+                    <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Pune Office</div>
+                        <div className="text-lg">
+                        198. H. No. 2/1 & 2/2, Office No. 816, ‘’A’’ Wing,Nyatiempress, Viman Nagar, Pune - 411 014. Maharashtra, India
+                        </div>
+                        <div className="text-lg">
+                          Tel: <a href="tel:+9102069069600">+91 020-69069600</a>
+                        </div>
+                      </div>
+                      <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Ahmedabad Office</div>
+                        <div className="text-lg">
+                        603. Sixth Floor, Lilamani Corporate Heights, Opp. Ramapir No Tekro, Near BRTS Bus Stop New Vadaj,Ahmedabad - 380 013, India
+                        </div>
+                        <div className="text-lg">
+                          Tel: <a href="tel:+9107929600603">+91 079-29600603</a>
+                        </div>
+                      </div>
+                      <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Surat Office</div>
+                        <div className="text-lg">
+                        B-504 Shakuntal Apartment, Near Shangvi Tower, Gujarat Gas Circle, Adajan, Surat - 395 009, India
+                        </div>
+                        <div className="text-lg">
+                          Tel: <a href="tel:+918660406787">+91 86604 06787</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex md:flex-row flex-col justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0">
+                      <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Belgaum Office</div>
+                        <div className="text-lg">
+                        Block No. 5, Next To Jamia Masjid Chowk, Mathpai Nagar, Angol, Belgaum - 590 006, India
+                        </div>
+                        <div className="text-lg">
+                          Tel: <a href="tel:+918691003166">+91 86910 03166</a>
+                        </div>
+                      </div>
+                      <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Goa Office</div>
+                        <div className="text-lg">
+                        Office No. 4, Nile’s Residency, Opp. Bharat Petrol Pump, Near Kira Paulo Hotel, Verma - 403 722, Goa, India
+                        </div>
+                        <div className="text-lg">
+                          Tel: <a href="tel:+918879670022">+91 88796 70022</a>
+                        </div>
+                      </div>
+                      <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Vadodara Office</div>
+                        <div className="text-lg">
+                        709, 7th Floor, Siddharth Complex R.C, Dutt Road, Alkapuri, Vadodara - 390 007, India
+                        </div>
+                        <div className="text-lg">
+                          Tel: <a href="tel:+9102652321256">+91 0265-2321256</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex md:flex-row flex-col justify-between flex-nowrap overflow-x-auto gap-8 md:gap-0">
+                      <div
+                        className={`flex flex-col flex-shrink-0 text-white bg-[#1a284c] w-full md:w-[30%] rounded-xl border border-[#263355] items-start justify-center gap-4 p-4 ${Clash.className}`}
+                      >
+                        <div className="text-2xl">Mangalore Office</div>
+                        <div className="text-lg">
+                        Suite No.1, Vruddhi Complex,  Adyar Garden, NH 75, Adyar, Mangaluru, Dakshina Kannada Karnataka, 57- 5007
+                        </div>
+                        {/* <div className="text-lg">
+                          Tel: <a href="tel:+918691003166">+91 86910 03166</a>
+                        </div> */}
+                      </div>
+                     
+                      
+                    </div>
+                   
+                </div>
       </div>
   
     </div>

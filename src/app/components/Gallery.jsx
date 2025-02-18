@@ -187,56 +187,121 @@ const Gallery = () => {
   const renderGalleryContent = (sliderRef) => (
     <>
 
-<div ref={addToRefs} className="md:w-[30%] flex-shrink-0 lg:w-[25%] xl:w-[20%] w-[50%] rounded-xl h-[45vw] md:h-[28vw] lg:h-[23vw] xl:h-[19vw] cursor-pointer"
+{/* <div ref={addToRefs} className="md:w-[30%] flex-shrink-0 lg:w-[25%] xl:w-[20%] w-[50%] rounded-xl h-[45vw] md:h-[28vw] lg:h-[23vw] xl:h-[19vw] cursor-pointer"
                         onClick={() => handleImageClick("/images/gallery/g1.webp")}
                       >
                         <img src="/images/gallery/g1.webp" className="w-full h-full object-cover rounded-xl" alt="" />
-                      </div>
+                      </div> */}
       
       <ImageCard 
         ref={addToRefs}
         images={[
-          "/images/gallery/card-1.webp",
-          "/images/gallery/card-1-1.webp",
-          "/images/gallery/card-1-2.webp",
-          "/images/gallery/card-1-3.webp",
+          "/images/gallery/img1.jpg",
+          "/images/gallery/img2.jpg",
+          
         ]}
-        title="Start"
-        date="12th January 1999"
+        // title=""
+        date="15-Ton Jaw Crusher & Pan Feeder Machinery to Matadi"
         onImageClick={handleImageClick}
       />
 
-      <div ref={addToRefs}     onClick={() => handleImageClick("/images/gallery/g2.webp")} className=' cursor-pointer md:w-[30%] flex-shrink-0 lg:w-[25%] xl:w-[20%] w-[50%] rounded-xl h-[45vw] md:h-[28vw] lg:h-[23vw] xl:h-[19vw]'>
+      {/* <div ref={addToRefs}     onClick={() => handleImageClick("/images/gallery/g2.webp")} className=' cursor-pointer md:w-[30%] flex-shrink-0 lg:w-[25%] xl:w-[20%] w-[50%] rounded-xl h-[45vw] md:h-[28vw] lg:h-[23vw] xl:h-[19vw]'>
         <img src="/images/gallery/g2.webp" className='w-full h-full object-cover rounded-xl' alt="" />
-      </div>
+      </div> */}
 
       <ImageCard 
         ref={addToRefs}
         images={[
-          "/images/gallery/card-2.webp",
-          "/images/gallery/card-1-1.webp",
-          "/images/gallery/card-1-2.webp",
-          "/images/gallery/card-1-3.webp",
+          "/images/gallery/img3.jpg",
+          "/images/gallery/img4.jpg",
         ]}
-        title="Air Charter"
-        date="18th June 2004"
+        // title="Air Charter"
+        date="12-Ton Flue Gas Cooler with Refractory Lining"
         onImageClick={handleImageClick}
       />
 
-      <div ref={addToRefs}     onClick={() => handleImageClick("/images/gallery/g3.webp")} className=' cursor-pointer md:w-[30%] flex-shrink-0 lg:w-[25%] xl:w-[20%] w-[50%] rounded-xl h-[45vw] md:h-[28vw] lg:h-[23vw] xl:h-[19vw]'>
+      {/* <div ref={addToRefs}     onClick={() => handleImageClick("/images/gallery/g3.webp")} className=' cursor-pointer md:w-[30%] flex-shrink-0 lg:w-[25%] xl:w-[20%] w-[50%] rounded-xl h-[45vw] md:h-[28vw] lg:h-[23vw] xl:h-[19vw]'>
         <img src="/images/gallery/g3.webp" className='w-full h-full object-cover rounded-xl' alt="" />
-      </div>
+      </div> */}
 
       <ImageCard 
         ref={addToRefs}
         images={[
-          "/images/gallery/card-3.webp",
-          "/images/gallery/card-1-1.webp",
-          "/images/gallery/card-1-2.webp",
-          "/images/gallery/card-1-3.webp",
+          "/images/gallery/img5.jpg",
+          "/images/gallery/img6.jpg",
+          "/images/gallery/img7.jpg",
         ]}
-        title="Air Charter"
-        date="18th June 2004"
+        // title="Air Charter"
+        date="10-Ton DG to MATADI"
+        onImageClick={handleImageClick}
+      />
+       <ImageCard 
+        ref={addToRefs}
+        images={[
+          "/images/gallery/img8.jpg",
+          "/images/gallery/img9.jpg",
+        ]}
+        // title="Air Charter"
+        date="10-Ton Agriculture Combine Harvester to Hamburg"
+        onImageClick={handleImageClick}
+      />
+        <ImageCard 
+        ref={addToRefs}
+        images={[
+          "/images/gallery/img10.jpg",
+          "/images/gallery/img11.jpg",
+          "/images/gallery/img12.jpg",
+          "/images/gallery/img13.jpg",
+          "/images/gallery/img14.jpg",
+          "/images/gallery/img15.jpg",
+          "/images/gallery/img16.jpg",
+          "/images/gallery/img17.jpg",
+          "/images/gallery/img18.jpg",
+          "/images/gallery/img19.jpg",
+          "/images/gallery/img20.jpg",
+          "/images/gallery/img21.jpg",
+          "/images/gallery/img22.jpg",
+          "/images/gallery/img23.jpg",
+          "/images/gallery/img24.jpg",
+          "/images/gallery/img25.jpg",
+          "/images/gallery/img26.jpg",
+          "/images/gallery/img27.jpg",
+          "/images/gallery/img28.jpg",
+        ]}
+        // title="Air Charter"
+        date="9-Ton Mixed Cargo"
+        onImageClick={handleImageClick}
+      />
+       <ImageCard 
+        ref={addToRefs}
+        images={[
+          "/images/gallery/img29.jpg",
+          "/images/gallery/img30.jpg",
+          "/images/gallery/img31.jpg",
+        ]}
+        // title="Air Charter"
+        date="7-Ton Packaging Machine"
+        onImageClick={handleImageClick}
+      />
+      <ImageCard 
+        ref={addToRefs}
+        images={[
+          "/images/gallery/img32.jpg",
+          "/images/gallery/img33.jpg",
+        ]}
+        // title="Air Charter"
+        date="6.3-ton Nature Organic Waste Converter – Russia"
+        onImageClick={handleImageClick}
+      />
+      <ImageCard 
+        ref={addToRefs}
+        images={[
+          "/images/gallery/img34.jpg",
+          "/images/gallery/img35.jpg",
+          "/images/gallery/img36.jpg",
+        ]}
+        // title="Air Charter"
+        date="2-Ton KV Transformer to Matadi"
         onImageClick={handleImageClick}
       />
     </>
