@@ -376,7 +376,7 @@ const imageRefs = useRef([]);
                             <div className='relative' style={{ height: '26vw' }}>
                             <div   className='w-full  flex gap-[8vw] border-b border-[#c8c8c8] pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                                    <img src="/images/sectors/eng.webp" className='w-full h-full' alt="" />
+                                    <img src="/images/sectors/eng.webp" className='w-full h-full rounded-2xl' alt="" />
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                     <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Engineering</div>
@@ -391,7 +391,7 @@ const imageRefs = useRef([]);
                             <div className='relative' style={{ height: '26vw' }}>
                             <div   className='w-full  flex gap-[8vw] border-b border-[#c8c8c8] pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                                    <img src="/images/sectors/cold.webp" className='w-full h-full' alt="" />
+                                    <img src="/images/sectors/cold.webp" className='w-full h-full rounded-2xl' alt="" />
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                     <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Cold Chain Products</div>
@@ -406,7 +406,7 @@ const imageRefs = useRef([]);
                             <div className='relative' style={{ height: '26vw' }}>
                             <div   className='w-full  flex gap-[8vw] border-b border-[#c8c8c8] pb-4'>
                                 <div ref={addToImageRefs} className='w-[50%] h-[25vw] relative'>
-                                    <img src="/images/sectors/pac.webp" className='w-full h-full' alt="" />
+                                    <img src="/images/sectors/pac.webp" className='w-full h-full rounded-xl' alt="" />
                                 </div>
                                 <div className={`flex flex-col w-[50%] ${Clash.className} justify-between `}>
                                     <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Packaging Solutions</div>

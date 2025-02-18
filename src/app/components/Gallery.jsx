@@ -133,7 +133,7 @@ const Gallery = () => {
     gsap.fromTo([slider.current, scaleRef.current], {
       translateX: 0,
     }, {
-      translateX: "-120%",
+      translateX: "-350%",
       ease: "none",
       duration: 1,
       scrollTrigger: {
@@ -304,6 +304,176 @@ const Gallery = () => {
         date="2-Ton KV Transformer to Matadi"
         onImageClick={handleImageClick}
       />
+        <ImageCard 
+        ref={addToRefs}
+        images={[
+          "/images/gallery/img37.jpg",
+          "/images/gallery/img38.jpg",
+          "/images/gallery/img39.jpg",
+          "/images/gallery/img40.jpg",
+          "/images/gallery/img41.jpg",
+          "/images/gallery/img42.jpg",
+          "/images/gallery/img43.jpg",
+          "/images/gallery/img44.jpg",
+          "/images/gallery/img45.jpg",
+          "/images/gallery/img46.jpg",
+          "/images/gallery/img47.jpg",
+          "/images/gallery/img48.jpg",
+          "/images/gallery/img49.jpg",
+          "/images/gallery/img50.jpg",
+          "/images/gallery/img51.jpg",
+          "/images/gallery/img52.jpg",
+          "/images/gallery/img53.jpg",
+          "/images/gallery/img54.jpg",
+          "/images/gallery/img55.jpg",
+          "/images/gallery/img56.jpg",
+          "/images/gallery/img57.jpg",
+          "/images/gallery/img58.jpg",
+          "/images/gallery/img59.jpg",
+          "/images/gallery/img60.jpg",
+          "/images/gallery/img61.jpg",
+          "/images/gallery/img62.jpg",
+          "/images/gallery/img63.jpg",
+
+        ]}
+        // title="Air Charter"
+        date="23-Tonnes Fuel Skid to Argentina"
+        onImageClick={handleImageClick}
+      />
+          <ImageCard 
+        ref={addToRefs}
+        images={[
+          "/images/gallery/img64.jpg",
+          "/images/gallery/img65.jpg",
+          "/images/gallery/img66.jpg",
+          "/images/gallery/img67.jpg",
+          "/images/gallery/img68.jpg",
+          "/images/gallery/img69.jpg",
+          "/images/gallery/img70.jpg",
+          "/images/gallery/img71.jpg",
+          "/images/gallery/img72.jpg",
+          "/images/gallery/img73.jpg",
+          "/images/gallery/img74.jpg",
+          "/images/gallery/img75.jpg",
+          "/images/gallery/img76.jpg",
+          "/images/gallery/img77.jpg",
+          "/images/gallery/img78.jpg",
+          "/images/gallery/img79.jpg",
+          "/images/gallery/img80.jpg",
+          "/images/gallery/img81.jpg",
+          "/images/gallery/img82.jpg",
+          "/images/gallery/img83.jpg",
+          "/images/gallery/img84.jpg",
+          "/images/gallery/img85.jpg",
+          "/images/gallery/img86.jpg",
+          "/images/gallery/img87.jpg",
+          "/images/gallery/img88.jpg",
+          "/images/gallery/img89.jpg",
+
+        ]}
+        // title="Air Charter"
+        date="25-Ton Rectors and Blenders"
+        onImageClick={handleImageClick}
+      />
+             <ImageCard 
+        ref={addToRefs}
+        images={[
+          
+          "/images/gallery/img90.jpg",
+          "/images/gallery/img91.jpg",
+          "/images/gallery/img92.jpg",
+          "/images/gallery/img93.jpg",
+          "/images/gallery/img94.jpg",
+          "/images/gallery/img95.jpg",
+          "/images/gallery/img96.jpg",
+          "/images/gallery/img97.jpg",
+          "/images/gallery/img98.jpg",
+          "/images/gallery/img99.jpg",
+          "/images/gallery/img100.jpg",
+          "/images/gallery/img101.jpg",
+          "/images/gallery/img102.jpg",
+          "/images/gallery/img103.jpg",
+          "/images/gallery/img104.jpg",
+          "/images/gallery/img105.jpg",
+          "/images/gallery/img106.jpg",
+          "/images/gallery/img107.jpg",
+          "/images/gallery/img108.jpg",
+          "/images/gallery/img109.jpg",
+          "/images/gallery/img110.jpg",
+          "/images/gallery/img111.jpg",
+          "/images/gallery/img112.jpg",
+          "/images/gallery/img113.jpg",
+          "/images/gallery/img114.jpg",
+          "/images/gallery/img115.jpg",
+          "/images/gallery/img116.jpg",
+          "/images/gallery/img117.jpg",
+          "/images/gallery/img118.jpg",
+          "/images/gallery/img119.jpg",
+          "/images/gallery/img120.jpg",
+
+          
+        ]}
+        // title="Air Charter"
+        date="28-Ton Excavator and Road Roller for Offshore"
+        onImageClick={handleImageClick}
+      />
+                   <ImageCard 
+        ref={addToRefs}
+        images={[
+          
+          "/images/gallery/img121.jpg",
+          "/images/gallery/img122.jpg",
+          "/images/gallery/img123.jpg",
+          "/images/gallery/img124.jpg",
+          "/images/gallery/img125.jpg",
+          "/images/gallery/img126.jpg",
+          
+          
+        ]}
+        // title="Air Charter"
+        date="46-Ton Centrifugal Fan Assembled with Motors to Iraq"
+        onImageClick={handleImageClick}
+      />
+                        <ImageCard 
+        ref={addToRefs}
+        images={[
+          
+          "/images/gallery/img127.jpg",
+          "/images/gallery/img128.jpg",
+          
+          
+        ]}
+        // title="Air Charter"
+        date="63-Ton Cold Forging Machine"
+        onImageClick={handleImageClick}
+      />
+                        <ImageCard 
+        ref={addToRefs}
+        images={[
+          
+          "/images/gallery/img129.jpg",
+          
+          
+        ]}
+        // title="Air Charter"
+        date="Offshore Crawler"
+        onImageClick={handleImageClick}
+      />
+                          <ImageCard 
+        ref={addToRefs}
+        images={[
+          
+          "/images/gallery/img130.jpg",
+          "/images/gallery/img131.jpg",
+          "/images/gallery/img132.jpg",
+          "/images/gallery/img133.jpg",
+          
+          
+        ]}
+        // title="Air Charter"
+        date="Oil Refinery Equipment"
+        onImageClick={handleImageClick}
+      />
     </>
   );
 
@@ -314,7 +484,7 @@ const Gallery = () => {
       </div>
       
       {/* Desktop Layout */}
-      <div className='w-full h-screen hidden md:block'>
+      <div className='w-full h-screen hidden md:block bg-[#02123b]'>
         <div className='w-full h-full bg-[#02123b]'>
           <div className='md:pt-[20vw] lg:pt-[16vw] xl:pt-[12vw] pt-[42vw] sm:pt-[32vw] bg-[#02123b]'>
             <div className={`md:pl-[2vw] lg:pl-[4vw] px-4 md:px-0 flex flex-col md:flex-row gap-6 md:gap-0 justify-end md:justify-between text-white ${Clash.className}`}>
@@ -334,7 +504,7 @@ const Gallery = () => {
                       <ToggleButton isActive={isActive} setIsActive={setIsActive} />
                     </div>
                     <div ref={scaleRef} className='flex pt-[10vw] md:pt-0'>
-                      <Scale value={5} />
+                      <Scale value={13} />
                     </div>
                   </div>
                 </div>
@@ -363,7 +533,7 @@ const Gallery = () => {
                       {renderGalleryContent(slider2)}
                     </div>
                     <div ref={scaleMobileRef} className='flex'>
-                      <Scale value={5} />
+                      <Scale value={12} />
                     </div>
                   </div>
                 </div>
