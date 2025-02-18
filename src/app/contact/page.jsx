@@ -132,7 +132,7 @@ const page = () => {
                   (E), Mumbai 400 099, Maharashtra, India. 
                 </div>
                 <div className="text-lg">
-                  Tel: <a href="tel:02242148000">022-42148000</a>
+                  Tel: <a href="tel:02242148000">+91 022-42148000</a>
                 </div>
               </div>
               <div

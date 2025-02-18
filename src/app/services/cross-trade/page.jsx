@@ -18,6 +18,7 @@ import locomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import Counter2 from '../../components/Counter2'
 import ServicesBottom from '../../components/ServicesBottom'
+import Counter from '../../components/Counter'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -302,11 +303,11 @@ const slides = [
         loop
     />
 
-    <div className={`${Clash.className} text-[#02123b] lg:text-[1vw] md:text-[1.8vw] text-[3vw]  `}>On-Time Delivery</div>
+    <div className={`${Clash.className} text-[#02123b] lg:text-[1vw] md:text-[1.8vw] text-[3vw]  `}>Countries Served</div>
     <div className='h-full flex flex-col justify-end '>
         {/* <div className={`${Clash.className} text-[#02123b] lg:text-[3vw] md:text-[3.5vw] text-[6vw] text-right md:text-left`}>00%</div> */}
-        <Counter2/>
-        <div className={`${Clash.className} lg:text-[1vw] md:text-[1.8vw] text-[3vw] text-[#02123b] leading-[0] pb-[2vw] md:pb-0`}>Success Rate</div>
+        <Counter end={190}/>
+        <div className={`${Clash.className} lg:text-[1vw] md:text-[1.8vw] text-[3vw] text-[#02123b] leading-[0] pb-[2vw] md:pb-0`}>Across the globe</div>
     </div>
 
 </div>

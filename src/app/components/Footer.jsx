@@ -136,8 +136,8 @@ const Footer = () => {
                         <div className='md:w-[30%] w-[50%] flex flex-col gap-3'>
                             <div className={`${ClashM.className} text-white md:text-[1.3vw] text-[4vw] sm:text-[3.5vw]`}>Contact Us</div>
                             <div className={`${Clash.className} text-white tracking-wide text-[3.5vw] sm:text-[3vw] md:text-[1vw]`}>
-                            <div><a href="mailto:sanjay@channel-freight.com">sanjay@channel-freight.com</a></div>
-                            <div><a href="tel:02242148000">022 4214 8000</a></div>
+                            <div><a href="mailto:sanjay@channel-freight.com">info@cfsipl.com</a></div>
+                            <div><a href="tel:02242148000">+91 022 4214 8000</a></div>
                                  </div>
                         </div>
                         {/* <div className='md:w-[30%] w-[50%] flex flex-col gap-3 pt-[3vw] md:pt-0'>

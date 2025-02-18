@@ -353,7 +353,7 @@ const Services = () => {
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Sea Freight</div>
                                <div className='flex flex-col gap-[2vw]'  
                                   >
-                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>At Channel Freight Logistics India Private Limited, our Sea Freight Services are designed to simplify global trade by offering tailored, cost-effective, and reliable ocean shipping solutions.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/sea-freight'  /></div>
                                </div>
                            </div>
@@ -368,7 +368,7 @@ const Services = () => {
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Supply Chain</div>
                                <div className='flex flex-col gap-[2vw]'  
                                    >
-                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>At Channel Freight Logistics, we redefine supply chain management through our integrated and innovative solutions tailored for businesses of all sizes.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/supply-chain' /></div>
                                </div>
                            </div>
@@ -383,7 +383,7 @@ const Services = () => {
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Project Logistics</div>
                                <div className='flex flex-col gap-[2vw]'  
                                   >
-                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Project logistics encompasses large-scale, complex operations such as infrastructure development, energy projects, and industrial installations.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/project-logistics' /></div>
                                </div>
                            </div>
@@ -398,7 +398,7 @@ const Services = () => {
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Customs Brokerage</div>
                                <div className='flex flex-col gap-[2vw]' 
                                    >
-                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>At Channel Freight Logistics India Private Limited, our customs brokerage solutions transcend basic compliance to deliver seamless trade facilitation</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/customs-brokerage' /></div>
                                </div>
                            </div>
@@ -413,7 +413,7 @@ const Services = () => {
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Cross Trade</div>
                                <div className='flex flex-col gap-[2vw]' 
                                  >
-                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Channel Freight Logistics India Private Limited excels in Cross Trade Logistics, enabling businesses to navigate the complexities of international shipments involving multiple countries.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/cross-trade'  /></div>
                                </div>
                            </div>
@@ -428,7 +428,7 @@ const Services = () => {
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Charter Services</div>
                                <div className='flex flex-col gap-[2vw]'  
                                  >
-                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Channel Freight Logistics India Pvt. Ltd. delivers tailored charter services, ensuring your cargo moves seamlessly across the globe with unmatched precision and speed.</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/charter-services' /></div>
                                </div>
                            </div>
@@ -443,7 +443,7 @@ const Services = () => {
                                <div className={`${ClashM.className} md:text-[4vw] text-[6vw] text-[#02123b] `}>Value Added Services</div>
                                <div className='flex flex-col gap-[2vw]'  
                                    >
-                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>Experience precision and efficiency with our air freight services, designed to meet the demands of a fast-paced global marketplace.</div>
+                                   <div className='hidden md:block text-[#02123b] text-[5vw]  sm:text-[3.4vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] '>At Channel Freight Logistics India, we recognize that modern businesses require more than just transportation</div>
                                    <div ref={addToButtonRefs}  className='md:block hidden '><Button text='View More' tColor='#ffffff' bgColor='#02123B' link='/services/value-added-services' /></div>
                                </div>
                            </div>

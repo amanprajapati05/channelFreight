@@ -9,6 +9,7 @@ import { useGSAP } from '@gsap/react';
 import locomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import StatsSection2 from '../components/StatSection2';
+import AirlineAwards from '../components/AirlineAwards';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -129,7 +130,7 @@ useGSAP(() => {
     const ship = shipRef.current;
     const ship2 = shipRef2.current;
     
-    const totalScroll = window.innerWidth < 768 ?(items.length - 6.3) * window.innerHeight:(items.length - 6.4) * window.innerHeight;
+    const totalScroll = window.innerWidth < 768 ?(items.length - 6.3) * window.innerHeight:(items.length - 6.3) * window.innerHeight;
     const shipMovement = window.innerWidth < 768 ? "210%" : "220%";
 
     const tl = gsap.timeline({
@@ -173,33 +174,7 @@ useGSAP(() => {
     };
 }, [isReady]); 
 
-  // const timelineData = [
-  //   {
-  //     year: "1999",
-  //     title: "Foundation Year",
-  //     description: "Channel Freight was established with a vision to revolutionize logistics through efficient and reliable service."
-  //   },
-  //   {
-  //     year: "2005",
-  //     title: "First Major Expansion",
-  //     description: "Expanded operations to include a comprehensive sea freight service, making global shipping more accessible."
-  //   },
-  //   {
-  //     year: "2010",
-  //     title: "International Recognition",
-  //     description: "Achieved global recognition by entering key international markets, handling large-scale projects."
-  //   },
-  //   {
-  //     year: "2020",
-  //     title: "Resilience During Global Challenges",
-  //     description: "Achieved global recognition by entering key international markets, handling large-scale projects."
-  //   },
-  //   {
-  //     year: "2024",
-  //     title: "25 Years of Service",
-  //     description: "Reached the 25-year milestone, with a strong reputation built on trust, efficiency, and innovation."
-  //   }
-  // ];
+
   const timelineData = [
     {
       year: "1999",
@@ -336,7 +311,7 @@ useGSAP(() => {
             <div className=' h-[100%] md:h-[100%] pb-4 md:pb-0  bg-[#02123b]'>
                 <div className={`md:pl-[2vw] lg:pl-[4vw] px-4 md:px-0 flex flex-col md:flex-row h-[100%] gap-6 md:gap-0 justify-end md:justify-between md:items-center text-white ${Clash.className}  `}>
                     <div className=' text-[10vw] lg:text-[6vw] md:text-[8vw] h-auto md:h-[50%] uppercase'>ABOUT US</div>
-                    <div className='text-base pr-[8vw]  md:w-[48%] xl:text-[1.5vw] md:text-[1.9vw] lg:text-[1.7vw] h-auto md:h-[50%] flex items-end'>As an AEO & IATA Certified Customs Clearing Agent, our credibility & goodwill are reinforced by our commitment to providing integrated logistics solutions at competitive prices.</div>
+                    <div className='text-base pr-[8vw]  md:w-[48%] xl:text-[1.5vw] md:text-[1.9vw] lg:text-[1.7vw] h-auto md:h-[50%] md:leading-[2.4vw] lg:leading-[1.7vw] flex items-end'>As an AEO & IATA Certified Customs Clearing Agent, our credibility & goodwill are reinforced by our commitment to providing integrated logistics solutions at competitive prices.</div>
                 </div>
             </div>
         </div>
@@ -451,7 +426,7 @@ useGSAP(() => {
 
         
 
-        <div className='md:px-[2vw] lg:px-[4vw] px-4 bg-[#02123b] pt-4 pb-[10vw] -mt-2 md:-mt-1 text-white z-[999999999]'>
+        {/* <div className='md:px-[2vw] lg:px-[4vw] px-4 bg-[#02123b] pt-4 pb-[10vw] -mt-2 md:-mt-1 text-white z-[999999999]'>
             <div className={`${ClashM.className} text-white flex justify-between border-b py-2 border-[#ffffff] md:text-[1.9vw] lg:text-[1.5vw] text-lg `}>
                 <div>Airlines</div>
                 <div>Awards</div>
@@ -511,16 +486,17 @@ useGSAP(() => {
                 <div>Etihad Airways  </div>
                 <div>Certificate of Appreciation</div>
             </div>  
-            <div
+             <div
             ref={addToContainerRefs}
             onMouseEnter={() => handleEnter(7)}
             onMouseLeave={() => handleLeave(7)}
              className={`${Clash.className} text-white py-6 md:text-[1.7vw] lg:text-[1.3vw] text-base flex justify-between border-b border-[#ffffff] `}>
                 <div>British Airways</div>
                 <div>Certificate of Appreciation</div>
-            </div>  
+            </div>   
               
-        </div>
+        </div> */}
+        <AirlineAwards/>
 
         {/* <div>
             <div className='w-full flex justify-center bg-[#02123b] -mt-1 -mb-1 pt-[4vw]'>
@@ -549,7 +525,7 @@ useGSAP(() => {
                   (E), Mumbai 400 099, Maharashtra, India. 
                 </div>
                 <div className="text-lg">
-                  Tel: <a href="tel:02242148000">022-42148000</a>
+                  Tel: <a href="tel:02242148000">+91 022-42148000</a>
                 </div>
               </div>
               <div
