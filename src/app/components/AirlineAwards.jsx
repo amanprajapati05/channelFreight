@@ -256,7 +256,7 @@ const AirlinesAwards = () => {
               <img
                 src={airlineImages[index]}
                 alt={airline}
-                className="w-64 h-48 object-cover rounded-lg shadow-lg"
+                className="w-[70%] h-[70%] object-cover rounded-lg shadow-lg"
               />
             </div>
           )}
