@@ -80,7 +80,7 @@ const page = () => {
     </div>
  
     <div ref={scrollContainerRef} data-scroll-container>
-    <ServicesPage title={'Pharma'} img1={'/images/sectors/imgp62.png'} img2={'/images/sectors/imgp61.png'} desc={'Pharmaceutical logistics is one of the most critical and regulated sectors, requiring precise handling of sensitive goods such as medicines, vaccines, APIs, and biological samples.'}/>
+    <ServicesPage title={'Pharmaceuticals'} img1={'/images/sectors/imgp62.png'} img2={'/images/sectors/imgp61.png'} desc={'Pharmaceutical logistics is one of the most critical and regulated sectors, requiring precise handling of sensitive goods such as medicines, vaccines, APIs, and biological samples.'}/>
 
   <div className='w-full flex md:flex-row flex-col md:justify-between md:items-center md:p-[2vw] lg:p-[4vw] p-4 md:gap-0 gap-[3vw]'>
     <div  className={`text-[#02123b] ${Clash.className} text-[8vw] sm:leading-[1.2] md:leading-none md:text-[5vw] lg:text-[4vw] md:w-[30%] w-full `} >Challenges & Solutions</div>
@@ -145,9 +145,9 @@ const page = () => {
                 <div className='pt-[20vw] md:pt-0'>
                 <BottomSector 
   description="Our in-depth knowledge, technological edge, and unparalleled commitment to quality have made us the preferred logistics partner for pharmaceutical giants worldwide. "
-  image1="/images/sectors/ph1.webp"
-  image2="/images/sectors/ph3.webp"
-  image3="/images/sectors/ph2.webp"
+  image1="/images/sectors/image-124.webp"
+  image2="/images/sectors/image-125.webp"
+  image3="/images/sectors/image-126.webp"
 />
                 </div>
   

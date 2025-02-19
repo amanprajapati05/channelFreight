@@ -95,9 +95,9 @@ const page = () => {
         <div data-scroll-section>
           <BottomSector
             description="Clients trust us for our precision, innovation, and global expertise. With Channel Freight, your perishable goods are in the safest hands, delivered fresh and on time, every time."
-            image1="/images/sectors/cc1.webp"
-            image2="/images/sectors/cc3.webp"
-            image3="/images/sectors/cc2.webp"
+            image1="/images/sectors/cold-121.webp"
+            image2="/images/sectors/cold-122.webp"
+            image3="/images/sectors/cold-123.webp"
           />
         </div>
 

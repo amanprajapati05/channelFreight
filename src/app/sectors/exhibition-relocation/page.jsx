@@ -94,6 +94,9 @@ const page = () => {
                 <div>
                 <BottomSector 
   description="We’ve handled logistics for prestigious global exhibitions, earning a reputation for reliability, efficiency, and excellence."
+  image1='/images/sectors/exhi-123.webp'
+  image2='/images/sectors/exhi-122.webp'
+  image3='/images/sectors/exh-121.webp'
 />
                 </div>
   

@@ -104,9 +104,9 @@ const page = () => {
                 <div>
                 <BottomSector 
   description="Clients trust us for our precision, innovation, and global expertise. With Channel Freight, you’re not just shipping goods—you’re safeguarding lives."
-  image1="/images/sectors/h1.webp"
-  image2="/images/sectors/h3.webp"
-  image3="/images/sectors/h2.webp"
+  image1="/images/sectors/image-211.webp"
+  image2="/images/sectors/image-212.webp"
+  image3="/images/sectors/imagw-213.webp"
 />
                 </div>
   

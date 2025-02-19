@@ -57,15 +57,15 @@ const BottomSector = ({
                     <div className={`text-[#02123b] ${Clash.className} text-[4.6vw]  sm:text-[3vw] xl:text-[1.3vw] md:text-[1.9vw] lg:text-[1.5vw] `}>{description}</div>
                     <Button text={buttonText} bgColor={buttonBgColor} tColor={buttonTextColor} link='/contact' />
                 </div>
-                <div className=' flex relative md:w-[50%] h-full md:justify-end justify-center gap-[3vw] md:gap-[1vw] items-center '>
-                    <div className='md:w-[14vw] w-[50%] sm:w-[30%]  md:h-[17vw]  bottom-[20%]'>
+                <div className=' flex relative md:w-[50%]  h-full md:justify-end justify-center gap-[3vw] md:gap-[1vw] items-center '>
+                    <div className='md:w-[14vw] h-[35vw] w-[30%]    md:h-[17vw]  bottom-[20%]'>
                         <img src={image1} className='rounded-xl w-full h-full object-cover' alt="" />
                     </div>
-                    <div className='flex flex-col md:gap-[1vw] gap-[3vw]'>
+                    <div className='flex flex-col w-[70%] md:gap-[1vw] gap-[3vw]'>
                     <div className='md:w-[30vw] md:h-[20vw]  '>
                         <img src={image2} className='rounded-xl w-full h-full' alt="" />
                     </div>
-                    <div className='md:h-[12vw] w-[60%] md:w-[18vw]'>
+                    <div className='md:h-[12vw]  w-[60%] md:w-[18vw]'>
                         <img src={image3} className='rounded-xl ' alt="" />
                     </div>
                     </div>

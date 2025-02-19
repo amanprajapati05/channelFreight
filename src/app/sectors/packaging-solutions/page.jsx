@@ -357,9 +357,9 @@ useGSAP(() => {
                 <div>
                 <BottomSector 
   description="At Channel Freight, packaging is not just a service—it’s a science. Our cutting-edge facilities, experienced teams, and commitment to innovation make us the go-to partner for businesses seeking reliable, efficient, and forward-thinking packaging solutions."
-  image1="/images/sectors/pa1.webp"
-  image2="/images/sectors/pa2.webp"
-  image3="/images/sectors/pa3.webp"
+  image1="/images/sectors/pack-123.webp"
+  image2="/images/sectors/pack-122.webp"
+  image3="/images/sectors/pack-121.webp"
 />
                 </div>
   

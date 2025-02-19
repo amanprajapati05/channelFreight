@@ -4,12 +4,9 @@ import TruckAnimation2 from '../components/TruckAnimation2'
 const page = () => {
   return (
     <>
-        <div className='h-screen bg-black'></div>
-        <div className='h-screen bg-blue-500'></div>
-        <div className='h-screen bg-red-400'></div>
-        <div>
-          <TruckAnimation2/>
-        </div>
+       <h1 className='text-pink-600 flex justify-center bg-black h-40 items-center text-3xl'>Sejal Pandey</h1>
+       <p>My first paragraph.</p>
+     
     </>
   )
 }
