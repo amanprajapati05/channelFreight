@@ -670,9 +670,9 @@ useGSAP(() => {
                 <div className="text-lg">
                 Suite No.1, Vruddhi Complex,  Adyar Garden, NH 75, Adyar, Mangaluru, Dakshina Kannada Karnataka, 57- 5007
                 </div>
-                {/* <div className="text-lg">
-                  Tel: <a href="tel:+918691003166">+91 86910 03166</a>
-                </div> */}
+                <div className="text-lg">
+                  Tel: <a href="tel:+919448548859">+91 9448548859</a>
+                </div>
               </div>
              
               
