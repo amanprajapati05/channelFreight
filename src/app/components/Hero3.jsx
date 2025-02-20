@@ -183,11 +183,12 @@ const Hero2 = () => {
     <div ref={scrollContainerRef}>
       <div className=' h-screen block '>
       <Navbar/>
+      <div className='bg-[#02123b] absolute opacity-40 z-[-1] top-0 w-full h-full '></div>
             <video   autoPlay 
           muted 
           loop 
           playsInline
-          className=" absolute top-0 z-[-1] w-full h-full object-cover  ">
+          className=" absolute top-0 z-[-2] w-full h-full object-cover  ">
                 <source src="/videos/Homepage-Hero.mp4" type="video/mp4"/>
             </video>
             <div  className='lg:pt-[9vw] md:pt-[20vw] flex h-[80%] md:h-auto'>
